@@ -1,0 +1,37 @@
+# Site title and subtitle. This is used in _includes/header.html
+title: 'BigPanda'
+subtitle: 'Documentation'
+    #
+codeurl: 'https://github.com/bigpandaio/docs.bigpanda.io'
+
+
+#baseurl: '/docs'
+
+# Dates are not included in permalinks
+permalink: none
+
+highlighter: pygments
+
+future: true
+
+# Exclude non-site files
+exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json"]
+
+# Use the redcarpet Markdown renderer
+markdown: redcarpet
+redcarpet:
+    extensions: [
+        'no_intra_emphasis',
+        'fenced_code_blocks',
+        'autolink',
+        'strikethrough',
+        'superscript',
+        'with_toc_data',
+        'tables',
+        'hardwrap'
+    ]
+destination: 'public'
+production: true
+ga_code: 'UA-40027187-7'
+kiss_metrics: '84ab77b86fc690e90c1b37db36da3f1946a97c90'
+marketo: '778-UNI-965'

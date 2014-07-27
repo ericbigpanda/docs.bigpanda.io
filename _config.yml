@@ -1,0 +1,42 @@
+# Site title and subtitle. This is used in _includes/header.html
+title: 'BigPanda'
+subtitle: 'Documentation'
+    #
+# URL to source code, used in _includes/footer.html
+codeurl: 'https://github.com/bigpandaio/docs.bigpanda.io'
+
+
+# Keep as an empty string if served up at the root. If served up at a specific
+# path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
+baseurl: '/docs'
+
+# Dates are not included in permalinks
+permalink: none
+
+# Syntax highlighting
+highlighter: pygments
+
+# Since these are pages, it doesn't really matter
+future: true
+
+# Exclude non-site files
+exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json"]
+
+# Use the redcarpet Markdown renderer
+markdown: redcarpet
+redcarpet:
+    extensions: [
+        'no_intra_emphasis',
+        'fenced_code_blocks',
+        'autolink',
+        'strikethrough',
+        'superscript',
+        'with_toc_data',
+        'tables',
+        'hardwrap'
+    ]
+destination: 'public'
+ga_code: false
+production: false
+kiss_metrics: false
+marketo : false

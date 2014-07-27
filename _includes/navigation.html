@@ -1,0 +1,28 @@
+<div id="search">
+    <form action="/search" method="get">
+        <input type="text" class="form-control" id="search-query" name="q" placeholder="Search" autocomplete="off" autofocus />
+    </form>
+</div>
+<section id="search-results" style="display: none;">
+    <div class="search-wrapper">   
+        <p>Search results</p>
+        <ul class="entries nav nav-list">
+        </ul>
+    </div>
+
+</section>
+<ul class="nav nav-list">
+    {% for category in site.categories %}
+      <li class="nav-header">{{ category | first | capitalize }}</li>
+        {% for posts in category %}
+          {% unless forloop.first %}
+          {% assign ordered_posts = posts | sort: 'title' %}
+          {% for category_post in ordered_posts %}
+              {% if category_post.url %}
+              <li class="{% if category_post.url contains page.url %}nav-active{%endif%}"><a href="{{ site.baseurl }}{{ category_post.url }}">{{ category_post.title }}</a></li>
+              {% endif%}
+          {% endfor %}
+          {% endunless %}
+        {% endfor %}
+    {% endfor %}
+</ul>
