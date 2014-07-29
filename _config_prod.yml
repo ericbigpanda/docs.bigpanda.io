@@ -34,3 +34,5 @@ destination: 'public_prod'
 production: true
 ga_code: 'UA-40027187-7'
 kiss_metrics: '84ab77b86fc690e90c1b37db36da3f1946a97c90'
+gems:
+  - jekyll-sitemap
