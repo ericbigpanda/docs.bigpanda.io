@@ -100,6 +100,9 @@ footer {
 #navigation {
     margin-top: 50px;
 }
+#navigation li:last-child {
+    border-bottom:none;
+}
 #navigation li {
     border-bottom: solid 1px #f0f0f0;
     height: 40px;
@@ -129,7 +132,7 @@ nav li a {
   padding: 10px;
 }
 .nav-center {
-  width: 70%;
+  width:350px;
   margin: 0 auto;
   display: table;
   text-align:center;
@@ -163,15 +166,33 @@ nav li a {
     background: #d7533a!important;
 }
 
+#search-results {
+    position:relative;
+}
+
 .search-wrapper {
+  width:100%;
+  padding-bottom: 10px;
   background : #FAFAFA;
+  position:absolute;
+  display: block;
   border: solid 1px #A4A4A4;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   box-shadow: 1px 1px 1px #CACACA;
+  z-index:199;
 }
 
 .search-wrapper p {
   border-bottom: solid 1px #f0f0f0;
-  padding : 15px;
+  margin : 15px;
+}
+
+.search-result-link , .site-nav li {
+    height: auto !important;
+    text-overflow: ellipsis;
+}
+
+.search-wrapper li.active {
+    background : #E9F5FF;
 }

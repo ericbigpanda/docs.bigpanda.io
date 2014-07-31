@@ -8,7 +8,7 @@
         <meta name="description" content="{{ page.title }}">
         <meta property="og:image" content="//dq1o3g1glajna.cloudfront.net/website-image.png" />
         <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="{{ site.baseurl }}/img//favicon.ico" type="image/x-icon">
+        <link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
         <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
@@ -58,7 +58,7 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bigpanda-docs-header">
-      <ul class="nav navbar-nav nav-center">
+      <ul class="nav navbar-nav col-md-6 col-lg-6 col-sm-6 col-lg-push-4 col-md-push-4 col-sm-push-3">
           <li><a href="http://bigpanda.io/integrations" target="_blank">Integrations</a></li>
           <li><a href="http://bigpanda.io/about-us" target="_blank">About Us</a></li>
           <li class="main-nav-center-current"><a href="{{ site.baseurl }}">Docs</a></li>
@@ -95,19 +95,66 @@
     {% raw %}
 <script id="search-results-template" type="text/mustache">
   {{#entries}}
-    <li>
-        <a href="{% endraw %}{{site.baseurl}}{% raw %}{{url}}">{{ categories.0 }} : {{title}}</a>
+    <li class="search-result-link">
+        <a href="{% endraw %}{{site.baseurl}}{% raw %}{{url}}">{{title}}</a>
     </li>
   {{/entries}}
 </script>
 {% endraw %}
 <script type="text/javascript">
   $(function() {
-    $('#search-query').lunrSearch({
+    var $search = $('#search-query');
+    $search.submit(function(){
+        return false;
+    });
+    $search.lunrSearch({
       indexUrl: '{{ site.baseurl }}/search.json',             // URL of the `search.json` index data for your site
       results:  '#search-results',          // jQuery selector for the search results container
       entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
       template: '#search-results-template'  // jQuery selector for the Mustache.js template
+    });
+
+    $search.on('keydown', function(event){
+        var up = 38;
+        var down = 40;
+        var esc = 27;
+        var enter = 13;
+        if([up, down, esc, enter].indexOf(event.keyCode) == -1){
+            return;
+        }
+        if ($("#search-results:visible").length == 0) {
+            return;
+        }
+        var $searchResults = $("#search-results");
+        if (event.keyCode == esc){
+            $(".active", $searchResults).removeClass("active");
+            return;
+        }
+        if ($(".active", $searchResults).length == 0) {
+            $("li:first", $searchResults).addClass("active");
+        }
+        else {
+            var $current = $(".active", $searchResults);
+            if (event.keyCode == enter){
+                event.preventDefault();
+                window.location.href = $("a", $current).attr('href');
+                return;
+            }
+            var $searchResultsLiElements = $("li", $searchResults);
+            var index = $searchResultsLiElements.index($current);
+            if (event.keyCode == down){
+                if (++index < $searchResultsLiElements.length){
+                    $current.removeClass("active");
+                    $($searchResultsLiElements[index]).addClass("active");
+                }
+            } else {
+                if (--index >= 0 && $current.length){
+                    $current.removeClass("active");
+                    $($searchResultsLiElements[index]).addClass("active");
+                }  
+            }
+        }
+
     });
   });
 </script>
