@@ -6,15 +6,13 @@ exclude_from_search: true
 
 ### Get Started
 
-Dui pede, vestibulum eu, elementum et, gravida quis, sapien. Donec blandit.
-Donec sed magna. Curabitur a risus. Nullam nibh libero, sagittis vel, hendrerit
-accumsan, pulvinar consequat, tellus. Donec varius dictum nisl. Vestibulum
-suscipit enim ac nulla. Proin tincidunt. Proin sagittis. Curabitur auctor metus
-non mauris. Nunc condimentum nisl non augue. Donec leo urna, dignissim vitae,
-porttitor ut, iaculis sit amet, sem.
+BigPanda is an incident response platform that uses powerful data algorithms to help you manage Ops issues better & faster. 
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-inceptos himenaeos. Suspendisse potenti. Quisque augue metus, hendrerit sit
-amet, commodo vel, scelerisque ut, ante. Praesent euismod euismod risus. Mauris
-ut metus sit amet mi cursus commodo. Morbi congue mauris.
+We consolidate your endless stream of alerts into high level incidents, based on host, cluster or applications – so you can see critical incidents without filtering through noise.
 
+We visualize related alerts and code deploys side by side – so you can get quick insight on critical events.
+
+We make collaboration easy, because we’ve simplified the conversation to only the data and exactly the insights that Ops teams need.
+
+Always in real time.  
+Without the noise and overhead. 
