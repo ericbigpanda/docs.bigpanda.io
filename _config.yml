@@ -20,7 +20,7 @@ highlighter: pygments
 future: true
 
 # Exclude non-site files
-exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json"]
+exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json", "public_prod", "public"]
 
 # Use the redcarpet Markdown renderer
 markdown: redcarpet
