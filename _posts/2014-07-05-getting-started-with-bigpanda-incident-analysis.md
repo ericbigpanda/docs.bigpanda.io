@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Part 3: Incident Analysis"
-category: "Product Tutorial"
+category: "BigPanda University"
 date: 2014-07-05 11:30:01
 ---
 

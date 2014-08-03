@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Part 1: The Incident Feed"
-category: "Product Tutorial"
+title: "Part 1: Incident Feed"
+category: "BigPanda University"
 date: 2014-07-03 11:30:01
 ---
 

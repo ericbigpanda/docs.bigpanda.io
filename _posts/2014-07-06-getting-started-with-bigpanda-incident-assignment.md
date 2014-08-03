@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Part 4: Incident Assignment"
-category: "Product Tutorial"
+category: "BigPanda University"
 date: 2014-07-06 11:30:01
 ---
 
