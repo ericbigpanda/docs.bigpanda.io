@@ -47,7 +47,7 @@ module Jekyll
           :date => entry.date,
           :categories => entry.categories,
           :body => entry.body,
-          :slug => item.to_liquid['categories'].nil? ? entry.url : "/##{entry.title.downcase.strip.gsub(/ /, "-").gsub(/:/, "-")}"
+          :slug => item.to_liquid['categories'].nil? ? entry.url : "/##{entry.title.downcase.strip.gsub(/[^a-zA-Z]/, "-")}"
 
         }
         

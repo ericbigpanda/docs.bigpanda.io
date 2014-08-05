@@ -4,7 +4,7 @@ require 'nokogiri'
 module Jekyll
   module PostHeaderFilter
     def get_header_hash_from_name(name)
-        {"title"=>name,"href"=>name.downcase().gsub(/ /, "-").gsub(/\:/, "-")}
+        {"title"=>name,"href"=>name.downcase().gsub(/[^a-zA-Z]/, "-")}
     end
     def get_posts_with_headers(posts)
       altered = []
