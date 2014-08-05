@@ -1,0 +1,23 @@
+<div class="index-post">
+    {{ site.pages | where:"url","/index.html" | first | map: "content" | first | markdownify }}
+</div>
+<div class="post-divider"></div>
+{% for category in site.categories %}
+{% for posts in category %}
+{% unless forloop.first %}
+{% assign category_name = posts | first | map: "category" %}
+{% assign ordered_posts = posts | sort: 'title'  %}
+{% for category_post in ordered_posts %}
+{% if category_post.url %}
+{% assign category_post_hash = category_post.title | get_header_hash_from_name | map: "href" %}
+<h2>{{ category_name }} - {{ category_post.title }}</h2>
+<div class="post-content" id="{{category_post_hash}}">
+    {{ category_post.content }}
+</div>
+<div class="post-divider"></div>
+{% endif%}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+

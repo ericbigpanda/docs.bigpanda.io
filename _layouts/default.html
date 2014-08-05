@@ -1,162 +1,61 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
-        <meta name="description" content="{{ page.title }}">
-        <meta property="og:image" content="//dq1o3g1glajna.cloudfront.net/website-image.png" />
-        <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
-        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-        <meta property="og:url" content="http://docs.bigpanda.io/" />
-        <meta property="og:title" content="BigPanda Documentation" />
-        <meta property="og:type" content="article" />
-        <meta property="og:description" content="BigPanda Documentation - {{ page.title }}" />
-        <meta name="description" content="BigPanda Documentation - {{ page.title }}" />
-        {% if site.ga_code %}
-        <!-- Google Analytics Tracking -->
-        <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', "{{ site.ga_code }}", { 'cookieDomain': 'bigpanda.io' });
-      ga('send', 'pageview');
-      </script>
-        {% endif %}
-        {% if site.kiss_metrics %}
-<!-- Kiss Metrics Tracking -->
-<script>
-  var _kmq = _kmq || [];
-  var _kmk = _kmk || "{{ site.kiss_metrics }}";
-    function _kms(u){
-      setTimeout(function(){
-        var d = document, f = d.getElementsByTagName('script')[0],
-        s = d.createElement('script');
-      s.type = 'text/javascript'; s.async = true; s.src = u;
-      f.parentNode.insertBefore(s, f);
-      }, 1);
-    }
-    _kms('//i.kissmetrics.com/i.js');
-    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
-</script>
-{% endif %}
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
+<meta name="description" content="{{ page.title }}">
+<meta property="og:image" content="//dq1o3g1glajna.cloudfront.net/website-image.png" />
+<link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+<meta property="og:url" content="http://docs.bigpanda.io/" />
+<meta property="og:title" content="BigPanda Documentation" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="BigPanda Documentation - {{ page.title }}" />
+<meta name="description" content="BigPanda Documentation - {{ page.title }}" />
+{% include tracking.html %}
 </head>
-    <body>
-<nav class="navbar navbar-default navbar-fix-top" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bigpanda-docs-header">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-          <a class="navbar-brand" href="{{ site.baseurl }}"><img height="33" width="160" src="{{ site.baseurl }}/img/logo.svg" alt="logo" /></a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bigpanda-docs-header">
-      <ul class="nav navbar-nav col-md-6 col-lg-6 col-sm-6 col-lg-push-4 col-md-push-4 col-sm-push-3">
-          <li><a href="http://bigpanda.io/integrations" target="_blank">Integrations</a></li>
-          <li><a href="http://bigpanda.io/about-us" target="_blank">About Us</a></li>
-          <li class="main-nav-center-current"><a href="{{ site.baseurl }}">Docs</a></li>
-          <li><a href="http://blog.bigpanda.io" target="_blank">Blog</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class=""><a href="https://a.bigpanda.io" title="Log in to BigPanda" >Log in</a></li>
-        <li class="get-started"><a href="https://signup.bigpanda.io" title="Get started with BigPanda" target="_blank">Get Started</a></li>
-   </ul>
-    </div>
-  </div>
-</nav>
-
-        <h1 class="docs-title">
-            docs
-        </h1>
-        <div class="container main">
-            <div class="row">
-                <div id="navigation" class="col-xs-6 col-sm-3">
-                    {% include navigation.html %}
-                </div>
-                <div id=content class="col-xs-12 col-sm-9">
-                    {{ content }}
-                </div>
-            </div>
+<body data-baseurl="{{site.baseurl}}" data-spy="scroll" data-target="#site-nav-wrapper" data-offset="140">
+{% include header.html %}
+<h1 class="docs-title">
+    docs
+</h1>
+<div class="container-fluid main">
+        <div id="navigation" class="col-md-2 hidden-sm visible-md-block visible-lg-block affix">
+            {% include navigation.html %}
         </div>
-        <footer>
-                    {% include footer.html %}
-        </footer>
-        <script src="{{ site.baseurl }}/js/search.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    {% raw %}
+        <div id="content" class="col-md-9 col-md-push-2">
+            {% if page.url contains 'index' %}
+                {% include single-full-page.html %}
+            {% else %}
+                {{ content }}
+            {% endif %}
+        </div>
+</div>
+<div class="container try-now">
+    <h3>Try the product right now!</h3>
+    <button><a href="https://signup.bigpanda.io" target="_blank">Get a free account</a></button>
+</div>
+<footer class="navbar" role="navigation">
+    {% include footer.html %}
+</footer>
+<script src="{{ site.baseurl }}/js/search.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+{% raw %}
 <script id="search-results-template" type="text/mustache">
-  {{#entries}}
+{{#entries}}
     <li class="search-result-link">
-        <a href="{% endraw %}{{site.baseurl}}{% raw %}{{url}}">{{title}}</a>
+        <a href="{% endraw %}{{ site.baseurl }}{% raw %}{{slug}}">{{title}}</a>
     </li>
   {{/entries}}
 </script>
 {% endraw %}
-<script type="text/javascript">
-  $(function() {
-    var $search = $('#search-query');
-    $search.submit(function(){
-        return false;
-    });
-    $search.lunrSearch({
-      indexUrl: '{{ site.baseurl }}/search.json',             // URL of the `search.json` index data for your site
-      results:  '#search-results',          // jQuery selector for the search results container
-      entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
-      template: '#search-results-template'  // jQuery selector for the Mustache.js template
-    });
-
-    $search.on('keydown', function(event){
-        var up = 38;
-        var down = 40;
-        var esc = 27;
-        var enter = 13;
-        if([up, down, esc, enter].indexOf(event.keyCode) == -1){
-            return;
-        }
-        if ($("#search-results:visible").length == 0) {
-            return;
-        }
-        var $searchResults = $("#search-results");
-        if (event.keyCode == esc){
-            $(".active", $searchResults).removeClass("active");
-            return;
-        }
-        if ($(".active", $searchResults).length == 0) {
-            $("li:first", $searchResults).addClass("active");
-        }
-        else {
-            var $current = $(".active", $searchResults);
-            if (event.keyCode == enter){
-                event.preventDefault();
-                window.location.href = $("a", $current).attr('href');
-                return;
-            }
-            var $searchResultsLiElements = $("li", $searchResults);
-            var index = $searchResultsLiElements.index($current);
-            if (event.keyCode == down){
-                if (++index < $searchResultsLiElements.length){
-                    $current.removeClass("active");
-                    $($searchResultsLiElements[index]).addClass("active");
-                }
-            } else {
-                if (--index >= 0 && $current.length){
-                    $current.removeClass("active");
-                    $($searchResultsLiElements[index]).addClass("active");
-                }  
-            }
-        }
-
-    });
-  });
+<script type="text/javascript" src="{{ site.baseurl }}/js/docs.js">
 </script>
 
 </body>

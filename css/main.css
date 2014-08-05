@@ -1,28 +1,39 @@
+html, body {
+    height: 100%;
+}
 body {
+    position: relative;
+    padding-top: 70px;
+    /*padding-bottom: 115px;*/
 }
 footer  {
+    height: 115px;
     width: 100%;
+    margin-bottom:0px !important;
     text-align:center;
     border-top: #d5d5d5;
 }
-footer nav{
-    margin: 0px !important;
-}
 
-footer h3 {
+.try-now h3 {
   color: #C0C0C0;
   font-family: 'Open Sans';
 }
 
-footer nav:first-child {
+.try-now {
+    width : 100%;
+    text-align:center;
+   /* margin-bottom: 115px; */
     padding:60px 50px;
     height:280px;
     background: #efefef !important;
 }
-footer nav:not(:first-child) {
+footer .bottom { 
+    height: 115px;
+    padding : 10px;
+    margin-bottom: none !important;
     background: #463e3a !important;
 }
-footer button {
+.try-now button {
   margin-top: 20px;
   background: #40a8de;
   border: none;
@@ -36,16 +47,29 @@ footer button {
 }
 
 .bottom-links li {
-  padding : 5px 15px;
+  padding : 0px 0px;
+  margin: 0px 10px;
   float:left;
   text-align:center;
-  border-right:solid 1px #CACACA;
+}
+.bottom-links li:not(:first-child):before {
+   content: '|';
+   color: #fff;
+   margin-right: 20px;
+   font-size: 14px;
+   font-weight: 300;
+   display: inline;
+   height: auto;
+   width: auto;
 }
 .bottom-links {
   display:block;
-  width : 450px;
-  font-size: 12px;
+  width : 400px;
+  font-size: 14px;
+  font-family: "Arial";
   margin: 10px auto;
+  text-align:center;
+  padding : 0px;
   list-style: none;
 }
 
@@ -59,29 +83,56 @@ footer button {
 .copyrights {
   border-top : solid 2px #38322f;
   font-size: 12px;
-  padding: 10px;
+  padding: 20px 10px;
   display:block;
   font-weight:bold;
   text-align:center;
  }
 
-footer button a:hover {
+.try-now button a:hover {
   text-decoration: none;
   color : #FFF;
 }
-footer button a {
+.try-now button a {
   color : #FFF;
   font-size: 18px;
   font-family: 'Open Sans'
 }
-nav.navbar-fix-top {
+.navbar-default {
     box-shadow: 0px 0px 5px #d9d9d9;
-    padding: 10px;
-    background: #FFF;
+    background: #FFF !important;
     margin-bottom:0px !important;
+    border-bottom:solid 1px #dadada;
+    text-align:center;
+    width:100%;
+    height: 70px;
+}
+#bigpanda-docs-header {
+}
+
+#bigpanda-docs-header li, #bigpanda-docs-header li:hover {
+    height: 69px;
+}
+#bigpanda-docs-header li.active ,  #bigpanda-docs-header li.active a, #bigpanda-docs-header li.active a:hover{
+    color: #3fa7e2;
+}
+#bigpanda-docs-header li.active , #bigpanda-docs-header li.active a , #bigpanda-docs-header li:not(.get-started):hover{
+    background: #F2F2F2;
+}
+#bigpanda-docs-header li a, #bigpanda-docs-header li a:hover{
+    text-decoration : none;
+    color: #7A7A7A;
+}
+#bigpanda-docs-header li a { 
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
 }
 .docs-title {
-    margin:0px;
+    margin:0px 0px 0px 0px;
     text-align:center;
     text-transform:uppercase;
     padding: 50px 0px;
@@ -92,19 +143,23 @@ nav.navbar-fix-top {
     background:#efefef;
 }
 
-.navbar-top li {
-}
 footer {
     text-align:center;
 }
+
 #navigation {
-    margin-top: 50px;
+    margin-top: 0px;
+    transition: margin-top 0.2s ease-in-out;
 }
-#navigation li:last-child {
-    border-bottom:none;
+
+#navigation.scrolled {
+  margin-top: -140px;
 }
-#navigation li {
-    border-bottom: solid 1px #f0f0f0;
+#navigation .nav-list li:last-child , #navigation .subnav li:last-child{
+    border-bottom:none !important;
+}
+#navigation .nav-list li, #navigation .subnav li {
+    border-bottom: solid 1px #FAFAFA;
     height: 40px;
 }
 #navigation .nav-header {
@@ -114,46 +169,94 @@ footer {
 #navigation ul li.nav-header:first-child {
     border-top: solid 1px #f0f0f0;
 }
-nav li a {
-    color : #a4a4a4!important;
-    font-weight:bold
+.site-nav {
+  background: #fff;
 }
 
-.navbar-brand {
+.site-nav .active {
+   background:#F2F2F2;
 }
+
+.site-nav .active .subnav {
+   background:#FFF;
+}
+
+.subnav .active {
+   background:#F2F2F2;
+}
+
 .main {
     margin-top: 30px;
+    min-height: 500px;
+    position:relative;
+}
+.navbar-collapse.collapse.in {
+    text-align:center;
+    background:#31414a;
+}
+@media (min-width: 108px){
+    .nav-center {
+        position:auto;
+        left:auto;
+        text-align:center;
+    }
+    .nav-center li {
+        float:none;
+        display:block;
+        padding : 0;
+        margin:0px;
+    }
+
+    #bigpanda-docs-header li a{
+        padding-left: 7px;
+        padding-right: 7px;
+    }
 }
 
-#bigpanda-docs-header .navbar-right{
-  margin: 0;
-}
-#bigpanda-docs-header .navbar-nav{
-  padding: 10px;
-}
-.nav-center {
-  width:350px;
-  margin: 0 auto;
-  display: table;
-  text-align:center;
-}
-.in .nav-center {
-  width: auto;
-  margin: 0px;
-  text-align:left;
-}
-.in .nav-center li {
-  position:relative;
-  display:block;
-}
-.nav-center li {
-  float:none;
-  display: inline-table;
-}
-.main-nav-center-li:hover {
-  background: #e7e7e7;
+@media (min-width: 768px){
+    .nav-center {
+        position:absolute;
+        left:25%;
+        text-align:center;
+    }
+    .nav-center li {
+        display:inline-block;
+    }
 }
 
+@media (min-width: 924px){
+    .nav-center {
+        left:30%;
+    }
+
+    #bigpanda-docs-header li a{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (min-width: 1050px){
+    #bigpanda-docs-header li a{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (min-width: 1500px){
+    .nav-center {
+        left:35%;
+    }
+    #bigpanda-docs-header li a{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.get-started {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 .get-started a {
     background: #eb6950;
     border-radius:5px;
@@ -195,4 +298,31 @@ nav li a {
 
 .search-wrapper li.active {
     background : #E9F5FF;
+}
+
+.subnav {
+    display:none;
+}
+
+.active .subnav {
+    display:block;
+}
+
+.subnav li {
+    margin-left : 15px;
+}
+
+.nav-active {
+    font-weight: bolder;
+}
+
+.post-divider {
+    border-top: solid 2px #FAFAFA;
+    margin: 40px 0 40 0;
+}
+
+#content {
+}
+
+.index-post {
 }
