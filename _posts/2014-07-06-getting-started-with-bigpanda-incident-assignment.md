@@ -5,8 +5,6 @@ category: "BigPanda University"
 date: 2014-07-06 11:30:01
 ---
 
-## Incident Assignment
-
 As the proverb goes, two captains will sink the ship. Promote accountability and make sure incidents are resolved on time by assigning a single owner to every active incident. BigPanda makes it easy to assign incidents. Click on the assign icon (it looks like a person with a + next to his head). Then select a member of your team from the list. 
 
 ![Incident Assignment](/media/Assignment.png)

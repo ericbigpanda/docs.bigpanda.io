@@ -11,18 +11,34 @@
     </div>
 
 </section>
-<ul class="nav nav-list site-nav">
-    {% for category in site.categories %}
-      <li class="nav-header">{{ category | first | capitalize }}</li>
-        {% for posts in category %}
-          {% unless forloop.first %}
-          {% assign ordered_posts = posts | sort: 'title' %}
-          {% for category_post in ordered_posts %}
-              {% if category_post.url %}
-              <li class="{% if category_post.url contains page.url %}nav-active{%endif%}"><a href="{{ site.baseurl }}{{ category_post.url }}">{{ category_post.title }}</a></li>
-              {% endif%}
-          {% endfor %}
-          {% endunless %}
+<div id="site-nav-wrapper">
+    <ul class="nav nav-list site-nav" id="site-nav">
+        <!-- {{page.url}}-->
+        {% unless page.url == '/index.html' %}
+        {% assign prefix = site.baseurl | append: '/' %}
+        {% endunless %}
+        {% for category in site.categories %}
+            {% for posts in category %}
+              {% unless forloop.first %}
+              <li class="nav-header">{{ posts | first | map: "category" }}</li>
+              {% assign ordered_posts = posts | sort: 'title' | get_posts_with_headers %}
+              {% for category_post in ordered_posts %}
+                  {% if category_post.url %}
+                  {% assign category_post_hash = category_post.title | get_header_hash_from_name | map: "href" %}
+                  <li class="{% if category_post.url contains page.url %}nav-active{%endif%}"><a href="{{ prefix }}#{{ category_post_hash}}">{{ category_post.title }}</a></li>
+                      {% if category_post.headers%}
+                      <li>
+                          <ul class="nav subnav">
+                            {% for header in category_post.headers %}
+                            <li><a href="{{ prefix }}#{{header.href}}">{{header.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                      </li>
+                      {% endif%}
+                  {% endif%}
+              {% endfor %}
+              {% endunless %}
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
-</ul>
+    </ul>
+</div>

@@ -46,7 +46,9 @@ module Jekyll
           :url => entry.url,
           :date => entry.date,
           :categories => entry.categories,
-          :body => entry.body
+          :body => entry.body,
+          :slug => item.to_liquid['categories'].nil? ? entry.url : "/##{entry.title.downcase.strip.gsub(/ /, "-").gsub(/:/, "-")}"
+
         }
         
         puts 'Indexed ' << "#{entry.title} (#{entry.url})"

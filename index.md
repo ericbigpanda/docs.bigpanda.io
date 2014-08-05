@@ -11,7 +11,8 @@ BigPanda is an incident response platform that uses powerful data algorithms to 
 We consolidate your endless stream of alerts into high level incidents, based on host, cluster or applications – so you can see critical incidents without filtering through noise. We visualizerelated alerts and code deploys side by side – so you can get quick insight on critical events. We make collaboration easy because we’ve simplified the conversation to only the data and exactly the insights that Ops teams need.
 
 Always in real time. Without the noise and overhead. 
-####That's BigPanda.
+
+#### That's BigPanda.
 
 Welcome to Docs. We've compiled a few things that you might find handy. 
 
