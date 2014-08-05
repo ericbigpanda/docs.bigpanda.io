@@ -326,3 +326,20 @@ footer {
 
 .index-post {
 }
+.integration-separator {
+    float: left;
+    width: 40px;
+    margin-top: -5px;
+}
+.integration-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    border: solid 2px #878787;
+    color: #505050;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 24px;
+    background-color: #fff;
+}

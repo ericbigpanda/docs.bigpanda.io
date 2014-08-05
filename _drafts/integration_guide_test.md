@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: integration 
 title: "Ansible Integration Guide"
 category: "Integration Guides"
 ---

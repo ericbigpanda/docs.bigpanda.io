@@ -12,7 +12,7 @@
 {% assign category_post_hash = category_post.title | get_header_hash_from_name | map: "href" %}
 <h2>{{ category_name }} - {{ category_post.title }}</h2>
 <div class="post-content" id="{{category_post_hash}}">
-    {{ category_post.content }}
+    {{ category_post.content | replace_section_separator }}
 </div>
 <div class="post-divider"></div>
 {% endif%}
