@@ -27,7 +27,7 @@
                   {% assign category_post_hash = category_post.title | get_header_hash_from_name | map: "href" %}
                   <li class="{% if category_post.url contains page.url %}nav-active{%endif%}"><a href="{{ prefix }}#{{ category_post_hash}}">{{ category_post.title }}</a></li>
                       {% if category_post.headers%}
-                      <li>
+                      <li class="subitem">
                           <ul class="nav subnav">
                             {% for header in category_post.headers %}
                             <li><a href="{{ prefix }}#{{header.href}}">{{header.title}}</a></li>
