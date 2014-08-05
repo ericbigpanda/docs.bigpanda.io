@@ -113,10 +113,10 @@ footer .bottom {
 #bigpanda-docs-header li, #bigpanda-docs-header li:hover {
     height: 69px;
 }
-#bigpanda-docs-header li.active ,  #bigpanda-docs-header li.active a, #bigpanda-docs-header li.active a:hover{
+#bigpanda-docs-header li.current-site ,  #bigpanda-docs-header li.current-site a, #bigpanda-docs-header li.current-site a:hover{
     color: #3fa7e2;
 }
-#bigpanda-docs-header li.active , #bigpanda-docs-header li.active a , #bigpanda-docs-header li:not(.get-started):hover{
+#bigpanda-docs-header li.current-site, #bigpanda-docs-header li.current-site a , #bigpanda-docs-header li:not(.get-started):hover{
     background: #F2F2F2;
 }
 #bigpanda-docs-header li a, #bigpanda-docs-header li a:hover{
