@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Part 1: Incident Feed"
-category: "BigPanda University"
-date: 2014-07-03 11:30:01
 ---
 
 BigPanda is an incident management platform for Modern Ops teams. Organize, prioritize and triage your incidents faster and more intelligently than ever before. Vastly improve your team's collaboration around Ops alerts and events. **The following guide is the first in our series** on getting started with BigPanda's incident feed. This product introduction will help you to get up and running quickly so you can get back to fixing the world's broken stuff.

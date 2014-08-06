@@ -40,15 +40,14 @@ module Jekyll
 
         entry.strip_index_suffix_from_url! if @strip_index_html
         entry.strip_stopwords!(stopwords, @min_length) if File.exists?(@stopwords_file) 
-        
+
         index << {
           :title => entry.title, 
           :url => entry.url,
           :date => entry.date,
           :categories => entry.categories,
           :body => entry.body,
-          :slug => item.to_liquid['categories'].nil? ? entry.url : "/##{entry.title.downcase.strip.gsub(/[^a-zA-Z]/, "-")}"
-
+          :slug => entry.doc ? "/##{SlugEntry.new(entry.title).href}" : entry.url
         }
         
         puts 'Indexed ' << "#{entry.title} (#{entry.url})"
@@ -83,9 +82,14 @@ module Jekyll
       # deep copy pages
       site.pages.each {|page| items << page.dup }
       site.posts.each {|post| items << post.dup }
-
       # only process files that will be converted to .html and only non excluded files 
       items.select! {|i| i.output_ext == '.html' && ! @excludes.any? {|s| (i.url =~ Regexp.new(s)) != nil } } 
+      docs = []
+      site.collections.keys.each {|collection| site.collections[collection].docs.each{|doc| docs << doc}}
+      for doc in docs
+        items << doc unless doc.data["draft"] && site.config["production"]
+      end
+
       items.reject! {|i| i.data['exclude_from_search'] } 
       
       items
@@ -119,7 +123,18 @@ module Jekyll
     def self.create(page_or_post, renderer)
       return create_from_post(page_or_post, renderer) if page_or_post.is_a?(Jekyll::Post)
       return create_from_page(page_or_post, renderer) if page_or_post.is_a?(Jekyll::Page)
+      return create_from_doc(page_or_post, renderer) if page_or_post.is_a?(Jekyll::Document)
       raise 'Not supported'
+    end
+
+    
+    def self.create_from_doc(doc, renderer)
+      title, url = extract_title_and_url(doc)
+      body = doc.output
+      date = nil
+      categories = []
+      
+      SearchEntry.new(title, url, date, categories, body, true)
     end
     
     def self.create_from_page(page, renderer)
@@ -145,10 +160,10 @@ module Jekyll
       [ data['title'], data['url'] ]
     end
 
-    attr_reader :title, :url, :date, :categories, :body
+    attr_reader :title, :url, :date, :categories, :body, :doc
     
-    def initialize(title, url, date, categories, body)
-      @title, @url, @date, @categories, @body = title, url, date, categories, body
+    def initialize(title, url, date, categories, body, doc=false)
+      @title, @url, @date, @categories, @body, @doc = title, url, date, categories, body, doc
     end
     
     def strip_index_suffix_from_url!

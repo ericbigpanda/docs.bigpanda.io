@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Part 2: Incident Triage"
-category: "BigPanda University"
-date: 2014-07-04 11:30:01
 ---
 
 As we discussed [in part 1 of this series](getting-started-with-bigpanda-incident-feed.html), BigPanda automatically tackles the grouping of alerts into incidents by host, cluster, or application as they come in. Once that's done, the most important thing to do next is to decide on that incident's priority. This process is known as incident triage and it ensures that your team is channeling its efforts wisely. BigPanda gives you two easy-to-use ways to prioritize your work: snoozing and starring. 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "CloudWatch Permissions"
-date: 2014-07-03 11:30:01
+static_page: true
 ---
 
 Connecting BigPanda with CloudWatch requires an IAM user with EC2 read access and certain CloudWatch write permissions. The easiset way to configure such as user is by attaching  to it the following User Policy templeates: `CloudWatch Full Access` and `Amazon EC2 Read Only Access`.

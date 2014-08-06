@@ -2,7 +2,7 @@
 layout: page
 title: "Monthly Newsletters: 2014 - 07"
 category: "Monthly Newsletters"
-date: 2014-07-31 11:30:01
+draft: true
 ---
 
 ## It’s been a busy summer at BigPanda!
