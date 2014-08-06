@@ -2,22 +2,18 @@
     {{ site.pages | where:"url","/index.html" | first | map: "content" | first | markdownify }}
 </div>
 <div class="post-divider"></div>
-{% for category in site.categories %}
-{% for posts in category %}
-{% unless forloop.first %}
-{% assign category_name = posts | first | map: "category" %}
-{% assign ordered_posts = posts | sort: 'title'  %}
-{% for category_post in ordered_posts %}
-{% if category_post.url %}
-{% assign category_post_hash = category_post.title | get_header_hash_from_name | map: "href" %}
-<h2 id="{{category_post_hash}}">{{ category_name }} - {{ category_post.title }}</h2>
-<div class="post-content">
-    {{ category_post.content | replace_section_separator }}
-</div>
-<div class="post-divider"></div>
-{% endif%}
+{% assign sorted_collections = '' | get_sorted_collections %}
+{% for collection in sorted_collections %}
+    {% if collection.size == 0 %}
+       {% continue %}
+    {% endif %}
+    <h2 id="{{collection.slug.href}}">{{ collection.slug.title }}</h2>
+    <div class="category-divider"></div>
+    {% for doc in collection.docs %}
+        <h3 id="{{ doc.slug.href }}" >{{ doc.slug.title }}</h3>
+    <div class="post-content">
+        {{ doc.content | markdownify | replace_section_separator | replace_media_links | replace_include_in_integration_guide }}
+    </div>
+    <div class="post-divider"></div>
+    {% endfor %}
 {% endfor %}
-{% endunless %}
-{% endfor %}
-{% endfor %}
-

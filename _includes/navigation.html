@@ -13,31 +13,27 @@
 </section>
 <div id="site-nav-wrapper">
     <ul class="nav nav-list site-nav" id="site-nav">
-        <!-- {{page.url}}-->
         {% unless page.url == '/index.html' %}
         {% assign prefix = site.baseurl | append: '/' %}
         {% endunless %}
-        {% for category in site.categories %}
-            {% for posts in category %}
-              {% unless forloop.first %}
-              <li class="nav-header">{{ posts | first | map: "category" }}</li>
-              {% assign ordered_posts = posts | sort: 'title' | get_posts_with_headers %}
-              {% for category_post in ordered_posts %}
-                  {% if category_post.url %}
-                  {% assign category_post_hash = category_post.title | get_header_hash_from_name | map: "href" %}
-                  <li class="{% if category_post.url contains page.url %}nav-active{%endif%}"><a href="{{ prefix }}#{{ category_post_hash}}">{{ category_post.title }}</a></li>
-                      {% if category_post.headers%}
+        {% assign sorted_collections = '' | get_sorted_collections %}
+        {% for collection in sorted_collections %}
+            {% if collection.size == 0 %}
+               {% continue %}
+            {% endif %}
+            <li class="nav-header">{{ collection.slug.title}}</li>
+            {% for doc in collection.docs %}
+                  <li><a href="{{ prefix }}#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
+                      {% if doc.headers %}
                       <li class="subitem">
                           <ul class="nav subnav">
-                            {% for header in category_post.headers %}
+                            {% for header in doc.headers %}
                             <li><a href="{{ prefix }}#{{header.href}}">{{header.title}}</a></li>
                             {% endfor %}
                         </ul>
                       </li>
                       {% endif%}
-                  {% endif%}
-              {% endfor %}
-              {% endunless %}
+                  </li>
             {% endfor %}
         {% endfor %}
     </ul>

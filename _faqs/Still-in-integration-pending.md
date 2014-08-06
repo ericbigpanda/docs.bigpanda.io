@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Still in Integration Pending State"
-category: "FAQs"
-date: 2014-07-30 11:30:01
 ---
 
 ### Q: 

@@ -1,11 +1,3 @@
-# Site title and subtitle. This is used in _includes/header.html
-title: 'BigPanda'
-subtitle: 'Documentation'
-    #
-# URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/bigpandaio/docs.bigpanda.io'
-
-
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
 baseurl: '/docs'
@@ -16,7 +8,16 @@ permalink: none
 # Syntax highlighting
 highlighter: pygments
 
-# Since these are pages, it doesn't really matter
+collections:
+  guides:
+    title: "BigPanda University"
+  integrations:
+    title: "Integration Guides"
+  faqs:
+    title: "FAQs"
+  newsletters:
+    title: "Monthly Newsletters"
+
 future: true
 
 # Exclude non-site files

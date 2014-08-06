@@ -4,8 +4,16 @@ subtitle: 'Documentation'
     #
 codeurl: 'https://github.com/bigpandaio/docs.bigpanda.io'
 
+collections:
+  guides:
+    title: "BigPanda University"
+  integrations:
+    title: "Integration Guides"
+  faqs:
+    title: "FAQs"
+  newsletters:
+    title: "Monthly Newsletters"
 
-#baseurl: '/docs'
 
 # Dates are not included in permalinks
 permalink: none
