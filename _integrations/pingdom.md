@@ -1,6 +1,7 @@
 ---
 layout: integration 
 title: "Pingdom Integration Guide"
+draft: true
 ---
 
 #### Register a Pingdom API Application

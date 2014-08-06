@@ -1,6 +1,7 @@
 ---
 layout: integration 
 title: "Ansible Integration Guide"
+draft: true
 ---
 
 #### Install the BigPanda Ansible module
