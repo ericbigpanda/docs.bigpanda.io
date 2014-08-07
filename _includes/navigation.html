@@ -21,14 +21,14 @@
             {% if collection.size == 0 %}
                {% continue %}
             {% endif %}
-            <li class="nav-header">{{ collection.slug.title}}</li>
+            <li class="nav-header col-item" data-col-ref="{{ collection.slug.href }}"><a href="{{ prefix }}#{{ collection.slug.href }}">{{ collection.slug.title}}</a></li>
             {% for doc in collection.docs %}
-                  <li><a href="{{ prefix }}#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
+            <li class="doc-item" data-parent-col-ref="{{ collection.slug.href }}"><a href="{{ prefix }}#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
                       {% if doc.headers %}
-                      <li class="subitem">
+                      <li class="subitem" data-parent-col-ref="{{ collection.slug.href }}">
                           <ul class="nav subnav">
                             {% for header in doc.headers %}
-                            <li><a href="{{ prefix }}#{{header.href}}">{{header.title}}</a></li>
+                            <li class="doc-header-item"><a href="{{ prefix }}#{{header.href}}">{{header.title}}</a></li>
                             {% endfor %}
                         </ul>
                       </li>

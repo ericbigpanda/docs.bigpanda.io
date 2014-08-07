@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Ansible Integration Guide"
+title: "Ansible"
 draft: true
 ---
 

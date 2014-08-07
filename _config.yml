@@ -11,8 +11,10 @@ highlighter: pygments
 collections:
   guides:
     title: "BigPanda University"
-  integrations:
-    title: "Integration Guides"
+  monitoring:
+    title: "Monitoring Integrations"
+  deployments:
+    title: "Deployment Integrations"
   faqs:
     title: "FAQs"
   newsletters:

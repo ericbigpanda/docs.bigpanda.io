@@ -300,6 +300,17 @@ footer {
     background : #E9F5FF;
 }
 
+.nav .col-item a, .nav .col-item a:hover {
+  font-weight: bold;
+  color: #333;
+  text-decoration:none;
+  padding: 0;
+}
+
+.nav .doc-item {
+  display: none;
+}
+
 .subnav {
     display:none;
 }

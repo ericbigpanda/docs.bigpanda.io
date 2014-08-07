@@ -15,6 +15,9 @@ $(function() {
   var esc = 27;
   var enter = 13;
   var slash = 191;
+  var $siteNavWrapper = $("#site-nav-wrapper");
+  var $searchResults = $("#search-results");
+
   $search.on('keydown', function(event){
     if([up, down, esc, enter].indexOf(event.keyCode) == -1){
       return;
@@ -28,7 +31,6 @@ $(function() {
       }
       return;
     }
-    var $searchResults = $("#search-results");
     if (event.keyCode == esc){
       $(".active", $searchResults).removeClass("active");
       return;
@@ -74,7 +76,6 @@ $(function() {
     }, 150);
   }
   $(window).scroll(function(){
-    var $siteNavWrapper = $("#site-nav-wrapper");
     var top = $(window).scrollTop();
     if (top >= 140){
       var $notScrolled = $("#navigation:not(.scrolled)");
@@ -95,6 +96,19 @@ $(function() {
       event.preventDefault();
       $search.focus();
       return;
+}
+  });
+  $siteNavWrapper.on('activate.bs.scrollspy', function(event){
+    var $li = $(event.target);
+    if ($li.hasClass("doc-header-item"))  {
+      $li = $li.parent("ul").parent("li").prev(".doc-item");
+    }
+    if (!$li.is(":visible")){
+      var parentRef = $li.data("parent-col-ref");
+      $(".subitem[data-parent-col-ref='" + parentRef + "']").show();
+      $(".doc-item[data-parent-col-ref='" + parentRef + "']").show();
+      $(".subitem[data-parent-col-ref!='" + parentRef + "']").hide();
+      $(".doc-item[data-parent-col-ref!='" + parentRef + "']").hide();
     }
   });
 });

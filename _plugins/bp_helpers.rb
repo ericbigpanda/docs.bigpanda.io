@@ -6,7 +6,10 @@ module Jekyll
     def replace_section_separator(content)
       separator = "<!-- section-separator -->"
       index = 0
-      return content if not content.include?(separator)
+      return content unless content.include?(separator)
+
+      content = "#{separator}\n#{content}" #as per bp-widget
+
       while content.include?(separator)
         index = index + 1
         content = content.sub(separator, "<div class=\"integration-separator\"><div class=\"integration-number\">#{index}</div></div>")
@@ -15,7 +18,8 @@ module Jekyll
     end
 
     def replace_include_in_integration_guide(content)
-      content
+        father_of_all_rexexes = /(<\!\-\-\sinclude\-start\s\-\-\>(?<=\<\!\-\-\sinclude\-start\s\-\-\>).*(?=\<\!\-\-\sinclude\-end\s\-\-\>)<\!\-\-\sinclude\-end\s\-\-\>)/m
+        content.gsub(father_of_all_rexexes, "")
     end
 
     def replace_media_links(content)
