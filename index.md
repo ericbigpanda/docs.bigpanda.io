@@ -23,6 +23,3 @@ Welcome to Docs. We've compiled a few things that you might find handy.
 Don't see what you need? [**Contact BigPanda Support**](mailto:support@bigpanda.io?Subject=Contacting%20you%20regarding%20BigPanda)
 
 Or even better, if you're a Github User? You can [fork this](https://github.com/bigpandaio/docs.bigpanda.io) documentation or [open an issue](https://github.com/bigpandaio/docs.bigpanda.io/issues/new)!
-
-
-To start, simply scroll down or click on one of the links on the left.

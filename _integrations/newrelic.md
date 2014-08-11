@@ -24,16 +24,16 @@ Click on `Integrate with Webhooks`.
 
 * Navigate to [Account settings > Integrations > Data sharing](https://rpm.newrelic.com/integrations?page=data_sharing)
 * If API access is not already enabled, click on `Enable API access`.
-<!-- include-start -->
+<!-- app-only-start -->
 * Copy the `API key` to the form below.
 
 <!-- include 'integrations/newrelic/newrelic' -->
-<!-- include-end -->
-<!-- include-replace-start -->
+<!-- app-only-end -->
+<!-- docs-only-start -->
 
 In the BigPanda Application, there's a Form that you can enter you API, which will create the New Relic WebHook for you.
 
-<!-- include-replace-end -->
+<!-- docs-only-end -->
 
 <!-- section-separator -->
 

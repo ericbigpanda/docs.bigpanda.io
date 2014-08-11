@@ -98,7 +98,7 @@ $(function() {
       return;
 }
   });
-  $siteNavWrapper.on('activate.bs.scrollspy', function(event){
+/*  $siteNavWrapper.on('activate.bs.scrollspy', function(event){
     var $li = $(event.target);
     if ($li.hasClass("doc-header-item"))  {
       $li = $li.parent("ul").parent("li").prev(".doc-item");
@@ -110,6 +110,6 @@ $(function() {
       $(".subitem[data-parent-col-ref!='" + parentRef + "']").hide();
       $(".doc-item[data-parent-col-ref!='" + parentRef + "']").hide();
     }
-  });
+  });*/
 });
 

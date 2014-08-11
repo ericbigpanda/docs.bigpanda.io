@@ -17,19 +17,19 @@ In [IAM Management Console](https://console.aws.amazon.com/iam/home?#users), sel
 
 <!-- section-separator -->
 #### Connect CloudWatch to BigPanda
-<!-- include-start -->
+<!-- app-only-start -->
 * Please copy the credentials from step 2 and paste them below.  
 * Click on `Retrieve AWS Regions` and select the regions you'd like to include in BigPanda.
 * Click on `Configure CloudWatch`.
 <!-- include 'integrations/cloudwatch/cloudwatch' -->
 
-<!-- include-end -->
+<!-- app-only-end -->
 
-<!-- include-replace-start -->
+<!-- docs-only-start -->
 
 In the BigPanda Application, you'll be able retreive the regions you'd like to include in BigPanda, and configure CloudWatch accordingly.
 
-<!-- include-replace-end -->
+<!-- docs-only-end -->
 
 <!-- section-separator -->
 #### Success

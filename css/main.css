@@ -308,14 +308,16 @@ footer {
 }
 
 .nav .doc-item {
-  display: none;
 }
 
-.subnav {
+.nav .sub-item{
     display:none;
 }
+.nav .sub-item.active{
+    display:block;
+}
 
-.active .subnav, .active + li.subitem .subnav {
+.nav .active .sub-item, .nav .active + .nav .sub-item {
     display:block;
 }
 
@@ -328,10 +330,12 @@ footer {
 }
 
 .post-divider {
-    border-top: solid 2px #FAFAFA;
-    margin: 40px 0 40 0;
+    margin: 60px 0 60px 0;
 }
 
+.post-divider:not(:last-child) {
+    border-top: solid 1px #999;
+}
 #content {
 }
 
@@ -353,4 +357,8 @@ footer {
     text-align: center;
     line-height: 24px;
     background-color: #fff;
+}
+
+.doc-title {
+  font-size: 28px;
 }
