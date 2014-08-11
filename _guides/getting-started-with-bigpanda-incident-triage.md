@@ -5,7 +5,7 @@ title: "Part 2: Incident Triage"
 
 As we discussed [in part 1 of this series](getting-started-with-bigpanda-incident-feed.html), BigPanda automatically tackles the grouping of alerts into incidents by host, cluster, or application as they come in. Once that's done, the most important thing to do next is to decide on that incident's priority. This process is known as incident triage and it ensures that your team is channeling its efforts wisely. BigPanda gives you two easy-to-use ways to prioritize your work: snoozing and starring. 
 
-### Snooze Non-Urgent Incidents
+#### Snooze Non-Urgent Incidents
 
 When a new incident arrives, first ask yourself if it's immediately actionable. A low diskspace issue, for example, often waits for weeks before it becomes urgent. If you are not planning to do anything about a low priority issue right now, it can be helpful to get it out of the way. With BigPanda, you can easily snooze any incident for: _1 hour, 6 hours, 1 day, or 1 week_.
 
@@ -17,7 +17,7 @@ Once you have clicked the snooze icon for a few issues, take a look at the left 
 
 ![Cancel snoozed incidents in BigPanda](/media/CancelSnooze.png)
 
-### Star Critical Incidents
+#### Star Critical Incidents
 
 Now that your snoozed incidents are out of the way, it's easier than ever to find the most critical things for your team to tackle next. In just one click, you can star incidents when they deserve a little extra focus. 
 

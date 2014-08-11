@@ -31,7 +31,7 @@ Please enter the credentials of the owner user that is logged in.
 We need your credentials in order to sync your Pingdom checks.
 <!-- include 'integrations/pingdom/pingdom' -->
 <!-- include-end -->
-<!-- include-replace-start-->
+<!-- include-replace-start -->
 #### The next step is available in the BigPanda Application
 Enter the BigPanda Application to enter your Pingdom credentials, needed to finish the integration.
 
