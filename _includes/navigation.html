@@ -13,28 +13,27 @@
 </section>
 <div id="site-nav-wrapper">
     <ul class="nav nav-list site-nav" id="site-nav">
-        {% unless page.url == '/index.html' %}
         {% assign prefix = site.baseurl | append: '/' %}
-        {% endunless %}
-        {% assign sorted_collections = '' | get_sorted_collections %}
+        {% assign sorted_collections = '' | get_sorted_collections_filter %}
         {% for collection in sorted_collections %}
             {% if collection.size == 0 %}
                {% continue %}
             {% endif %}
-            <li class="nav-header">{{ collection.slug.title}}</li>
+            <li class="nav-header col-item"><a href="{{ prefix }}{{ collection.name }}">{{ collection.slug.title}}</a></li>
+            {% if collection.slug.href == page.collection.slug.href %}
             {% for doc in collection.docs %}
-                  <li><a href="{{ prefix }}#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
-                      {% if doc.headers %}
-                      <li class="subitem">
-                          <ul class="nav subnav">
-                            {% for header in doc.headers %}
-                            <li><a href="{{ prefix }}#{{header.href}}">{{header.title}}</a></li>
-                            {% endfor %}
-                        </ul>
-                      </li>
-                      {% endif%}
-                  </li>
+            <li class="doc-item"><a href="#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
+            {% if doc.headers %}
+            <li class="sub-item">
+                <ul class="nav subnav">
+                {% for header in doc.headers %}
+                <li class="doc-header-item"><a href="#{{header.href}}">{{header.title}}</a></li>
+                {% endfor %}
+                </ul>
+            </li>
+            {% endif%}
             {% endfor %}
+            {% endif %}
         {% endfor %}
     </ul>
 </div>

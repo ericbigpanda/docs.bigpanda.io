@@ -1,7 +1,8 @@
 ---
 layout: integration 
-title: "Pingdom Integration Guide"
-draft: true
+title: "Pingdom"
+draft: false
+
 ---
 
 #### Register a Pingdom API Application
@@ -24,10 +25,17 @@ Navigate to [Alerting > Contacts > Add New Contact](https://my.pingdom.com/conta
 
 Click on `Create New Contact`
 <!-- section-separator -->
+<!-- app-only-start -->
 #### Enter Pingdom Credentials
 Please enter the credentials of the owner user that is logged in.  
 We need your credentials in order to sync your Pingdom checks.
 <!-- include 'integrations/pingdom/pingdom' -->
+<!-- app-only-end -->
+<!-- docs-only-start -->
+#### The next step is available in the BigPanda Application
+Enter the BigPanda Application to enter your Pingdom credentials, needed to finish the integration.
+
+<!-- docs-only-end -->
 
 <!-- section-separator -->
 #### Success

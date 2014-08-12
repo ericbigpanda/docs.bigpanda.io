@@ -300,11 +300,24 @@ footer {
     background : #E9F5FF;
 }
 
-.subnav {
-    display:none;
+.nav .col-item a, .nav .col-item a:hover {
+  font-weight: bold;
+  color: #333;
+  text-decoration:none;
+  padding: 0;
 }
 
-.active .subnav, .active + li.subitem .subnav {
+.nav .doc-item {
+}
+
+.nav .sub-item{
+    display:none;
+}
+.nav .sub-item.active{
+    display:block;
+}
+
+.nav .active .sub-item, .nav .active + .nav .sub-item {
     display:block;
 }
 
@@ -317,10 +330,12 @@ footer {
 }
 
 .post-divider {
-    border-top: solid 2px #FAFAFA;
-    margin: 40px 0 40 0;
+    margin: 75px 0px 0px 0px;
 }
 
+.post-divider:not(:last-child) {
+    border-top: solid 1px #999;
+}
 #content {
 }
 
@@ -342,4 +357,9 @@ footer {
     text-align: center;
     line-height: 24px;
     background-color: #fff;
+}
+
+.doc-title {
+  padding-top: 75px;
+  font-size: 28px;
 }

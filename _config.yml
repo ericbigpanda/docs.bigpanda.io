@@ -12,11 +12,9 @@ collections:
   guides:
     title: "BigPanda University"
   integrations:
-    title: "Integration Guides"
+    title: "Integrations"
   faqs:
     title: "FAQs"
-  newsletters:
-    title: "Monthly Newsletters"
 
 future: true
 
@@ -40,5 +38,3 @@ destination: 'public'
 ga_code: false
 production: false
 kiss_metrics: false
-gems:
-  - jekyll-sitemap

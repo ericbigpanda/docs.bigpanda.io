@@ -4,3 +4,4 @@ _pages
 public
 public_prod
 .DS_Store
+node_modules

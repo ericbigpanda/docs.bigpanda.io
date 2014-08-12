@@ -6,7 +6,10 @@ module Jekyll
     def replace_section_separator(content)
       separator = "<!-- section-separator -->"
       index = 0
-      return content if not content.include?(separator)
+      return content unless content.include?(separator)
+
+      content = "#{separator}\n#{content}" #as per bp-widget
+
       while content.include?(separator)
         index = index + 1
         content = content.sub(separator, "<div class=\"integration-separator\"><div class=\"integration-number\">#{index}</div></div>")
@@ -15,7 +18,9 @@ module Jekyll
     end
 
     def replace_include_in_integration_guide(content)
-      content
+        father_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>(?<=\<\!\-\-\sapp\-only\-start\s\-\-\>).*(?=\<\!\-\-\sapp\-only\-end\s\-\-\>)<\!\-\-\sapp\-only\-end\s\-\-\>)/m
+        aunt_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>|<\!\-\-\sapp\-only\-end\s\-\-\>)/m
+        content.gsub(father_of_all_regexes, "").gsub(aunt_of_all_regexes, "")
     end
 
     def replace_media_links(content)
@@ -23,11 +28,15 @@ module Jekyll
       site.config["production"] ? content : content.gsub(/src="\/media/, "src=\"#{site.config["baseurl"]}/media")
     end
 
-    def get_sorted_collections(a)
+    def self.get_sorted_collections(a, opt_site=nil)
       cols = []
-      site = @context.registers[:site]
-      site.config["collections"].keys.each{ |key| cols << CollectionEntry.create_from_collection(site.collections[key], site)}
+      site = opt_site.nil? ? @context.registers[:site] : opt_site
+      site.config["collections"].keys.each{ |key| cols << CollectionEntry.create_from_collection(site.collections[key], site, key)}
       cols 
+    end
+
+    def get_sorted_collections_filter(a)
+      Jekyll::BPHelpersFilters.get_sorted_collections(a, @context.registers[:site])
     end
   end
 
@@ -70,28 +79,29 @@ module Jekyll
   end
 
   class CollectionEntry
-    attr_reader   :docs, :size, :slug
+    attr_reader   :docs, :size, :slug, :name
 
     def filter_drafts(docs)
       @site.config["production"] ? docs.select{ |d| d.data["draft"] != true} : docs
     end
 
-    def initialize(docs, title, site)
-      @site, @slug = site, SlugEntry.new(title)
+    def initialize(docs, title, site, name)
+      @site, @slug, @name = site, SlugEntry.new(title), name
       docs_unsorted = filter_drafts(docs.map{|doc| DocEntry.new(doc)})
       @docs = docs_unsorted.sort{|x,y | y.slug.title<=>x.slug.title}.reverse
       @size = @docs.length
     end
 
-    def self.create_from_collection(col, site)
-      CollectionEntry.new(col.docs, col.metadata["title"], site)
+    def self.create_from_collection(col, site, name)
+      CollectionEntry.new(col.docs, col.metadata["title"], site, name)
     end
 
     def to_liquid
       {
         "docs"=> @docs,
         "size"=> @size,
-        "slug"=> @slug
+        "slug"=> @slug,
+        "name"=> @name
       }
     end
   end
