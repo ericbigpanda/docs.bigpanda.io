@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Ruby"
-draft: true
+draft: false
 ---
 
 #### Install the BigPanda Ruby module

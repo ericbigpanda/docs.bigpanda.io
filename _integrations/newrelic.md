@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "New Relic"
-draft: true
+draft: false
 
 ---
 #### Locate Alert Policies Settings

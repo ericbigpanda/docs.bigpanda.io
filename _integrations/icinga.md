@@ -1,8 +1,7 @@
 ---
 layout: integration 
 title: "Icinga"
-draft: true
-
+draft: false
 ---
 
 #### Install the BigPanda Agent

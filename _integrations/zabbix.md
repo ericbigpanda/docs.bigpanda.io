@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Zabbix"
-draft: true
+draft: false
 
 ---
 

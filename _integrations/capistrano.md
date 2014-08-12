@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Capistrano"
-draft: true
+draft: false
 ---
 
 #### Install the BigPanda Ruby module

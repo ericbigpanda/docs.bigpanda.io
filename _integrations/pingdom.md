@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Pingdom"
-draft: true
+draft: false
 
 ---
 

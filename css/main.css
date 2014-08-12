@@ -330,7 +330,7 @@ footer {
 }
 
 .post-divider {
-    margin: 60px 0 60px 0;
+    margin: 75px 0px 0px 0px;
 }
 
 .post-divider:not(:last-child) {
@@ -360,5 +360,6 @@ footer {
 }
 
 .doc-title {
+  padding-top: 75px;
   font-size: 28px;
 }

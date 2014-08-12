@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Amazon CloudWatch"
-draft: true
+draft: false
 ---
 
 #### Locate an Appropriate User

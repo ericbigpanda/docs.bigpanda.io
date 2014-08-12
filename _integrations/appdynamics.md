@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "AppDynamics"
-draft: true
+draft: false
 ---
 
 #### Login

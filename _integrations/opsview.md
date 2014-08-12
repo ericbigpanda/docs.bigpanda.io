@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "OpsView"
-draft: true
+draft: false
 
 ---
 

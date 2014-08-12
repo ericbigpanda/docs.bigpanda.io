@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "PagerDuty"
-draft: true
+draft: false
 
 ---
 

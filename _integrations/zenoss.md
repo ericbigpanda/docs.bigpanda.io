@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Zenoss"
-draft: true
+draft: false
 
 ---
 #### Install the BigPanda Agent

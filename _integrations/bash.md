@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Bash"
-draft: true
+draft: false
 ---
 
 #### Install the BigPanda Shell utility

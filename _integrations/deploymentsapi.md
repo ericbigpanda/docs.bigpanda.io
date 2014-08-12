@@ -1,7 +1,7 @@
 ---
 layout: integration 
-title: "REST API"
-draft: true
+title: "Deployments REST API"
+draft: false
 ---
 
 #### Create deployment start event

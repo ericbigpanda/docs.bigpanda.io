@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Sensu"
-draft: true
+draft: false
 
 ---
 

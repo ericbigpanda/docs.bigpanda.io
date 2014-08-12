@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Nagios"
-draft: true
+draft: false
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "PRTG"
-draft: true
+draft: false
 
 ---
 
