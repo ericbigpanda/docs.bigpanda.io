@@ -3,24 +3,31 @@ require 'nokogiri'
 
 module Jekyll
   module BPHelpersFilters
+    def to_id_filter(str)
+      BPHelpersFilters.to_id(str)
+    end
+    def self.to_id(str)
+      str.downcase().gsub(/[^a-zA-Z]/, "-")
+    end
     def replace_section_separator(content)
       separator = "<!-- section-separator -->"
       index = 0
       return content unless content.include?(separator)
 
-      content = "#{separator}\n#{content}" #as per bp-widget
+      content = "#{separator}\n\n#{content}" #as per bp-widget
 
       while content.include?(separator)
         index = index + 1
-        content = content.sub(separator, "<div class=\"integration-separator\"><div class=\"integration-number\">#{index}</div></div>")
+        content = content.sub(separator, "<div class=\"integration-separator\"><div class=\"integration-number\">#{index}</div></div>\n")
       end
       content
     end
 
     def replace_include_in_integration_guide(content)
+        grandpa_of_all_regexes = /(<\!\-\-\seditor\-only\-start\s\-\-\>(?<=\<\!\-\-\seditor\-only\-start\s\-\-\>).*(?=\<\!\-\-\seditor\-only\-end\s\-\-\>)<\!\-\-\seditor\-only\-end\s\-\-\>)/m
         father_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>(?<=\<\!\-\-\sapp\-only\-start\s\-\-\>).*(?=\<\!\-\-\sapp\-only\-end\s\-\-\>)<\!\-\-\sapp\-only\-end\s\-\-\>)/m
         aunt_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>|<\!\-\-\sapp\-only\-end\s\-\-\>)/m
-        content.gsub(father_of_all_regexes, "").gsub(aunt_of_all_regexes, "")
+        content.gsub(grandpa_of_all_regexes, "").gsub(father_of_all_regexes, "").gsub(aunt_of_all_regexes, "")
     end
 
     def replace_media_links(content)
@@ -44,7 +51,7 @@ module Jekyll
     attr_reader   :slug, :content, :headers, :data
 
     def initialize(doc)
-      @slug, @content, @data =  SlugEntry.new(doc.data["title"]), doc.content, doc.data
+      @slug, @content, @data = SlugEntry.new(doc.data["title"]), doc.content, doc.data
       if doc.content.include?("###") #isMarkdown
         @headers = doc.content.split("\n").select{|i| i[/^\#\#\#\s/]}.map{ |n| n.sub("### ", "")}.map{ |m| SlugEntry.new(m)}
       else
@@ -67,7 +74,7 @@ module Jekyll
 
     def initialize(name)
       @title = name
-      @href = @title.downcase().gsub(/[^a-zA-Z]/, "-")
+      @href = Jekyll::BPHelpersFilters::to_id(@title) 
     end
 
     def to_liquid

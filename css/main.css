@@ -329,7 +329,7 @@ footer {
     font-weight: bolder;
 }
 
-.post-divider {
+.category-divider:not(:first-child) {
     margin: 75px 0px 0px 0px;
 }
 
@@ -362,4 +362,24 @@ footer {
 .doc-title {
   padding-top: 75px;
   font-size: 28px;
+}
+
+.guide-content > *:not(.integration-separator) {
+    margin-left: 40px;
+}
+.guide-content {
+    padding-top: 15px;
+}
+.integration-separator:first-child {
+    margin-top: 15px;
+}
+.integration-separator:not(:first-child) {
+    margin-top: 5px;
+}
+.integration-separator + h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.guide-content p {
+    color: #505050;
 }

@@ -5,9 +5,6 @@ baseurl: '/docs'
 # Dates are not included in permalinks
 permalink: none
 
-# Syntax highlighting
-highlighter: pygments
-
 collections:
   guides:
     title: "BigPanda University"
@@ -21,19 +18,11 @@ future: true
 # Exclude non-site files
 exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json", "public_prod", "public"]
 
-# Use the redcarpet Markdown renderer
-markdown: redcarpet
-redcarpet:
-    extensions: [
-        'no_intra_emphasis',
-        'fenced_code_blocks',
-        'autolink',
-        'strikethrough',
-        'superscript',
-        'with_toc_data',
-        'tables',
-        'hardwrap'
-    ]
+markdown: KramdownPygments
+highlighter: pygments
+kramdown:
+  input: GFM
+
 destination: 'public'
 ga_code: false
 production: false
