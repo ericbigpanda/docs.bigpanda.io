@@ -1,4 +1,4 @@
-require 'rubygems'
+require 'nokogiri'
 require 'json'
 
 module Jekyll
@@ -67,6 +67,7 @@ module Jekyll
 
       # Keep the search.json file from being cleaned by Jekyll
       site.static_files << Jekyll::SearchIndexFile.new(site, site.dest, "/", filename)
+      puts 'Search indexer done...'
     end
 
   private
@@ -96,7 +97,6 @@ module Jekyll
     end
   end
 end
-require 'nokogiri'
 
 module Jekyll
 

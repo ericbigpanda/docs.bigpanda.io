@@ -23,19 +23,12 @@ future: true
 # Exclude non-site files
 exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json", "public_prod", "public"]
 
-# Use the redcarpet Markdown renderer
-markdown: redcarpet
-redcarpet:
-    extensions: [
-        'no_intra_emphasis',
-        'fenced_code_blocks',
-        'autolink',
-        'strikethrough',
-        'superscript',
-        'with_toc_data',
-        'tables',
-        'hardwrap'
-    ]
+
+markdown: KramdownPygments
+highlighter: pygments
+kramdown:
+  input: GFM
+
 destination: 'public_prod'
 production: true
 ga_code: 'UA-40027187-7'
