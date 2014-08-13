@@ -47,7 +47,7 @@ module Jekyll
           :date => entry.date,
           :categories => entry.categories,
           :body => entry.body,
-          :slug => entry.doc ? "/#{item.collection.label}/##{SlugEntry.new(entry.title).href}" : entry.url
+          :slug => entry.doc ? "/#{item.collection.label}.index.html##{SlugEntry.new(entry.title).href}" : entry.url
         }
         
         puts 'Indexed ' << "#{entry.title} (#{entry.url})"

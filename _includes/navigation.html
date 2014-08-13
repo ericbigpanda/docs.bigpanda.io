@@ -19,7 +19,7 @@
             {% if collection.size == 0 %}
                {% continue %}
             {% endif %}
-            <li class="nav-header col-item"><a href="{{ prefix }}{{ collection.name }}">{{ collection.slug.title}}</a></li>
+            <li class="nav-header col-item"><a href="{{ prefix }}{{ collection.name }}/index.html">{{ collection.slug.title}}</a></li>
             {% if collection.slug.href == page.collection.slug.href %}
             {% for doc in collection.docs %}
             <li class="doc-item"><a href="#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
