@@ -1,6 +1,7 @@
 ---
 layout: integration 
 title: "Alerts REST API"
+type: REST
 draft: false
 ---
 
@@ -72,3 +73,35 @@ The alert should appear in the [BigPanda dashboard](https://a.bigpanda.io) almos
     -H "Authorization: Bearer $TOKEN" \
     https://api.bigpanda.io/data/v2/alerts \
     -d '{ "app_key": "$STREAM_ID", "status": "ok", "host": "production-database-1", "check": "CPU overloaded" }'
+    
+<!-- editor-only-start -->
+
+#### Sending multiple alerts
+Occasionally you might want to send more than one alert in a single API call. Doing so requires only a minor tweak to the payload's JSON:
+
+    {
+      "app_key": "$STREAM_ID",
+      "alerts": [
+       {
+        "status": "critical",
+        "host": "production-database-1",
+        "timestamp": 1402302570,
+        "check": "CPU overloaded",
+        "description": "CPU is above upper limit (70%)",
+        "cluster": "production-databases",
+        "my_unique_attribute": "my_unique_value"
+       }
+      ]
+    }
+    
+As can be seen in the example above, the main payload now contains only two properties:
+
+* `alerts`: an array property that contains the list of alert you want to send to BigPanda. Each item in the list should have the same structure as illustrated above
+* `app_key`: instead of specifying the `app_key` in each and every alert in the list, you should simply put it in this property.
+
+#### How my alerts are going to look inside the BigPanda OpsBox?
+
+By default, BigPanda will use the `host`/`service`/`application` property to construct the title of incidents, and the `check` property to construct their subtitle.
+
+<!-- editor-only-end -->
+
