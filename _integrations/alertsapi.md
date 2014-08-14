@@ -1,6 +1,7 @@
 ---
 layout: integration 
 title: "Alerts REST API"
+type: API
 draft: false
 ---
 
@@ -137,7 +138,9 @@ Will be merged into a single alert with `status` _warning_, and description _CPU
 
 #### Grouping alerts into Incidents (a.k.a Consolidation)
 
-Noise supression does not stop at the event level. BigPanda can take different alerts and group them togetherinto high-level incidents. We call this process **Consolidation**. The most basic consolidation rule is 
+Noise supression does not stop at the event level. BigPanda can take different alerts and group them together into high-level incidents. We call this process **Consolidation**. The most basic consolidation rule is using the **primary** property. For example, two alerts on the same `host` with different `check`s will be consolidated to a single incident.
+
+Grouping alerts by `host` (or `application` or `service`) is pretty awesome, but sometimes it's not enough. What happens if you have the same problem on different hosts of the same logical cluster (for example, high CPU on several servers of your MySQL cluster)? You'd probably want to have only one incident for the whole cluster. The `cluster` property can be used for this purpose execatly: different alerts with the same `cluster` will be consolidated into a single incident in BigPanda.
 
 #### How my alerts are going to look inside the BigPanda OpsBox?
 

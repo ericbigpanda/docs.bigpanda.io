@@ -2,7 +2,7 @@
 layout: integration 
 title: "Sensu"
 draft: false
-type: Agent
+type: Server Monitoring
 
 ---
 

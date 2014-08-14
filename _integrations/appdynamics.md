@@ -2,7 +2,7 @@
 layout: integration 
 title: "AppDynamics"
 draft: false
-type: Email
+type: Application Monitoring
 ---
 
 #### Login

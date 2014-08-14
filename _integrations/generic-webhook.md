@@ -2,7 +2,7 @@
 layout: integration 
 title: "Generic WebHook"
 draft: true
-type: Webhook
+type: Generic
 ---
 #### $NAME Custom WebHook Integration
 

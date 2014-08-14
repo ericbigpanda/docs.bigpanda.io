@@ -2,7 +2,7 @@
 layout: integration 
 title: "Zabbix"
 draft: false
-type: Agent
+type: Server Monitoring
 
 ---
 
