@@ -18,6 +18,7 @@ In order to send events to BigPanda we need to define a handler for Sensu ([more
   `sudo chown sensu:sensu /etc/sensu/handlers/bigpanda.rb && sudo chmod 700 /etc/sensu/handlers/bigpanda.rb` 
 
 <!-- section-separator -->
+
 #### Add BigPanda as a Handler  
 
 * Still on the Sensu server, go to the checks configuration directory (default: `/etc/sensu/conf.d`):
@@ -47,6 +48,7 @@ In order to send events to BigPanda we need to define a handler for Sensu ([more
   `sudo /etc/init.d/sensu-server restart`
 
 <!-- section-separator -->
+
 #### Success
 Now click on **ACTIVATE INTEGRATION** below to complete the installation.
 
