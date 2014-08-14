@@ -17,7 +17,6 @@ Using BigPanda's Alerts API is easy. Start by creating an app key with the form 
 <!-- app-only-end -->
 
 <!-- section-separator -->
-
 #### Make a REST Call From Your Monitoring System
 
 The integrated system should call the Alerts API endpoint:
@@ -58,7 +57,6 @@ Below is an example of a full payload:
     }
 
 <!-- section-separator -->
-
 #### Create a Test Alert 
 
  Send a quick test alert to validate that you've got everything right. In shell, execute the following to create an alert:
@@ -120,7 +118,7 @@ As single alert in BigPanda can contain one ore more events. Events are grouped 
        {
         "status": "critical",
         "host": "production-database-1",
-        "timestamp": 1402302570,
+        "timestamp": 1402302570, # 09 Jun 2014 08:29:30 GMT
         "check": "CPU overloaded",
         "description": "CPU is above upper limit (70%)",
        }
@@ -130,7 +128,7 @@ As single alert in BigPanda can contain one ore more events. Events are grouped 
        {
         "status": "warning",
         "host": "production-database-1",
-        "timestamp": 1402303570,
+        "timestamp": 1402303570, # 09 Jun 2014 08:46:10 GMT
         "check": "CPU overloaded",
         "description": "CPU is above warning limit (40%)",
        }
@@ -139,7 +137,7 @@ Will be merged into a single alert with `status` _warning_, and description _CPU
 
 #### Grouping alerts into Incidents (a.k.a Consolidation)
 
-
+Noise supression does not stop at the event level. BigPanda can take different alerts and group them togetherinto high-level incidents. We call this process **Consolidation**. The most basic consolidation rule is 
 
 #### How my alerts are going to look inside the BigPanda OpsBox?
 
