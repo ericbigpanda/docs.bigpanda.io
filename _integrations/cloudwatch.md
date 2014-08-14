@@ -10,13 +10,16 @@ In [IAM Management Console](https://console.aws.amazon.com/iam/home?#users), sel
 *We need your credentials in order to configure BigPanda as a recipient of your CloudWatch alarms.*
 
 [Click here](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html) for further information about IAM users permissions.
+
 <!-- section-separator -->
+
 #### Generate Access Key for BigPanda
 * In the user options in the lower pane, navigate to `Security Credentials > Manage Access Keys`.
 * Click on `Create Access Key`.
 * Tap on `Show User Security Credentials` in order to reveal the newly created access key details.
 
 <!-- section-separator -->
+
 #### Connect CloudWatch to BigPanda
 <!-- app-only-start -->
 * Please copy the credentials from step 2 and paste them below.  
@@ -33,5 +36,6 @@ In the BigPanda Application, you'll be able retreive the regions you'd like to i
 <!-- docs-only-end -->
 
 <!-- section-separator -->
+
 #### Success
 Next time you will have CloudWatch alerts, you will be able to see them in OpsBox.

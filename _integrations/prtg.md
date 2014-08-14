@@ -12,6 +12,7 @@ Login to the PRTG Dashboard as an admin user.
 
 
 <!-- section-separator -->
+
 #### Create a PRTG Notification  
 
 Go to *Setup > Account Settings > Notifications* and click on **Add new notification**.
@@ -31,6 +32,7 @@ The final outcome should look like this:
 Click on save and continue with the tutorial.
 
 <!-- section-separator -->
+
 #### Create PRTG Triggers
 Go to *Devices* and click on **Notifications** (for Group **Root**)
 
@@ -50,6 +52,7 @@ The final outcome should look like this:
 ![Create Policy window](/media/prtg2.jpg)
 
 <!-- section-separator -->
+
 #### Success
 Now click on **Done & Install** below to complete the installation.
 

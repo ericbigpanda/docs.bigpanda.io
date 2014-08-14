@@ -17,7 +17,9 @@ Go to [Sharing > Pingdom API > Register An Application](https://my.pingdom.com/a
 * **Platform:** `Web`
 
 Click on `Save Changes`, copy the provided **Application Key**.
+
 <!-- section-separator -->
+
 #### Create Pingdom Contact
 Navigate to [Alerting > Contacts > Add New Contact](https://my.pingdom.com/contacts/new) and provide the exact information to the form:
 
@@ -25,7 +27,9 @@ Navigate to [Alerting > Contacts > Add New Contact](https://my.pingdom.com/conta
 * **Email:** `$EMAIL`
 
 Click on `Create New Contact`
+
 <!-- section-separator -->
+
 <!-- app-only-start -->
 #### Enter Pingdom Credentials
 Please enter the credentials of the owner user that is logged in.  
@@ -39,5 +43,6 @@ Enter the BigPanda Application to enter your Pingdom credentials, needed to fini
 <!-- docs-only-end -->
 
 <!-- section-separator -->
+
 #### Success
 Next time you have Pingdom alerts, you will able to see them in OpsBox.
