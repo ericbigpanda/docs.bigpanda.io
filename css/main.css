@@ -383,3 +383,13 @@ footer {
 .guide-content p {
     color: #505050;
 }
+
+.mobile-headers {
+    text-align:center;
+    padding: 10px 15px;
+}
+
+.mobile-header:not(:last-child):after{
+    content:"|";
+    margin: 0px 10px;
+}
