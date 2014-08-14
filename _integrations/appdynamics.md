@@ -2,6 +2,7 @@
 layout: integration 
 title: "AppDynamics"
 draft: false
+type: Email
 ---
 
 #### Login

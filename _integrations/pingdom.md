@@ -2,6 +2,7 @@
 layout: integration 
 title: "Pingdom"
 draft: false
+type: Email
 
 ---
 

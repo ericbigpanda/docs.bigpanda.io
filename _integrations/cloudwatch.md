@@ -2,6 +2,7 @@
 layout: integration 
 title: "Amazon CloudWatch"
 draft: false
+type: Webhook
 ---
 
 #### Locate an Appropriate User

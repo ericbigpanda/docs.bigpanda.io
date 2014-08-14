@@ -2,6 +2,7 @@
 layout: integration 
 title: "Generic"
 draft: true
+type: Generic
 
 ---
 

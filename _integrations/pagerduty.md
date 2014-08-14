@@ -2,6 +2,7 @@
 layout: integration 
 title: "PagerDuty"
 draft: true
+type: Generic
 
 ---
 

@@ -2,6 +2,7 @@
 layout: integration 
 title: "OpsView"
 draft: false
+type: Agent
 
 ---
 

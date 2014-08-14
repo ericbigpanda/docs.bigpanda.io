@@ -2,7 +2,7 @@
 layout: integration 
 title: "Generic Agent"
 draft: true
-
+type: Agent 
 ---
 
 #### $NAME Custom Agent Integration

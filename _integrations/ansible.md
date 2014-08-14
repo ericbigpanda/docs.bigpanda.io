@@ -1,6 +1,7 @@
 ---
 layout: integration 
 title: "Ansible"
+type: Deployment
 draft: false
 ---
 

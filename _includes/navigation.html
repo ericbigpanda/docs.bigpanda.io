@@ -13,27 +13,41 @@
 </section>
 <div id="site-nav-wrapper">
     <ul class="nav nav-list site-nav" id="site-nav">
-        {% assign prefix = site.baseurl | append: '/' %}
-        {% assign sorted_collections = '' | get_sorted_collections_filter %}
-        {% for collection in sorted_collections %}
-            {% if collection.size == 0 %}
-               {% continue %}
-            {% endif %}
-            <li class="nav-header col-item"><a href="{{ prefix }}{{ collection.name }}/index.html">{{ collection.slug.title}}</a></li>
-            {% if collection.slug.href == page.collection.slug.href %}
-            {% for doc in collection.docs %}
-            <li class="doc-item"><a href="#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
-            {% if doc.headers %}
-            <li class="sub-item">
-                <ul class="nav subnav">
-                {% for header in doc.headers %}
-                <li class="doc-header-item"><a href="#{{header.href}}">{{header.title}}</a></li>
+    {% assign prefix = site.baseurl | append: '/' %}
+    {% assign sorted_collections = '' | get_sorted_collections_filter %}
+    {% for collection in sorted_collections %}
+        {% if collection.size == 0 %}
+            {% continue %}
+        {% endif %}
+        <li class="nav-header col-item"><a href="{{ prefix }}{{ collection.name }}/index.html">{{ collection.slug.title}}</a></li>
+        {% if collection.slug.href == page.collection.slug.href %}
+            {% if collection.slug.href == 'integrations' %}
+                {% assign groups = collection.docs | group_docs_by_type %}
+                {% for group in groups %}
+                    <li class="doc-item"><a href="{{ prefix }}{{ collection.name }}/index.html#{{ group['name'] | downcase }}">{{ group['name'] }}</a></li>
+                    <li class="sub-item">
+                        <ul class="nav subnav">
+                        {% for doc in group['items'] %}
+                            <li class="doc-header-item"><a href="#{{doc.slug.href}}">{{doc.slug.title}}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </li>
                 {% endfor %}
-                </ul>
-            </li>
-            {% endif%}
-            {% endfor %}
+            {% else %}
+                {% for doc in collection.docs %}
+                    <li class="doc-item"><a href="#{{ doc.slug.href}}">{{ doc.slug.title}}</a></li>
+                    {% if doc.headers | size > 0 %}
+                        <li class="sub-item">
+                            <ul class="nav subnav">
+                                {% for header in doc.headers %}
+                                    <li class="doc-header-item"><a href="#{{header.href}}">{{header.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endif %}
+                {% endfor %}
             {% endif %}
-        {% endfor %}
+        {% endif %}
+    {% endfor %}
     </ul>
 </div>
