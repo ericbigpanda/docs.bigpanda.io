@@ -2,7 +2,7 @@
 layout: integration 
 title: "OpsView"
 draft: false
-type: Agent
+type: Server Monitoring
 
 ---
 

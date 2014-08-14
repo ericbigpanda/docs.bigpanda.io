@@ -2,7 +2,7 @@
 layout: integration 
 title: "PRTG"
 draft: false
-type: Webhook
+type: Network Monitoring
 
 ---
 

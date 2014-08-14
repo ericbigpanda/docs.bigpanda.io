@@ -2,7 +2,7 @@
 layout: integration 
 title: "New Relic"
 draft: false
-type: Webhook
+type: Application Monitoring
 
 ---
 #### Locate Alert Policies Settings

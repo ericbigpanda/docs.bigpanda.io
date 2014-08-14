@@ -8,7 +8,7 @@ layout: default
 {% if page.collection.slug.href == 'integrations' %}
     {% assign grouped_docs = docs | group_docs_by_type %}
     {% for group in grouped_docs %}
-        <h3 class="integration-type-title" id="{{ group["name"] | downcase }}">{{ group["name"] }}</h3>
+        <h3 class="integration-type-title" id="{{ group["name"] | to_id_filter }}">{{ group["name"] }}</h3>
         {% for doc in group["items"] %}
             <h3 class="doc-title" id="{{ doc.slug.href }}" >{{ doc.slug.title }}</h3>
             <div class="post-content guide-content">

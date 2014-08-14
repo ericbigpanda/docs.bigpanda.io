@@ -2,7 +2,7 @@
 layout: integration 
 title: "Nagios"
 draft: false
-type: Agent
+type: Server Monitoring
 
 ---
 

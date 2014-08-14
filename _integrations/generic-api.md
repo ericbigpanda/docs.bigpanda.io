@@ -2,7 +2,7 @@
 layout: integration 
 title: "Generic Api"
 draft: true
-type: API
+type: Generic
 ---
 
 #### $NAME Custom API Integration

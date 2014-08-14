@@ -2,7 +2,7 @@
 layout: integration 
 title: "Generic Email"
 draft: true
-type: Email
+type: Generic
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: integration 
 title: "Alerts REST API"
+type: API
 draft: false
 ---
 
@@ -106,6 +107,8 @@ Every alert has a clear lifecycle - it starts at some point, ends at another, an
 
 Intenarlly BigPanda maps certain properties of each alert to what we call **primary** and **secondary** properties. For example, in the alert payload above, the `host` property is considered **primary**, and the `check` property is considered **secondary**. These two properties are used across the board for various purposes, some of which will be discussed next.
 
+_Note_: the **secondary** property is optional. In case it's missing, BigPanda will use only the **primary** property for its needs. 
+
 ##### Event deduping
 
 In case we recieve two events with the same `app_key`,`timestamp`, **primary** and **secondary** properties, the last of these events will be dropped. 
@@ -133,15 +136,19 @@ As single alert in BigPanda can contain one ore more events. Events are grouped 
         "description": "CPU is above warning limit (40%)",
        }
 
-Will be merged into a single alert with `status` _warning_, and description _CPU is above warning limit (40%)_.
+Will be merged into a single alert with `status` _warning_, and description _CPU is above warning limit (40%)_. 
+
+_Tip:_ the best way to understand how events are merged into alerts, is to open the Lifecycle 
 
 #### Grouping alerts into Incidents (a.k.a Consolidation)
 
-Noise supression does not stop at the event level. BigPanda can take different alerts and group them togetherinto high-level incidents. We call this process **Consolidation**. The most basic consolidation rule is 
+Noise supression does not stop at the event level. BigPanda can take different alerts and group them together into high-level incidents. We call this process **Consolidation**. The most basic consolidation rule is using the **primary** property. For example, two alerts on the same `host` with different `check`s will be consolidated to a single incident.
 
-#### How my alerts are going to look inside the BigPanda OpsBox?
+Grouping alerts by `host` (or `application` or `service`) is pretty awesome, but sometimes it's not enough. What happens if you have the same problem on different hosts of the same logical cluster (for example, high CPU on several servers of your MySQL cluster)? You'd probably want to have only one incident for the whole cluster. The `cluster` property can be used for this purpose execatly: different alerts with the same `cluster` will be consolidated into a single incident in BigPanda.
 
-By default, BigPanda will use the `host`/`service`/`application` property to construct the title of incidents, and the `check` property to construct their subtitle.
+#### UI Considerations
+
+BigPanda will use the **primary** property to construct the title of incidents, and the **secondary** property to construct their subtitle.
 
 <!-- editor-only-end -->
 

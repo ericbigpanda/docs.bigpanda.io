@@ -2,7 +2,7 @@
 layout: integration 
 title: "StatusCake"
 draft: true 
-type: Webhook
+type: Website Monitoring
 
 ---
 

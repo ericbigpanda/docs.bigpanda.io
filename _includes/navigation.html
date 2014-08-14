@@ -24,7 +24,7 @@
             {% if collection.slug.href == 'integrations' %}
                 {% assign groups = collection.docs | group_docs_by_type %}
                 {% for group in groups %}
-                    <li class="doc-item"><a href="{{ prefix }}{{ collection.name }}/index.html#{{ group['name'] | downcase }}">{{ group['name'] }}</a></li>
+                    <li class="doc-item"><a href="#{{ group['name'] | to_id_filter }}">{{ group['name'] }}</a></li>
                     <li class="sub-item">
                         <ul class="nav subnav">
                         {% for doc in group['items'] %}
