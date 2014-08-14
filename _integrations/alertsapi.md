@@ -18,6 +18,7 @@ Using BigPanda's Alerts API is easy. Start by creating an app key with the form 
 <!-- app-only-end -->
 
 <!-- section-separator -->
+
 #### Make a REST Call From Your Monitoring System
 
 The integrated system should call the Alerts API endpoint:
@@ -58,6 +59,7 @@ Below is an example of a full payload:
     }
 
 <!-- section-separator -->
+
 #### Create a Test Alert 
 
  Send a quick test alert to validate that you've got everything right. In shell, execute the following to create an alert:

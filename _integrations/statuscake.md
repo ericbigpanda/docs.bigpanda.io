@@ -15,7 +15,9 @@ Go to [Contact Groups > Create New Contact Group](https://www.statuscake.com/App
 * **Ping URL:** `https://api.bigpanda.io/data/integrations/statuscake?access_token=$TOKEN`
 
 Click on *Save Changes*.
+
 <!-- section-separator -->
+
 #### Assign BigPanda as a Contact for All StatusCake Tests
 Navigate to [Your Tests](https://www.statuscake.com/App/YourStatus.php). For each test:
 
@@ -24,6 +26,7 @@ Navigate to [Your Tests](https://www.statuscake.com/App/YourStatus.php). For eac
 * Click on *Instant Submit*
 
 <!-- section-separator -->
+
 #### Provide Your StatusCake Account Information
 
 <!-- app-only-start -->

@@ -12,6 +12,7 @@ Login to the AppDynamics Controller.
 For every application you have configured in AppDynamics, please follow steps 2-3. 
 
 <!-- section-separator -->
+
 #### Create an AppDynamics Policy    
 
 Go to `Application > Alert & Respond > Policies` and click on `Create Policy`.
@@ -25,6 +26,7 @@ The final outcome should look like this:
 ![Create Policy window](/media/appdynamics1.png)
 
 <!-- section-separator -->
+
 #### Create an AppDynamics Action
 Without leaving the Create Policy window.  
 Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).  
@@ -42,6 +44,7 @@ Otherwise:
 After selecting or creating a contact, click on `Save` in the next `Configure Action` window and then in the `Create Policy` window.
 
 <!-- section-separator -->
+
 #### Success
 *Don't forget to follow steps 2-3 for every application in AppDynamics*
 
