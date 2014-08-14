@@ -2,6 +2,7 @@
 layout: integration 
 title: "Icinga"
 draft: false
+type: Agent
 ---
 
 #### Install the BigPanda Agent

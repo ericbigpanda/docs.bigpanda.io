@@ -2,6 +2,7 @@
 layout: integration 
 title: "Bash"
 draft: false
+type: Deployment
 ---
 
 #### Install the BigPanda Shell utility

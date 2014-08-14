@@ -2,6 +2,7 @@
 layout: integration 
 title: "PRTG"
 draft: false
+type: Webhook
 
 ---
 

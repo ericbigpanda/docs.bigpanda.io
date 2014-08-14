@@ -3,6 +3,11 @@ require 'nokogiri'
 
 module Jekyll
   module BPHelpersFilters
+    def group_docs_by_type(docs)
+      grouped = docs.group_by{|doc| doc.data['type']}
+      grouped.keys.map{|key| {"name"=>key, "items"=>grouped[key]}}
+    end
+    
     def to_id_filter(str)
       BPHelpersFilters.to_id(str)
     end

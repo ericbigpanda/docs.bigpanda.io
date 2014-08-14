@@ -2,6 +2,7 @@
 layout: integration 
 title: "New Relic"
 draft: false
+type: Webhook
 
 ---
 #### Locate Alert Policies Settings
