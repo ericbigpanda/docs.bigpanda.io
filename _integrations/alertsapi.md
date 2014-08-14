@@ -1,7 +1,6 @@
 ---
 layout: integration 
 title: "Alerts REST API"
-type: REST
 draft: false
 ---
 
@@ -98,6 +97,47 @@ As can be seen in the example above, the main payload now contains only two prop
 
 * `alerts`: an array property that contains the list of alert you want to send to BigPanda. Each item in the list should have the same structure as illustrated above
 * `app_key`: instead of specifying the `app_key` in each and every alert in the list, you should simply put it in this property.
+
+#### Alert Lifecycle
+
+Every alert has a clear lifecycle - it starts at some point, ends at another, and occassionaly flaps between statuses. Creating an incident in BigPanda for every status change would have caused the incident list (OpsBox page) to be extremely noisy and probably even less useful than your email inbox. To avoid that, BigPanda utilizes different rules for event deduping, merging and grouping. The purpose of the next few sections would be giving you a glimpse into the internals of BigPanda, so you, as a REST API user, could better understand how BigPanda is going to process your events.
+
+##### Primary and Secondary properties
+
+Intenarlly BigPanda maps certain properties of each alert to what we call **primary** and **secondary** properties. For example, in the alert payload above, the `host` property is considered **primary**, and the `check` property is considered **secondary**. These two properties are used across the board for various purposes, some of which will be discussed next.
+
+##### Event deduping
+
+In case we recieve two events with the same `app_key`,`timestamp`, **primary** and **secondary** properties, the last of these events will be dropped. 
+
+##### Merging events into alerts
+
+As single alert in BigPanda can contain one ore more events. Events are grouped into the same alert if they have the same `app_key`, **primary** and **secondary** properties. The status and description of the alert will be the status and description of the newest event (determined by the `timestamp` property). So in fact the following events:
+
+       # First event
+       {
+        "status": "critical",
+        "host": "production-database-1",
+        "timestamp": 1402302570,
+        "check": "CPU overloaded",
+        "description": "CPU is above upper limit (70%)",
+       }
+
+
+       # Second event
+       {
+        "status": "warning",
+        "host": "production-database-1",
+        "timestamp": 1402303570,
+        "check": "CPU overloaded",
+        "description": "CPU is above warning limit (40%)",
+       }
+
+Will be merged into a single alert with `status` _warning_, and description _CPU is above warning limit (40%)_.
+
+#### Grouping alerts into Incidents (a.k.a Consolidation)
+
+
 
 #### How my alerts are going to look inside the BigPanda OpsBox?
 
