@@ -2,7 +2,7 @@
 layout: integration 
 title: "Amazon CloudWatch"
 draft: false
-type: Server Monitoring
+type: System Monitoring
 ---
 
 #### Locate an Appropriate User
