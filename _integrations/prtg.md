@@ -2,7 +2,7 @@
 layout: integration 
 title: "PRTG"
 draft: false
-type: Network Monitoring
+type: System Monitoring
 
 ---
 

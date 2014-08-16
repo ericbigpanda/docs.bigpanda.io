@@ -146,9 +146,18 @@ Noise supression does not stop at the event level. BigPanda can take different a
 
 Grouping alerts by `host` (or `application` or `service`) is pretty awesome, but sometimes it's not enough. What happens if you have the same problem on different hosts of the same logical cluster (for example, high CPU on several servers of your MySQL cluster)? You'd probably want to have only one incident for the whole cluster. The `cluster` property can be used for this purpose execatly: different alerts with the same `cluster` will be consolidated into a single incident in BigPanda.
 
+#### Alert Resolution and Expiration
+
+Alerts that were not resolved, i.e. did not recieve an event with status `ok`, will remain open in BigPanda and will cause the corresponding incident to remain open.Open incidents will continue to be displayed in BigPanda's OpsBox, so it's highly recommended that resolving events are sent to BigPanda this way or another. By default, open alerts will be automatically closed (a.k.a expired) after a months with no activity (i.e. no new events). 
+
+_Note:_ incidents will remain open as long as at least one of the alerts associated with it is open. 
+
 #### UI Considerations
 
 BigPanda will use the **primary** property to construct the title of incidents, and the **secondary** property to construct their subtitle.
+
+
+
 
 <!-- editor-only-end -->
 

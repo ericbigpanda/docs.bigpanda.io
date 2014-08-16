@@ -2,7 +2,7 @@
 layout: integration 
 title: "Zenoss"
 draft: false
-type: Server Monitoring
+type: System Monitoring
 
 ---
 #### Install the BigPanda Agent

@@ -2,7 +2,7 @@
 layout: integration 
 title: "Python"
 draft: false
-type: Deployment
+type: API
 ---
 
 #### Install the BigPanda Python module

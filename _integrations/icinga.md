@@ -2,7 +2,7 @@
 layout: integration 
 title: "Icinga"
 draft: false
-type: Server Monitoring
+type: System Monitoring
 ---
 
 #### Install the BigPanda Agent
