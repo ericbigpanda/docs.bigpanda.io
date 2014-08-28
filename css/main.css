@@ -924,9 +924,28 @@ footer.footer nav.footermenu ul li a:hover {
     font-family: 'Open Sans';
 }
 
-code {
-    word-break: break-all;
+pre code , code {
+    font-size: 12px;
+    word-wrap: normal;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.guide-content table tr td:first-child {
+    width: 100px;
+}
+.guide-content tr td {
+    padding-bottom: 10px;
+}
+.guide-content table td {
+    padding: 4px 10px 4px 0;
+    vertical-align: top;
+}
+.guide-content table
+{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
 
 #content .page-header {
     margin: 0 0 50px 0;
