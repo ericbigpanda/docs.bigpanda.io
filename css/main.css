@@ -929,14 +929,21 @@ code {
 }
 
 #content .page-header {
-    margin: 0 0 0 0;
+    margin: 0 0 50px 0;
+    border-bottom:none;
 }
 
 #content .page-header h2 {
+    font-size: 32px;
+}
+#content h2 {
     font-weight: bold;
     margin: 0;
 }
 
-#content img.responsive {
+#content .not-responsive img {
+    width: auto;
+}
+#content img {
     width: 100%;
 }

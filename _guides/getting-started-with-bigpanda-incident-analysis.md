@@ -15,6 +15,7 @@ Click on any incident in the feed to drill down into it. In the right panel, you
 
 Clicking on any alert in the right panel will give you even more information about the alert. Full time and duration information as well as any of the tags provided by the source monitoring tool are all at your fingertips.
 ![IncidentsSource](/media/IncidentAnalysis_Source.png)
+{: .not-responsive}
 
 #### Visualize the Incident Lifecycle
 Next, click on the <strong>lifecycle</strong> button at the bottom of the right pane to visualize the timeline of an incident. Each dot on the timeline represents a status change in one of the incident's alerts. With the BigPanda lifecycle timeline, you can quickly understand how an incident has unfolded. This is light-years faster than sifting through a few dozen alert messages in your email inbox and trying to piece the fragments together manually.
