@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% assign navLinks = "Product,http://www.bigpanda.io|Integrations,http://bigpanda.io/integrations|Docs|Blog,http://blog.bigpanda.io|About Us,http://bigpanda.io/about-us" | getNavLinksArray %}{% assign gitTag = '' | git_tag %}<!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="utf-8">
@@ -7,12 +7,13 @@
 <title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
 <meta name="description" content="{{ page.title }}">
 <meta property="og:image" content="//dq1o3g1glajna.cloudfront.net/website-image.png" />
-<link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico?v={{ gitTag }}" type="image/x-icon">
+<link rel="icon" href="{{ site.baseurl }}/img/favicon.ico?v={{ gitTag }}" type="image/x-icon">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
+<link href='{{site.baseurl}}/css/bp-font.css?v={{ gitTag }}' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css?v={{ gitTag }}">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?v={{ gitTag }}">
 <meta property="og:url" content="http://docs.bigpanda.io/" />
 <meta property="og:title" content="BigPanda Documentation" />
 <meta property="og:type" content="article" />
@@ -25,13 +26,13 @@
 <h1 class="docs-title">
     docs
 </h1>
-<div class="container-fluid main">
+<div class="container main">
         <div id="navigation" class="col-md-2 hidden-sm visible-md-block visible-lg-block affix">
             {% include navigation.html %}
         </div>
 
     {% assign prefix = site.baseurl | append: '/' %}
-        <div id="content" class="col-md-9 col-md-push-2">
+        <div id="content" class="col-lg-9 col-md-8 col-md-offset-3">
             {% assign sorted_collections = '' | get_sorted_collections_filter %}
              <div class="mobile-headers hidden-lg hidden-md visible-sm-block visible-xs-block"> 
             {% for collection in sorted_collections %}
@@ -46,10 +47,10 @@
     <h3>Try the product right now!</h3>
     <button><a href="https://signup.bigpanda.io" target="_blank">Get a free account</a></button>
 </div>
-<footer class="navbar" role="navigation">
+<footer class="footer" role="navigation">
     {% include footer.html %}
 </footer>
-<script src="{{ site.baseurl }}/js/search.min.js"></script>
+<script src="{{ site.baseurl }}/js/search.min.js?v={{ gitTag }}"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 {% raw %}
 <script id="search-results-template" type="text/mustache">
@@ -60,8 +61,7 @@
   {{/entries}}
 </script>
 {% endraw %}
-<script type="text/javascript" src="{{ site.baseurl }}/js/docs.js">
+<script type="text/javascript" src="{{ site.baseurl }}/js/docs.js?v={{ gitTag }}">
 </script>
-
 </body>
 </html>

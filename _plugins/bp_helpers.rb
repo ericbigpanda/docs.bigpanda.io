@@ -3,6 +3,24 @@ require 'nokogiri'
 
 module Jekyll
   module BPHelpersFilters
+    def git_tag(str)
+      "#{`git describe --always`}".sub("\n", "")
+    end
+
+    def self.splitNavLinkItem(item, baseUrl)
+      splittedItems = item.split(",")
+      {
+        "Name"=>    splittedItems[0],
+        "Link"=>    splittedItems.length == 1 ? "#{baseUrl}/" : splittedItems[1],
+        "Current"=> splittedItems.length == 1 ? 'current active' : ''
+      }
+    end
+
+    def getNavLinksArray(str)
+      site = @context.registers[:site]
+      str.split("|").map{|s| BPHelpersFilters.splitNavLinkItem(s, site.config['baseurl'])}
+    end
+
     def group_docs_by_type(docs)
       grouped = docs.group_by{|doc| doc.data['type']}
       grouped.keys.map{|key| {"name"=>key, "items"=>grouped[key]}}

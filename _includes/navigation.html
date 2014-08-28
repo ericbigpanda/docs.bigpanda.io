@@ -19,8 +19,8 @@
         {% if collection.size == 0 %}
             {% continue %}
         {% endif %}
-        <li class="nav-header col-item"><a href="{{ prefix }}{{ collection.name }}/index.html">{{ collection.slug.title}}</a></li>
         {% if collection.slug.href == page.collection.slug.href %}
+            <li class="nav-header col-item current-collection"><a href="{{ prefix }}{{ collection.name }}/index.html?v={{ gitTag }}">{{ collection.slug.title}}</a></li>
             {% if collection.slug.href == 'integrations' %}
                 {% assign groups = collection.docs | group_docs_by_type %}
                 {% for group in groups %}
@@ -47,6 +47,8 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
+        {% else %}
+            <li class="nav-header col-item"><a href="{{ prefix }}{{ collection.name }}/index.html?v={{ gitTag }}">{{ collection.slug.title}}</a></li>
         {% endif %}
     {% endfor %}
     </ul>

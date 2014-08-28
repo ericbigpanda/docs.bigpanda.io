@@ -1,7 +1,7 @@
 <header class="header">
     <div class="logo">
         <div class="custom">
-            <div><a href="http://www.bigpanda.io"><img alt="logo" src="{{site.baseurl}}/img/logo.svg"></a></div></div>
+            <div><a href="http://www.bigpanda.io"><img alt="logo" src="{{site.baseurl}}/img/logo.svg?v={{ gitTag }}"></a></div></div>
     </div>
     <nav class="responav">
         <ul class="nav menu">
@@ -15,11 +15,9 @@
     </nav>
     <nav class="mainmenu">
         <ul class="nav menu">
-            <li class=""><a href="http://www.bigpanda.io/">Product</a></li>
-            <li class=""><a href="http://www.bigpanda.io/integrations">Integrations</a></li>
-            <li class="current active"><a href="{{site.baseurl}}/">Docs</a></li>
-            <li class=""><a href="http://blog.bigpanda.io">Blog</a></li>
-            <li class=""><a href="http://www.bigpanda.io/about-us">About Us</a></li>
+            {% for item in navLinks %}
+            <li class="{{ item['Current'] }}"><a href="{{ item["Link"] }}">{{ item["Name"] }}</a></li>
+            {% endfor %}
         </ul>
     </nav>
     <div class="signupin">

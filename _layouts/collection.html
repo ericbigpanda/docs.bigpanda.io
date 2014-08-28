@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<h2 id="{{page.collection.slug.href}}">{{ page.collection.slug.title }}</h2>
-<div class="category-divider"></div>
+<h2 class="collection-title" id="{{page.collection.slug.href}}">{{ page.collection.slug.title }}</h2>
 {% assign docs = page.collection.docs %}
 {% if page.collection.slug.href == 'integrations' %}
     {% assign grouped_docs = docs | group_docs_by_type %}
