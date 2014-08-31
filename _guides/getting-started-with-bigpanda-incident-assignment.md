@@ -6,6 +6,7 @@ title: "Part 4: Incident Assignment"
 As the proverb goes, two captains will sink the ship. Promote accountability and make sure incidents are resolved on time by assigning a single owner to every active incident. BigPanda makes it easy to assign incidents. Click on the assign icon (it looks like a person with a + next to his head). Then select a member of your team from the list. 
 
 ![Incident Assignment](/media/Assignment.png)
+{: .not-responsive}
 
 #### Ensure Assignment Visibility
 
@@ -18,5 +19,6 @@ When you assign an incident to a person, BigPanda contacts them via email or a d
 Once you've been assigned to some issues, you can use the **My Tasks** folder to see all of the incidents that have been assigned to you. If you're on triage-duty, the **Unassigned** folder shows any incidents that weren't assigned (or snoozed). The best practice for incident-response on leading Ops teams is to keep the Unassigned folder empty at all times. So we've made this as easy for you as possible.  
 
 ![My Tasks &amp; Unassigned Folders](/media/UnAssigned.png)
+{: .not-responsive}
 
 With BigPanda, taking care of your production environment is both efficient and painless. It's automated and insightful more than ever before. We look forward to having you as a BigPanda customer. Please feel free to [Contact us](mailto:support@bigpanda.io?Subject=Contacting%20you%20regarding%20BigPanda) with any request or inquiry.

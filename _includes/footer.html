@@ -1,12 +1,14 @@
-<div class="container-fluid bottom">
-  <ul class="bottom-links clearfix">
-    <li><a href="http://bigpanda.io/integrations" >Integrations</a></li>
-    <li><a href="http://bigpanda.io/about-us" >About Us</a></li>
-    <li><a href="http://blog.bigpanda.io" >Blog</a></li>
+<nav class="footermenu">
+  <ul class="nav menu">
+    {% for item in navLinks %}
+    <li class="{{ item["Current"] }}"><a href="{{ item["Link"] }}">{{ item["Name"] }}</a></li>
+    {% endfor %}
     <li><a href="mailto:support@bigpanda.io?Subject=Contacting%20you%20regarding%20BigPanda" >Contact us</a></li>
   </ul>
-  <div class="copyrights">
-    <div class="custom">
-      <p>All rights reserved to BigPanda 2014</p></div>
-  </div>
+</nav>
+
+<div class="copyrights">
+  <div class="custom">
+    <p>All rights reserved to BigPanda {{ site.time | date:"%Y"}}</p></div>
 </div>
+

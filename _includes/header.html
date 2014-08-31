@@ -1,26 +1,28 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bigpanda-docs-header">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://bigpanda.io"><img height="33" width="160" src="{{ site.baseurl }}/img/logo.svg" alt="logo" /></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bigpanda-docs-header">
-            <ul class="nav navbar-nav nav-center">
-                <li><a href="http://bigpanda.io/">Product</a></li>
-                <li><a href="http://bigpanda.io/integrations">Integrations</a></li>
-                <li class="current-site"><a href="{{ site.baseurl }}/">Docs</a></li>
-                <li><a href="http://blog.bigpanda.io">Blog</a></li>
-                <li><a href="http://bigpanda.io/about-us">About Us</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class=""><a href="https://a.bigpanda.io" title="Log in to BigPanda" >Log in</a></li>
-                <li class="get-started"><a href="https://signup.bigpanda.io" title="Get started with BigPanda" target="_blank">Get Started</a></li>
-            </ul>
-        </div>
+<header class="header">
+    <div class="logo">
+        <div class="custom">
+            <div><a href="http://www.bigpanda.io"><img alt="logo" src="{{site.baseurl}}/img/logo.svg?v={{ gitTag }}"></a></div></div>
     </div>
-</nav>
+    <nav class="responav">
+        <ul class="nav menu">
+            <li class=""><a href="http://www.bigpanda.io/">Product</a></li>
+            <li class=""><a href="http://www.bigpanda.io/integrations">Integrations</a></li>
+            <li class=""><a href="http://blog.bigpanda.io">Blog</a></li>
+            <li class=""><a href="http://www.bigpanda.io/about-us">About Us</a></li>
+            <li class=""><a class="log" href="https://a.bigpanda.io/">Login</a></li>
+        </ul>
+
+    </nav>
+    <nav class="mainmenu">
+        <ul class="nav menu">
+            {% for item in navLinks %}
+            <li class="{{ item['Current'] }}"><a href="{{ item["Link"] }}">{{ item["Name"] }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <div class="signupin">
+        <ul class="nav menu">
+            <li class=""><a class="signupbtn" href="https://signup.bigpanda.io">Get Started</a></li><li class="login"><a href="https://a.bigpanda.io">Log In</a></li></ul>
+
+    </div>
+</header>

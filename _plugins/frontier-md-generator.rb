@@ -40,8 +40,8 @@ module Jekyll
     end
 
     def replace_include(content)
-      grandma_of_all_regexes = /(<\!\-\-\seditor\-only\-start\s\-\-\>(?<=\<\!\-\-\seditor\-only\-start\s\-\-\>).*(?=\<\!\-\-\seditor\-only\-end\s\-\-\>)<\!\-\-\seditor\-only\-end\s\-\-\>)/m
-      mother_of_all_regexes = /(<\!\-\-\sdocs\-only\-start\s\-\-\>(?<=\<\!\-\-\sdocs\-only\-start\s\-\-\>).*(?=\<\!\-\-\sdocs\-only\-end\s\-\-\>)<\!\-\-\sdocs\-only\-end\s\-\-\>)/m
+      grandma_of_all_regexes = /(<\!\-\-\seditor\-only\-start\s\-\-\>(?<=\<\!\-\-\seditor\-only\-start\s\-\-\>)(?:(.*?))(?=\<\!\-\-\seditor\-only\-end\s\-\-\>)<\!\-\-\seditor\-only\-end\s\-\-\>)/m
+      mother_of_all_regexes = /(<\!\-\-\sdocs\-only\-start\s\-\-\>(?<=\<\!\-\-\sdocs\-only\-start\s\-\-\>)(?:(.*?))(?=\<\!\-\-\sdocs\-only\-end\s\-\-\>)<\!\-\-\sdocs\-only\-end\s\-\-\>)/m
       uncle_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>|<\!\-\-\sapp\-only\-end\s\-\-\>)/m
       content.gsub(grandma_of_all_regexes, "").gsub(mother_of_all_regexes, "").gsub(uncle_of_all_regexes, "")
     end

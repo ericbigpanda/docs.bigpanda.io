@@ -29,7 +29,13 @@ The final outcome should look like this:
 
 #### Create an AppDynamics Action
 Without leaving the Create Policy window.  
+<!-- docs-only-start -->
 Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).  
+{: .not-responsive}
+<!-- docs-only-end -->
+<!-- app-only-start -->
+Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).  
+<!-- app-only-end -->
 
 If you already created a BigPanda action for another application in AppDynamics, choose it and then click `Select`.
 

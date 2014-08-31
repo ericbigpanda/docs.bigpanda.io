@@ -1,10 +1,8 @@
 ---
-layout: default
-title: "Welcome to the BigPanda Documentation"
+layout: page
+title: "Getting Started with BigPanda"
 exclude_from_search: true
 ---
-
-# Getting Started with BigPanda
 
 BigPanda is an incident response platform that uses powerful data algorithms to help you manage Ops issues better & faster. 
 

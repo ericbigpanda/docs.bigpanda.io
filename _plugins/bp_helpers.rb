@@ -3,6 +3,24 @@ require 'nokogiri'
 
 module Jekyll
   module BPHelpersFilters
+    def git_tag(str)
+      "#{`git describe --always`}".sub("\n", "")
+    end
+
+    def self.splitNavLinkItem(item, baseUrl)
+      splittedItems = item.split(",")
+      {
+        "Name"=>    splittedItems[0],
+        "Link"=>    splittedItems.length == 1 ? "#{baseUrl}/" : splittedItems[1],
+        "Current"=> splittedItems.length == 1 ? 'current active' : ''
+      }
+    end
+
+    def getNavLinksArray(str)
+      site = @context.registers[:site]
+      str.split("|").map{|s| BPHelpersFilters.splitNavLinkItem(s, site.config['baseurl'])}
+    end
+
     def group_docs_by_type(docs)
       grouped = docs.group_by{|doc| doc.data['type']}
       grouped.keys.map{|key| {"name"=>key, "items"=>grouped[key]}}
@@ -29,9 +47,9 @@ module Jekyll
     end
 
     def replace_include_in_integration_guide(content)
-        grandpa_of_all_regexes = /(<\!\-\-\seditor\-only\-start\s\-\-\>(?<=\<\!\-\-\seditor\-only\-start\s\-\-\>).*(?=\<\!\-\-\seditor\-only\-end\s\-\-\>)<\!\-\-\seditor\-only\-end\s\-\-\>)/m
-        father_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>(?<=\<\!\-\-\sapp\-only\-start\s\-\-\>).*(?=\<\!\-\-\sapp\-only\-end\s\-\-\>)<\!\-\-\sapp\-only\-end\s\-\-\>)/m
-        aunt_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>|<\!\-\-\sapp\-only\-end\s\-\-\>)/m
+        grandpa_of_all_regexes = /(<\!\-\-\seditor\-only\-start\s\-\-\>(?<=\<\!\-\-\seditor\-only\-start\s\-\-\>)(?:(.*?))(?=\<\!\-\-\seditor\-only\-end\s\-\-\>)<\!\-\-\seditor\-only\-end\s\-\-\>)/m
+        father_of_all_regexes = /(<\!\-\-\sapp\-only\-start\s\-\-\>(?<=\<\!\-\-\sapp\-only\-start\s\-\-\>)(?:(.*?))(?=\<\!\-\-\sapp\-only\-end\s\-\-\>)<\!\-\-\sapp\-only\-end\s\-\-\>)/m
+        aunt_of_all_regexes = /(<\!\-\-\sdocs\-only\-start\s\-\-\>|<\!\-\-\sdocs\-only\-end\s\-\-\>)/m
         content.gsub(grandpa_of_all_regexes, "").gsub(father_of_all_regexes, "").gsub(aunt_of_all_regexes, "")
     end
 
