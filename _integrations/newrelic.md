@@ -46,5 +46,5 @@ In the BigPanda Application, there's a Form that you can enter you API, which wi
 
 You should now be able to see a test incident in the **OpsBox** screen.
 
-_**Note:** BigPanda will automatically close the test incident after 3 hours, make sure you can see the alert in the **OpsBox** screen._
+_**Note:** BigPanda will automatically close the test incident after 3 hours, to make sure that you can see the alert in the **OpsBox** screen._
 
