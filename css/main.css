@@ -12,15 +12,7 @@ body {
     text-align: left;
     font-family: 'Open Sans', arial;
 }
-/*
-footer  {
-    height: 115px;
-    width: 100%;
-    margin-bottom:0px !important;
-    text-align:center;
-    border-top: #d5d5d5;
-}
-*/
+
 .header.header .logo {
     width: 161px;
     margin-top: 17px;
@@ -273,31 +265,6 @@ footer .bottom {
     font-size: 18px;
     font-family: 'Open Sans'
 }
-
-#bigpanda-docs-header {
-}
-
-#bigpanda-docs-header li, #bigpanda-docs-header li:hover {
-    height: 69px;
-}
-#bigpanda-docs-header li.current-site ,  #bigpanda-docs-header li.current-site a, #bigpanda-docs-header li.current-site a:hover{
-    color: #3fa7e2;
-}
-#bigpanda-docs-header li.current-site, #bigpanda-docs-header li.current-site a , #bigpanda-docs-header li:not(.get-started):hover{
-    background: #F2F2F2;
-}
-#bigpanda-docs-header li a, #bigpanda-docs-header li a:hover{
-    text-decoration : none;
-    color: #7A7A7A;
-}
-#bigpanda-docs-header li a { 
-    font-family: "Arial";
-    font-size: 14px;
-    font-weight: bold;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
-}
 .docs-title {
     margin:0px 0px 0px 0px;
     text-align:center;
@@ -310,15 +277,8 @@ footer .bottom {
     background:#efefef;
 }
 
-/*
-footer {
-    text-align:center;
-}
-*/
 #navigation {
-    /*width: 250px;*/
     margin-top: 110px;
-    /*margin-left:-70px;*/
     transition: margin-top 0.14s ease-in-out;
 }
 
@@ -330,10 +290,8 @@ footer {
 }
 #navigation .nav-list li.nav-header:last-child {
     border-bottom: solid 1px #f0f0f0;
-   /* border-bottom:none !important; */
 }
 #navigation .nav-list li, #navigation .subnav li {
-    /*border-bottom: solid 1px #FAFAFA;*/
     height: 40px;
 }
 #navigation .nav-header {
@@ -363,16 +321,8 @@ footer {
     background: #fff;
 }
 
-.site-nav .active {
-   /* background:#F2F2F2;*/
-}
-
 .site-nav .active .subnav {
     background:#FFF;
-}
-
-.subnav .active {
-    /*background:#F2F2F2;*/
 }
 
 .site-nav a{
@@ -551,6 +501,11 @@ footer {
 
 .search-wrapper li.active {
     background : #E9F5FF;
+}
+
+.nav .nav-header.col-item:hover{
+    background: #eee;
+
 }
 
 .nav .col-item a, .nav .col-item a:hover {
@@ -926,7 +881,7 @@ footer.footer nav.footermenu ul li a:hover {
 
 pre code , code {
     font-size: 12px;
-    word-wrap: normal;
+    word-wrap: break-word;
     font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
@@ -965,4 +920,23 @@ pre code , code {
 }
 #content img {
     width: 100%;
+}
+@media (min-width: 1300px){
+    #navigation {
+        width: 14% !important;
+    }
+}
+
+@media (min-width: 1500px){
+    #navigation {
+        width: 14% !important;
+        margin-left:-120px !important;        
+    }
+}
+
+@media (min-width: 1800px){
+    #navigation {
+        width: 12% !important;
+        margin-left:-120px !important;        
+    }
 }
