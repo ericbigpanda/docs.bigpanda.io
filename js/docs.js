@@ -76,7 +76,9 @@ $(function() {
     }, 150);
   }
   $(window).scroll(function(){
-    var atBottom = $(window).scrollTop() >= $(document).height() - $(window).height() - $(".try-now").height() - $("footer").height();
+    //added safety buffer to not hide if page is small
+    var atBottom = ($(document).height() - $(window).height() > 100) && ($(window).scrollTop() >= $(document).height() - $(window).height() - $(".try-now").height() - $("footer").height());
+    
     $("#navigation").toggleClass("end", atBottom);
     var top = $(window).scrollTop();
     if (top >= 140){
