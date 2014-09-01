@@ -26,7 +26,7 @@ In the Add Notification page:
 * In **Notification Name** input: `BigPanda Notification`
 * For **NOTIFICATION SUMMARIZATION > Method** choose: `Always notify ASAP`
 * Mark **EXECUTE HTTP ACTION** as checked
-* In **EXECUTE HTTP ACTION > URL** insert: `https://api.bigpanda.io/data/integrations/prtg?access_token=$TOKEN&app_key=$STREAM_ID`
+* In **EXECUTE HTTP ACTION > URL** insert: `https://api.bigpanda.io/data/integrations/prtg?$URL_PARAMS`
 * In **EXECUTE HTTP ACTION > Postdata** insert: `sensor=%name&status=%status&datetime=%datetime&timezone=%timezone&message=%message&group=%group&device=%device&host=%host&home=%home&prio=%prio&since=%since`
 
 The final outcome should look like this:  

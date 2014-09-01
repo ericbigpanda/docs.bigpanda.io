@@ -24,7 +24,7 @@ In the *New Relic* dashboard, navigate to [Tools > Alert Policies > Channels and
 Click on `Create channel` and select `Webhook`. Fill in the form:
 
 * **Webhook Name**: `BigPanda`
-* **Webhook URL**: `https://api.bigpanda.io/data/integrations/newrelic?access_token=$TOKEN&app_key=$STREAM_ID`
+* **Webhook URL**: `https://api.bigpanda.io/data/integrations/newrelic?$URL_PARAMS`
 * **Notification level**: `All critical events`
 
 Click on `Integrate with Webhooks`.
