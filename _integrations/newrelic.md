@@ -5,6 +5,16 @@ draft: false
 type: Application Monitoring
 
 ---
+
+#### Create a BigPanda Application Key
+
+Start by creating an app key for New Relic with the form below. Use a separate app key per each New Relic system you integrate. 
+
+*Tip: if you have only one New Relic, you might want to click on `Generate App Key` without giving a name).*
+
+<!-- include 'integrations/multiple/multiple' -->
+
+<!-- section-separator -->
 #### Locate Alert Policies Settings
 In the *New Relic* dashboard, navigate to [Tools > Alert Policies > Channels and groups](https://rpm.newrelic.com/notification_channels)
 
@@ -14,7 +24,7 @@ In the *New Relic* dashboard, navigate to [Tools > Alert Policies > Channels and
 Click on `Create channel` and select `Webhook`. Fill in the form:
 
 * **Webhook Name**: `BigPanda`
-* **Webhook URL**: `https://api.bigpanda.io/data/integrations/newrelic?access_token=$TOKEN`
+* **Webhook URL**: `https://api.bigpanda.io/data/integrations/newrelic?access_token=$TOKEN&app_key=$STREAM_ID`
 * **Notification level**: `All critical events`
 
 Click on `Integrate with Webhooks`.
@@ -46,5 +56,5 @@ In the BigPanda Application, there's a Form that you can enter you API, which wi
 
 You should now be able to see a test incident in the **OpsBox** screen.
 
-_**Note:** BigPanda will automatically close the test incident after 3 hours, to make sure that you can see the alert in the **OpsBox** screen._
+_**Note:** To make sure that you can see the alert in the **OpsBox** screen, BigPanda will automatically close the test incident after 3 hours._
 

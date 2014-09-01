@@ -6,14 +6,18 @@ type: System Monitoring
 
 ---
 
-#### Login
+#### Create a BigPanda Application Key
 
-Login to the PRTG Dashboard as an admin user.
+Start by creating an app key for PRTG with the form below. Use a separate app key per each PRTG system you integrate. 
 
+*Tip: if you have only one PRTG, you might want to click on `Generate App Key` without giving a name).*
+
+<!-- include 'integrations/multiple/multiple' -->
 
 <!-- section-separator -->
-
 #### Create a PRTG Notification  
+
+Login to the PRTG Dashboard as an admin user.
 
 Go to *Setup > Account Settings > Notifications* and click on **Add new notification**.
 
@@ -22,7 +26,7 @@ In the Add Notification page:
 * In **Notification Name** input: `BigPanda Notification`
 * For **NOTIFICATION SUMMARIZATION > Method** choose: `Always notify ASAP`
 * Mark **EXECUTE HTTP ACTION** as checked
-* In **EXECUTE HTTP ACTION > URL** insert: `https://api.bigpanda.io/data/integrations/prtg?access_token=$TOKEN`
+* In **EXECUTE HTTP ACTION > URL** insert: `https://api.bigpanda.io/data/integrations/prtg?access_token=$TOKEN&app_key=$STREAM_ID`
 * In **EXECUTE HTTP ACTION > Postdata** insert: `sensor=%name&status=%status&datetime=%datetime&timezone=%timezone&message=%message&group=%group&device=%device&host=%host&home=%home&prio=%prio&since=%since`
 
 The final outcome should look like this:  
