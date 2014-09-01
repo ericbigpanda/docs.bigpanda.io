@@ -8,9 +8,9 @@ type: System Monitoring
 
 #### Create a BigPanda Application Key
 
-Start by creating an app key for PRTG with the form below. Use a separate app key per each PRTG system you integrate. 
+Start by creating an app key for a PRTG installation with the form below. Use a separate app key per each PRTG installation you integrate. 
 
-*Tip: if you have only one PRTG, you might want to click on `Generate App Key` without giving a name).*
+*Tip: if you have only one PRTG installation, you might want to click on `Generate App Key` without giving a name).*
 
 <!-- include 'integrations/multiple/multiple' -->
 
@@ -58,6 +58,4 @@ The final outcome should look like this:
 <!-- section-separator -->
 
 #### Success
-Now click on **Done & Install** below to complete the installation.
-
 Next time you'll have PRTG alerts, you will able to see them in BigPanda.

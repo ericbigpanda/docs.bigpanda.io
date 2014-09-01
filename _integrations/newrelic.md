@@ -8,9 +8,9 @@ type: Application Monitoring
 
 #### Create a BigPanda Application Key
 
-Start by creating an app key for New Relic with the form below. Use a separate app key per each New Relic system you integrate. 
+Start by creating an app key for a New Relic account with the form below. Use a separate app key per each New Relic account you integrate. 
 
-*Tip: if you have only one New Relic, you might want to click on `Generate App Key` without giving a name).*
+*Tip: if you have only one New Relic account, you might want to click on `Generate App Key` without giving a name).*
 
 <!-- include 'integrations/multiple/multiple' -->
 
