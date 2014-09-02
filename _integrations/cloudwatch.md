@@ -10,8 +10,14 @@ Start by creating an app key for a CloudWatch account with the form below. Use a
 
 *Tip: if you have only one CloudWatch account, you might want to click on `Generate App Key` without giving a name).*
 
+<!-- app-only-start -->
 <!-- include 'integrations/multiple/multiple' -->
+<!-- app-only-end -->
+<!-- docs-only-start -->
 
+In the BigPanda Application, there's a Form that you can enter the CloudWatch account name.
+
+<!-- docs-only-end -->
 <!-- section-separator -->
 #### Locate an Appropriate User
 In [IAM Management Console](https://console.aws.amazon.com/iam/home?#users), select a user with sufficient permissions to modify CloudWatch alarms (i.e. at least `CloudWatch Full Access` and `Amazon EC2 Read Only Access` policies templates).    

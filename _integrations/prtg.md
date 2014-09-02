@@ -12,7 +12,14 @@ Start by creating an app key for a PRTG installation with the form below. Use a 
 
 *Tip: if you have only one PRTG installation, you might want to click on `Generate App Key` without giving a name).*
 
+<!-- app-only-start -->
 <!-- include 'integrations/multiple/multiple' -->
+<!-- app-only-end -->
+<!-- docs-only-start -->
+
+In the BigPanda Application, there's a Form that you can enter the PRTG instance name.
+
+<!-- docs-only-end -->
 
 <!-- section-separator -->
 #### Create a PRTG Notification  

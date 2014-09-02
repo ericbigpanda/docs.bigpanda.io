@@ -12,7 +12,15 @@ Start by creating an app key for a New Relic account with the form below. Use a 
 
 *Tip: if you have only one New Relic account, you might want to click on `Generate App Key` without giving a name).*
 
+<!-- app-only-start -->
 <!-- include 'integrations/multiple/multiple' -->
+<!-- app-only-end -->
+<!-- docs-only-start -->
+
+In the BigPanda Application, there's a Form that you can enter the New Relic account name.
+
+<!-- docs-only-end -->
+
 
 <!-- section-separator -->
 #### Locate Alert Policies Settings
@@ -42,7 +50,7 @@ Click on `Integrate with Webhooks`.
 <!-- app-only-end -->
 <!-- docs-only-start -->
 
-In the BigPanda Application, there's a Form that you can enter you API, which will create the New Relic WebHook for you.
+In the BigPanda Application, there's a Form that you can enter your API, which will create the New Relic WebHook for you.
 
 <!-- docs-only-end -->
 
