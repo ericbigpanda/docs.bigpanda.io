@@ -5,6 +5,24 @@ draft: false
 type: Application Monitoring
 
 ---
+
+#### Create a BigPanda Application Key
+
+Start by creating an app key for a New Relic account with the form below. Use a separate app key per each New Relic account you integrate. 
+
+*Tip: if you have only one New Relic account, you might want to click on `Generate App Key` without giving a name.*
+
+<!-- app-only-start -->
+<!-- include 'integrations/multiple/multiple' -->
+<!-- app-only-end -->
+<!-- docs-only-start -->
+
+In the BigPanda Application, there's a Form that you can enter the New Relic account name.
+
+<!-- docs-only-end -->
+
+
+<!-- section-separator -->
 #### Locate Alert Policies Settings
 In the *New Relic* dashboard, navigate to [Tools > Alert Policies > Channels and groups](https://rpm.newrelic.com/notification_channels)
 
@@ -14,7 +32,7 @@ In the *New Relic* dashboard, navigate to [Tools > Alert Policies > Channels and
 Click on `Create channel` and select `Webhook`. Fill in the form:
 
 * **Webhook Name**: `BigPanda`
-* **Webhook URL**: `https://api.bigpanda.io/data/integrations/newrelic?access_token=$TOKEN`
+* **Webhook URL**: `https://api.bigpanda.io/data/integrations/newrelic?$URL_PARAMS`
 * **Notification level**: `All critical events`
 
 Click on `Integrate with Webhooks`.
@@ -32,7 +50,7 @@ Click on `Integrate with Webhooks`.
 <!-- app-only-end -->
 <!-- docs-only-start -->
 
-In the BigPanda Application, there's a Form that you can enter you API, which will create the New Relic WebHook for you.
+In the BigPanda Application, there's a Form that you can enter your API, which will create the New Relic WebHook for you.
 
 <!-- docs-only-end -->
 
@@ -40,11 +58,7 @@ In the BigPanda Application, there's a Form that you can enter you API, which wi
 
 #### Test the webhook
 
-* Go back to [Channels and groups](https://rpm.newrelic.com/notification_channels)
-* Navigate to `Channels > Webhook > BigPanda`, 
-* Click on the `send test message` link.
+A test message should arrive in a few moments.
 
-You should now be able to see a test incident in the **OpsBox** screen.
-
-_**Note:** BigPanda will automatically close the test incident after 3 hours, to make sure that you can see the alert in the **OpsBox** screen._
+_Make sure that you can see the alert in the **OpsBox** screen, BigPanda will automatically close the test incident after 3 hours._
 
