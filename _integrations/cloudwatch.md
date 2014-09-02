@@ -8,7 +8,7 @@ type: System Monitoring
 
 Start by creating an app key for a CloudWatch account with the form below. Use a separate app key per each CloudWatch account you integrate. 
 
-*Tip: if you have only one CloudWatch account, you might want to click on `Generate App Key` without giving a name).*
+*Tip: if you have only one CloudWatch account, you might want to click on `Generate App Key` without giving a name.*
 
 <!-- app-only-start -->
 <!-- include 'integrations/multiple/multiple' -->
@@ -29,7 +29,7 @@ In [IAM Management Console](https://console.aws.amazon.com/iam/home?#users), sel
 
 #### Generate Access Key for BigPanda
 * In the user options in the lower pane, navigate to `Access Credentials > Manage Access Keys`.
-* Click on `Create Access Key`.
+* Click on `Create Access Key` (located in the bottom right corner).
 * Tap on `Show User Security Credentials` in order to reveal the newly created access key details.
 
 <!-- section-separator -->
