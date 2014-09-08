@@ -8,7 +8,7 @@ type: System Monitoring
 
 Start by creating an app key for a CloudWatch account with the form below. Use a separate app key per each CloudWatch account you integrate. 
 
-*Tip: if you have only one CloudWatch account, you might want to click on `Generate App Key` without giving a name.*
+*Tip: if you have only one CloudWatch account, you might want to click on `Generate App Key` without providing a name.*
 
 <!-- app-only-start -->
 <!-- include 'integrations/multiple/multiple' -->
