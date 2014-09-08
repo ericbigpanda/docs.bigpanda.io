@@ -42,7 +42,7 @@ The new Webhook needs to be assigned to existing Notification Groups. Do the fol
 {: .not-responsive}
 <!-- docs-only-end -->
 <!-- app-only-start -->
-* Click on the wrench icon (![media/wrench.png](https://doc-admin.bigpanda.io/docs/media/wrench.png)) 
+* Click on the wrench icon (![media/wrench.png](/media/wrench.png)) 
 <!-- app-only-end -->
 
 
