@@ -10,7 +10,7 @@ type: Application Monitoring
 
 Start by creating an app key for a New Relic account with the form below. Use a separate app key per each New Relic account you integrate. 
 
-*Tip: if you have only one New Relic account, you might want to click on `Generate App Key` without giving a name.*
+*Tip: if you have only one New Relic account, you might want to click on `Generate App Key` without providing a name.*
 
 <!-- app-only-start -->
 <!-- include 'integrations/multiple/multiple' -->

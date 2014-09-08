@@ -10,7 +10,7 @@ type: System Monitoring
 
 Start by creating an app key for a PRTG installation with the form below. Use a separate app key per each PRTG installation you integrate. 
 
-*Tip: if you have only one PRTG installation, you might want to click on `Generate App Key` without giving a name.*
+*Tip: if you have only one PRTG installation, you might want to click on `Generate App Key` without providing a name.*
 
 <!-- app-only-start -->
 <!-- include 'integrations/multiple/multiple' -->
