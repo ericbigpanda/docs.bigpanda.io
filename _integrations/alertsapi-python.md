@@ -24,6 +24,7 @@ Create a new alert objects decribing the status of a host, application, service 
     alert.send()
 
 Status can be one of:
+
 - ok
 - warn
 - crit
