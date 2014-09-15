@@ -7,7 +7,7 @@ type: System Monitoring
 ---
 
 #### Install the BigPanda Agent
-Connect to the host where your Nagios server is installed, and install the BigPanda agent package.
+Connect to the host where your Zabbix server is installed, and install the BigPanda agent package.
 
 **RedHat / CentOS:**
 

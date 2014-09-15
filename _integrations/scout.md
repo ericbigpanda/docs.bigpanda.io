@@ -6,22 +6,6 @@ type: System Monitoring
 
 ---
 
-#### Create a BigPanda Application Key
-
-Start by creating an app key for a Scout account with the form below. Use a separate app key per each Scout account you integrate. 
-
-*Tip: if you have only one Scout account, you might want to click on `Generate App Key` without providing a name.*
-
-<!-- app-only-start -->
-<!-- include 'integrations/multiple/multiple' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-In the BigPanda Application, there's a Form that you can enter the Scout account name.
-
-<!-- docs-only-end -->
-
-<!-- section-separator -->
 #### Create a Scout Webhook Notification  
 
 Login to Scout and in *Account > Notifications* click on *Add Webhook*.  

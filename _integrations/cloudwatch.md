@@ -4,21 +4,7 @@ title: "Amazon CloudWatch"
 draft: false
 type: System Monitoring
 ---
-#### Create a BigPanda Application Key
 
-Start by creating an app key for a CloudWatch account with the form below. Use a separate app key per each CloudWatch account you integrate. 
-
-*Tip: if you have only one CloudWatch account, you might want to click on `Generate App Key` without providing a name.*
-
-<!-- app-only-start -->
-<!-- include 'integrations/multiple/multiple' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-In the BigPanda Application, there's a Form that you can enter the CloudWatch account name.
-
-<!-- docs-only-end -->
-<!-- section-separator -->
 #### Locate an Appropriate User
 In [IAM Management Console](https://console.aws.amazon.com/iam/home?#users), select a user with sufficient permissions to modify CloudWatch alarms (i.e. at least `CloudWatch Full Access` and `Amazon EC2 Read Only Access` policies templates).    
 *We need your credentials in order to configure BigPanda as a recipient of your CloudWatch alarms.*
@@ -36,7 +22,7 @@ In [IAM Management Console](https://console.aws.amazon.com/iam/home?#users), sel
 
 #### Connect CloudWatch to BigPanda
 <!-- app-only-start -->
-* Please copy the credentials from step 2 and paste them below.  
+* Please copy the credentials from the previous step and paste them below.  
 * Click on `Retrieve AWS Regions` and select the regions you'd like to include in BigPanda.
 * Click on `Configure CloudWatch`.
 <!-- include 'integrations/cloudwatch/cloudwatch' -->

@@ -5,21 +5,6 @@ draft: true
 type: "Log Aggregation"
 
 ---
-#### Create a BigPanda Application Key
-
-Start by creating an app key for a Splunk account with the form below. Use a separate app key per each Splunk account you integrate. 
-
-*Tip: if you have only one Splunk account, you might want to click on `Generate App Key` without providing a name.*
-
-<!-- app-only-start -->
-<!-- include 'integrations/multiple/multiple' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-In the BigPanda Application, there's a Form that you can enter the Splunk account name.
-
-<!-- docs-only-end -->
-<!-- section-separator -->
 
 #### Install package
 Now you'll need to install the python package to get BigPanda Splunk action script:
@@ -30,20 +15,27 @@ Now you'll need to install the python package to get BigPanda Splunk action scri
   
 
 <!-- docs-only-start -->
-This will create a test alert in your BigPanda Dashboard
+This will create a test alert in your BigPanda Dashboard.
 <!-- docs-only-end -->
 <!-- app-only-start -->
 After running these commands, you should see a test alert in OpsBox.
 <!-- app-only-end -->
+<!-- docs-only-start -->
+__Note:__ Unlike other incidents in BigPanda, Splunk incidents will not resolve automatically as Splunk does not send notifications when an alert is resolved. For this reason, Splunk incidents can be resolved manually by clicking on the resolve button (![media/resolve.png](/media/resolve.png))  on the incident.
+{: .not-responsive}
+<!-- docs-only-end -->
+<!-- app-only-start -->
+__Note:__ Unlike other incidents in BigPanda, Splunk incidents will not resolve automatically as Splunk does not send notifications when an alert is resolved. For this reason, Splunk incidents can be resolved manually by clicking on the resolve button (![media/resolve.png](/media/resolve.png)) on the incident.
+<!-- app-only-end -->
 
 <!-- section-separator -->
 
-#### Configure alerts in Splunk to run script
+#### Configure Splunk
 
-For each alert configured in Splunk:
+Configure Splunk to always execute BigPanda's action script when an alert is triggered by running the following configuration script:
 
-* Edit the alert through the Splunk UI
-* Enable the `Run a script` option, and set `bigpanda-splunk` as the script filename.
+    $ sudo bigpanda-splunk-defaults
+
 
 <!-- section-separator -->
 

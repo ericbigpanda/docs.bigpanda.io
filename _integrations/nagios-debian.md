@@ -1,12 +1,12 @@
 ---
 layout: integration 
-title: "Nagios For Debian"
-draft: true
+title: "Nagios (Debian)"
+draft: false
 type: System Monitoring
 
 ---
 
-#### Install the BigPanda Agent
+#### Install the BigPanda Agent On Debian
 Connect to the host where your Nagios server is installed, and install the BigPanda agent package.
 
     $ echo deb http://repos.bigpanda.io/deb `lsb_release -c -s` main | sudo tee /etc/apt/sources.list.d/bigpanda.list

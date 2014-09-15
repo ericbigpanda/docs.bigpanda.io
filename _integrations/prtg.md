@@ -6,22 +6,6 @@ type: System Monitoring
 
 ---
 
-#### Create a BigPanda Application Key
-
-Start by creating an app key for a PRTG installation with the form below. Use a separate app key per each PRTG installation you integrate. 
-
-*Tip: if you have only one PRTG installation, you might want to click on `Generate App Key` without providing a name.*
-
-<!-- app-only-start -->
-<!-- include 'integrations/multiple/multiple' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-In the BigPanda Application, there's a Form that you can enter the PRTG instance name.
-
-<!-- docs-only-end -->
-
-<!-- section-separator -->
 #### Create a PRTG Notification  
 
 Login to the PRTG Dashboard as an admin user.
@@ -45,7 +29,7 @@ Click on save and continue with the tutorial.
 <!-- section-separator -->
 
 #### Create PRTG Triggers
-Go to *Devices* and click on **Notifications** (for Group **Root**)
+Click on **Devices**, in the devices page click on the **Notifications** button (for Group **Root**)
 
 BigPanda will monitor the **Down**, **Warning**, **Unusual** and **Partial Down** states. The following instructions are for the **Down** state. Please repeat them for every state.
 
