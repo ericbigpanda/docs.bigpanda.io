@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Alerts REST API Ruby Wrapper"
+title: "Alerts REST API Bash Wrapper"
 type: API
 draft: false
 ---
