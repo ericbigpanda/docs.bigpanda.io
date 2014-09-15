@@ -5,21 +5,6 @@ draft: true
 type: "Log Aggregation"
 
 ---
-#### Create a BigPanda Application Key
-
-Start by creating an app key for a Splunk account with the form below. Use a separate app key per each Splunk account you integrate. 
-
-*Tip: if you have only one Splunk account, you might want to click on `Generate App Key` without providing a name.*
-
-<!-- app-only-start -->
-<!-- include 'integrations/multiple/multiple' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-In the BigPanda Application, there's a Form that you can enter the Splunk account name.
-
-<!-- docs-only-end -->
-<!-- section-separator -->
 
 #### Install package
 Now you'll need to install the python package to get BigPanda Splunk action script:

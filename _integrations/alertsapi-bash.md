@@ -1,11 +1,11 @@
 ---
 layout: integration 
-title: "Alerts REST API"
+title: "Alerts REST API Bash Wrapper"
 type: API
 draft: false
 ---
 
-#### Make a REST Call From Your Monitoring System
+#### Make a REST Call From Your Monitoring System - Bash
 
 The integrated system should call the Alerts API endpoint:
     

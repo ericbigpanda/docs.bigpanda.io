@@ -1,11 +1,11 @@
 ---
 layout: integration 
-title: "Alerts REST API"
+title: "Alerts REST API Python Wrapper"
 type: API
 draft: false
 ---
 
-#### Make a REST Call From Your Monitoring System
+#### Make a REST Call From Your Monitoring System - Python
 
 The integrated system should call the Alerts API endpoint:
     

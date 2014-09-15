@@ -5,22 +5,6 @@ draft: false
 type: System Monitoring
 ---
 
-#### Create a BigPanda Application Key
-
-Start by creating an app key for a Sentry account with the form below. Use a separate app key per each Sentry account you integrate. 
-
-*Tip: if you have only one Sentry account, you might want to click on `Generate App Key` without giving a name.*
-
-<!-- app-only-start -->
-<!-- include 'integrations/multiple/multiple' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-In the BigPanda Application, there's a form that you can enter the Sentry account name.
-
-<!-- docs-only-end -->
-
-<!-- section-separator -->
 #### Define the Sentry Webhook  
 
 For each project in Sentry:
