@@ -5,20 +5,6 @@ type: API
 draft: false
 ---
 
-#### Create An App Key
-
-<!-- docs-only-start -->
-Using BigPanda's Alerts API is easy. Start by creating an app key within the BigPanda Application (Integrations -> Alerts REST API). Use a separate app key per each system you integrate.
-
-<!-- docs-only-end -->
-<!-- app-only-start -->
-Using BigPanda's Alerts API is easy. Start by creating an app key with the form below. Use a separate app key per each system you integrate.
-
-<!-- include 'integrations/alertsapi/alertsapi' -->
-<!-- app-only-end -->
-
-<!-- section-separator -->
-
 #### Make a REST Call From Your Monitoring System
 
 The integrated system should call the Alerts API endpoint:
