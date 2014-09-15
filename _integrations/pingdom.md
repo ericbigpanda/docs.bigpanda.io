@@ -9,7 +9,7 @@ type: Website Monitoring
 #### Register a Pingdom API Application
 Log in to Pingdom with your **owner user**.
 
-Go to [Sharing > Pingdom API > Register An Application](https://my.pingdom.com/account/appkeys/new), provide the following information to the form:
+Go to [Sharing > Pingdom API > Register Application](https://my.pingdom.com/account/appkeys), provide the following information to the form:
 
 * **Application Name:** `BigPanda`
 * **Description:** `BigPanda Integration`
@@ -21,7 +21,7 @@ Click on `Save Changes`, copy the provided **Application Key**.
 <!-- section-separator -->
 
 #### Create Pingdom Contact
-Navigate to [Alerting > Contacts > Add New Contact](https://my.pingdom.com/contacts/new) and provide the exact information to the form:
+Navigate to [Alerting > Contacts > Add New Contact](https://my.pingdom.com/contacts) and provide the exact information to the form:
 
 * **Name:** `BigPanda Integration`
 * **Email:** `$EMAIL`

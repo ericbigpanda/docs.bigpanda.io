@@ -29,7 +29,7 @@ Click on save and continue with the tutorial.
 <!-- section-separator -->
 
 #### Create PRTG Triggers
-Go to *Devices* and click on **Notifications** (for Group **Root**)
+Click on **Devices**, in the devices page click on the **Notifications** button (for Group **Root**)
 
 BigPanda will monitor the **Down**, **Warning**, **Unusual** and **Partial Down** states. The following instructions are for the **Down** state. Please repeat them for every state.
 
