@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Splunk"
-draft: true
+draft: false
 type: "Log Aggregation"
 
 ---
@@ -35,7 +35,8 @@ __Note:__ Unlike other incidents in BigPanda, Splunk incidents will not resolve 
 Configure Splunk to always execute BigPanda's action script when an alert is triggered by running the following configuration script:
 
     $ sudo bigpanda-splunk-defaults
-
+    
+Restart Splunk server for the changes to take effect.
 
 <!-- section-separator -->
 
