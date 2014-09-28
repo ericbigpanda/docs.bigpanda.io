@@ -80,6 +80,6 @@ Configure the locations of the OpsView log and object cache files:
 <!-- section-separator -->
 
 #### Success
-You should be able to see all your active OpsView alerts in OpsBox.
+You should be able to see all your active OpsView alerts in the Incidents tab.
 
 

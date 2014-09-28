@@ -7,7 +7,7 @@ type: System Monitoring
 ---
 
 #### Install the BigPanda Agent
-Connect to the host where your Nagios server is installed, and install the BigPanda agent package.
+Connect to the host where your Zabbix server is installed, and install the BigPanda agent package.
 
 **RedHat / CentOS:**
 
@@ -75,4 +75,4 @@ Your Zabbix alerts are now being streamed to BigPanda.
 <!-- section-separator -->
 
 #### Success
-You should be able to see all your active Zabbix alerts in OpsBox.
+You should be able to see all your active Zabbix alerts in the Incidents tab.

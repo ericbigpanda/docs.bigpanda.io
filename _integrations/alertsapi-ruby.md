@@ -1,9 +1,23 @@
 ---
 layout: integration 
-title: "Alerts REST API"
+title: "Alerts REST API - Ruby"
 type: API
-draft: false
+draft: true
 ---
+
+#### Create An App Key - Ruby
+
+<!-- docs-only-start -->
+Using BigPanda's Alerts API is easy. Start by creating an app key within the BigPanda Application (Integrations -> Alerts REST API). Use a separate app key per each system you integrate.
+
+<!-- docs-only-end -->
+<!-- app-only-start -->
+Using BigPanda's Alerts API is easy. Start by creating an app key with the form below. Use a separate app key per each system you integrate.
+
+<!-- include 'integrations/alertsapi/alertsapi' -->
+<!-- app-only-end -->
+
+<!-- section-separator -->
 
 #### Make a REST Call From Your Monitoring System
 
@@ -89,7 +103,7 @@ As can be seen in the example above, the main payload now contains only two prop
 
 #### Alert Lifecycle
 
-Every alert has a clear lifecycle - it starts at some point, ends at another, and occasionally flaps between statuses. Creating an incident in BigPanda for every status change would have caused the incident list (Incidents page) to be extremely noisy and probably even less useful than your email inbox. To avoid that, BigPanda utilizes different rules for event deduping, merging and grouping. The purpose of the next few sections would be giving you a glimpse into the internals of BigPanda, so you, as a REST API user, could better understand how BigPanda is going to process your events.
+Every alert has a clear lifecycle - it starts at some point, ends at another, and occasionally flaps between statuses. Creating an incident in BigPanda for every status change would have caused the incident list (Incidents tab) to be extremely noisy and probably even less useful than your email inbox. To avoid that, BigPanda utilizes different rules for event deduping, merging and grouping. The purpose of the next few sections would be giving you a glimpse into the internals of BigPanda, so you, as a REST API user, could better understand how BigPanda is going to process your events.
 
 ##### Primary and Secondary properties
 
@@ -143,7 +157,7 @@ Another dimension we consider when consolidating alerts into incidents is **Time
 * Two alerts will be consolidated by their `cluster` property if and only if they started at the same 4 hours timeframe.
 
 #### Alert Resolution and Expiration
-Alerts that were not resolved, i.e. did not receive an event with status `ok`, will remain open in BigPanda and will cause the corresponding incident to remain open. Open incidents will continue to be displayed in BigPanda's Incidents, so it's highly recommended that resolving events are sent to BigPanda this way or another. By default, open alerts will be automatically closed (a.k.a expired) after a months with no activity (i.e. no new events).
+Alerts that were not resolved, i.e. did not receive an event with status `ok`, will remain open in BigPanda and will cause the corresponding incident to remain open. Open incidents will continue to be displayed in BigPanda's Incidents tab, so it's highly recommended that resolving events are sent to BigPanda this way or another. By default, open alerts will be automatically closed (a.k.a expired) after a months with no activity (i.e. no new events).
 
 _Note_: incidents will remain open as long as at least one of the alerts associated with it is open.
 

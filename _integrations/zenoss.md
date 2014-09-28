@@ -64,5 +64,5 @@ Make sure the host, the user and the password for Zenoss are configured correctl
 <!-- section-separator -->
 
 #### Success
-You should be able to see all your active Zenoss alerts in OpsBox.
+You should be able to see all your active Zenoss alerts in the Incidents tab.
 

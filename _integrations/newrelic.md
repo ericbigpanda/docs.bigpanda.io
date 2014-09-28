@@ -6,23 +6,6 @@ type: Application Monitoring
 
 ---
 
-#### Create a BigPanda Application Key
-
-Start by creating an app key for a New Relic account with the form below. Use a separate app key per each New Relic account you integrate. 
-
-*Tip: if you have only one New Relic account, you might want to click on `Generate App Key` without giving a name.*
-
-<!-- app-only-start -->
-<!-- include 'integrations/multiple/multiple' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-In the BigPanda Application, there's a Form that you can enter the New Relic account name.
-
-<!-- docs-only-end -->
-
-
-<!-- section-separator -->
 #### Locate Alert Policies Settings
 In the *New Relic* dashboard, navigate to [Tools > Alert Policies > Channels and groups](https://rpm.newrelic.com/notification_channels)
 
@@ -50,7 +33,7 @@ Click on `Integrate with Webhooks`.
 <!-- app-only-end -->
 <!-- docs-only-start -->
 
-In the BigPanda Application, there's a Form that you can enter your API, which will create the New Relic WebHook for you.
+Within the BigPanda Application use the interactive New Relic integration guide to enter your API Key. It will create the New Relic WebHook for you.
 
 <!-- docs-only-end -->
 
@@ -60,5 +43,5 @@ In the BigPanda Application, there's a Form that you can enter your API, which w
 
 A test message should arrive in a few moments.
 
-_Make sure that you can see the alert in the **OpsBox** screen, BigPanda will automatically close the test incident after 3 hours._
+_Make sure that you can see the alert in the **Incidents** tab, BigPanda will automatically close the test incident after 3 hours._
 

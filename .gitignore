@@ -5,3 +5,4 @@ public
 public_prod
 .DS_Store
 node_modules
+_config-deploy.yml

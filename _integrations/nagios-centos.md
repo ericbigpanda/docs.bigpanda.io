@@ -1,12 +1,12 @@
 ---
 layout: integration 
-title: "Nagios (RedHat)"
+title: "Nagios (CentOS)"
 draft: false
 type: System Monitoring
 
 ---
 
-#### Install the BigPanda Agent On RedHat
+#### Install the BigPanda Agent On CentOS
 Connect to the host where your Nagios server is installed, and install the BigPanda agent package.
 
 
