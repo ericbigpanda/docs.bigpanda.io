@@ -75,4 +75,4 @@ Your Zabbix alerts are now being streamed to BigPanda.
 <!-- section-separator -->
 
 #### Success
-You should be able to see all your active Zabbix alerts in OpsBox.
+You should be able to see all your active Zabbix alerts in the Incidents tab.

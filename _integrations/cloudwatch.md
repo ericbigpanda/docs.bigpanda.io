@@ -38,4 +38,4 @@ In the BigPanda Application, you'll be able retreive the regions you'd like to i
 <!-- section-separator -->
 
 #### Success
-Next time you will have CloudWatch alerts, you will be able to see them in OpsBox.
+Next time you will have CloudWatch alerts, you will be able to see them in the Incidents tab.

@@ -45,4 +45,4 @@ Enter the BigPanda Application to enter your Pingdom credentials, needed to fini
 <!-- section-separator -->
 
 #### Success
-Next time you have Pingdom alerts, you will able to see them in OpsBox.
+Next time you have Pingdom alerts, you will able to see them in the Incidents tab.

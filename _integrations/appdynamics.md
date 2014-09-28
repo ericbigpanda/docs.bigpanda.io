@@ -54,7 +54,7 @@ After selecting or creating a contact, click on `Save` in the next `Configure Ac
 #### Success
 *Don't forget to follow steps 2-3 for every application in AppDynamics*
 
-Next time you'll have AppDynamics alerts, you will able to see them in OpsBox.
+Next time you'll have AppDynamics alerts, you will able to see them in the Incidents tab.
 
 Now click on `Done & Install` below to finish.
 

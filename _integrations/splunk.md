@@ -18,7 +18,7 @@ Now you'll need to install the python package to get BigPanda Splunk action scri
 This will create a test alert in your BigPanda Dashboard.
 <!-- docs-only-end -->
 <!-- app-only-start -->
-After running these commands, you should see a test alert in OpsBox.
+After running these commands, you should see a test alert in the Incidents tab.
 <!-- app-only-end -->
 <!-- docs-only-start -->
 __Note:__ Unlike other incidents in BigPanda, Splunk incidents will not resolve automatically as Splunk does not send notifications when an alert is resolved. For this reason, Splunk incidents can be resolved manually by clicking on the resolve button (![media/resolve.png](/media/resolve.png))  on the incident.
@@ -41,4 +41,4 @@ Restart Splunk server for the changes to take effect.
 <!-- section-separator -->
 
 #### Success
-Next time you will have Splunk alerts, you will be able to see them in OpsBox.
+Next time you will have Splunk alerts, you will be able to see them in the Incidents tab.

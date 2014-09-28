@@ -75,7 +75,7 @@ Give the agent read permissions to the object cache and log files. A possible wa
 <!-- section-separator -->
 
 #### Success
-You should be able to see all your active Nagios alerts in OpsBox.
+You should be able to see all your active Nagios alerts in the Incidents tab.
 
 
 

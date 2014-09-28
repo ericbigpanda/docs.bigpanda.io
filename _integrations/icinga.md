@@ -78,6 +78,6 @@ Configure the locations of the icinga log and object cache files:
 <!-- section-separator -->
 
 #### Success
-You should be able to see all your active Icinga alerts in OpsBox.
+You should be able to see all your active Icinga alerts in the Incidents tab.
 
 
