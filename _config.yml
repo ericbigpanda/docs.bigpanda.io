@@ -16,7 +16,7 @@ collections:
 future: true
 
 # Exclude non-site files
-exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json", "public_prod", "public"]
+exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json", "public_prod", "public", "*.sh", "dev.js"]
 
 markdown: KramdownPygments
 highlighter: pygments
