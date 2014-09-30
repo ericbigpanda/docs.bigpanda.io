@@ -5,7 +5,7 @@ html, body {
 body {
     position: relative;
     padding: 0px;
-    margin: 0px;
+    margin: 70px 0px 0px 0px;
     width: 100%;
     height: 100%;	
     direction: ltr;
@@ -54,19 +54,19 @@ header.header nav.mainmenu ul li {
 }
 
 header.header nav.mainmenu ul li a {
-    padding-left: 30px;
+    padding-left: 35px;
     font-family: "Arial";
-    padding-right: 30px;
+    padding-right: 35px;
     letter-spacing: 1px;
     text-decoration: none;
     display: inline-block;
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-left: -1px;
+    margin-right: -1px;
     padding-top: 25px;
     height: 100%;
     color: #7a7a7a;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     background-color: transparent;
     transition: background 0.3s ease;
     -webkit-transition: background 0.3s ease;
@@ -170,6 +170,7 @@ header.header nav.mainmenu ul li.current a {
     -o-transition: background 0.3s ease;
 }
 header.header {
+    top: 0px;
     position: fixed;
     background-color: #fff;
     width: 100%;
@@ -270,7 +271,7 @@ footer .bottom {
     margin:0px 0px 0px 0px;
     text-align:center;
     text-transform:uppercase;
-    padding: 118px 0px 56px 4px;
+    padding: 48px 0px 56px 4px;
     color:#505050;
     font-weight:100;
     font-size:52px;
@@ -280,9 +281,9 @@ footer .bottom {
 }
 
 #navigation {
-    margin-top: 105px;
-    margin-left: 98px;
-    width:250px;
+    margin-top: 106px;
+    margin-left: 100px;
+    width:251px;
     transition: margin-top 0.14s ease-in-out;
 }
 
@@ -294,6 +295,7 @@ footer .bottom {
 }
 #navigation .nav-list li.nav-header:last-child {
     border-bottom: solid 1px #f0f0f0;
+    border-top: solid 1px #f0f0f0;
 }
 #navigation .nav-list li, #navigation .subnav li {
     height: 40px;
@@ -302,8 +304,11 @@ footer .bottom {
     padding : 10px;
     font-weight:bold;
 }
-#navigation ul li.nav-header{
+#navigation ul li.nav-header:not(:last-child){
     border-top: solid 1px #f0f0f0;
+}
+#navigation ul li.nav-header:not(:first-child){
+    border-bottom: solid 1px #f0f0f0;
 }
 #navigation ul li.nav-header.current-collection:after{
     content:"d";
@@ -429,22 +434,24 @@ footer .bottom {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
+    height: 38px;
 }
 #search {
     margin-bottom:15px;
 }
 #search{
     border-top: solid 1px #F0f0f0;
-    padding-top:15px;
+    padding:14px 0px 0px 1px;
 }
 #search form:after{
     /*content: "\e003";*/
     content: "i";
+    font-size: 16px;
     font-family: 'bigpanda';
-    right: 23px;
+    right: 9px;
     font-weight:bold;
     position: absolute;
-    top: 27px;
+    top: 23px;
     color: #9d9d9d;
 }
 #search-query::-webkit-input-placeholder {
@@ -573,15 +580,17 @@ footer .bottom {
     background-color: #fff;
 }
 
-.collection-title{
-    margin-top: 0;
+#content .collection-title{
+    margin-top: -70px;
+    padding-top: 70px;
     font-family: 'Open Sans';
     font-weight: bold;
     font-size: 32px;
 }
 .doc-title, .integration-type-title {
+    padding-top:70px;
+    margin-top: -25px;
     font-family: 'Open Sans';
-    padding-top: 75px;
     font-weight: bold;
 }
 .doc-title {
