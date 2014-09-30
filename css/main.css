@@ -280,7 +280,9 @@ footer .bottom {
 }
 
 #navigation {
-    margin-top: 110px;
+    margin-top: 105px;
+    margin-left: 98px;
+    width:250px;
     transition: margin-top 0.14s ease-in-out;
 }
 
@@ -339,8 +341,6 @@ footer .bottom {
 }
 
 .main {
-    margin-top: 30px;
-
     font-family: arial;
     min-height: 500px;
     position:relative;
@@ -435,7 +435,7 @@ footer .bottom {
 }
 #search{
     border-top: solid 1px #F0f0f0;
-    padding-top:20px;
+    padding-top:15px;
 }
 #search form:after{
     /*content: "\e003";*/
@@ -876,7 +876,8 @@ footer.footer nav.footermenu ul li a:hover {
 }
 #content {
     line-height: 27px;
-    padding-top:130px;
+    margin-left: 400px;
+    padding-top:122px;
     min-height: 500px;
     font-family: 'Open Sans';
 }
@@ -924,21 +925,23 @@ pre code , code {
     width: 100%;
 }
 @media (min-width: 1300px){
-    #navigation {
+/*    #navigation {
         width: 14% !important;
-    }
+    }*/
 }
 
 @media (min-width: 1500px){
-    #navigation {
+/*    #navigation {
         width: 14% !important;
         margin-left:-120px !important;        
     }
+*/
 }
 
 @media (min-width: 1800px){
-    #navigation {
+/*    #navigation {
         width: 12% !important;
         margin-left:-120px !important;        
     }
+*/
 }
