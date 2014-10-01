@@ -291,7 +291,7 @@ footer .bottom {
     margin-top: -140px;
 }
 #navigation.end {
-    display:none !important;
+    bottom: 410px;
 }
 #navigation .nav-list li.nav-header:last-child {
     border-bottom: solid 1px #f0f0f0;
