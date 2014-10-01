@@ -628,8 +628,15 @@ footer .bottom {
 .mobile-headers {
     text-align:center;
     font-size: 14px;
-    margin-top : -70px;
     padding: 10px 15px;
+    color: #505050;
+}
+.mobile-headers a, .mobile-headers a:hover, .mobile-headers a:visited{
+    color: #505050;
+    text-decoration:none;
+}
+.mobile-headers-top{
+    margin-top : -70px;
 }
 
 .mobile-header:not(:last-child):after{
