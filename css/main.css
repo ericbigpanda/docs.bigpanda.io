@@ -900,12 +900,12 @@ footer.footer nav.footermenu ul li a:hover {
     padding: 0px 0px 0px 20px;
 }
 
-.post-content h4 {
+.page-content h4, .post-content h4 {
     padding: 35px 0px 10px 0px;
     font-size: 24px;
     font-weight: 600;
 }
-.post-content p
+.page-content p , .post-content p
 {
     padding-bottom: 20px;
 }
