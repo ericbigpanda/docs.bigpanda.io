@@ -1,6 +1,6 @@
 #!/bin/bash
-npm i --dev
+npm i
 gem install jekyll kramdown nokogiri
 if [[ ! "$?" = "0" ]]; then
-    sudo install jekyll kramdown nokogiri
+    sudo gem install jekyll kramdown nokogiri
 fi
