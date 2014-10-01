@@ -895,7 +895,7 @@ footer.footer nav.footermenu ul li a:hover {
     line-height: 27px;
 }
 
-.post-content ul
+.page-content ul ,.post-content ul
 {
     padding: 0px 0px 0px 20px;
 }
