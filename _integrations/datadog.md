@@ -17,27 +17,27 @@ In the New Webhook form, fill out the following:
 * Use custom payload (mark checkbox)
 * In the custom payload, fill in the following json:
 
-```
-{
-    "id":"$ID",
-    "title":"$EVENT_TITLE",
-    "last_updated": "$LAST_UPDATED",
-    "date": "$DATE",
-    "event_type":"$EVENT_TYPE",
-    "body":"$EVENT_MSG",
-    "org":{
-        "id":"$ORG_ID",
-        "name":"$ORG_NAME"
-    },
-    "link": "$LINK",
-    "priority": "$PRIORITY",
-    "alert_status": "$ALERT_STATUS",
-    "aggreg_key": "$AGGREG_KEY",
-    "alert_transition": "$ALERT_TRANSITION",
-    "tags":  "$TAGS",
-    "alert_metric": "$ALERT_METRIC"
-}
-```
+    ```
+    {
+        "id":"$ID",
+        "title":"$EVENT_TITLE",
+        "last_updated": "$LAST_UPDATED",
+        "date": "$DATE",
+        "event_type":"$EVENT_TYPE",
+        "body":"$EVENT_MSG",
+        "org":{
+            "id":"$ORG_ID",
+            "name":"$ORG_NAME"
+        },
+        "link": "$LINK",
+        "priority": "$PRIORITY",
+        "alert_status": "$ALERT_STATUS",
+        "aggreg_key": "$AGGREG_KEY",
+        "alert_transition": "$ALERT_TRANSITION",
+        "tags":  "$TAGS",
+        "alert_metric": "$ALERT_METRIC"
+    }
+    ```
 
 * Ensure that the "Encode as form" checkbox is not checked
 
