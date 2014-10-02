@@ -8,7 +8,7 @@ type: System Monitoring
 
 #### Create a Datadog Webhook Notification  
 
-Login to Datadog and in enter your [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks) (Integrations -> Integrations -> Webhooks)
+Login to Datadog and enter your [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks) (Integrations -> Integrations -> Webhooks)
 
 In the New Webhook form, fill out the following:  
 
