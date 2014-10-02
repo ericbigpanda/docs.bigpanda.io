@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Datadog"
-draft: false
+draft: true
 type: System Monitoring
 
 ---
@@ -38,7 +38,6 @@ Custom payload json:
        "tags":  "$TAGS",
        "alert_metric": "$ALERT_METRIC"
      }
-
 
 * Ensure that the "Encode as form" checkbox is not checked
 
