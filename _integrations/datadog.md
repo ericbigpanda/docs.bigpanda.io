@@ -8,7 +8,7 @@ type: System Monitoring
 
 #### Create a Datadog Webhook Notification  
 
-Login to Datadog and in enter your [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks)
+Login to Datadog and in enter your [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks) (Integrations -> Integrations -> Webhooks)
 
 In the New Webhook form, fill out the following:  
 
@@ -39,14 +39,14 @@ In the New Webhook form, fill out the following:
 }
 ```
 
-* Ensure that *'Encode as form'* is **NOT** checked
+* Ensure that the "Encode as form" checkbox is not checked
 
 <!-- section-separator -->
 
 #### Add the BigPanda Webhook to your alerts
 
 Enter the Datadog metrics section, specifically the [Manage Monitors](https://app.datadoghq.com/monitors) section.
-Edit your alert, and add the BigPanda Webhook you created to the 5th part ('*Notify your team*')
+Edit your alert, and add the BigPanda Webhook you created to the 5th part ("Notify your team")
  
 <!-- section-separator -->
 
