@@ -26,10 +26,6 @@ Custom payload json:
        "date": "$DATE",
        "event_type":"$EVENT_TYPE",
        "body":"$EVENT_MSG",
-       "org":{
-         "id":"$ORG_ID",
-         "name":"$ORG_NAME"
-       },
        "link": "$LINK",
        "priority": "$PRIORITY",
        "alert_status": "$ALERT_STATUS",
