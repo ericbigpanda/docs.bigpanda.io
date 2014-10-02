@@ -46,7 +46,7 @@ In the New Webhook form, fill out the following:
 #### Add the BigPanda Webhook to your alerts
 
 Enter the Datadog metrics section, specifically the [Manage Monitors](https://app.datadoghq.com/monitors) section.
-Edit your alert, and add the BigPanda Webhook you created to the 5th part ("Notify your team")
+Edit each monitor, and add the BigPanda Webhook that you created to the last part of the edit Monitor screen ("Notify your team" section)
  
 <!-- section-separator -->
 
