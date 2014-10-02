@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Datadog"
-draft: true
+draft: false
 type: System Monitoring
 
 ---
@@ -15,29 +15,30 @@ In the New Webhook form, fill out the following:
 * Webhook Name: `BigPanda`
 * Webhook URL: `https://api.bigpanda.io/data/integrations/datadog?$URL_PARAMS`
 * Use custom payload (mark checkbox)
-* In the custom payload, fill in the following json:
+* In the custom payload, fill in the following:
 
-    ```
-    {
-        "id":"$ID",
-        "title":"$EVENT_TITLE",
-        "last_updated": "$LAST_UPDATED",
-        "date": "$DATE",
-        "event_type":"$EVENT_TYPE",
-        "body":"$EVENT_MSG",
-        "org":{
-            "id":"$ORG_ID",
-            "name":"$ORG_NAME"
-        },
-        "link": "$LINK",
-        "priority": "$PRIORITY",
-        "alert_status": "$ALERT_STATUS",
-        "aggreg_key": "$AGGREG_KEY",
-        "alert_transition": "$ALERT_TRANSITION",
-        "tags":  "$TAGS",
-        "alert_metric": "$ALERT_METRIC"
-    }
-    ```
+Custom payload json:
+
+     {
+       "id":"$ID",
+       "title":"$EVENT_TITLE",
+       "last_updated": "$LAST_UPDATED",
+       "date": "$DATE",
+       "event_type":"$EVENT_TYPE",
+       "body":"$EVENT_MSG",
+       "org":{
+         "id":"$ORG_ID",
+         "name":"$ORG_NAME"
+       },
+       "link": "$LINK",
+       "priority": "$PRIORITY",
+       "alert_status": "$ALERT_STATUS",
+       "aggreg_key": "$AGGREG_KEY",
+       "alert_transition": "$ALERT_TRANSITION",
+       "tags":  "$TAGS",
+       "alert_metric": "$ALERT_METRIC"
+     }
+
 
 * Ensure that the "Encode as form" checkbox is not checked
 
