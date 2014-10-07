@@ -8,14 +8,14 @@ type: Deployment
 #### Install the BigPanda Jenkins Plugin
 
 In Jenkins, Enter ```Manage Jenkins > Manage Plugins > Available```.
-Find the BigPanda Jenkins Notifier, mark the checkbox and click ```Install without restart``` at the bottom.
+Find the plugin ```BigPanda Notifier``` mark the checkbox to the left of the row, then click ```Install without restart``` at the bottom.
 
 <!-- section-separator -->
 
 #### Configuring  the global Jenkins settings
 
 In Jenkins, Enter ```Manage Jenkins > Configure System```
-At the ```BigPanda Notification``` Section, enter ```$TOKEN``` and click save
+At the ```BigPanda Notifier``` section, enter ```$TOKEN``` and click save
 
 <!-- section-separator -->
 
