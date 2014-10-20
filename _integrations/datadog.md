@@ -1,7 +1,7 @@
 ---
 layout: integration 
 title: "Datadog"
-draft: true
+draft: false
 type: System Monitoring
 
 ---
