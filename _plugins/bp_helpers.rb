@@ -29,9 +29,22 @@ module Jekyll
     def to_id_filter(str)
       BPHelpersFilters.to_id(str)
     end
+
     def self.to_id(str)
       str.downcase().gsub(/[^a-zA-Z]/, "-")
     end
+
+    def replace_docs_include(content)
+      path_matches = content.match(/<\!\-\-\sdocs\-include\s([^\s]*)\s\-\-\>/)
+      return content unless path_matches
+      base_path = File.expand_path("../", File.dirname(__FILE__)) 
+      path_matches.captures.each do |include_path|
+        file_path = "#{base_path}/#{include_path}"
+        content = content.gsub("<!-- docs-include #{include_path} -->", File.read(file_path))
+      end
+      content
+    end
+
     def replace_section_separator(content)
       separator = "<!-- section-separator -->"
       index = 0
