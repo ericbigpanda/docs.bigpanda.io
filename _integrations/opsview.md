@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "OpsView"
+title: "OpsView (RedHat)"
 draft: false
 type: System Monitoring
 

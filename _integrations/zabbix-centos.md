@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Zabbix"
+title: "Zabbix (CentOs)"
 draft: false
 type: System Monitoring
 

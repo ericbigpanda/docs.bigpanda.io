@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Zenoss (RedHat)"
+title: "Zenoss (CentOs)"
 draft: false
 type: System Monitoring
 

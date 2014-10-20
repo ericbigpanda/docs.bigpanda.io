@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Zabbix"
+title: "Zabbix (Ubuntu)"
 draft: false
 type: System Monitoring
 

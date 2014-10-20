@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Icinga"
+title: "Icinga (Debian)"
 draft: false
 type: System Monitoring
 ---

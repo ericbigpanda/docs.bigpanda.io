@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "OpsView"
+title: "OpsView (CentOS)"
 draft: false
 type: System Monitoring
 

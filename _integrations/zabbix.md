@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Zabbix"
+title: "Zabbix (RedHat)"
 draft: false
 type: System Monitoring
 
