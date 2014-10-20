@@ -9,8 +9,10 @@ type: System Monitoring
 #### Install the BigPanda Agent
 Connect to the host where your Zabbix server is installed, and install the BigPanda agent package.
 
-    $ sudo wget http://repos.bigpanda.io/config/bigpanda.repo -O /etc/yum.repos.d/bigpanda.repo
-    $ sudo yum install bigpanda-agent
+    $ echo deb http://repos.bigpanda.io/deb `lsb_release -c -s` main | sudo tee /etc/apt/sources.list.d/bigpanda.list
+    $ curl https://repos.bigpanda.io/config/bigpanda.pub | sudo apt-key add -
+    $ sudo apt-get update
+    $ sudo apt-get install bigpanda-agent
 
 <!-- section-separator -->
 
@@ -53,8 +55,7 @@ Make sure the host url for Zabbix is configured correctly:
 
 #### Start the BigPanda Agent
 
-    $ sudo initctl start bigpanda
-
+    $ sudo service bigpanda start
 
 Your Zabbix alerts are now being streamed to BigPanda.
 
