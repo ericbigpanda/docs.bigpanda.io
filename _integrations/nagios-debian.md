@@ -17,7 +17,7 @@ Open the main Nagios configuration file (usually `/usr/local/nagios/etc/nagios.c
 
 <!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=debian:::SERVICE_NAME=nagios -->* Test that `nagios` user has write permissions to the `log_archive_path` folder
 
-<!-- docs-include _integrations/agent-common/configure-service/restart-debian.md:::SERVICENAME=nagios -->
+<!-- docs-include _integrations/agent-common/configure-service/restart-debian.md:::SERVICENAME=Nagios:::SERVICE_LOWER=nagios -->
 
 <!-- section-separator -->
 

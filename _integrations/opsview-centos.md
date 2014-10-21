@@ -6,11 +6,7 @@ type: System Monitoring
 
 ---
 
-#### Install the BigPanda Agent
-Connect to the host where your OpsView server is installed, and install the BigPanda agent package.
-
-    $ sudo wget http://repos.bigpanda.io/config/bigpanda.repo -O /etc/yum.repos.d/bigpanda.repo
-    $ sudo yum install bigpanda-agent
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::PLATFORM_NAME=Centos -->
 
 <!-- section-separator -->
 
@@ -19,52 +15,20 @@ Open the main OpsView configuration file (usually `/usr/local/nagios/etc/nagios.
 
 	$ sudo vim /usr/local/nagios/etc/nagios.cfg
 
-* Set `log_rotation_method` to `d` (= daily log rotation)
-* Make sure `log_archive_path` is configured (= location of old logs)
-* Test that OpsView (usually `nagios` user) has write permissions to the `log_archive_path` folder
+<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=centos:::SERVICE_NAME=nagios -->* Test that OpsView (usually `nagios` user) has write permissions to the `log_archive_path` folder
 
-Reload the OpsView service for the changes to take effect.
-	
-    $ sudo service opsview reload
-
+<!-- docs-include _integrations/agent-common/configure-service/restart-centos.md:::SERVICE_LOWER=opsview:::SERVICENAME=OpsView -->
 
 <!-- section-separator -->
 
-#### Configure the BigPanda Agent
-Generate and edit the agent's configuration file:
-
-    $ sudo bigpanda-agent config --token $TOKEN
-    $ sudo vim /etc/bigpanda/bigpanda.conf
-
-Activate the OpsView plugin:
-
-	"plugins" : {
-		"opsview/state" : {
-			"enabled" : true,
-			...
-		}
-	}
-
-Configure the locations of the OpsView log and object cache files:
-
-	"opsview/state" : {
-		...
-		"config" : {
-			"opsview_log_file" : "<LOCATION OF OPSVIEW LOG>",
-			"objects_cache_filename" : "<LOCATION OF OPSVIEW OBJECT CACHE>"
-		}
-	}
+<!-- docs-include _integrations/agent-common/configure-agent/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::SOURCE_SYSTEM_UPPER=ICINGA:::SOURCE_SYSTEM_LOWER=icinga -->
     
 * The log file is usually located at `/usr/local/nagios/var/nagios.log`
 * The cache file is usually located at `/usr/local/nagios/var/objects.cache`
 
-#### Start the BigPanda Agent
-
-    $ sudo initctl start bigpanda
+<!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 
 <!-- section-separator -->
 
-#### Success
-You should be able to see all your active OpsView alerts in the Incidents tab.
-
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM=centos -->
 
