@@ -11,7 +11,7 @@ layout: default
         {% for doc in group["items"] %}
             <h3 class="doc-title" id="{{ doc.slug.href }}" >{{ doc.slug.title }}</h3>
             <div class="post-content guide-content">
-                {{ doc.content | replace_docs_include | replace_include_in_integration_guide | replace_section_separator | markdownify | replace_media_links }}
+                {{ doc.content | replace_docs_include_filter | replace_include_in_integration_guide | replace_section_separator | markdownify | replace_media_links }}
             </div>
             <div class="post-divider"></div>
         {% endfor %}
@@ -20,7 +20,7 @@ layout: default
     {% for doc in docs %}
         <h3 class="doc-title" id="{{ doc.slug.href }}" >{{ doc.slug.title }}</h3>
         <div class="post-content">
-        {{ doc.content | replace_docs_include |  replace_include_in_integration_guide | replace_section_separator | markdownify | replace_media_links }}
+        {{ doc.content | replace_docs_include_filter |  replace_include_in_integration_guide | replace_section_separator | markdownify | replace_media_links }}
     </div>
     <div class="post-divider"></div>
     {% endfor %}

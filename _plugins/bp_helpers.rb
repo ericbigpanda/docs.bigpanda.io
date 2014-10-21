@@ -34,13 +34,28 @@ module Jekyll
       str.downcase().gsub(/[^a-zA-Z]/, "-")
     end
 
-    def replace_docs_include(content)
-      path_matches = content.match(/<\!\-\-\sdocs\-include\s([^\s]*)\s\-\-\>/)
-      return content unless path_matches
+    def replace_docs_include_filter(content)
+        Jekyll::BPHelpersFilters.replace_docs_include(content)
+    end
+
+    def self.replace_docs_include(content)
+      path_matches = content.scan(/(?:<\!\-\-\sdocs\-include\s)(.*?)(?:\s\-\-\>)/m)
+      return content unless path_matches and path_matches.length > 0
       base_path = File.expand_path("../", File.dirname(__FILE__)) 
-      path_matches.captures.each do |include_path|
+      path_matches.each do |capture|
+        capture_fields = capture[0].split(":::") 
+        include_path = capture_fields[0]
         file_path = "#{base_path}/#{include_path}"
-        content = content.gsub("<!-- docs-include #{include_path} -->", File.read(file_path))
+        file_content = File.read(file_path)
+        if capture_fields.length > 1
+            capture_fields[1..-1].each do |field_and_value|
+                key, val = field_and_value.split("=")
+                file_content = file_content.gsub(key, val)
+            end
+        end
+        file_content = self.replace_docs_include(file_content)
+        puts "Including #{include_path}"
+        content = content.gsub("<!-- docs-include #{capture[0]} -->", file_content)
       end
       content
     end

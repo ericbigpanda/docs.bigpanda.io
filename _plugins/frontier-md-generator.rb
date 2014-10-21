@@ -17,11 +17,11 @@ module Jekyll
      
       integration_docs = []
       site.collections["integrations"].docs.each do |doc|
-        puts("Saving #{doc.basename})")
+        puts("Saving #{doc.basename}...")
         integration_docs << doc.basename
         filename = "frontier/#{doc.basename}"
         File.open(File.join(site.dest, filename), "w") do |file|
-          file.write(replace_include(doc.content))
+          file.write(replace_include(BPHelpersFilters::replace_docs_include(doc.content)))
         end
         site.static_files << Jekyll::FrontierMarkdownFile.new(site, site.dest, "/", filename)
       end
