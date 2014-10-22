@@ -6,7 +6,7 @@ type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM_NAME=Ubuntu -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM_NAME=Ubuntu:::PLATFORM_LOWER=ubuntu -->
 
 <!-- section-separator -->
 
