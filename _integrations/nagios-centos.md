@@ -26,6 +26,7 @@ Open the main Nagios configuration file (usually `/usr/local/nagios/etc/nagios.c
 
 * The log file is usually located at `/usr/local/nagios/var/nagios.log` or `/var/log/nagios3/nagios.log`
 * The cache file is usually located at `/usr/local/nagios/var/objects.cache` or `/var/cache/nagios3/objects.cache`
+* The status.dat file is usually located at `/usr/local/nagios/var/status.dat` or `/var/cache/nagios3/status.dat`
 
 <!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 
