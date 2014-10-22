@@ -6,7 +6,7 @@ type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM_NAME=Centos -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
 
 <!-- section-separator -->
 

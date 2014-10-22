@@ -6,7 +6,7 @@ type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::PLATFORM_NAME=Debian -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::PLATFORM_NAME=Debian:::PLATFORM_LOWER=debian -->
 
 <!-- section-separator -->
 
