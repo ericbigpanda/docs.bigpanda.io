@@ -5,13 +5,8 @@ draft: false
 type: System Monitoring
 
 ---
-#### Install the BigPanda Agent
-Connect to the host where your Zenoss server is installed, and install the BigPanda agent package.
 
-    $ echo deb http://repos.bigpanda.io/deb `lsb_release -c -s` main | sudo tee /etc/apt/sources.list.d/bigpanda.list
-    $ curl https://repos.bigpanda.io/config/bigpanda.pub | sudo apt-key add -
-    $ sudo apt-get update
-    $ sudo apt-get install bigpanda-agent
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM_NAME=Ubuntu -->
 
 <!-- section-separator -->
 
@@ -26,6 +21,7 @@ Activate the Zenoss plugin:
 	"plugins" : {
 		"zenoss/api" : {
 			"enabled" : true,
+                    "app_key" : "$STREAM_ID"
 			...
 		}
 	}
@@ -43,13 +39,6 @@ Make sure the host, the user and the password for Zenoss are configured correctl
 		}
 	}
 	
-
-#### Start the BigPanda Agent
-
-    $ sudo service bigpanda start
-
 <!-- section-separator -->
 
-#### Success
-You should be able to see all your active Zenoss alerts in the Incidents tab.
-
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM=ubuntu -->
