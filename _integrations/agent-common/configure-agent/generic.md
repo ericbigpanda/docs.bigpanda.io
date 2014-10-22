@@ -20,7 +20,10 @@ Configure the locations of the SOURCE_SYSTEM_LOWER log and object cache files:
 		...
 		"config" : {
 			"SOURCE_SYSTEM_LOWER_log_file" : "<LOCATION OF SOURCE_SYSTEM_UPPER LOG>",
-			"objects_cache_filename" : "<LOCATION OF SOURCE_SYSTEM_UPPER OBJECT CACHE>"
+			"objects_cache_filename" : "<LOCATION OF SOURCE_SYSTEM_UPPER OBJECT CACHE>",
+                    "status_dat" : {
+                        "filename" : "<LOCATION OF SOURCE_SYSTEM_UPPER STATUS DAT>"
+                    }
 		}
 	}
 

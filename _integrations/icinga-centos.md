@@ -26,6 +26,7 @@ Open the main Icinga configuration file (usually `/usr/local/icinga/etc/icinga.c
     
 * The log file is usually located at `/usr/local/icinga/var/icinga.log` or `/var/log/icinga/icinga.log`
 * The cache file is usually located at `/usr/local/icinga/var/objects.cache` or `/var/cache/icinga/objects.cache`
+* The status.dat file is usually located at `/usr/local/icinga/var/status.dat` or `/var/cache/icinga/status.dat`
 
 <!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 
