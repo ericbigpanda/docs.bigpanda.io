@@ -1,12 +1,12 @@
 ---
 layout: integration 
-title: "Zabbix (RedHat)"
+title: "Zabbix (Debian)"
 draft: false
 type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM_NAME=RedHat -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM_NAME=Debian -->
 
 <!-- section-separator -->
 
@@ -49,4 +49,4 @@ Make sure the host url for Zabbix is configured correctly:
 	
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM=redhat -->
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM=debian -->

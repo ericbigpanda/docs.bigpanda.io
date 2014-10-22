@@ -1,12 +1,12 @@
 ---
 layout: integration 
-title: "OpsView (RedHat)"
+title: "OpsView (CentOS)"
 draft: false
 type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::PLATFORM_NAME=RedHat -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::PLATFORM_NAME=Centos -->
 
 <!-- section-separator -->
 
@@ -15,9 +15,9 @@ Open the main OpsView configuration file (usually `/usr/local/nagios/etc/nagios.
 
 	$ sudo vim /usr/local/nagios/etc/nagios.cfg
 
-<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=redhat:::SERVICE_NAME=nagios -->* Test that OpsView (usually `nagios` user) has write permissions to the `log_archive_path` folder
+<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=centos:::SERVICE_NAME=nagios -->* Test that OpsView (usually `nagios` user) has write permissions to the `log_archive_path` folder
 
-<!-- docs-include _integrations/agent-common/configure-service/restart-redhat.md:::SERVICE_LOWER=opsview:::SERVICENAME=OpsView -->
+<!-- docs-include _integrations/agent-common/configure-service/restart-centos.md:::SERVICE_LOWER=opsview:::SERVICENAME=OpsView -->
 
 <!-- section-separator -->
 
@@ -30,4 +30,5 @@ Open the main OpsView configuration file (usually `/usr/local/nagios/etc/nagios.
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM=redhat -->
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM=centos -->
+

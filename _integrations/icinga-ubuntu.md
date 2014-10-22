@@ -1,11 +1,11 @@
 ---
 layout: integration 
-title: "Icinga (RedHat)"
+title: "Icinga (Ubuntu)"
 draft: false
 type: System Monitoring
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=RedHat -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=Ubuntu -->
 
 <!-- section-separator -->
 
@@ -15,10 +15,10 @@ Open the main Icinga configuration file (usually `/usr/local/icinga/etc/icinga.c
     $ sudo vim /usr/local/icinga/etc/icinga.cfg
 
 
-<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=redhat:::SERVICE_NAME=nagios -->* Test that Icinga (usually `nagios` user) has write permissions to the `log_archive_path` folder
+<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=ubuntu:::SERVICE_NAME=nagios -->* Test that Icinga (usually `nagios` user) has write permissions to the `log_archive_path` folder
 
 
-<!-- docs-include _integrations/agent-common/configure-service/restart-redhat.md:::SERVICENAME=Icinga:::SERVICE_LOWER=icinga -->
+<!-- docs-include _integrations/agent-common/configure-service/restart-ubuntu.md:::SERVICENAME=Icinga:::SERVICE_LOWER=icinga -->
 
 <!-- section-separator -->
 
@@ -31,4 +31,4 @@ Open the main Icinga configuration file (usually `/usr/local/icinga/etc/icinga.c
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM=redhat -->
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM=ubuntu -->

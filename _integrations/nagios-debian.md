@@ -6,14 +6,7 @@ type: System Monitoring
 
 ---
 
-#### Install the BigPanda Agent On Debian
-Connect to the host where your Nagios server is installed, and install the BigPanda agent package.
-
-    $ echo deb http://repos.bigpanda.io/deb `lsb_release -c -s` main | sudo tee /etc/apt/sources.list.d/bigpanda.list
-    $ curl https://repos.bigpanda.io/config/bigpanda.pub | sudo apt-key add -
-    $ sudo apt-get update
-    $ sudo apt-get install bigpanda-agent
-
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM_NAME=Debian -->
 
 <!-- section-separator -->
 
@@ -22,59 +15,19 @@ Open the main Nagios configuration file (usually `/usr/local/nagios/etc/nagios.c
 
     $ sudo vim /usr/local/nagios/etc/nagios.cfg
 
-* Set `log_rotation_method` to `d` (= daily log rotation)
-* Make sure `log_archive_path` is configured (= location of old logs)
-* Test that `nagios` user has write permissions to the `log_archive_path` folder
+<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=debian:::SERVICE_NAME=nagios -->* Test that `nagios` user has write permissions to the `log_archive_path` folder
 
-Reload the nagios service for the changes to take effect.
-	
-    $ sudo service nagios reload
-
+<!-- docs-include _integrations/agent-common/configure-service/restart-debian.md:::SERVICENAME=Nagios:::SERVICE_LOWER=nagios -->
 
 <!-- section-separator -->
 
-#### Configure the BigPanda Agent
-Generate and edit the agent's configuration file:
-
-    $ sudo bigpanda-agent config --token $TOKEN
-    $ sudo vim /etc/bigpanda/bigpanda.conf
-
-Activate the Nagios plugin:
-
-	"plugins" : {
-		"nagios/state" : {
-			"enabled" : true,
-			...
-		}
-	}
-
-Configure the locations of the nagios log and object cache files:
-
-	"nagios/state" : {
-		...
-		"config" : {
-			"nagios_log_file" : "<LOCATION OF NAGIOS LOG>",
-			"objects_cache_filename" : "<LOCATION OF NAGIOS OBJECT CACHE>"
-		}
-	}
+<!-- docs-include _integrations/agent-common/configure-agent/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::SOURCE_SYSTEM_UPPER=NAGIOS:::SOURCE_SYSTEM_LOWER=nagios -->
 
 * The log file is usually located at `/usr/local/nagios/var/nagios.log` or `/var/log/nagios3/nagios.log`
 * The cache file is usually located at `/usr/local/nagios/var/objects.cache` or `/var/cache/nagios3/objects.cache`
 
-Give the agent read permissions to the object cache and log files. A possible way to do it:
-
-    $ usermod bigpanda -a -G "<GROUP OF OBJECT CACHE FILE>,<GROUP OF LOG FILE>"
+<!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 
 <!-- section-separator -->
 
-#### Start the BigPanda Agent
-
-    $ sudo service bigpanda start
-
-<!-- section-separator -->
-
-#### Success
-You should be able to see all your active Nagios alerts in the Incidents tab.
-
-
-
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM=debian -->
