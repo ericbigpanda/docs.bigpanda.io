@@ -53,20 +53,26 @@
     docs
 </h1>
 <div class="container main">
-        <div id="navigation" class="col-md-2 hidden-sm visible-md-block visible-lg-block affix">
+        <div id="navigation" class="hidden-sm visible-md-block visible-lg-block affix">
             {% include navigation.html %}
         </div>
 
     {% assign prefix = site.baseurl | append: '/' %}
-        <div id="content" class="col-md-8 col-lg-7 col-md-offset-2">
+    <div id="content" class="col-md-8 col-lg-7"> 
             {% assign sorted_collections = '' | get_sorted_collections_filter %}
-             <div class="mobile-headers hidden-lg hidden-md visible-sm-block visible-xs-block"> 
+             <div class="mobile-headers mobile-headers-top hidden-lg hidden-md visible-sm-block visible-xs-block"> 
             {% for collection in sorted_collections %}
 
             <a class="mobile-header" href="{{ prefix }}{{ collection.name }}/index.html">{{ collection.slug.title}}</a>
             {% endfor %}
             </div>
             {{ content }}
+             <div class="mobile-headers mobile-headers-bottom hidden-lg hidden-md visible-sm-block visible-xs-block"> 
+            {% for collection in sorted_collections %}
+
+            <a class="mobile-header" href="{{ prefix }}{{ collection.name }}/index.html">{{ collection.slug.title}}</a>
+            {% endfor %}
+            </div>
         </div>
 </div>
 <div class="container try-now">

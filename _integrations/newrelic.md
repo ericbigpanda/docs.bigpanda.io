@@ -6,8 +6,8 @@ type: Application Monitoring
 
 ---
 
-#### Locate Alert Policies Settings
-In the *New Relic* dashboard, navigate to [Tools > Alert Policies > Channels and groups](https://rpm.newrelic.com/notification_channels)
+#### Locate Alerts Settings
+In the *New Relic* dashboard, navigate to [Alerts > Channels and groups](https://rpm.newrelic.com/notification_channels)
 
 <!-- section-separator -->
 
