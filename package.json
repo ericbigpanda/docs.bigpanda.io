@@ -1,10 +1,9 @@
 {
   "name": "docs.bigpanda.io",
-  "version": "1.10.2",
+  "version": "1.10.4",
   "description": "________________________     /\\                       \\     \\_|     BigPanda Docs     |       |         FTW           |       |   ____________________|_        \\_/_____________________/",
   "main": "dev.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "body-parser": "^1.6.7",
     "errorhandler": "^1.1.1",
