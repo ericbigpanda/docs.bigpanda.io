@@ -1,8 +1,8 @@
 ---
 layout: integration 
 title: "Zendesk"
-type: Ticketing
-draft: false
+type: Ticket Management
+draft: true
 ---
 
 #### Contact BigPanda
