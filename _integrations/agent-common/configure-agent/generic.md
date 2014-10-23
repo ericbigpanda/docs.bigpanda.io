@@ -14,7 +14,7 @@ Activate the SOURCE_SYSTEM_NAME plugin:
 		}
 	}
 
-Configure the locations of the SOURCE_SYSTEM_LOWER log and object cache files:
+Configure the locations of the SOURCE_SYSTEM_LOWER log, status.dat and objects.cache files:
 
 	"SOURCE_SYSTEM_LOWER/state" : {
 		...
