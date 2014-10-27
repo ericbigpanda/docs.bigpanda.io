@@ -68,21 +68,21 @@ header.header nav.mainmenu ul li a {
     font-size: 13px;
     font-weight: 600;
     background-color: transparent;
-    transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 header.header nav.mainmenu ul li a:hover {
     border-top: solid 5px #40a8de;
     background-color: #f2f2f2;
-    transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 header.header nav.mainmenu ul li.current a:hover {
@@ -92,11 +92,11 @@ header.header nav.mainmenu ul li.current a {
     background-color: #f2f2f2;
     border-top: solid 5px #F2F2F2;
     color: #319bd2;
-    transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .header.header .signupin {
