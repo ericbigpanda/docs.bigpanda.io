@@ -53,44 +53,50 @@ header.header nav.mainmenu ul li {
 }
 
 header.header nav.mainmenu ul li a {
-    padding-left: 35px;
+    border-top: solid 5px #FFF;
+    padding-left: 20px;
     font-family: "Arial";
-    padding-right: 35px;
+    padding-right: 20px;
     letter-spacing: 1px;
     text-decoration: none;
     display: inline-block;
     margin-left: -1px;
     margin-right: -1px;
-    padding-top: 25px;
+    padding-top: 22px;
     height: 100%;
-    color: #7a7a7a;
-    font-size: 14px;
+    color: #505050;
+    font-size: 13px;
     font-weight: 600;
     background-color: transparent;
-    transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 header.header nav.mainmenu ul li a:hover {
+    border-top: solid 5px #40a8de;
     background-color: #f2f2f2;
-    transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
+header.header nav.mainmenu ul li.current a:hover {
+    border-top: solid 5px #40a8de;
+}
 header.header nav.mainmenu ul li.current a {
     background-color: #f2f2f2;
+    border-top: solid 5px #F2F2F2;
     color: #319bd2;
-    transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .header.header .signupin {
@@ -204,7 +210,7 @@ footer .bottom {
 */
 .try-now button {
     margin-top: 20px;
-    background: #40a8de;
+    background: #d7533a;
     border: none;
     text-transform: uppercase;
     padding: 15px 30px;
@@ -731,7 +737,7 @@ footer .bottom {
     }
 
     header.header nav.responav ul li a {
-        font-size: 20px;
+        font-size: 16px;
         color: #d2d2d2;
         font-weight: 300;
         text-decoration: none;
