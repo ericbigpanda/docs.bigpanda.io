@@ -9,12 +9,12 @@ Activate the SOURCE_SYSTEM_NAME plugin:
 	"plugins" : {
 		"SOURCE_SYSTEM_LOWER/state" : {
 			"enabled" : true,
-                    "app_key" : "$STREAM_ID"
+                    "app_key" : "$STREAM_ID",
 			...
 		}
 	}
 
-Configure the locations of the SOURCE_SYSTEM_LOWER log and object cache files:
+Configure the locations of the SOURCE_SYSTEM_LOWER log, status.dat and objects.cache files:
 
 	"SOURCE_SYSTEM_LOWER/state" : {
 		...
@@ -23,7 +23,7 @@ Configure the locations of the SOURCE_SYSTEM_LOWER log and object cache files:
 			"objects_cache_filename" : "<LOCATION OF SOURCE_SYSTEM_UPPER OBJECT CACHE>",
                     "status_dat" : {
                         "filename" : "<LOCATION OF SOURCE_SYSTEM_UPPER STATUS DAT>"
-                    }
+                    },
 		}
 	}
 
