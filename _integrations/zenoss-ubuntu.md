@@ -1,12 +1,12 @@
 ---
 layout: integration 
-title: "Zenoss (RedHat)"
+title: "Zenoss (Ubuntu)"
 draft: false
 type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM_NAME=Ubuntu:::PLATFORM_LOWER=ubuntu -->
 
 <!-- section-separator -->
 
@@ -41,4 +41,4 @@ Make sure the host, the user and the password for Zenoss are configured correctl
 	
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM=redhat -->
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM=ubuntu -->

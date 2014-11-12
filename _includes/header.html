@@ -5,10 +5,9 @@
     </div>
     <nav class="responav">
         <ul class="nav menu">
-            <li class=""><a href="http://www.bigpanda.io/">Product</a></li>
-            <li class=""><a href="http://www.bigpanda.io/integrations">Integrations</a></li>
-            <li class=""><a href="http://blog.bigpanda.io">Blog</a></li>
-            <li class=""><a href="http://www.bigpanda.io/about-us">About Us</a></li>
+            {% for item in navLinks %}
+            <li class="{{ item['Current'] }}"><a href="{{ item["Link"] }}">{{ item["Name"] }}</a></li>
+            {% endfor %}
             <li class=""><a class="log" href="https://a.bigpanda.io/">Login</a></li>
         </ul>
 
@@ -22,7 +21,7 @@
     </nav>
     <div class="signupin">
         <ul class="nav menu">
-            <li class=""><a class="signupbtn" href="https://signup.bigpanda.io">Get Started</a></li><li class="login"><a href="https://a.bigpanda.io">Log In</a></li></ul>
+            <li class=""><a class="signupbtn" href="https://signup.bigpanda.io">FREE TRIAL</a></li><li class="login"><a href="https://a.bigpanda.io">Log In</a></li></ul>
 
     </div>
 </header>

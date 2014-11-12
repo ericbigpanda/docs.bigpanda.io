@@ -1,12 +1,12 @@
 ---
 layout: integration 
-title: "Zabbix (RedHat)"
+title: "Zabbix (CentOs)"
 draft: false
 type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
+<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
 
 <!-- section-separator -->
 
@@ -49,4 +49,4 @@ Make sure the host url for Zabbix is configured correctly:
 	
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM=redhat -->
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM=centos -->
