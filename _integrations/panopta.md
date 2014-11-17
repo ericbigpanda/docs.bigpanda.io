@@ -9,7 +9,7 @@ type: System Monitoring
 
 * **TBD**
 * Access Token: $TOKEN
-* Application Key: $APP_KEY
+* Application Key: $STREAM_ID
 
 
 <!-- section-separator -->
