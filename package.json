@@ -1,14 +1,20 @@
 {
   "name": "docs.bigpanda.io",
-  "version": "1.11.4",
+  "version": "1.12.0",
   "description": "________________________     /\\                       \\     \\_|     BigPanda Docs     |       |         FTW           |       |   ____________________|_        \\_/_____________________/",
   "main": "dev.js",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jekyll": "^0.4.2"
+  },
   "devDependencies": {
     "body-parser": "^1.6.7",
     "errorhandler": "^1.1.1",
     "express": "^4.8.7",
     "express-cross-origin": "^1.4.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-stylus": "^0.20.0",
+    "grunt-express": "^1.4.1",
     "method-override": "^2.1.3"
   },
   "scripts": {
