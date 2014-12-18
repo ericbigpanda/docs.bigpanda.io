@@ -9,7 +9,7 @@ Activate the SOURCE_SYSTEM_NAME plugin:
 	"plugins" : {
 		"SOURCE_SYSTEM_LOWER/state" : {
 			"enabled" : true,
-                    "app_key" : "$STREAM_ID",
+			"app_key" : "$STREAM_ID",
 			...
 		}
 	}

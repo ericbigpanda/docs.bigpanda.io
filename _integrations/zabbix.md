@@ -31,7 +31,7 @@ Activate the Zabbix plugin:
 	"plugins" : {
 		"zabbix/api" : {
 			"enabled" : true,
-                    "app_key" : "$STREAM_ID" 
+			"app_key" : "$STREAM_ID",
 			...
 		}
 	}
@@ -40,7 +40,6 @@ Activate the Zabbix plugin:
 Make sure the host url for Zabbix is configured correctly:
 
 	"zabbix/api": {
-		...
 		"config": {
 			"host": "http://localhost/zabbix",
 			...
