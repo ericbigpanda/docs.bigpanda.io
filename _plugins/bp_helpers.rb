@@ -83,7 +83,8 @@ module Jekyll
 
     def replace_media_links(content)
       site = @context.registers[:site]
-      site.config["production"] ? content : content.gsub(/src="\/media/, "src=\"#{site.config["baseurl"]}/media")
+      #site.config["production"] ? content : content.gsub(/src="\/media/, "src=\"#{site.config["baseurl"]}/media")
+      content.gsub(/src="\/media/, "src=\"#{site.config["baseurl"]}/media")
     end
 
     def self.get_sorted_collections(a, opt_site=nil)
