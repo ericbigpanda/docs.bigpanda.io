@@ -37,4 +37,4 @@ In the BigPanda Application, you'll be able to set JIRA params here.
 After the form is complete, click on "Configure JIRA".
 You should be ready to share incidents to JIRA.
 
-*Note: If you want to share using other users or other issue types, you may create another JIRA integration with a different Target system name.*
+*Note: If you want to share using other users or other issue types, you may create another JIRA integration with a different target system name.*
