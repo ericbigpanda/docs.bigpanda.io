@@ -21,7 +21,7 @@ Activate the Zenoss plugin:
 	"plugins" : {
 		"zenoss/api" : {
 			"enabled" : true,
-                    "app_key" : "$STREAM_ID"
+			"app_key" : "$STREAM_ID",
 			...
 		}
 	}
@@ -31,7 +31,6 @@ Make sure the host, the user and the password for Zenoss are configured correctl
 *Note: You may want to create a dedicated user for BigPanda, the required role is `ZenUser`.*
 
 	"zenoss/api": {
-		...
 		"config": {
 			"host": "http://localhost:8080",
 			"user": "<username>",
