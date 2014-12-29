@@ -31,7 +31,7 @@ In [IAM Management Console](https://console.aws.amazon.com/iam/home?#users), sel
 
 <!-- docs-only-start -->
 
-In the BigPanda Application, you'll be able retreive the regions you'd like to include in BigPanda, and configure CloudWatch accordingly.
+In the BigPanda Application, you'll be able retrieve the regions you'd like to include in BigPanda, and configure CloudWatch accordingly.
 
 <!-- docs-only-end -->
 
