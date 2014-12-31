@@ -22,7 +22,7 @@ Use the form below to configure how the JIRA issues should be created.
 <!-- app-only-start -->
 
 <!-- include 'integrations/jira/jira' -->
-*All the fields are required*
+*All fields are required*
 
 <!-- app-only-end -->
 
