@@ -10,6 +10,7 @@ draft: false
 The ServiceNow integration allows you to easily create ServiceNow incidents from BigPanda incidents.
 Use the form below to configure how the ServiceNow incidents should be created.
 
+*Note: Currently, the ServiceNow integration is only available for Eureka version. Please let us know if you have other version via the support button*
 
 |Field|Description|Example|
 |-----|-----------|-------|
