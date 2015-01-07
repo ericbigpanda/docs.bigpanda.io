@@ -2,7 +2,7 @@
 layout: integration
 title: "JIRA"
 type: Ticket Management
-draft: true
+draft: false
 ---
 
 #### Connect JIRA to BigPanda
