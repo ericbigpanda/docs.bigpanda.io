@@ -8,25 +8,16 @@ draft: false
 #### Create an Incoming Webhook for BigPanda
 The Slack integration allows you to easily share BigPanda incidents with a channel.
 
-* Go to `Slack Home > Slack Integrations` and choose [Incoming WebHooks](https://slack.com/services/new/incoming-webhook) *or just click on the link...*
-* Click on `create a new channel` and name it BigPanda, you may set the purpose to something appropriate.
+* Go to `Slack Home > Slack Integrations` and choose `Incoming WebHooks` *[or just click here...](https://slack.com/services/new/incoming-webhook)*
+* Click on the `create a new channel` link located below the dropdown
+* Name the channel BigPanda. Optionally, you can set the `Purpose` to something appropriate.
 * Click on `Add Incoming WebHooks Integration`
 * Copy the `Webhook URL` to the form below
 * Click on `Save Settings`
 
-<!-- section-separator -->
-#### Connect Slack to BigPanda
-
-Use the form below to configure how BigPanda should send Slack messages.
-
-|Field|Description|Example|
-|-----|-----------|-------|
-|**Slack URL**|The URL of your Slack Incoming WebHook from step 2|`https://hooks.slack.com/services/ABCDEF/GHIJKLMNOP/QRSTUVWXYZ1234567890`|
-
 <!-- app-only-start -->
 
 <!-- include 'integrations/slack/slack' -->
-*The URL field is required*
 
 <!-- app-only-end -->
 
