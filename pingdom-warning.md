@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "How do I configure Pingdom for incident alerts checks?"
+static_page: true
 ---
 
 This tutorial will walk you through configuring BigPanda on Pingdom for "Incident Alerts" checks:
