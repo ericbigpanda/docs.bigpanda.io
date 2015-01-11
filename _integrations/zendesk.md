@@ -1,7 +1,7 @@
 ---
-layout: integration 
+layout: integration
 title: "Zendesk"
-type: Ticket Management
+type: Sharing & Ticket Management
 draft: true
 ---
 
