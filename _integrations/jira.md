@@ -1,7 +1,7 @@
 ---
 layout: integration
 title: "JIRA"
-type: Ticket Management
+type: Sharing & Ticket Management
 draft: false
 ---
 
