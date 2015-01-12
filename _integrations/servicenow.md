@@ -15,7 +15,7 @@ Use the form below to configure how the ServiceNow incidents should be created.
 |Field|Description|Example|
 |-----|-----------|-------|
 |**ServiceNow URL**|The URL of your ServiceNow account. Go to the ServiceNow dashboard and copy the address before **/navpage.do**|For **https://bigpanda.servicenow.com/navpage.do**  please input **https://bigpanda.servicenow.com**|
-|**Username**|The ServiceNow user that will be used to create issues|`bigpandaUser`|
+|**Username**|A ServiceNow user with `rest_service` role that will be used to create issues|`bigpandaUser`|
 |**Password**|The corresponding ServiceNow password|`123456`|
 
 <!-- app-only-start -->
