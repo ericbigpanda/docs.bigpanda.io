@@ -18,7 +18,7 @@ In the Add Notification page:
 * For **NOTIFICATION SUMMARIZATION > Method** choose: `Always notify ASAP`
 * Mark **EXECUTE HTTP ACTION** as checked
 * In **EXECUTE HTTP ACTION > URL** insert: `https://api.bigpanda.io/data/integrations/prtg?$URL_PARAMS`
-* In **EXECUTE HTTP ACTION > Postdata** insert: `sensor=%name&status=%status&datetime=%datetime&timezone=%timezone&message=%message&group=%group&device=%device&host=%host&home=%home&prio=%prio&since=%since`
+* In **EXECUTE HTTP ACTION > Postdata** insert: `sensor=%name&status=%status&datetime=%datetime&timezone=%timezone&message=%message&group=%group&device=%device&host=%host&home=%home&prio=%prio&since=%since&linksensor=%linksensor`
 
 The final outcome should look like this:  
 ![Create Policy window](/media/prtg1.jpg)
