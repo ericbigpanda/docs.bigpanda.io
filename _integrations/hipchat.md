@@ -8,13 +8,13 @@ draft: false
 #### Get an API Token for BigPanda
 The HipChat integration allows you to easily share BigPanda incidents to a HipChat room.
 
-* Create a new room for BigPanda in your favorite HipChat client
-* In the top menu, go to **Group admin** and choose the **Rooms** tab *[or just click here...](https://hipchat.com/admin/rooms)*
+* Create a new HipChat room for BigPanda
+* In [https://hipchat.com](https://hipchat.com) navigate through the top menu to **Group admin** and choose the **Rooms** tab *[or just click here...](https://hipchat.com/admin/rooms)*
 * Find the room that you've just created and click on it
-* From the details of the room you can find the **API ID**, copy it to the form below
-* Choose the **Tokens** tab in the left menu
-* Label the new token `BigPanda` and click on **Create**
-* Copy the Token to the form below
+* In the **Room Details** section, find the **API ID** and copy it to the form below
+* Switch to the **Tokens** tab on the left menu
+* Under **Create new token**, enter the label `BigPanda` and click on **Create**
+* Copy the generated **Token** to the form below
 
 <!-- app-only-start -->
 
