@@ -55,6 +55,3 @@ After selecting or creating a contact, click on `Save` in the next `Configure Ac
 *Don't forget to follow steps 2-3 for every application in AppDynamics*
 
 Next time you'll have AppDynamics alerts, you will able to see them in the Incidents tab.
-
-Now click on `Done & Install` below to finish.
-
