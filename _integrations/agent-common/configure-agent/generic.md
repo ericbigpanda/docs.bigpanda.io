@@ -6,9 +6,9 @@ Generate and edit the agent's configuration file:
 
 Find the SOURCE_SYSTEM_LOWER/state plugin configuration section:
 
-* Replace <APP_KEY> with $STREAM_ID
-* Configure the locations of the SOURCE_SYSTEM_LOWER log, status.dat and objects.cache files
-* Set enabled to 'true'
+* Replace `<APP_KEY>` with `$STREAM_ID`
+* Configure the locations of `LOGFILE.log`, `status.dat` and `objects.cache` files
+* Set `enabled` to `true`
 
 The plugin config should looks something like this:
 
