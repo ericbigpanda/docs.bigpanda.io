@@ -21,11 +21,7 @@ Open the main OpsView configuration file (usually `/usr/local/nagios/etc/nagios.
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/configure-agent/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::SOURCE_SYSTEM_UPPER=OPSVIEW:::SOURCE_SYSTEM_LOWER=opsview -->
-    
-* The log file is usually located at `/usr/local/nagios/var/nagios.log`
-* The cache file is usually located at `/usr/local/nagios/var/objects.cache`
-* The status.dat file is usually located at `/usr/local/nagios/var/status.dat`
+<!-- docs-include _integrations/agent-common/configure-agent/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::SOURCE_SYSTEM_UPPER=OPSVIEW:::SOURCE_SYSTEM_LOWER=opsview:::SOURCE_SYSTEM_FOLDER=nagios:::LOGFILE=nagios -->
 
 <!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 
