@@ -10,7 +10,7 @@ Find the SOURCE_SYSTEM_LOWER/state plugin configuration section:
 * Configure the locations of `LOGFILE.log`, `status.dat` and `objects.cache` files
 * Set `enabled` to `true`
 
-The plugin config should looks something like this:
+The plugin config should look like this:
 
 	"SOURCE_SYSTEM_LOWER/state" : {
 		"enabled" : true,
@@ -23,7 +23,3 @@ The plugin config should looks something like this:
 			}
 		}
 	}
-
-* The log file is usually located at `/usr/local/SOURCE_SYSTEM_FOLDER/var/LOGFILE.log` or `/var/log/SOURCE_SYSTEM_FOLDER/LOGFILE.log`
-* The cache file is usually located at `/usr/local/SOURCE_SYSTEM_FOLDER/var/objects.cache` or `/var/cache/SOURCE_SYSTEM_FOLDER/objects.cache`
-* The status.dat file is usually located at `/usr/local/SOURCE_SYSTEM_FOLDER/var/status.dat` or `/var/cache/SOURCE_SYSTEM_FOLDER/status.dat`
