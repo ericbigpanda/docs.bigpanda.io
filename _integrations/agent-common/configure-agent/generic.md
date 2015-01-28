@@ -22,4 +22,6 @@ The plugin config should look like this:
 				"filename" : "/var/cache/SOURCE_SYSTEM_FOLDER/status.dat"
 			}
 		}
-	}
+	},
+
+of course, the actual paths will depend on your installation.
