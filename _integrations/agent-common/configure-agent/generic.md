@@ -4,26 +4,24 @@ Generate and edit the agent's configuration file:
     $ sudo bigpanda-agent config --token $TOKEN
     $ sudo vim /etc/bigpanda/bigpanda.conf
 
-Activate the SOURCE_SYSTEM_NAME plugin:
+Find the SOURCE_SYSTEM_LOWER/state plugin configuration section:
 
-	"plugins" : {
-		"SOURCE_SYSTEM_LOWER/state" : {
-			"enabled" : true,
-			"app_key" : "$STREAM_ID",
-			...
-		}
-	}
+* Replace `<APP_KEY>` with `$STREAM_ID`
+* Configure the locations of `LOGFILE.log`, `status.dat` and `objects.cache` files
+* Set `enabled` to `true`
 
-Configure the locations of the SOURCE_SYSTEM_LOWER log, status.dat and objects.cache files:
+The plugin config should look like this:
 
 	"SOURCE_SYSTEM_LOWER/state" : {
-		...
+		"enabled" : true,
+		"app_key" : "$STREAM_ID",
 		"config" : {
-			"SOURCE_SYSTEM_LOWER_log_file" : "<LOCATION OF SOURCE_SYSTEM_UPPER LOG>",
-			"objects_cache_filename" : "<LOCATION OF SOURCE_SYSTEM_UPPER OBJECT CACHE>",
-                    "status_dat" : {
-                        "filename" : "<LOCATION OF SOURCE_SYSTEM_UPPER STATUS DAT>"
-                    },
+			"SOURCE_SYSTEM_LOWER_log_file" : "/var/log/SOURCE_SYSTEM_FOLDER/LOGFILE.log",
+			"objects_cache_filename" : "/var/cache/SOURCE_SYSTEM_FOLDER/objects.cache",
+			"status_dat" : {
+				"filename" : "/var/cache/SOURCE_SYSTEM_FOLDER/status.dat"
+			}
 		}
-	}
+	},
 
+of course, the actual paths will depend on your installation.
