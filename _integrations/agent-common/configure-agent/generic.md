@@ -4,7 +4,7 @@ Generate and edit the agent's configuration file:
     $ sudo bigpanda-agent config --token $TOKEN
     $ sudo vim /etc/bigpanda/bigpanda.conf
 
-Find the SOURCE_SYSTEM_LOWER/state plugin configuration section:
+Find the __SOURCE_SYSTEM_LOWER/state__ plugin configuration section:
 
 * Replace `<APP_KEY>` with `$STREAM_ID`
 * Configure the locations of `LOGFILE.log`, `status.dat` and `objects.cache` files
@@ -24,4 +24,22 @@ The plugin config should look like this:
 		}
 	},
 
+Find the __SOURCE_SYSTEM_LOWER/objects__ plugin configuration section:
+
+* Replace `<APP_KEY>` with `$STREAM_ID`
+* Configure the location of the `objects.cache` file
+* Set `enabled` to `true`
+
+The plugin config should look like this:
+
+	"SOURCE_SYSTEM_LOWER/objects" : {
+		"enabled" : true,
+		"app_key" : "$STREAM_ID",
+		"config" : {
+			"objects_cache_filename" : "/var/cache/SOURCE_SYSTEM_FOLDER/objects.cache"
+		}
+	},
+
+
 of course, the actual paths will depend on your installation.
+
