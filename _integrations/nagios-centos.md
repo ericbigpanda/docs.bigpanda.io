@@ -1,11 +1,10 @@
 ---
-layout: integration 
+layout: integration
 title: "Nagios (CentOS)"
 draft: false
 type: System Monitoring
 
 ---
-
 
 <!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
 
