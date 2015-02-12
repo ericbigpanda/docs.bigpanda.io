@@ -8,9 +8,6 @@ type: System Monitoring
 
 <!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
 
-**Note:** If you run **CentOS 5**, you will need to install the EPEL repository. Please consult the FAQ for instructions.
-
-
 <!-- section-separator -->
 
 #### Configure Nagios
