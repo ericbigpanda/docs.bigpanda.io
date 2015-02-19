@@ -1,6 +1,6 @@
 ---
 layout: integration
-title: "Asana"
+title: "HipChat"
 type: Sharing & Ticket Management
 draft: false
 ---
