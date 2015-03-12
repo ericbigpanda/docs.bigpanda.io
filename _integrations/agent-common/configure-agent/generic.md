@@ -15,6 +15,8 @@ The plugin config should look like this:
 	"SOURCE_SYSTEM_LOWER/state" : {
 		"enabled" : true,
 		"app_key" : "$STREAM_ID",
+		"endpoint": "/data/events/alerts",
+		"action": "POST",
 		"config" : {
 			"SOURCE_SYSTEM_LOWER_log_file" : "/var/log/SOURCE_SYSTEM_FOLDER/LOGFILE.log",
 			"objects_cache_filename" : "/var/cache/SOURCE_SYSTEM_FOLDER/objects.cache",
@@ -34,7 +36,9 @@ The plugin config should look like this:
 
 	"SOURCE_SYSTEM_LOWER/objects" : {
 		"enabled" : true,
-		"app_key" : "$STREAM_ID",
+		"endpoint": "/metadata/dump/$STREAM_ID/",
+		"timeout": 1000,
+		"action": "POST",
 		"config" : {
 			"objects_cache_filename" : "/var/cache/SOURCE_SYSTEM_FOLDER/objects.cache"
 		}
