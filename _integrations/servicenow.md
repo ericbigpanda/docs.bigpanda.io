@@ -7,10 +7,7 @@ draft: false
 
 #### Connect ServiceNow to BigPanda
 
-The ServiceNow integration allows you to easily create ServiceNow incidents from BigPanda incidents.
-Use the form below to configure how the ServiceNow incidents should be created.
-
-*Note: Currently the integration only supports ServiceNow version Eureka. Please contact support (via the button above) if you have another ServiceNow version.*
+The ServiceNow integration allows you to easily create ServiceNow incidents from BigPanda incidents. Use the form below to configure how the ServiceNow incidents should be created.
 
 |Field|Description|Example|
 |-----|-----------|-------|
@@ -27,7 +24,7 @@ Use the form below to configure how the ServiceNow incidents should be created.
 
 <!-- docs-only-start -->
 
-In the BigPanda Application, you'll be able to set ServiceNow params here.
+Go to the in-app integration wizard to configure your ServiceNow parameters.
 
 <!-- docs-only-end -->
 
