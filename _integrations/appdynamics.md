@@ -5,53 +5,40 @@ draft: false
 type: Application Monitoring
 ---
 
-#### Login
+#### Compatibility
 
-Login to the AppDynamics Controller.
-
-For every application you have configured in AppDynamics, please follow steps 2-3. 
+BigPanda supports on-premise and dedicated SaaS deployments. For the latter, please ask AppDynamics to set up the integration with the instructions bellow.
 
 <!-- section-separator -->
 
-#### Create an AppDynamics Policy    
+#### Download
 
-Go to `Application > Alert & Respond > Policies` and click on `Create Policy`.
-
-In the Create Policy window:
-
-* Input `BigPanda` in the name field
-* Check all of the `Health Rule Violation Events` checkboxes
-
-The final outcome should look like this:  
-![Create Policy window](/media/appdynamics1.png)
+[Download](https://www.google.com) the zip release and unpack it to `<CONTROLLER INSTALL ROOT>/custom/actions`
 
 <!-- section-separator -->
 
-#### Create an AppDynamics Action
-Without leaving the Create Policy window.  
-<!-- docs-only-start -->
-Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).  
-{: .not-responsive}
-<!-- docs-only-end -->
-<!-- app-only-start -->
-Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).  
-<!-- app-only-end -->
+#### Installation
 
-If you already created a BigPanda action for another application in AppDynamics, choose it and then click `Select`.
+Update or create `<CONTROLLER INSTALL ROOT>/custom/actions/custom.xml`. The file should look like this:
 
-Otherwise:
-
-* Click on `Create Action`
-* Make sure `Send an email` is selected
-* Click on `OK`
-* Copy `$EMAIL` to the email field 
-* Click on `Save`
-
-After selecting or creating a contact, click on `Save` in the next `Configure Action` window and then in the `Create Policy` window.
+    <custom-actions>
+        <action>
+            <type>bigpanda-alert</type>
+            <executable>bigpanda-alert.py</executable>
+        </action>
+    </custom-actions>
 
 <!-- section-separator -->
 
-#### Success
-*Don't forget to follow steps 2-3 for every application in AppDynamics*
+#### Configuration
 
-Next time you'll have AppDynamics alerts, you will able to see them in the Incidents tab.
+Edit `<CONTROLLER INSTALL ROOT>/custom/actions/bigpanda-alert/config.ini` and set your API token and app key:
+
+    [base]
+    api_token: $TOKEN
+    app_key: $STREAM_ID
+    logging: no
+
+You can enable logging for debug purposes. The log will be at `/tmp/bigpanda.action.log`
+
+__Note__: We support only health rules violation alerts. If you need support in other alerts, please contact support@bigpanda.io.
