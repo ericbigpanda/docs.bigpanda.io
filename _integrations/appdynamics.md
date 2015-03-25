@@ -82,7 +82,7 @@ Otherwise:
 * Click on `Create Action`
 * Select the `Run a Custom Action that has been uploaded to the Controller` option
 * Click on `OK`
-* Enter `BigPandaAlert` in the name field
+* Input `BigPandaAlert` in the name field
 * Click on `Reload Custom Actions`
 * In the Custom Action field choose `bigpanda-alert`
 * Click on `Save` to save the new custom action
