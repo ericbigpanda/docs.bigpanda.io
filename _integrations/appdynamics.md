@@ -24,7 +24,7 @@ Update or create `<CONTROLLER INSTALL ROOT>/custom/actions/custom.xml`. The file
     <custom-actions>
         <action>
             <type>bigpanda-alert</type>
-            <executable>bigpanda-alert.py</executable>
+            <executable>bigpanda_alert.py</executable>
         </action>
     </custom-actions>
 
@@ -39,6 +39,6 @@ Edit `<CONTROLLER INSTALL ROOT>/custom/actions/bigpanda-alert/config.ini` and se
     app_key: $STREAM_ID
     logging: no
 
-You can enable logging for debug purposes. The log will be at `/tmp/bigpanda.action.log`
+You can enable logging for debug purposes. The log will be at `/tmp/bigpanda-alert.log`
 
 __Note__: We support only health rules violation alerts. If you need support in other alerts, please contact support@bigpanda.io.
