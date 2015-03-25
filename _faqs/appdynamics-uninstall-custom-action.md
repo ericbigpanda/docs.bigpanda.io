@@ -6,6 +6,7 @@ title: "How can i uninstall BigPanda custom action from AppDynamics?"
 This tutorial will walk you through removing the BigPanda custom action from AppDynamics:
 
 * For every application you have configured in AppDynamics, go to `Application > Alert & Respond > Policies` and remove the `BigPnada` policy.
+* For every application you have configured in AppDynamics, go to `Application > Alert & Respond > Actions` and remove the `BigPandaAlert` custom action.
 * Edit `<CONTROLLER INSTALL ROOT>/custom/actions/custom.xml` and remove these lines:
 
           <action>
@@ -15,5 +16,5 @@ This tutorial will walk you through removing the BigPanda custom action from App
 
 * Remove the `<CONTROLLER INSTALL ROOT>/custom/actions/bigpanda-alert` directory.
 
-__Note__: The bigpanda-alert will remain in the custom actions drop down until the next custom actions reload.
+__Note__: `bigpanda-alert` will remain in the custom actions drop down until the next custom actions reload.
 
