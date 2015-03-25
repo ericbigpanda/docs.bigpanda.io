@@ -13,7 +13,7 @@ BigPanda supports on-premise and dedicated SaaS deployments. For the latter, ple
 
 #### Download
 
-[Download](https://www.google.com) the zip release and unpack it to `<CONTROLLER INSTALL ROOT>/custom/actions`
+[Download](https://s3-us-west-1.amazonaws.com/bp-appdynamics-extension/bigpanda-alert-1.0.tar.gz) the zip release and unpack it to `<CONTROLLER INSTALL ROOT>/custom/actions`
 
 <!-- section-separator -->
 
