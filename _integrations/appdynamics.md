@@ -7,7 +7,8 @@ type: Application Monitoring
 
 #### Compatibility
 
-BigPanda supports on-premise and dedicated SaaS deployments. For the latter, please ask AppDynamics to set up the custom action (steps 2-4) for you.
+BigPanda supports on-premise and dedicated SaaS deployments. For the latter, please contact AppDynamics support to help you set up the custom action (steps 2-4).
+If you need support for windows controller, please contact support@bigpanda.io.
 
 <!-- section-separator -->
 
@@ -17,9 +18,9 @@ BigPanda supports on-premise and dedicated SaaS deployments. For the latter, ple
 
 <!-- section-separator -->
 
-#### Installation
+#### Add BigPanda Custom Action
 
-Update or create `<CONTROLLER INSTALL ROOT>/custom/actions/custom.xml`. The file should look like this:
+Create `<CONTROLLER INSTALL ROOT>/custom/actions/custom.xml` with the following content. If the file already exists, just add the bigpanda-alert action.
 
     <custom-actions>
         <action>
@@ -27,6 +28,7 @@ Update or create `<CONTROLLER INSTALL ROOT>/custom/actions/custom.xml`. The file
             <executable>bigpanda_alert.py</executable>
         </action>
     </custom-actions>
+
 
 <!-- section-separator -->
 
@@ -43,11 +45,11 @@ You can enable logging for debug purposes. The log will be at `/tmp/bigpanda-ale
 
 <!-- section-separator -->
 
-#### Login
+#### Login to AppDynamics
 
 Login to the AppDynamics Controller.
 
-For every application you have configured in AppDynamics, please follow steps 6-7.
+For every application you have configured in AppDynamics, please follow steps 7-8.
 
 <!-- section-separator -->
 
@@ -92,9 +94,9 @@ After creating the new custom action, click on `Save` to create the new policy.
 <!-- section-separator -->
 
 #### Success
-*Don't forget to follow steps 6-7 for every application in AppDynamics*
+*Don't forget to follow steps 7-8 for every application in AppDynamics*
 
 Next time you'll have AppDynamics alerts, you will able to see them in the Incidents tab.
 
 
-__Note__: We support only health rules violation alerts. If you need support in other alerts, please contact support@bigpanda.io.
+__Note__: If you need support in alerts other than health rules, please contact support@bigpanda.io.
