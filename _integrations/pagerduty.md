@@ -10,7 +10,7 @@ draft: false
 The PagerDuty integration allows you to easily share BigPanda incidents to create an incident in PagerDuty.
 
 * Access PagerDuty with a privileged user
-* Under **Services** click on **Add New Service**
+* Under **Configuration > Services** click on **Add New Service**
 * Give it a name, for example: `BigPanda - Billing`
 * Choose the desired escalation policy
 * In the **Integration Type**, choose **Use our API directly**
@@ -20,12 +20,12 @@ The PagerDuty integration allows you to easily share BigPanda incidents to creat
 <!-- section-separator -->
 #### Get the PagerDuty Subdomain
 
-In PagerDuty app, copy the name of the company before **pagerduty.com** from your browser address bar to the form below. For example, for **https://bigpanda.pagerduty.com/** write `bigpanda` in the form below.
+In PagerDuty app, copy the company subdomain from the browser address bar. Paste it into the subdomain field in the form below. For example, for **https://bigpanda.pagerduty.com/** the company subdomain is `bigpanda`.
 
 <!-- section-separator -->
 #### Get a PagerDuty REST API Key for BigPanda
 
-* Still in PagerDuty app, go to **API Access**
+* Still in PagerDuty app, go to **Configuration > API Access**
 * On the right pane, write `BigPanda` in the description and check the **Read-only API Key** checkbox
 * Click on **Create Key**
 * Copy the just created **API Key** value from the table to the form below
