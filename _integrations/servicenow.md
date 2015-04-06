@@ -12,8 +12,8 @@ In the ServiceNow instance, navigate to `System Application > Install Applicatio
 <!-- section-separator -->
 #### Create a User for BigPanda in ServiceNow
 
-* In ServiceNow, under User `Administration > Users`, click on `New`
-* Fill out the form with at least:  
+* In ServiceNow, under `User Administration > Users`, click on `New`
+* Fill out the New User form (make sure to include the following fields):  
   * `User ID` - bigpanda  
   * `First name` - BigPanda  
   * `Password` - <you may choose one>  
@@ -21,7 +21,7 @@ In the ServiceNow instance, navigate to `System Application > Install Applicatio
 * Click on Submit
 * Find the user by writing "bigpanda" in the filter box above the User ID column
 * Go to Roles section (the first section) and click on Edit...
-* Filter "x_bip_panda_user" on the left table and then double click on it to move it to the right table
+* Filter "x\_bip\_panda\_user" on the left table and then double click on it to move it to the right table
 * Click on Save
 
 <!-- section-separator -->
