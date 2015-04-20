@@ -1,8 +1,8 @@
 #### Configure the BigPanda Agent
 Generate the agent's configuration file:
 
-    $ sudo bigpanda-agent config --token $TOKEN
-    $ sudo bigpanda-agent config --add SOURCE_SYSTEM_LOWER --app-key $STREAM_ID
+    $ sudo bigpanda-config --init --token $TOKEN
+    $ sudo bigpanda-config --add SOURCE_SYSTEM_LOWER --app-key $STREAM_ID
 
 When prompted, specify the locations of `LOGFILE.log`, `status.dat` and `objects.cache` files.
 
