@@ -8,9 +8,9 @@ When prompted, specify the locations of `LOGFILE.log`, `status.dat` and `objects
 
 The script output should look like this:
 
-    Log File Path: /var/log/nagios3/nagios.log
-    Status Dat Path: /var/cache/nagios3/status.dat
-    Objects Cache Path: /var/cache/nagios3/objects.cache
+    Log File Path: /var/log/SOURCE_SYSTEM_FOLDER/nagios.log
+    Status Dat Path: /var/cache/SOURCE_SYSTEM_FOLDER/status.dat
+    Objects Cache Path: /var/cache/SOURCE_SYSTEM_FOLDER/objects.cache
 	
 Of course, the actual paths will depend on your installation.
 
