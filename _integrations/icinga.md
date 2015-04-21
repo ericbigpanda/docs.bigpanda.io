@@ -24,6 +24,8 @@ Open the main Icinga configuration file (usually `/usr/local/icinga/etc/icinga.c
 
 <!-- docs-include _integrations/agent-common/configure-agent/nagios.md:::SOURCE_SYSTEM_NAME=Icinga:::SOURCE_SYSTEM_UPPER=ICINGA:::SOURCE_SYSTEM_LOWER=icinga:::SOURCE_SYSTEM_FOLDER=icinga:::LOGFILE=icinga -->
 
+<!-- section-separator -->
+
 <!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 
 <!-- section-separator -->
