@@ -7,7 +7,7 @@ draft: false
 
 #### Install the BigPanda Application in ServiceNow
 
-In the ServiceNow instance, navigate to `System Application > Install Application` and install the BigPanda application.
+Install the [BigPanda application](https://store.servicenow.com/$appstore.do#!/store/application/d9767d970f4b3100823d4cace1050e69) in ServiceNow app store
 
 <!-- section-separator -->
 #### Create a User for BigPanda in ServiceNow
