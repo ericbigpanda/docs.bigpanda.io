@@ -12,7 +12,7 @@ Log in to StatusCake.
 Go to [Contact Groups > Create New Contact Group](https://www.statuscake.com/App/ContactGroup.php), and fill out the form as follows:
 
 * **Group Name:** `BigPanda`
-* **Ping URL:** `https://api.bigpanda.io/data/integrations/statuscake?access_token=$TOKEN`
+* **Ping URL:** `https://api.bigpanda.io/data/integrations/statuscake?access_token=$URL_PARAMS`
 
 Click on *Save Changes*.
 
