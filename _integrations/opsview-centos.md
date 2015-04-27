@@ -21,8 +21,10 @@ Open the main OpsView configuration file (usually `/usr/local/nagios/etc/nagios.
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/configure-agent/generic.md:::SOURCE_SYSTEM_NAME=OpsView:::SOURCE_SYSTEM_UPPER=OPSVIEW:::SOURCE_SYSTEM_LOWER=opsview:::SOURCE_SYSTEM_FOLDER=nagios:::LOGFILE=nagios -->
+<!-- docs-include _integrations/agent-common/configure-agent/nagios.md:::SOURCE_SYSTEM_NAME=OpsView:::SOURCE_SYSTEM_UPPER=OPSVIEW:::SOURCE_SYSTEM_LOWER=opsview:::SOURCE_SYSTEM_FOLDER=nagios:::LOGFILE=nagios -->
     
+<!-- section-separator -->
+
 <!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 
 <!-- section-separator -->
