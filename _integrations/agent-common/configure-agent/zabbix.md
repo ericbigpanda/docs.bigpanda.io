@@ -1,11 +1,11 @@
-#### Configure the BigPanda agent
+#### Initialize the BigPanda agent
 Execute the following command to initially configure the agent:
 
     $ sudo bigpanda-config --init --token $TOKEN
 
 <!-- section-separator -->
 
-#### Configure Zabbix
+#### Configure the Zabbix plugin
 Execute the following command and follow the on-screen instructions to configure the BigPanda Zabbix plugin: 
 
     $ sudo bigpanda-config --add zabbix --app-key $STREAM_ID
