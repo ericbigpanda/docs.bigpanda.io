@@ -10,6 +10,22 @@ type: System Monitoring
 
 <!-- section-separator -->
 
+#### OMG32
+
+<!-- docs-only-start -->
+
+In the BigPanda Application, you'll be able retrieve the regions you'd like to include in BigPanda, and configure CloudWatch accordingly.
+
+<!-- docs-only-end -->
+
+<!-- app-only-start -->
+
+<!-- include 'integrations/zenoss/zenoss' -->
+
+<!-- app-only-end -->
+
+<!-- section-separator -->
+
 #### Configure the BigPanda Agent
 Generate and edit the agent's configuration file:
 
