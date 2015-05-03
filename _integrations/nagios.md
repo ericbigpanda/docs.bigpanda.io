@@ -6,7 +6,7 @@ type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
+<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
 
 <!-- section-separator -->
 
