@@ -19,7 +19,9 @@ Generate the agent's configuration file:
 When prompted, specify the url of the Zenoss web interface and a valid username and password.
 
 *Note: You may want to create a dedicated user for BigPanda, the required role is `ZenUser`.*
-	
+
+<!-- docs-include _integrations/zenoss-common/timezone.md -->
+
 <!-- section-separator -->
 
 <!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Zenoss:::PLATFORM=debian -->
