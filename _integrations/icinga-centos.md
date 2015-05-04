@@ -5,7 +5,7 @@ draft: false
 type: System Monitoring
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
+<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
 
 <!-- section-separator -->
 
