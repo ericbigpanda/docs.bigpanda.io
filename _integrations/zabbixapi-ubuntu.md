@@ -6,7 +6,7 @@ type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM_NAME=Ubuntu:::PLATFORM_LOWER=ubuntu -->
+<!-- docs-include _integrations/agent-common/install/remote-installation.md:::SOURCE_SYSTEM_NAME=Zabbix:::PLATFORM_NAME=Ubuntu:::PLATFORM_LOWER=ubuntu -->
 
 <!-- section-separator -->
 
