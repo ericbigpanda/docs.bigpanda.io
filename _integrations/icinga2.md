@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Icinga (RedHat)"
+title: "Icinga2 (RedHat)"
 draft: false
 type: System Monitoring
 ---

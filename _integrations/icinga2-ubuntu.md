@@ -1,22 +1,20 @@
 ---
 layout: integration 
-title: "Icinga (Ubuntu)"
+title: "Icinga2 (Ubuntu)"
 draft: false
 type: System Monitoring
 ---
 
 <!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=Ubuntu:::PLATFORM_LOWER=ubuntu -->
 
-<!-- docs-include _integrations/icinga/common.md -->
+<!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=ubuntu:::SERVICE_NAME=nagios -->* Test that Icinga (usually `nagios` user) has write permissions to the `log_archive_path` folder
-
-<!-- docs-include _integrations/agent-common/configure-service/restart-ubuntu.md:::SERVICENAME=Icinga:::SERVICE_LOWER=icinga -->
+<!-- docs-include _integrations/icinga2/common.md -->
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/configure-agent/nagios.md:::SOURCE_SYSTEM_NAME=Icinga:::SOURCE_SYSTEM_UPPER=ICINGA:::SOURCE_SYSTEM_LOWER=icinga:::SOURCE_SYSTEM_FOLDER=icinga:::LOGFILE=icinga -->
-    
+<!-- docs-include _integrations/agent-common/configure-agent/icinga2.md -->
+
 <!-- section-separator -->
 
 <!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
