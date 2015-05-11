@@ -2,7 +2,7 @@
 Generate the agent's configuration file:
 
     $ sudo bigpanda-config --init --token $TOKEN
-    $ sudo bigpanda-config --add SOURCE_SYSTEM_LOWER --app-key $STREAM_ID
+    $ sudo bigpanda-config --add icinga2 --app-key $STREAM_ID
 
 When prompted, specify the locations of `icinga.log`, `status.dat` and `objects.cache` files.
 

@@ -5,7 +5,7 @@ draft: false
 type: System Monitoring
 ---
 
-<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
+<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga2:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
 
 <!-- section-separator -->
 
@@ -21,4 +21,4 @@ type: System Monitoring
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM=redhat -->
+<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Icinga2:::PLATFORM=redhat -->
