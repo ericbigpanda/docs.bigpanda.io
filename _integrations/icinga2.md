@@ -9,7 +9,7 @@ type: System Monitoring
 
 <!-- section-separator -->
 
-
+<!-- docs-include _integrations/icinga2/common.md -->
 
 <!-- section-separator -->
 
