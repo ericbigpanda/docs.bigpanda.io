@@ -27,15 +27,13 @@ module Jekyll
       end
 
       media_root = Pathname.new "#{site.source}/media"
-      media_files = Dir.glob("#{site.source}/media/**/*").reject {|fn| File.directory?(fn)}.map{|media_file| Pathname.new(media_file).relative_path_from media_root}
-
-
-      json = JSON.generate({:integrations=> integration_docs, :media_files=>media_files})
-      filename = "frontier/integrations.json"
-      File.open(File.join(site.dest, filename), "w") do |file|
-        file.write(json)
+      media_files = Dir.glob("#{site.source}/media/**/*").reject {|fn| File.directory?(fn)}.map{|media_file| File.absolute_path("media/#{Pathname.new(media_file).relative_path_from(media_root)}")}
+      media_files.each do |media_file| 
+        filename = File.basename(media_file)
+        target = "#{site.dest}/frontier/#{filename}"
+        FileUtils.cp(media_file, target) 
+        site.static_files << Jekyll::FrontierMarkdownFile.new(site, site.dest, "/frontier/", filename)
       end
-      site.static_files << Jekyll::FrontierMarkdownFile.new(site, site.dest, "/", filename)
 
     end
 
