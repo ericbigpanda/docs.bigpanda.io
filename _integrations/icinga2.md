@@ -7,6 +7,8 @@ type: System Monitoring
 
 <!-- docs-include _integrations/icinga2/beta.md -->
 
+<!-- section-separator -->
+
 <!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga2:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
 
 <!-- section-separator -->
