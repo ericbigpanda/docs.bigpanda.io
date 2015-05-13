@@ -1,8 +1,6 @@
 #### Configure the BigPanda Agent
-Generate the agent's configuration file:
 
-    $ sudo bigpanda-config --init --token $TOKEN
-    $ sudo bigpanda-config --add icinga2 --app-key $STREAM_ID
+<!-- docs-include _integrations/agent-common/configure-agent/common.md:::SOURCE_SYSTEM_NAME=Icinga2:::SOURCE_SYSTEM_LOWER=icinga2 -->
 
 When prompted, specify the locations of `icinga.log`, `status.dat` and `objects.cache` files.
 
@@ -12,5 +10,5 @@ The script output should look like this:
     Status Dat Path: /var/cache/icinga2/status.dat
     Objects Cache Path: /var/cache/icinga2/objects.cache
 	
-Of course, the actual paths will depend on your installation.
+Of course, the actual paths will depend on 	your installation.
 
