@@ -7,7 +7,7 @@ type: System Monitoring
 
 <!-- docs-include _integrations/icinga2/beta.md -->
 
-<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=Debian:::PLATFORM_LOWER=debian -->
+<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga2:::PLATFORM_NAME=Debian:::PLATFORM_LOWER=debian -->
 
 <!-- section-separator -->
 

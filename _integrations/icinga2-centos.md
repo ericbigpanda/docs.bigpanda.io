@@ -7,7 +7,7 @@ type: System Monitoring
 
 <!-- docs-include _integrations/icinga2/beta.md -->
 
-<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
+<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga2:::PLATFORM_NAME=Centos:::PLATFORM_LOWER=centos -->
 
 <!-- section-separator -->
 
