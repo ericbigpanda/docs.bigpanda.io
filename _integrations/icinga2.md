@@ -5,11 +5,7 @@ draft: false
 type: System Monitoring
 ---
 
-<!-- docs-only-start -->
-
-__The Icinga2 integration is still in beta and will be opened upon request to support@bigpanda.io.__
-
-<!-- docs-only-end -->
+<!-- docs-include _integrations/icinga2/beta.md -->
 
 <!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga2:::PLATFORM_NAME=RedHat:::PLATFORM_LOWER=redhat -->
 
