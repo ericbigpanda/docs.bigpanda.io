@@ -6,7 +6,7 @@ type: System Monitoring
 
 ---
 
-<!-- docs-include _integrations/agent-common/install/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM_NAME=Debian:::PLATFORM_LOWER=debian -->
+<!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM_NAME=Debian:::PLATFORM_LOWER=debian -->
 
 <!-- section-separator -->
 
@@ -21,7 +21,9 @@ Open the main Nagios configuration file (usually `/usr/local/nagios/etc/nagios.c
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/configure-agent/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::SOURCE_SYSTEM_UPPER=NAGIOS:::SOURCE_SYSTEM_LOWER=nagios:::SOURCE_SYSTEM_FOLDER=nagios3:::LOGFILE=nagios -->
+<!-- docs-include _integrations/agent-common/configure-agent/nagios.md:::SOURCE_SYSTEM_NAME=Nagios:::SOURCE_SYSTEM_UPPER=NAGIOS:::SOURCE_SYSTEM_LOWER=nagios:::SOURCE_SYSTEM_FOLDER=nagios3:::LOGFILE=nagios -->
+
+<!-- section-separator -->
 
 <!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
 

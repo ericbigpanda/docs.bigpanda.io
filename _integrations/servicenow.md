@@ -5,6 +5,26 @@ type: Sharing & Ticket Management
 draft: false
 ---
 
+#### Install the BigPanda Application in ServiceNow
+
+Install the [BigPanda application](https://store.servicenow.com/$appstore.do#!/store/application/d9767d970f4b3100823d4cace1050e69) in ServiceNow app store
+
+<!-- section-separator -->
+#### Create a User for BigPanda in ServiceNow
+
+* In ServiceNow, under `User Administration > Users`, click on `New`
+* Fill out the New User form (make sure to include the following fields):  
+  * `User ID` - bigpanda  
+  * `First name` - BigPanda  
+  * `Password` - <you may choose one>  
+  * **Make sure that the `Active` checkbox is checked**  
+* Click on Submit
+* Find the user by writing "bigpanda" in the filter box above the User ID column
+* Go to Roles section (the first section) and click on Edit...
+* Filter "x\_bip\_panda\_user" on the left table and then double click on it to move it to the right table
+* Click on Save
+
+<!-- section-separator -->
 #### Connect ServiceNow to BigPanda
 
 The ServiceNow integration allows you to easily create ServiceNow incidents from BigPanda incidents. Use the form below to configure how the ServiceNow incidents should be created.
