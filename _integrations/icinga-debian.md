@@ -7,16 +7,9 @@ type: System Monitoring
 
 <!-- docs-include _integrations/agent-common/install/local-installation.md:::SOURCE_SYSTEM_NAME=Icinga:::PLATFORM_NAME=Debian:::PLATFORM_LOWER=debian -->
 
-<!-- section-separator -->
-
-#### Configure Icinga
-Open the main Icinga configuration file (usually `/usr/local/icinga/etc/icinga.cfg` or `/etc/icinga/icinga.cfg`):
-
-    $ sudo vim /usr/local/icinga/etc/icinga.cfg
-
+<!-- docs-include _integrations/icinga/common.md -->
 
 <!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=debian:::SERVICE_NAME=nagios -->* Test that Icinga (usually `nagios` user) has write permissions to the `log_archive_path` folder
-
 
 <!-- docs-include _integrations/agent-common/configure-service/restart-debian.md:::SERVICENAME=Icinga:::SERVICE_LOWER=icinga -->
 
