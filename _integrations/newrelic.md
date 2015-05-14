@@ -48,5 +48,5 @@ Within the BigPanda Application use the interactive New Relic integration guide 
 
 A test message should arrive in a few moments.
 
-_Make sure that you can see the alert in the **Incidents** tab, BigPanda will automatically close the test incident after 3 hours._
+_Make sure that you can see the alert in the **Incidents** tab. Since it's a test message, it won't be resolved by its own. To resolve the issue manually, use the __Force Resolve__ action in the __More__ actions context menu of the incident._
 
