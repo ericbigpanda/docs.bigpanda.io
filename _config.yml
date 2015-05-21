@@ -1,29 +1,3 @@
-title: 'BigPanda'
-subtitle: 'Documentation'
-
-collections:
-  guides:
-    title: "BigPanda University"
-  integrations:
-    title: "Integrations"
-  faqs:
-    title: "FAQs"
-
-permalink: none
-
-highlighter: pygments
-
-future: true
-
-# Exclude non-site files
-exclude: ['lib', 'README.md', "package.json", "node_modules", "bower.json", "public_prod", "public", 'stylus', "*.sh", "dev.js", 'base.js', 'prod.js', 'Gruntfile.js']
-
-markdown: KramdownPygments
-highlighter: pygments
-kramdown:
-  input: GFM
-
-destination: 'public'
 ga_code: false
 production: false
 kiss_metrics: false
