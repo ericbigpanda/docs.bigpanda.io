@@ -12,7 +12,7 @@ type: System Monitoring
 * This should open the BigPanda Service Configuration form. If the form doesn't open, click on the plus button to open it.
 * Fill in the form and click on **create service**. The form should be filled with the following details:
 
-		Title: _Go wild!_
+		Title: <FREE TEXT>
 		App Key: $STREAM_ID
 		Token: $TOKEN
 
