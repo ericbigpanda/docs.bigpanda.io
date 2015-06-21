@@ -29,12 +29,12 @@ module.exports = function (grunt) {
       jekyll:{
         prod: {
           options: {
-            config: '_config_prod.yml'
+            config: '_config_base.yml,_config_prod.yml'
           }
         },
         dev: {
           options: {
-            config: '_config.yml'
+            config: '_config_base.yml,_config.yml'
           }
         }
       },
