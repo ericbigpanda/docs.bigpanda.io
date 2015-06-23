@@ -12,7 +12,7 @@ type: System Monitoring
 * This should open the BigPanda Service Configuration form. If the form doesn't open, click on the plus button to open it.
 * Fill in the form and click **create service**. The form should be filled with the following details:
 
-		Title: <YOUR SERVICE NAME>
+		Title: <YOUR LIBRATO SERVICE NAME>
 		App Key: $STREAM_ID
 		Token: $TOKEN
 
