@@ -15,7 +15,7 @@ System user accounts can be created by sending a POST request to your SolarWinds
 
 <!-- section-separator -->
 
-#### Create subscription to alerts notifications in SolarWinds
+#### Subscribe BigPanda to alerts notifications in SolarWinds
 
 In order to subscribe BigPanda to your SolarWinds alerts notification, you need to POST a request to your SolarWinds server.
 
@@ -29,7 +29,7 @@ The response should contain the identifier of the subscription that can be used 
 
 #### Update your alert to send notifications
 
-In order to get notifications on alerts, you need to mark the alert as "Alert Integration". The build-in alerts already sends notifications, but if you have created other alerts in the past or going to create new alerts in the future it is very important to go over the following steps:
+In order to get notifications on alerts, you need to mark the alert as "Alert Integration". The build-in alerts already sends notifications, but if you have created other alerts in the past or going to create new alerts in the future it is very important to go over the following steps foreach alert:
 
 * While editing the alert go to the **SUMMARY** tab
 * At the bottom of the page expand the **Alert Integration**
