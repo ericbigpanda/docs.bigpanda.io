@@ -1,10 +1,7 @@
 var app = require('./base');
 var express = require('express');
 
-app.get("/", function (req, res) {
-  res.redirect("/docs/index.html");
-});
-app.use('/docs', express.static(__dirname + '/public_prod'));
+app.use('/', express.static(__dirname + '/public'));
 
 
 module.exports = app;
