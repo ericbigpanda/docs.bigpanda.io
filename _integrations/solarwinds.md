@@ -21,7 +21,7 @@ In order to subscribe BigPanda to your SolarWinds alerts notification, you need 
 
 Use the credentials of the system user account from the previous step.
 
-    curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://a.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
+    curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
 
 The response contains the identifier of the subscription which is required to remove it. For example: "swis://dev.local/Orion/System.Subscription/Id=b626ef38-b1e3-448e-ba5a-f148dc9889ba"
 
