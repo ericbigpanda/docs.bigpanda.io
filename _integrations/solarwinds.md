@@ -15,9 +15,9 @@ System user accounts can be created by sending a POST request to your SolarWinds
 
 <!-- section-separator -->
 
-#### Subscribe BigPanda to alerts notifications in SolarWinds
+#### Subscribe BigPanda to alert notifications in SolarWinds
 
-In order to subscribe BigPanda to your SolarWinds alerts notification, you need to POST a request to your SolarWinds server.
+In order to subscribe BigPanda to your SolarWinds alert notifications, you need to POST a request to your SolarWinds server.
 
 Use the credentials of the system user account from the previous step.
 
