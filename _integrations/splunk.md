@@ -6,39 +6,43 @@ type: "Log Aggregation"
 
 ---
 
-#### Install package
-Now you'll need to install the python package to get BigPanda Splunk action script:
+Three things to note before integrating Splunk with BigPanda:
 
+#### No automatic resolution
+Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
+
+#### Requires installation of Python package
+The BigPanda Python package must first be installed on the Splunk server to complete the integration. See instructions below.
+
+#### All Splunk alerts are sent to BigPanda
+Without additional configuration, the BigPanda Splunk action script forwards all Splunk alerts to BigPanda.
+
+Here are instructions for integrating Splunk with BigPanda:
+
+#### Install the BigPanda Python package
+Download and install the BigPanda Python package to get the BigPanda Splunk action script:
 
     $ sudo pip install bigpanda-splunk
     $ sudo bigpanda-splunk-configure $TOKEN $STREAM_ID
-  
 
 <!-- docs-only-start -->
-This will create a test alert in your BigPanda Dashboard.
+The second command creates a test incident in your BigPanda Incident Dashboard.
 <!-- docs-only-end -->
 <!-- app-only-start -->
-After running these commands, you should see a test alert in the Incidents tab.
-<!-- app-only-end -->
-<!-- docs-only-start -->
-__Note:__ Unlike other incidents in BigPanda, Splunk incidents will not resolve automatically as Splunk does not send notifications when an alert is resolved. For this reason, Splunk incidents can be resolved manually by clicking on the resolve button (![media/resolve.png](/media/resolve.png))  on the incident.
-{: .not-responsive}
-<!-- docs-only-end -->
-<!-- app-only-start -->
-__Note:__ Unlike other incidents in BigPanda, Splunk incidents will not resolve automatically as Splunk does not send notifications when an alert is resolved. For this reason, Splunk incidents can be resolved manually by clicking on the resolve button (![media/resolve.png](/media/resolve.png)) on the incident.
+After running these commands, you should see a test alert in the Incident Dashboard.
 <!-- app-only-end -->
 
 <!-- section-separator -->
 
 #### Configure Splunk
 
-Configure Splunk to always execute BigPanda's action script when an alert is triggered by running the following configuration script:
+Configure Splunk to execute BigPanda's action script when an alert is triggered by running the following:
 
     $ sudo bigpanda-splunk-defaults
     
-Restart Splunk server for the changes to take effect.
+Restart the Splunk server for the changes to take effect.
 
 <!-- section-separator -->
 
 #### Success
-Next time you will have Splunk alerts, you will be able to see them in the Incidents tab.
+Next time Splunk generates an alert, you will see it in the Incident Dashboard.
