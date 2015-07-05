@@ -20,8 +20,6 @@ By snoozing non-urgent incidents, you will keep your feed clean and your team fo
 
 To see all the snoozed incidents, simply select the **Snoozed** folder on the left pane. Here, you can easily unsnooze any items by clicking on the bell icon and choosing "Cancel Snooze".
 
-![Cancel snoozed incidents in BigPanda](/media/CancelSnooze.png)
-
 #### Sharing Incidents With Your Co-workers
 
 If you would like to inform a co-worker of the incident or collaborate on its solution, you can easily share it from BigPanda. Simply select the **Share** button and follow the instructions - you'll be able to select the media and the recipients.
