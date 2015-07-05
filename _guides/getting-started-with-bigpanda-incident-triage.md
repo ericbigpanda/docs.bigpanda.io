@@ -18,14 +18,5 @@ Once you have clicked the snooze icon for a few issues, take a look at the left 
 
 ![Cancel snoozed incidents in BigPanda](/media/CancelSnooze.png)
 
-#### Star Critical Incidents
-
-Now that your snoozed incidents are out of the way, it's easier than ever to find the most critical things for your team to tackle next. In just one click, you can star incidents when they deserve a little extra focus. 
-
-![Starring incidents](/media/Star.png)
-{: .not-responsive}
-
-Starring items keeps everybody on your team aware and in synch on your company's most-critical problems. As with snoozed incidents, you can select the **Starred** folder in the navigation panel on the left to view all of your organization's starred items so you can focus on the critical without the distraction of the less-urgent items cluttering up your plate. 
-
-Reduce the noise, collaborate better, and resolve issues faster with BigPanda. Now that you know your way around the incident feed and we've discussed snoozing and starring, we will discuss incident analysis in [part three of our Getting Started with BigPanda guide](getting-started-with-bigpanda-incident-analysis.html).
+Reduce the noise, collaborate better, and resolve issues faster with BigPanda. Now that you know your way around the incident feed and we've discussed snoozing, we will discuss incident analysis in [part three of our Getting Started with BigPanda guide](getting-started-with-bigpanda-incident-analysis.html).
 
