@@ -1,22 +1,32 @@
 ---
 layout: page
-title: "Part 2: Incident Triage"
+title: "Part 3: Incident Triage"
 ---
 
-As we discussed [in part 1 of this series](getting-started-with-bigpanda-incident-feed.html), BigPanda automatically tackles the grouping of alerts into incidents by host, cluster, or application as they come in. Once that's done, the most important thing to do next is to decide on that incident's priority. This process is known as incident triage and it ensures that your team is channeling its efforts wisely. BigPanda gives you two easy-to-use ways to prioritize your work: snoozing and starring. 
+As we discussed in the previous parts of this guide, BigPanda automatically tackles the grouping of alerts into incidents by host, cluster, or application as they come in. Those incidents are then divided into your environments, where each team can easily triage and handle them.
+
+With BigPanda, you have two useful tools at your disposal to ease the triage process: snoozing and sharing.
 
 #### Snooze Non-Urgent Incidents
 
-When a new incident arrives, first ask yourself if it's immediately actionable. A low diskspace issue, for example, often waits for weeks before it becomes urgent. If you are not planning to do anything about a low priority issue right now, it can be helpful to get it out of the way. With BigPanda, you can easily snooze any incident for: _1 hour, 6 hours, 1 day, or 1 week_.
+When a new incident arrives, first ask yourself if it's immediately actionable. A low diskspace issue, for example, often waits for weeks before it becomes urgent. If you are not planning to do anything about a low priority issue right now, it can be helpful to get it out of the way. With BigPanda, you can easily snooze incidents for various periods of time.
 
-![Snoozing Incidents](/media/GettingStarted.png)
+![Snoozing Incidents](/media/SnoozeButton.png)
 {: .not-responsive}
 
-By snoozing non-urgent incidents, you will keep your feed clean and your team focused on the right issues at the right time. And don't worry about forgetting that snoozed issues still exist. We've got your back. When the allocated snooze-period has elapsed, the incident will arrive back in your feed right where it belongs.
+Once you've opened the dialog, you'll be able to choose the snooze period.
 
-Once you have clicked the snooze icon for a few issues, take a look at the left pane.  Simply select the **Snoozed** folder to see all of your snoozed incidents. Here, you can easily unsnooze any items by clicking on the bell icon and choosing "Cancel Snooze".
+![Choosing the Snooze Period](/media/SnoozeDialog.png)
 
-![Cancel snoozed incidents in BigPanda](/media/CancelSnooze.png)
+By snoozing non-urgent incidents, you will keep your feed clean and your team focused on the right issues at the right time. Once the allocated snooze-period has elapsed, the incident will arrive back in your feed right where it belongs.
+
+To see all the snoozed incidents, simply select the **Snoozed** folder on the left pane. Here, you can easily unsnooze any items by clicking on the bell icon and choosing "Cancel Snooze".
+
+#### Sharing Incidents With Your Co-workers
+
+If you would like to inform a co-worker of the incident or collaborate on its solution, you can easily share it from BigPanda. Simply select the **Share** button and follow the instructions - you'll be able to select the media and the recipients.
+
+![Sharing incidents in Bigpanda](/media/ShareIncident.png)
 
 Reduce the noise, collaborate better, and resolve issues faster with BigPanda. Now that you know your way around the incident feed and we've discussed snoozing, we will discuss incident analysis in [part three of our Getting Started with BigPanda guide](getting-started-with-bigpanda-incident-analysis.html).
 
