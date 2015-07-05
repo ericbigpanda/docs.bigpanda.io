@@ -17,6 +17,7 @@ When a new incident arrives, first ask yourself if it's immediately actionable. 
 Once you've opened the dialog, you'll be able to choose the snooze period.
 
 ![Choosing the Snooze Period](/media/SnoozeDialog.png)
+{: .not-responsive}
 
 By snoozing non-urgent incidents, you will keep your feed clean and your team focused on the right issues at the right time. Once the allocated snooze-period has elapsed, the incident will arrive back in your feed right where it belongs.
 
@@ -27,6 +28,7 @@ To see all the snoozed incidents, simply select the **Snoozed** folder on the le
 If you would like to inform a co-worker of the incident or collaborate on its solution, you can easily share it from BigPanda. Simply select the **Share** button and follow the instructions - you'll be able to select the media and the recipients.
 
 ![Sharing incidents in Bigpanda](/media/ShareIncident.png)
+{: .not-responsive}
 
 Reduce the noise, collaborate better, and resolve issues faster with BigPanda. Now that you know your way around the incident feed and we've discussed snoozing, we will discuss incident analysis in [part three of our Getting Started with BigPanda guide](getting-started-with-bigpanda-incident-analysis.html).
 
