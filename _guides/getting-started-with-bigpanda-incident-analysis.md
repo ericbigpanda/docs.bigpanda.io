@@ -22,5 +22,5 @@ Next, click on the <strong>lifecycle</strong> button at the bottom of the right 
 
 ![Lifecycle](/media/LifeCycle.png)
 
-BigPanda speeds up the process of understanding incidents. Automatically-consolidated alerts in real-time, as they unfold are combined with powerful alert lifecycle visibility. This makes BigPanda the best way for Modern Ops teams to manage and resolve issues. Next, in part 4 of this series, we'll discuss how to [bring your whole team into the picture](getting-started-with-bigpanda-incident-assignment.html) so that you're collaborating together at maximum strength.
+BigPanda speeds up the process of understanding incidents. Automatically-consolidated alerts in real-time, as they unfold are combined with powerful alert lifecycle visibility. This makes BigPanda the best way for Modern Ops teams to manage and resolve issues. <!--Next, in part 4 of this series, we'll discuss how to [bring your whole team into the picture](getting-started-with-bigpanda-incident-assignment.html) so that you're collaborating together at maximum strength.-->
 
