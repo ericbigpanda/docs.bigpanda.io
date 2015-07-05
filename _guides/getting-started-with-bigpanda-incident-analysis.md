@@ -21,9 +21,6 @@ Each incident in the main feed contains several fields with more information abo
 Click on any incident in the feed to drill down into it. In the right panel, you will see each of the alerts that compose the incident. For each alert, you'll also see it's status, description, duration (time since first event) and it's last change time (time of the last status change). Additionally, if the alert contains any links you'll see a small link icon you can click on.
 
 ![IncidentAnalysis](/media/IncidentAnalysis.png)
-
-Clicking on any alert in the right panel will give you even more information about the alert. Description of the alert as well as any of the tags provided by the source monitoring tool are all at your fingertips.
-![IncidentsSource](/media/IncidentAnalysis_Source.png)
 {: .not-responsive}
 
 #### Visualize the Incident Lifecycle
