@@ -8,7 +8,16 @@ Most of the ticketing or issue tracking systems that you've been stuck with requ
 #### Reduce the Noise
 A single production incident often manifests itself in multiple alerts. A disk issue might first cause a disk IO alert. That, in turn, is likely to quickly trigger a series of CPU, memory, database and application alerts. Of course, in this case, you don't want to manage a dozen or more separate issues. They're all connected to the same root problem. For that reason, BigPanda automatically groups related alerts into consolidated, high-level incidents. BigPanda's grouping algorithm leverages hostnames, clusters and applications in order to pull related alerts together. Additionally, the algorithm factors in the time between alerts in order to provide you with unique incident insight.
 
-#### Drill into Alert Detail
+
+#### Drill into Incident Detail
+Each incident in the main feed contains several fields with more information about the incident:
+* Status incicator. This is the colored ribbon on the left. The status of the incident is determined by the most severe status of its alerts.
+* The number of active alerts. An active alert is an alert in the <strong>Critical</strong> or <strong>Warning</strong>.
+* The type (e.g. Nagios, Zabbix) and name (e.g Production) of the integration the alerts came from.
+* Summary of the subjects (hostnames, applications, etc) that are a part of the incident.
+* Summary of the symptoms (checks, metrics) that are a part of the incident.
+* The time since the last change of the entire incident; this includes status changes of its alerts or the addition of new alerts to the incident.
+
 Click on any incident in the feed to drill down into it. In the right panel, you will see each of the alerts that compose the incident. For each alert, you'll also see it's status, description, duration (time since first event) and it's last change time (time of the last status change). Additionally, if the alert contains any links you'll see a small link icon you can click on.
 
 ![IncidentAnalysis](/media/IncidentAnalysis.png)
@@ -17,7 +26,6 @@ Clicking on any alert in the right panel will give you even more information abo
 ![IncidentsSource](/media/IncidentAnalysis_Source.png)
 {: .not-responsive}
 
-TODO: MENTION URLS
 #### Visualize the Incident Lifecycle
 Next, click on the <strong>Timeline</strong> button at the top-right of the right pane to visualize the lifecycle of an incident. Each dot on the timeline represents a status change in one of the incident's alerts. With the BigPanda timeline, you can quickly understand how an incident has unfolded. This is light-years faster than sifting through a few dozen alert messages in your email inbox and trying to piece the fragments together manually.
 
