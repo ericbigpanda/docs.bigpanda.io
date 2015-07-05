@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part 2: Incident Organization"
+title: "Part 3: Incident Organization"
 ---
 
 Different teams in your organization have different responsibilities. BigPanda allows you to automatically distribute your incidents into **environments** according to custom rules. Using the environment builder, you'll be able to quickly set up multiple environments for any use. By thinning down the amount of incidents in your feed, you'll be able to divide and conquer your NOC!

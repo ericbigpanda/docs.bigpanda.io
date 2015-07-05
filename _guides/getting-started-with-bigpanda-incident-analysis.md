@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part 3: Incident Analysis"
+title: "Part 4: Incident Analysis"
 ---
 
 Most of the ticketing or issue tracking systems that you've been stuck with require you to link related tickets together manually. BigPanda is different. Every incident in BigPanda's incident feed is created automatically. Each one is based on alerts generated in real time by your monitoring stack. Tools like Nagios, New Relic, and more are all there – just about every monitoring tool you can imagine. If it makes alerts for Ops teams, we're working on pulling it in. Then BigPanda aggregates everything together into a single, intelligent incident dashboard.

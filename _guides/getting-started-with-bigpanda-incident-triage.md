@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part 4: Incident Triage"
+title: "Part 5: Incident Triage"
 ---
 
 As we discussed in the previous parts of this guide, BigPanda automatically tackles the grouping of alerts into incidents by host, cluster, or application as they come in. Those incidents are then divided into your environments, where each team can easily triage and handle them.
