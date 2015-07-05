@@ -5,7 +5,7 @@ title: "Part 1: Incident Feed"
 
 BigPanda is an incident management platform for Modern Ops teams. Organize, prioritize and triage your incidents faster and more intelligently than ever before. Vastly improve your team's collaboration around Ops alerts and events. **The following guide is the first in our series** on getting started with BigPanda's incident feed. This product introduction will help you to get up and running quickly so you can get back to fixing the world's broken stuff.
 
-The most important section of the BigPanda interface is the incident feed. The incident feed is always just a click away. Just click **OpsBox** in the menu at the top. Here you can track and manage all of your active incidents – no matter what system they're coming from: Nagios, New Relic, Pingdom, Zabbix, CloudWatch, Zenoss, and more than a dozen more – and the list is growing rapidly.
+The most important section of the BigPanda interface is the incident feed. The incident feed is always just a click away. Just click **Incidents** in the menu at the top. Here you can track and manage all of your active incidents – no matter what system they're coming from: Nagios, New Relic, Pingdom, Zabbix, CloudWatch, Zenoss, and more than a dozen more – and the list is growing rapidly.
 
 ![The BigPanda Incident Feed](/media/incidentFeed.png)
 
