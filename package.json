@@ -1,6 +1,6 @@
 {
   "name": "docs.bigpanda.io",
-  "version": "2.6.3",
+  "version": "2.7.0",
   "description": "________________________     /\\                       \\     \\_|     BigPanda Docs     |       |         FTW           |       |   ____________________|_        \\_/_____________________/",
   "main": "dev.js",
   "dependencies": {
