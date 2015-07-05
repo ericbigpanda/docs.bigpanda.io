@@ -9,8 +9,12 @@ As we discussed [in part 1 of this series](getting-started-with-bigpanda-inciden
 
 When a new incident arrives, first ask yourself if it's immediately actionable. A low diskspace issue, for example, often waits for weeks before it becomes urgent. If you are not planning to do anything about a low priority issue right now, it can be helpful to get it out of the way. With BigPanda, you can easily snooze any incident for: _1 hour, 6 hours, 1 day, or 1 week_.
 
-![Snoozing Incidents](/media/GettingStarted.png)
+![Snoozing Incidents](/media/SnoozeButton.png)
 {: .not-responsive}
+
+Once you've opened the dialog, you'll be able to choose the snooze period.
+
+![Choosing the Snooze Period](/media/SnoozeDialog.png)
 
 By snoozing non-urgent incidents, you will keep your feed clean and your team focused on the right issues at the right time. Once the allocated snooze-period has elapsed, the incident will arrive back in your feed right where it belongs.
 
