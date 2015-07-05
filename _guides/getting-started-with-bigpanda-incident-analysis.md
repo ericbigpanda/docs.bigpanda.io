@@ -14,7 +14,7 @@ Each incident in the main feed contains several fields with more information abo
 * Status indicator. This is the colored ribbon on the left. The status of the incident is determined by the most severe status of its alerts.
 * The number of active alerts. An active alert is an alert in the <strong>Critical</strong> or <strong>Warning</strong>.
 * The type (e.g. Nagios, Zabbix) and name (e.g Production) of the integration the alerts came from.
-* Summary of the subjects (hostnames, applications, etc) that are a part of the incident.
+* Summary of the subjects (hosts, applications, etc) that are a part of the incident.
 * Summary of the symptoms (checks, metrics) that are a part of the incident.
 * The time since the last change of the entire incident; this includes status changes of its alerts or the addition of new alerts to the incident.
 
