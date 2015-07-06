@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part 4: Incident Analysis"
+title: "Part 5: Incident Analysis"
 ---
 
 Most of the ticketing or issue tracking systems that you've been stuck with require you to link related tickets together manually. BigPanda is different. Every incident in BigPanda's incident feed is created automatically. Each one is based on alerts generated in real time by your monitoring stack. Tools like Nagios, New Relic, and more are all there – just about every monitoring tool you can imagine. If it makes alerts for Ops teams, we're working on pulling it in. Then BigPanda aggregates everything together into a single, intelligent incident dashboard.
@@ -11,6 +11,7 @@ A single production incident often manifests itself in multiple alerts. A disk i
 
 #### Drill into Incident Detail
 Each incident in the main feed contains several fields with more information about the incident:
+
 * Status indicator. This is the colored ribbon on the left. The status of the incident is determined by the most severe status of its alerts.
 * The number of active alerts. An active alert is an alert in the <strong>Critical</strong> or <strong>Warning</strong>.
 * The type (e.g. Nagios, Zabbix) and name (e.g Production) of the integration the alerts came from.
