@@ -11,6 +11,7 @@ A single production incident often manifests itself in multiple alerts. A disk i
 
 #### Drill into Incident Detail
 Each incident in the main feed contains several fields with more information about the incident:
+
 * Status indicator. This is the colored ribbon on the left. The status of the incident is determined by the most severe status of its alerts.
 * The number of active alerts. An active alert is an alert in the <strong>Critical</strong> or <strong>Warning</strong>.
 * The type (e.g. Nagios, Zabbix) and name (e.g Production) of the integration the alerts came from.

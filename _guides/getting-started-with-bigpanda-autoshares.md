@@ -1,9 +1,7 @@
 ---
 layout: page
-title: "AutoShares"
+title: "Part 6: AutoShares"
 ---
-
-<Introduction to autoshares>
 
 #### Creating an Escalation Channel
 Go to the **Integrations** tab, scroll down to the **Sharing & Ticket Management** section and click on the system you want to integrate. Follow the instructions on the screen.
