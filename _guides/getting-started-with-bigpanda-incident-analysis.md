@@ -21,8 +21,8 @@ Each incident in the main feed contains several fields with more information abo
 
 Click on any incident in the feed to drill down into it. In the right panel, you will see each of the alerts that compose the incident. For each alert, you'll also see it's status, description, duration (time since first event) and it's last change time (time of the last status change). Additionally, if the alert contains any links you'll see a small link icon you can click on.
 
-![IncidentAnalysis](/media/IncidentAnalysis.png)
-{: .not-responsive}
+![IncidentAnalysis](/media/IncidentAnalysis.png){: style="height: auto; width: 635px"}
+{: .not-responsive }
 
 #### Visualize the Incident Lifecycle
 Next, click on the <strong>Timeline</strong> button at the top-right of the right pane to visualize the lifecycle of an incident. Each dot on the timeline represents a status change in one of the incident's alerts. With the BigPanda timeline, you can quickly understand how an incident has unfolded. This is light-years faster than sifting through a few dozen alert messages in your email inbox and trying to piece the fragments together manually.
