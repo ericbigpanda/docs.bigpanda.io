@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part 5: Incident Triage"
+title: "Part 4: Incident Triage"
 ---
 
 As we discussed in the previous parts of this guide, BigPanda automatically tackles the grouping of alerts into incidents by host, cluster, or application as they come in. Those incidents are then divided into your environments, where each team can easily triage and handle them.
@@ -27,5 +27,5 @@ If you would like to inform a co-worker of the incident or collaborate on its so
 
 ![Sharing incidents in Bigpanda](/media/ShareIncident.png)
 
-Reduce the noise, collaborate better, and resolve issues faster with BigPanda. Now that you know your way around the incident feed and we've discussed snoozing, we will discuss incident analysis in [part three of our Getting Started with BigPanda guide](getting-started-with-bigpanda-incident-analysis.html).
+Reduce the noise, collaborate better, and resolve issues faster with BigPanda. Now that you know your way around the incident feed and we've discussed snoozing, we will now discuss incident analysis.
 
