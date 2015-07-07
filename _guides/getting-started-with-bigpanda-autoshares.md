@@ -1,10 +1,14 @@
 ---
 layout: page
-title: "Part 6: AutoShares"
+title: "Part 6: AutoShare"
 ---
 
-#### Creating an Escalation Channel
-Go to the **Integrations** tab, scroll down to the **Sharing & Ticket Management** section and click on the system you want to integrate. Follow the instructions on the screen.
+#### Automatically Share Incidents via Escalation Channels with AutoShare
 
-#### Creating a New Autoshare
-To create a new autoshare, navigate to the **AutoShare** tab, and click on the **Create AutoShare** button at the top-right corner. A popup window will open. From the **Choose Environment** dropdown, choose the environment which incidents you'd like to automatically share. Then select an escalation channel from the **Escalate via** dropdown and click **Next**. To add escalation channels, refer to the *Creating an Escalation Channel* section above. The next form is specific for each escalation channel. You should fill the relevant info and click **Create**. A new rule should be added to the bottom of the rules table.
+AutoShare rules route incidents to key team members when and how they're needed to assist the resolution process. Any incident in any BigPanda Environment can be automatically shared to any escalation channel such as ServiceNow, JIRA, HipChat, Slack, or Asana. First configure one or more escalation channels in the Integrations tab then configure AutoShare rules in the AutoShare tab.
+
+#### Creating a New Escalation Channel
+Go to the **Integrations** tab. Scroll down to the **Sharing & Ticket Management** section and select the system you want to use as an escalation channel. Follow the instructions on the screen.
+
+#### Creating a New AutoShare
+To create a new AutoShare, navigate to the **AutoShare** tab and click the **Create AutoShare** button at the top right corner. A popup window will open. From the **Choose Environment** dropdown, select the Environment from which you'd like to automatically share incidents. Next, select an escalation channel from the **Escalate via** dropdown and click **Next**. To add escalation channels, refer to the *Creating an Escalation Channel* section above. The next form is specific to the escalation channel you selected. Fill in the relevant info and click **Create**. A new AutoShare rule will be added to the list.
