@@ -15,9 +15,18 @@ The BigPanda-SolarWinds integration only supports Orion server version 2015.1 or
 
 If you already have a user account with system rights, use it. If not, create a new one.
 
-System user accounts can be created by sending a POST request to your SolarWinds server with your admin credentials. They cannot be created or managed from the Orion web interface.
+System user accounts can be created by sending a POST request to your SolarWinds server with your admin credentials. They cannot be created or managed from the Orion web interface. Use your admin user credentials to create your new system user account.
+
+Curl command:
 
     curl -XPOST -H "Content-Type: application/json" https://<user name>:<password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<system user name>","password":"<system password>"}]'
+
+PowerShell commands:
+
+    $securepassword = ConvertTo-SecureString “<password>” -AsPlainText -Force
+    $credentials = New-Object System.Management.Automation.PSCredential(“<user name>”, $securepassword)
+
+    Invoke-WebRequest -ContentType application/json  -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -Body '["System",{"AccountID":"<system user name>","password":"<system password>"}]' -Credential $credentials
 
 <!-- section-separator -->
 
@@ -27,7 +36,16 @@ In order to subscribe BigPanda to your SolarWinds alert notifications, you need 
 
 Use the credentials of the system user account from the previous step.
 
+Curl command:
+
     curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
+
+PowerShell commands:
+
+    $securepassword = ConvertTo-SecureString “<system password>” -AsPlainText -Force
+    $credentials = New-Object System.Management.Automation.PSCredential(“<system user name>”, $securepassword)
+
+    Invoke-WebRequest -ContentType application/json -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -Body '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=<your app key>", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }' -Credential $credentials
 
 The response contains the identifier of the subscription which is required to remove it. For example: "swis://dev.local/Orion/System.Subscription/Id=b626ef38-b1e3-448e-ba5a-f148dc9889ba"
 
