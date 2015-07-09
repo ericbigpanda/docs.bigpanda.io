@@ -17,7 +17,7 @@ If you already have a user account with system rights, use it. If not, create a 
 
 System user accounts can be created by sending a POST request to your SolarWinds server with your admin credentials. They cannot be created or managed from the Orion web interface. Use your admin user credentials to create your new system user account.
 
-Curl command:
+cURL command:
 
     curl -XPOST -H "Content-Type: application/json" https://<user name>:<password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<system user name>","password":"<system password>"}]'
 
@@ -36,7 +36,7 @@ In order to subscribe BigPanda to your SolarWinds alert notifications, you need 
 
 Use the credentials of the system user account from the previous step.
 
-Curl command:
+cURL command:
 
     curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
 
