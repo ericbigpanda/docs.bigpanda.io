@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part 6: AutoShare"
+title: "Part 5: AutoShare"
 ---
 
 #### Automatically Share Incidents via Escalation Channels with AutoShare
