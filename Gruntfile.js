@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         prod: {
           options: {
             port: 8080,
-            bases: __dirname + '/public_prod',
+            bases: __dirname + '/public',
             livereload: true,
             server: path.resolve('./dev')
           }
@@ -29,12 +29,14 @@ module.exports = function (grunt) {
       jekyll:{
         prod: {
           options: {
-            config: '_config_prod.yml'
+            config: '_config_base.yml,_config_prod.yml',
+            raw: "baseurl: ''"
           }
         },
         dev: {
           options: {
-            config: '_config.yml'
+            config: '_config_base.yml,_config.yml',
+            raw: "baseurl: ''"
           }
         }
       },
