@@ -13,9 +13,9 @@ When a new incident arrives, first ask yourself if it's immediately actionable. 
 
 Click the bell icon, and then select the snooze period.
 
-![Snoozing Incidents](/media/SnoozeButton.png){: style= "height:auto; width:300px;"}
+![Snoozing Incidents](/media/SnoozeButton.png)
 
-![Choosing the Snooze Period](/media/SnoozeDialog.png){: style= "height:auto; width:300px;"}
+![Choosing the Snooze Period](/media/SnoozeDialog.png)
 
 By snoozing non-urgent incidents, you keep your team focused on the right issues at the right time. When the snooze period has elapsed, the incident again appears in the active feed.
 
