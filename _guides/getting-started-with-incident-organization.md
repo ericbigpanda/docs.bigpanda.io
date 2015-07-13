@@ -11,8 +11,8 @@ By default, all of your incidents are included in the **All** Environment.
 
 #### Defining a New Environment
 
-Click **New Environment**. A settings window opens where you can define the rules that determine which incidents are included in your Environment.
-
-![Environment Settings](/media/EnvironmentSettings.png)
+Click **New Environment**. A window opens where you can define the rules that determine which incidents are included in the Environment.
 
 The rules construct a simple **and**/**or** boolean expression that is evaluated against the incident properties. You can see a live preview of these incidents in the right pane.
+
+![Environment Settings](/media/EnvironmentSettings.png)
