@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part 1 - Initial Setup"
+title: "Part 1: Initial Setup"
 ---
 
 BigPanda is an incident management platform for modern Ops teams. Organize, prioritize, and triage your incidents faster and more intelligently than ever before. Vastly improve your team's collaboration on Ops alerts and events. The following guide is the first in our series on getting started with BigPanda's incident feed. This product introduction will help you to get up and running quickly so you can get back to fixing the world's broken stuff.
