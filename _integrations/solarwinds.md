@@ -13,52 +13,52 @@ The BigPanda-SolarWinds integration only supports Orion server version 2015.1 or
 
 #### Create system user account in SolarWinds
 
-If you already have a user account with system rights, use it. If not, create a new one.
+If you already have a user account with system rights, proceed to the next step. If not, create a new account.
 
-System user accounts can be created by sending a POST request to your SolarWinds server with your admin credentials. They cannot be created or managed from the Orion web interface. Use your admin user credentials to create your new system user account.
+You can create a system user account by sending a POST request to your SolarWinds server. System user accounts cannot be created or managed from the Orion web interface. You must use admin user credentials in the POST request to create a new system user account.
 
 cURL command:
 
-    curl -XPOST -H "Content-Type: application/json" https://<user name>:<password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<system user name>","password":"<system password>"}]'
+    curl -XPOST -H "Content-Type: application/json" https://<admin user name>:<admin password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<new system user name>","password":"<new system user password>"}]'
 
 PowerShell commands:
 
-    $securepassword = ConvertTo-SecureString “<password>” -AsPlainText -Force
-    $credentials = New-Object System.Management.Automation.PSCredential(“<user name>”, $securepassword)
+    $securepassword = ConvertTo-SecureString “<admin password>” -AsPlainText -Force
+    $credentials = New-Object System.Management.Automation.PSCredential(“<admin user name>”, $securepassword)
 
-    Invoke-WebRequest -ContentType application/json  -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -Body '["System",{"AccountID":"<system user name>","password":"<system password>"}]' -Credential $credentials
+    Invoke-WebRequest -ContentType application/json  -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -Body '["System",{"AccountID":"<new system user name>","password":"<new system user password>"}]' -Credential $credentials
 
 <!-- section-separator -->
 
 #### Subscribe BigPanda to alert notifications in SolarWinds
 
-In order to subscribe BigPanda to your SolarWinds alert notifications, you need to POST a request to your SolarWinds server.
+To subscribe BigPanda to your SolarWinds alert notifications, send a POST request to your SolarWinds server.
 
 Use the credentials of the system user account from the previous step.
 
 cURL command:
 
-    curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
+    curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system user password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
 
 PowerShell commands:
 
-    $securepassword = ConvertTo-SecureString “<system password>” -AsPlainText -Force
+    $securepassword = ConvertTo-SecureString “<system user password>” -AsPlainText -Force
     $credentials = New-Object System.Management.Automation.PSCredential(“<system user name>”, $securepassword)
 
     Invoke-WebRequest -ContentType application/json -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -Body '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=<your app key>", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }' -Credential $credentials
 
-The response contains the identifier of the subscription which is required to remove it. For example: "swis://dev.local/Orion/System.Subscription/Id=b626ef38-b1e3-448e-ba5a-f148dc9889ba"
+The response contains the identifier of the subscription, which is required to remove it. For example: "swis://dev.local/Orion/System.Subscription/Id=b626ef38-b1e3-448e-ba5a-f148dc9889ba"
 
 <!-- section-separator -->
 
 #### Update your alert to send notifications
 
-In order to get notifications on alerts, mark the alert as "Alert Integration". Built-in SolarWinds alerts already send notifications but if you have created other alerts in the past or create new alerts in the future do the following for each one to trigger notifications:
+To get notifications on alerts, mark the alert as "Alert Integration". Built-in SolarWinds alerts already send notifications. If you have created your own alerts, follow these steps for each alert to trigger notifications:
 
-* While editing the alert go to the **SUMMARY** tab
-* At the bottom of the page expand the **Alert Integration**
-* Check the box beside **Integrate alert with other SolarWinds products and subscribers**
-* Select **Use the name of alert as a subject**
+1. While editing the alert, click the **SUMMARY** tab.
+2. At the bottom of the page, expand **Alert Integration**.
+3. Select the **Integrate alert with other SolarWinds products and subscribers** check box.
+4. Select **Use the name of alert as a subject**.
 
 <!-- section-separator -->
 
