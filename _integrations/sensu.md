@@ -12,7 +12,7 @@ In order to send events to BigPanda we need to define a handler for Sensu ([more
 
 * Connect to the Sensu server via shell. 
 * Please make sure you have all the following libraries installed: `ruby, ruby-dev, build-essential`.
-* Please make sure you have sensu-plugin gen installed: `sudo gem install sensu-plugin`.
+* Please make sure you have sensu-plugin gem installed: `sudo gem install sensu-plugin`.
 * Download the BigPanda handler and its configuration by executing the following:  
   * `sudo curl -o /etc/sensu/handlers/bigpanda.rb https://a.bigpanda.io/resources/integrations/sensu/bigpanda.rb`  
   * `sudo curl https://a.bigpanda.io/resources/integrations/sensu/handler_bigpanda.json | $SED | sudo tee /etc/sensu/conf.d/handler_bigpanda.json > /dev/null`
@@ -53,4 +53,4 @@ In order to send events to BigPanda we need to define a handler for Sensu ([more
 
 #### Success
 
-Next time you'll have Sensu alerts, you will able to see them in BigPanda.
+Next time you have Sensu alerts, you will see them in BigPanda.
