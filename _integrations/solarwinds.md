@@ -5,12 +5,6 @@ draft: false
 type: System Monitoring
 ---
 
-#### Compatibility
-
-The BigPanda-SolarWinds integration only supports Orion server version 2015.1 or higher. Contact [support@bigpanda.io](mailto:support@bigpanda.io?Subject=SolarWinds%integration%help "contact BigPanda support") with questions about version support.
-
-<!-- section-separator -->
-
 #### Create system user account in SolarWinds
 
 If you already have a user account with system rights, proceed to the next step. If not, create a new account.
