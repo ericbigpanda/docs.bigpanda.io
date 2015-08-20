@@ -5,8 +5,6 @@ draft: false
 type: System Monitoring
 ---
 
-<!-- section-separator -->
-
 #### Create system user account in SolarWinds
 
 If you already have a user account with system rights, proceed to the next step. If not, create a new account.
