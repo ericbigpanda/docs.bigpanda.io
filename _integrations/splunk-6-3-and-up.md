@@ -10,7 +10,14 @@ type: "Log Aggregation"
 
 One thing to note before integrating Splunk with BigPanda:
 
+<!-- docs-only-start -->
+{: .not-responsive}
 Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
+<!-- docs-only-end -->
+<!-- app-only-start -->
+Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
+<!-- app-only-end -->
+
 
 #### Setting up the BigPanda App for Splunk
 
