@@ -12,39 +12,31 @@ One thing to note before integrating Splunk with BigPanda:
 
 Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
 
-#### Install the BigPanda Splunk App
+#### Setting up the BigPanda App for Splunk
 
-Within Splunk, Click on the cog wheel next to the apps (Top left corner).
+In the Splunkbase app store, search for **BigPanda** and download the app for **BigPanda App for Splunk**.
 
-Click on Browse More Apps, then search for BigPanda
+Log in to Splunk 6.3 as an administrator.
 
-**TBD** *CHECK FOR THE FINAL SCENARIO WITH SPLUNK*
+Go to **Settings...Alert Actions (under Knowledge)**.
 
-...
+In the list of alert actions, find the alert action for BigPanda.
 
-Click `Install`
+In the **Setup** column, click the link for **Setup bigpanda_alerts**.
 
-<!-- section-separator -->
+In the setup screen that will open, populate the fields as follows:
 
-#### Configure The BigPanda Splunk App
+  Enter `$TOKEN` into the **App Key** field in Splunk.
 
-Right after installing the BigPanda Splunk App, you'll be prompted to set up BigPanda.
+  Enter `$STREAM_ID` into the **API Token** field in Splunk.
 
-In the setup screen, for the API Key enter:
-
-    $TOKEN
-
-
-Then for the App Token, enter:
-
-    $STREAM_ID
+**Note:** The **API URL** is populated automatically in Splunk. Do not change this field value.
 
 <!-- section-separator -->
 
+#### Set up **Trigger Actions** for the alerts you want to send to BigPanda.
 
-#### Configure your Splunk Alert to notify BigPanda
-
-While editing or creating your Alert, select BigPanda in the `Trigger Actions` category.
+For example, you can run a **Search, Save As > Alert**. At the bottom of the window, click **+Add Actions**, and then select **BigPanda**. When the alert is triggered in Splunk, it is sent to BigPanda.
 
 Optionally, if you have more than one BigPanda Splunk integration, you can override the App Key here (Enter `$STREAM_ID`).
 
