@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Splunk"
+title: "Splunk (6.2 and below)"
 draft: false
 type: "Log Aggregation"
 
