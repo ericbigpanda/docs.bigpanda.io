@@ -36,7 +36,10 @@ In the setup screen that will open, populate the fields as follows:
 
 #### Set up **Trigger Actions** for the alerts you want to send to BigPanda.
 
-For example, you can run a **Search, Save As > Alert**. At the bottom of the window, click **+Add Actions**, and then select **BigPanda**. When the alert is triggered in Splunk, it is sent to BigPanda.
+For example, you can run a **Search, Save As > Alert**.
+At the bottom of the window, click **+Add Actions**, and then select **BigPanda**.
+
+When the alert is triggered in Splunk, it is sent to BigPanda.
 
 Optionally, if you have more than one BigPanda Splunk integration, you can override the App Key here (Enter `$STREAM_ID`).
 
