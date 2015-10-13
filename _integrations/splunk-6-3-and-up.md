@@ -30,9 +30,9 @@ Unlike other monitoring systems Splunk incidents will not resolve automatically 
 
 6. In the setup screen, populate the following fields:
 
-  * Enter `$TOKEN` into the **App Key** field in Splunk.
+  * Enter `$STREAM_ID` into the **App Key** field in Splunk.
 
-  * Enter `$STREAM_ID` into the **API Token** field in Splunk.
+  * Enter `$TOKEN` into the **API Token** field in Splunk.
 
 **Note:** The **API URL** is populated automatically in Splunk. Do not change this field value.
 
