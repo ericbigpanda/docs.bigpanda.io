@@ -50,6 +50,8 @@ For example:
 
 Optionally, if you have more than one BigPanda Splunk integration, you can override the App Key here (Enter `$STREAM_ID`).
 
+In addition, you can override the description, primary and secondary property of the alert.
+
 <!-- section-separator -->
 
 #### Success
