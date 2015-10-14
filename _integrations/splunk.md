@@ -1,6 +1,6 @@
 ---
 layout: integration 
-title: "Splunk"
+title: "Splunk (6.2 and below)"
 draft: false
 type: "Log Aggregation"
 
@@ -9,7 +9,13 @@ type: "Log Aggregation"
 Three things to note before integrating Splunk with BigPanda:
 
 #### No automatic resolution
+<!-- docs-only-start -->
+{: .not-responsive}
 Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
+<!-- docs-only-end -->
+<!-- app-only-start -->
+Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
+<!-- app-only-end -->
 
 #### Requires installation of Python package
 The BigPanda Python package must first be installed on the Splunk server to complete the integration. See instructions below.
