@@ -7,7 +7,7 @@ type: System Monitoring
 
 #### Create system user account in SolarWinds
 
-If you already have a user account with system rights, proceed to the next step. If not, create a new account.
+If you already have a system user account, proceed to the next step. If not, create a new account.
 
 You can create a system user account by sending a POST request to your SolarWinds server. System user accounts cannot be created or managed from the Orion web interface. You must use admin user credentials in the POST request to create a new system user account.
 
@@ -28,7 +28,9 @@ PowerShell commands:
 
 To subscribe BigPanda to your SolarWinds alert notifications, send a POST request to your SolarWinds server.
 
-Use the credentials of the system user account from the previous step.
+Use the credentials of the system user account from the previous step. 
+
+**Note:** You must use a system user to subscribe to notifications. An admin user cannot be used in place of a system user.
 
 cURL command:
 
