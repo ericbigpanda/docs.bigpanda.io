@@ -6,11 +6,6 @@ type: Application Monitoring
 
 ---
 
-#### New Relic Alerts Beta
- If you are using the new relic alerts beta and want to connect it to BigPanda please contact support@bigpanda.io.
-
-<!-- section-separator -->
-
 #### Locate Alerts Settings
 In the *New Relic* dashboard, navigate to [Alerts > Channels and groups](https://rpm.newrelic.com/notification_channels)
 
