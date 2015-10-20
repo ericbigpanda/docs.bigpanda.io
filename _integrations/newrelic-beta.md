@@ -38,11 +38,15 @@ In the New Relic dashboard, navigate to **Alerts<sup>Beta</sup> &gt; Notificatio
 
 <!-- section-separator -->
 
-#### Add the Channel to an Alert Policy in New Relic
+#### Add Alert Policies to the Channel in New Relic
 
-1. In the New Relic dashboard, navigate to **Alerts<sup>Beta</sup> &gt; Alert policies**.
+1. In the New Relic dashboard, navigate back to **Alerts<sup>Beta</sup> &gt; Notification channels**.
 
-2. Click the policy.
+2. Under **Channels**, select the **BigPanda** channel.
 
-3. Under **Notification channels**, click **Add notification channels** and select **Webhook &gt; BigPanda**.
+3. Under **Alert policies** of the channel, click **Add alert policies** and add all of your policies to the **BigPanda** channel, and then click **Update channel** .
+
+**Note:** You must set the incident preference of each policy to **By condition and target**. Navigate to **Alerts<sup>Beta</sup> &gt; Alert policies**. The incident preference is set per alert policy.
+
+![media/NewRelicIncidentPreference.png](/media/NewRelicIncidentPreference.png)
 
