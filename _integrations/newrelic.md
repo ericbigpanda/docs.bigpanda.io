@@ -7,7 +7,7 @@ type: Application Monitoring
 ---
 
 #### Locate Alerts Settings
-In the New Relic dashboard, navigate to [Alerts > Channels and groups](https://rpm.newrelic.com/notification_channels)
+In the New Relic dashboard, navigate to [Alerts > Channels and groups](https://rpm.newrelic.com/notification_channels).
 
 <!-- section-separator -->
 
@@ -24,10 +24,10 @@ Click **Integrate with Webhooks**.
 
 #### Apply Webhook to All Policies
 
-* Navigate to [Account settings > Integrations > Data sharing](https://rpm.newrelic.com/integrations?page=data_sharing)
-* If API access is not already enabled, click **Enable API access**.
+1. Navigate to [Account settings > Integrations > Data sharing](https://rpm.newrelic.com/integrations?page=data_sharing).
+2. If API access is not already enabled, click **Enable API access**.
 <!-- app-only-start -->
-* Copy the **API key** to the form below.
+3. Copy the **API key** into the form below.
 
 <!-- include 'integrations/newrelic/newrelic' -->
 <!-- app-only-end -->
@@ -41,7 +41,7 @@ Within the BigPanda Application use the interactive New Relic integration guide 
 
 #### Test the webhook
 
-A test message should arrive in a few moments.
+A test message should arrive in a few moments. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received. 
 
-_Make sure that you can see the alert in the **Incidents** tab. Since it's a test message, it won't be resolved by its own. To resolve the issue manually, use the __Force Resolve__ action in the __More__ actions context menu of the incident._
+**Note:** Since it's a test message, it won't be resolved automatically. Click **Resolve incident** to manually resolve it.
 
