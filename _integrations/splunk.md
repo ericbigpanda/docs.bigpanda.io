@@ -6,26 +6,19 @@ type: "Log Aggregation"
 
 ---
 
-Three things to note before integrating Splunk with BigPanda:
+#### Review Splunk Integration Notes
 
-#### No automatic resolution
-<!-- docs-only-start -->
-{: .not-responsive}
-Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
-<!-- docs-only-end -->
-<!-- app-only-start -->
-Unlike other monitoring systems Splunk incidents will not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
-<!-- app-only-end -->
+Before integrating Splunk with BigPanda, review these notes:
 
-#### Requires installation of Python package
-The BigPanda Python package must first be installed on the Splunk server to complete the integration. See instructions below.
+* **No automatic resolution:** Unlike for other monitoring systems, Splunk incidents do not resolve automatically because Splunk does not send notifications when alerts are resolved. Resolve Splunk incidents manually by clicking the resolve button (![media/resolve.png](/media/resolve.png)) in the incident.
 
-#### All Splunk alerts are sent to BigPanda
-Without additional configuration, the BigPanda Splunk action script forwards all Splunk alerts to BigPanda.
+* **Requires Python package:** You must install the BigPanda Python package on the Splunk server before completing the integration. See instructions below.
 
-Here are instructions for integrating Splunk with BigPanda:
+* **All Splunk alerts are sent to BigPanda:** Without additional configuration, the BigPanda Splunk action script sends all Splunk alerts to BigPanda.
 
-#### Install the BigPanda Python package
+<!-- section-separator -->
+#### Install the BigPanda Python Package
+
 Download and install the BigPanda Python package to get the BigPanda Splunk action script:
 
     $ sudo pip install bigpanda-splunk
@@ -42,11 +35,15 @@ After running these commands, you should see a test alert in the Incident Dashbo
 
 #### Configure Splunk
 
-Configure Splunk to execute BigPanda's action script when an alert is triggered by running the following:
+Configure Splunk to execute the BigPanda action script when an alert is triggered.
 
-    $ sudo bigpanda-splunk-defaults
+1. Run the following command:
+
+  ````
+  $ sudo bigpanda-splunk-defaults
+  ````
     
-Restart the Splunk server for the changes to take effect.
+2. Restart the Splunk server for the changes to take effect.
 
 <!-- section-separator -->
 
