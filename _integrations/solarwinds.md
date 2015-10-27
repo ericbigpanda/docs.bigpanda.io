@@ -5,43 +5,46 @@ draft: false
 type: System Monitoring
 ---
 
-#### Create system user account in SolarWinds
+#### Create system level user account in SolarWinds
 
-If you already have a system user account, proceed to the next step. If not, create a new account.
+Create a system level user account by sending a POST request to your SolarWinds server. If you have previously created a system user account through this method, you can proceed to the next step.
 
-You can create a system user account by sending a POST request to your SolarWinds server. System user accounts cannot be created or managed from the Orion web interface. You must use admin user credentials in the POST request to create a new system user account.
+**Note:**
+* System level user accounts cannot be created or managed from the Orion web interface. You must use a POST request.
+* You must use admin user credentials in the POST request to create the new system user.
+* When using the commands below, be sure to replace the generic text (indicated in &lt;CAPS&gt;) with your specific user and server information.
 
 cURL command:
 
-    curl -XPOST -H "Content-Type: application/json" https://<admin user name>:<admin password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<new system user name>","password":"<new system user password>"}]'
+    curl -XPOST -H "Content-Type: application/json" https://<ADMIN USER NAME>:<ADMIN PASSWORD>@<YOUR SERVER>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<NEW SYSTEM USER NAME>","password":"<NEW SYSTEM USER PASSWORD>"}]'
 
 PowerShell commands:
 
-    $securepassword = ConvertTo-SecureString “<admin password>” -AsPlainText -Force
-    $credentials = New-Object System.Management.Automation.PSCredential(“<admin user name>”, $securepassword)
+    $securepassword = ConvertTo-SecureString “<ADMIN PASSWORD>” -AsPlainText -Force
+    $credentials = New-Object System.Management.Automation.PSCredential(“<ADMIN USER NAME>”, $securepassword)
 
-    Invoke-WebRequest -ContentType application/json  -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -Body '["System",{"AccountID":"<new system user name>","password":"<new system user password>"}]' -Credential $credentials
+    Invoke-WebRequest -ContentType application/json  -Method Post -Uri https://<YOUR SERVER>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -Body '["System",{"AccountID":"<NEW SYSTEM USER NAME>","password":"<NEW SYSTEM USER PASSWORD>"}]' -Credential $credentials
 
 <!-- section-separator -->
 
 #### Subscribe BigPanda to alert notifications in SolarWinds
 
-To subscribe BigPanda to your SolarWinds alert notifications, send a POST request to your SolarWinds server.
+Subscribe BigPanda to your SolarWinds alert notifications by sending a POST request to your SolarWinds server.
 
 Use the credentials of the system user account from the previous step. 
 
-**Note:** You must use a system user to subscribe to notifications. An admin user cannot be used in place of a system user.
+**Note:** An admin user cannot be used in place of a system level user.
 
 cURL command:
 
-    curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system user password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
+    curl -XPOST -H "Content-Type: application/json" https://<SYSTEM USER NAME>:<SYSTEM USER PASSWORD>@<YOUR SERVER>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
 
 PowerShell commands:
 
-    $securepassword = ConvertTo-SecureString “<system user password>” -AsPlainText -Force
-    $credentials = New-Object System.Management.Automation.PSCredential(“<system user name>”, $securepassword)
+    $securepassword = ConvertTo-SecureString “<SYSTEM USER PASSWORD>” -AsPlainText -Force
+    $credentials = New-Object System.Management.Automation.PSCredential(“<SYSTEM USER NAME>”, $securepassword)
 
-    Invoke-WebRequest -ContentType application/json -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -Body '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }' -Credential $credentials
+    Invoke-WebRequest -ContentType application/json -Method Post -Uri https://<YOUR SERVER>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -Body '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }' -Credential $credentials
 
 The response contains the identifier of the subscription, which is required to remove it. For example: "swis://dev.local/Orion/System.Subscription/Id=b626ef38-b1e3-448e-ba5a-f148dc9889ba"
 
