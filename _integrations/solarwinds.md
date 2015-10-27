@@ -11,7 +11,7 @@ Create a system level user account by sending a POST request to your SolarWinds 
 
 **Note:**
 * System level user accounts cannot be created or managed from the Orion web interface. You must use a POST request.
-* You must use admin user credentials in the POST request to create the new system user.
+* You must use admin user credentials to create the new system user.
 * When using the commands below, be sure to replace the generic text (indicated in &lt;CAPS&gt;) with your specific user and server information.
 
 cURL command:
@@ -33,7 +33,9 @@ Subscribe BigPanda to your SolarWinds alert notifications by sending a POST requ
 
 Use the credentials of the system user account from the previous step. 
 
-**Note:** An admin user cannot be used in place of a system level user.
+**Note:** 
+* An admin user cannot be used in place of a system level user.
+* When using the commands below, be sure to replace the generic text (indicated in &lt;CAPS&gt;) with your specific user and server information.
 
 cURL command:
 
