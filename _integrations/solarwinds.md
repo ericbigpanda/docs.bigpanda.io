@@ -5,6 +5,18 @@ draft: false
 type: System Monitoring
 ---
 
+#### Collect the required information
+
+Collect the SolarWinds user account and server information that you will need to complete the installation.
+
+* **Admin user name**: You need an admin user to create an system level user.
+* **Admin password**
+* **New system user name**: You need a system level user to subscribe to notifications. Create the account in the next step.
+* **New system user password**
+* **Server address**
+
+<!-- section-separator -->
+
 #### Create system level user account in SolarWinds
 
 Create a system level user account by sending a POST request to your SolarWinds server. If you have previously created a system user account through this method, you can proceed to the next step.
