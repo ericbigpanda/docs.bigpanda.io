@@ -42,7 +42,7 @@ In the New Relic dashboard, navigate to **Alerts<sup>Beta</sup> &gt; Notificatio
 
 1\. In the New Relic dashboard, navigate to **Alerts<sup>Beta</sup> &gt; Notification channels**.
 
-2\. Under **Channels**, select **BigPanda**.
+2\. Under **Channels**, select the **BigPanda** channel.
 
 3\. Under **Alert policies**, click **Add alert policies**.
 
