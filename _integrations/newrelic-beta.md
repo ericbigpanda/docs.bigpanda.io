@@ -19,7 +19,7 @@ In the New Relic dashboard, navigate to **Alerts Beta > Notification channels**.
  
 2\. Fill in the form:
 
-* **Channel name**: `BigPanda` <br>
+* **Channel name**: `BigPanda`
 * **Base Url**: `https://api.bigpanda.io/data/integrations/newrelic?$URL_PARAMS`
 
 3\. Click **+Add custom payload** and ensure that **JSON** is selected as the payload type.
