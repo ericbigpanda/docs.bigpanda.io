@@ -7,7 +7,7 @@ type: Application Monitoring
 
 #### Create the BigPanda HTTP Request Template
 
-__Note__ This step is only required once per AppDynamics Controller.
+__Note__: This step is only required once per AppDynamics Controller.
 
 * Login to your AppDynamics controller
 * Click on **Alert and Respond**
