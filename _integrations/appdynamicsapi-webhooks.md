@@ -7,21 +7,22 @@ type: Application Monitoring
 
 #### Create the BigPanda HTTP Request Template
 
-**NOTE** This step is only required once per AppDynamics Controller
+__Note__ This step is only required once per AppDynamics Controller.
 
 * Login to your AppDynamics controller
-* Click on `Alert and Respond`
-* Click on `HTTP Request Templates`
-* Click on `New`
-* In the `Name` field, enter `BigPandaAlertTemplate` 
-* In the `Request URL` section:
-    * Choose `POST` as method
-    * In the `Raw URL` field, Enter `https://api.bigpanda.io/data/integrations/appdynamics-webhook?app_key=$STREAM_ID`
-* In the `Custom Request Headers` section add a header with the following values:
+* Click on **Alert and Respond**
+* Click on **HTTP Request Templates**
+* Click on **New**
+* In the **Name** field, enter `BigPandaAlertTemplate` 
+* In the **Request URL** section:
+    * Choose _POST_ as method
+    * In the **Raw URL** field, Enter `https://api.bigpanda.io/data/integrations/appdynamics-webhook?app_key=$STREAM_ID`
+* In the **Custom Request Headers** section add a header with the following values:
     `Authorization`     `Bearer $TOKEN`
-* In the `Payload` section:
-    * In the `MIME Type` field, Enter `application/json`
+* In the **Payload** section:
+    * In the **MIME Type** field, Enter `application/json`
     * In the text area, copy the following template:
+
 
             {
               "account_name":                  "${account.name}",
@@ -57,13 +58,17 @@ type: Application Monitoring
                 "health_rule_name":            "${event.healthRule.name}",
                 "incident_id":                 "${event.incident.id}",
                 "incident_name":               "${event.incident.name}",
+            #if (${event.node_name})
                 "node_name":                   "${event.node.name}",
                 "node_id":                     "${event.node.id}",
-                "summary_message":             "${event.summaryMessage}",
+            #end
+                "summary_message":             "${event.summaryMessage.replaceAll("\\<[^>]*\\>","")}",
                 "severity":                    "${event.severity}",
                 "tag":                         "bigpanda-api",
+            #if (${event.tier_name})
                 "tier_name":                   "${event.tier.name}",
                 "tier_id":                     "${event.tier.id}",
+            #end
                 "affected_entities":           [
             #foreach(${entity} in ${event.affectedEntities})
                     {
@@ -82,39 +87,40 @@ type: Application Monitoring
               ]
             }
 
-* In the `Settings` section, make sure that the `One request per event` is not checked
 
-* Click `Save`
+* In the **Settings** section, make sure that the **One request per event** is not checked
+
+* Click **Save**
 
 <!-- section-separator -->
 
 #### Create an AppDynamics Policy
 
-Go to `Application > Alert & Respond > Policies` and click on `Create Policy`.
+Go to **Application** > **Alert & Respond** > **Policies** and click on **Create Policy**.
 
 In the Create Policy window:
 
 * Input `BigPanda` in the name field
-* Check all of the `Health Rule Violation Events` checkboxes
+* Check all of the **Health Rule Violation Events** checkboxes
 
 <!-- section-separator -->
 
 #### Create an AppDynamics Action
 
 Without leaving the Create Policy window.
-Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).
+Click on **Actions** on the left pane, and then click on ![+](/media/appdynamics-plus.png).
 
-If you already created a `BigPandaAlert` action for another application in AppDynamics, choose it and then click `Select`.
+If you already created a `BigPandaAlert` action for another application in AppDynamics, choose it and then click **Select**.
 
 Otherwise:
 
-* Click on `Create Action`
-* Select the `Make an HTTP Request` option
-* Click on `OK`
-* Choose `BigPandaAlertTemplate` in the `HTTP Request Template` field
-* Click on `Save` to save the action
+* Click on **Create Action**
+* Select the **Make an HTTP Request** option
+* Click on **OK**
+* Choose **BigPandaAlertTemplate** in the **HTTP Request Template** field
+* Click on **Save** to save the action
 
-After creating the new custom action, click on `Save` to create the new policy.
+After creating the new custom action, click on **Save** to create the new policy.
 
 <!-- section-separator -->
 
