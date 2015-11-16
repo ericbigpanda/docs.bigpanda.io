@@ -7,20 +7,27 @@ type: Application Monitoring
 
 #### Create the BigPanda HTTP Request Template
 
-__Note__: This step is only required once per AppDynamics Controller.
+__Note__: Complete this step only one time per AppDynamics controller.
 
-* Login to your AppDynamics controller
-* Click on **Alert and Respond**
-* Click on **HTTP Request Templates**
-* Click on **New**
-* In the **Name** field, enter `BigPandaAlertTemplate` 
-* In the **Request URL** section:
-    * Choose _POST_ as method
-    * In the **Raw URL** field, Enter `https://api.bigpanda.io/data/integrations/appdynamics-webhook?app_key=$STREAM_ID`
-* In the **Custom Request Headers** section add a header with the following values:
+1\. Log in to your AppDynamics controller.
+
+2\. Click **Alert &amp; Respond**.
+
+3\. Click **HTTP Request Templates**.
+
+4\. Click **New**.
+
+5\. In the **Name** field, enter `BigPandaAlertTemplate`.
+
+6\. In the **Request URL** section:
+    * For the method, select **POST**.
+    * In the **Raw URL** field, enter `https://api.bigpanda.io/data/integrations/appdynamics-webhook?app_key=$STREAM_ID`.
+    
+7\. In the **Custom Request Headers** section, add a header with the following values:
     `Authorization`     `Bearer $TOKEN`
-* In the **Payload** section:
-    * In the **MIME Type** field, Enter `application/json`
+    
+8\. In the **Payload** section:
+    * In the **MIME Type** field, enter `application/json`.
     * In the text area, copy the following template:
 
 
@@ -88,44 +95,47 @@ __Note__: This step is only required once per AppDynamics Controller.
             }
 
 
-* In the **Settings** section, make sure that the **One request per event** is not checked
+9\. In the **Settings** section, make sure that the **One Request Per Event** check box is not selected.
 
-* Click **Save**
+10\. Click **Save**.
 
 <!-- section-separator -->
 
 #### Create an AppDynamics Policy
 
-Go to **Application** > **Alert & Respond** > **Policies** and click on **Create Policy**.
+1\. Go to **Application** > **Alert & Respond** > **Policies**, and click **Create Policy**.
 
-In the Create Policy window:
+2\. In the Create Policy window:
 
-* Input `BigPanda` in the name field
-* Check all of the **Health Rule Violation Events** checkboxes
+* In the name field, enter `BigPanda`.
+* Select all of the **Health Rule Violation Events** check boxes.
 
 <!-- section-separator -->
 
 #### Create an AppDynamics Action
 
-Without leaving the Create Policy window.
-Click on **Actions** on the left pane, and then click on ![+](/media/appdynamics-plus.png).
+1\. In the Create Policy window, click **Actions** in the left pane, and then click ![+](/media/appdynamics-plus.png).
 
-If you already created a `BigPandaAlert` action for another application in AppDynamics, choose it and then click **Select**.
+2\. If you already created a `BigPandaAlert` action for another application in AppDynamics, choose it and then click **Select**.
 
-Otherwise:
+3\. If you have not created a `BigPandaAlert` action for another application in AppDynamics, create the action:
 
-* Click on **Create Action**
-* Select the **Make an HTTP Request** option
-* Click on **OK**
-* Choose **BigPandaAlertTemplate** in the **HTTP Request Template** field
-* Click on **Save** to save the action
+  1. Click **Create Action**.
+  
+  2. Select **Make an HTTP Request**.
+  
+  3. Click **OK**.
+  
+  4. In the **HTTP Request Template** field, select **BigPandaAlertTemplate**.
+  
+  5. Click **Save** to save the action.
 
-After creating the new custom action, click on **Save** to create the new policy.
+4\. Click **Save** to create the new policy.
 
 <!-- section-separator -->
 
 #### Success
 
-Next time you'll have AppDynamics alerts, you will able to see them in the Incidents tab.
+The next time AppDynamics generates a health rules alert, you will see it in the Incidents Dashboard.
 
-__Note__: If you need support in alerts other than health rules, please contact support@bigpanda.io.
+__Note__: If you need support for alerts other than health rules, please contact support@bigpanda.io.
