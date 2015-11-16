@@ -48,7 +48,7 @@ __Note__ This step is only required once per AppDynamics Controller.
                 "bt_performance_event":        ${event.btPerformanceEvent},
                 "deep_link_url":               "${event.deepLink}",
                 "event_type":                  "$event.eventType",
-                "event_message":               "${event.eventMessage}",
+                "event_message":               "${event.eventMessage.replaceAll("\\<[^>]*\\>","")}",
                 "event_type_key":              "${event.eventTypeKey}",
                 "event_time":                  "${event.eventTime}",
                 "guid":                        "${event.guid}",
