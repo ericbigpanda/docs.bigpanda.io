@@ -5,6 +5,10 @@ draft: false
 type: Application Monitoring
 ---
 
+#### Determine Your Version
+
+AppDynamics WebHooks are available in AppDynamics version 4.1 and up.
+
 #### Create the BigPanda HTTP Request Template
 
 __Note__: Complete this step only one time per AppDynamics controller.
@@ -104,6 +108,8 @@ __Note__: Complete this step only one time per AppDynamics controller.
 <!-- section-separator -->
 
 #### Create an AppDynamics Policy
+
+__Note__: You'll need to repeat this step for each Application.
 
 1\. Go to **Application** > **Alert & Respond** > **Policies**, and click **Create Policy**.
 
