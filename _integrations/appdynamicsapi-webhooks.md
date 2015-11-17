@@ -11,7 +11,7 @@ __Note__: Complete this step only one time per AppDynamics controller.
 
 1\. Log in to your AppDynamics controller.
 
-2\. Click **Alert &amp; Respond**.
+2\. Click **Alert & Respond**.
 
 3\. Click **HTTP Request Templates**.
 
@@ -20,15 +20,17 @@ __Note__: Complete this step only one time per AppDynamics controller.
 5\. In the **Name** field, enter `BigPandaAlertTemplate`.
 
 6\. In the **Request URL** section:
-    * For the method, select **POST**.
-    * In the **Raw URL** field, enter `https://api.bigpanda.io/data/integrations/appdynamics-webhook?app_key=$STREAM_ID`.
+
+* For the method, select **POST**.
+* In the **Raw URL** field, enter `https://api.bigpanda.io/data/integrations/appdynamics-webhook?app_key=$STREAM_ID`.
     
 7\. In the **Custom Request Headers** section, add a header with the following values:
     `Authorization`     `Bearer $TOKEN`
     
 8\. In the **Payload** section:
-    * In the **MIME Type** field, enter `application/json`.
-    * In the text area, copy the following template:
+
+* In the **MIME Type** field, enter `application/json`.
+* In the text area, copy the following template:
 
 
             {

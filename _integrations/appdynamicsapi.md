@@ -8,6 +8,7 @@ type: Application Monitoring
 #### Determine Your Version
 
 BigPanda supports on-premise and dedicated SaaS deployments of AppDynamics. The procedure for configuring the custom action (steps 4 - 6) is different depending on which version you are using.
+
 * For a dedicated SaaS deployment, contact AppDynamics support to configure the custom action.
 * For an on-premise deployment with the Windows controller, contact support@bigpanda.io.
 * For an on-premise deployment with the Linux controller, follow steps 4 - 6 and contact support@bigpanda.io if you have any questions.
