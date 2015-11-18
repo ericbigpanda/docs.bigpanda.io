@@ -8,6 +8,7 @@ type: Application Monitoring
 #### Determine Your Version
 
 AppDynamics WebHooks are available in AppDynamics version 4.1 and up.
+For previous versions, please click on **Action Script** above.
 
 #### Create the BigPanda HTTP Request Template
 
