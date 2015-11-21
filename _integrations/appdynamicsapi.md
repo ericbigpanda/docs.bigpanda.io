@@ -73,14 +73,14 @@ __Note__: Complete this step only one time per AppDynamics controller.
                 "health_rule_name":            "${event.healthRule.name}",
                 "incident_id":                 "${event.incident.id}",
                 "incident_name":               "${event.incident.name}",
-            #if (${event.node_name})
+            #if (${event.node.name})
                 "node_name":                   "${event.node.name}",
                 "node_id":                     "${event.node.id}",
             #end
                 "summary_message":             "${event.summaryMessage.replaceAll("\\<[^>]*\\>","")}",
                 "severity":                    "${event.severity}",
                 "tag":                         "bigpanda-api",
-            #if (${event.tier_name})
+            #if (${event.tier.name})
                 "tier_name":                   "${event.tier.name}",
                 "tier_id":                     "${event.tier.id}",
             #end
