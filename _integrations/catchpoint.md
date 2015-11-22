@@ -6,8 +6,6 @@ type: Application Monitoring
 
 ---
 
-
-
 #### Locate API Settings
 In the Catchpoint side-dashboard, navigate to **Settings > API**.
 
