@@ -19,6 +19,7 @@ In the Catchpoint side-dashboard, navigate to **Settings > API**.
 * **Status**: Select **Active**
 
 Under **Format**, click **Select Template > Add new**
+
 2\. Fill in the form:
 
 * **Name**: `BigPanda`
