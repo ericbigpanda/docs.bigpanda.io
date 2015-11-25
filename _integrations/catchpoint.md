@@ -18,7 +18,7 @@ In Catchpoint, go to **Settings > API**.
 * **Endpoint URL**: `https://api.bigpanda.io/data/integrations/catchpoint?$URL_PARAMS`
 * **Status**: select **Active**
 
-2\.Under **Format**, click **Select Template > Add new**. A form opens where you can define the template.
+2\. Under **Format**, click **Select Template > Add new**. A form opens where you can define the template.
 
 3\. Fill in the form:
 
