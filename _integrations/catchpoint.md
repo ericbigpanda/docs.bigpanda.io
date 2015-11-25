@@ -7,38 +7,41 @@ type: Application Monitoring
 ---
 
 #### Locate API Settings
-In the Catchpoint side-dashboard, navigate to **Settings > API**.
+In Catchpoint, go to **Settings > API**.
 
 <!-- section-separator -->
 
 #### Create an API Alert for BigPanda
 
-1\. Under **Alerts API**, add a new endpoint. Fill in:
+1\. Under **Alerts API**, add a new endpoint by filling in the fields:
 
 * **Endpoint URL**: `https://api.bigpanda.io/data/integrations/catchpoint?$URL_PARAMS`
-* **Status**: Select **Active**
+* **Status**: select **Active**
 
-Under **Format**, click **Select Template > Add new**
+2\.Under **Format**, click **Select Template > Add new**. A form opens where you can define the template.
 
-2\. Fill in the form:
+3\. Fill in the form:
 
 * **Name**: `BigPanda`
-* **Format**: Select **JSON**
-* **Template**: `{
-                 "notificationLevelId" : "${notificationLevelId}",
-                 "TestName" : "${TestName}",
-                 "testId":"${testId}",
-                 "testUrl":"${testUrl}",
-                 "monitorTypeId":"${monitorTypeId}",
-                 "AlertTypeId": "${AlertTypeId}",
-                 "AlertProcessingTimestampUtcEpoch": "${AlertProcessingTimestampUtcEpoch}",
-                 "alertTriggerPercentage":"${alertTriggerPercentage}",
-                 "alertTriggerTotal":"${alertTriggerTotal}"
-                 }`
+* **Format**: select **JSON**
+* **Template**: 
+```
+    {
+    "notificationLevelId" : "${notificationLevelId}",
+    "TestName" : "${TestName}",
+    "testId":"${testId}",
+    "testUrl":"${testUrl}",
+    "monitorTypeId":"${monitorTypeId}",
+    "AlertTypeId": "${AlertTypeId}",
+    "AlertProcessingTimestampUtcEpoch": "${AlertProcessingTimestampUtcEpoch}",
+    "alertTriggerPercentage":"${alertTriggerPercentage}",
+    "alertTriggerTotal":"${alertTriggerTotal}"
+    }
+```
 
-3\. Click **Save**.
+4\. Click **Save**.
 
-4\. Re-click **Select Template** and select **BigPanda**.
+5\. Click **Select Template** and select **BigPanda**.
 
-5\. At the bottom of the screen, click **Save**.
+6\. At the bottom of the screen, click **Save**.
 
