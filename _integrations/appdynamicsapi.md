@@ -11,6 +11,16 @@ AppDynamics WebHooks are available in AppDynamics version 4.1 and up.
 
 For previous versions, please click on **Action Script** above.
 
+<!-- section-separator -->
+
+#### Set the AppDynamics Timezone 
+
+The on-premise version of AppDynamics uses the timezone that has been set on the system that AppDynamics is installed on. Connect to the server AppDynamics is installed on, check its timezone, and select it below.
+
+<!-- include 'integrations/appdynamics/appdynamics' -->
+
+<!-- section-separator -->
+
 #### Create the BigPanda HTTP Request Template
 
 __Note__: Complete this step only one time per AppDynamics controller.
