@@ -15,7 +15,7 @@ BigPanda supports on-premise and dedicated SaaS deployments of AppDynamics. The 
 
 <!-- section-separator -->
 
-#### Set the AppDynamics Timezone 
+#### Set the AppDynamics Timezone (Optional)
 
 The on-premise version of AppDynamics uses the timezone that has been set on the system that AppDynamics is installed on. Connect to the server AppDynamics is installed on, check its timezone, and select it below.
 
