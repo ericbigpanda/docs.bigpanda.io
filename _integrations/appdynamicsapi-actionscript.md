@@ -15,6 +15,14 @@ BigPanda supports on-premise and dedicated SaaS deployments of AppDynamics. The 
 
 <!-- section-separator -->
 
+#### Set the AppDynamics Timezone 
+
+The on-premise version of AppDynamics uses the timezone that has been set on the system that AppDynamics is installed on. Connect to the server AppDynamics is installed on, check its timezone, and select it below.
+
+<!-- include 'integrations/appdynamics/appdynamics' -->
+
+<!-- section-separator -->
+
 #### Download the Extension
 
 1\. [Download](https://s3-us-west-1.amazonaws.com/bp-appdynamics-extension/bigpanda-alert-latest.tar.gz) the tar.gz release and unpack it to `<CONTROLLER INSTALL ROOT>/custom/actions`.
