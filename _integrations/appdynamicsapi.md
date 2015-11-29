@@ -1,106 +1,161 @@
 ---
 layout: integration 
-title: "AppDynamics"
+title: "AppDynamics WebHooks"
 draft: false
 type: Application Monitoring
 ---
 
-#### Compatibility
+#### Determine Your Version
 
-BigPanda supports on-premise and dedicated SaaS deployments. For the latter, please contact AppDynamics support to help you set up the custom action (steps 2-4).
-If you need support for windows controller, please contact support@bigpanda.io.
+AppDynamics WebHooks are available in AppDynamics version 4.1 and up.
 
-<!-- section-separator -->
-
-#### Download
-
-[Download](https://s3-us-west-1.amazonaws.com/bp-appdynamics-extension/bigpanda-alert-latest.tar.gz) the tar.gz release and unpack it to `<CONTROLLER INSTALL ROOT>/custom/actions`
-
-If your controller is deployed on **RHEL 5** or **CentOS 5** install the simplejson module:
-
-    $ sudo yum install python-simplejson
+For previous versions, please click on **Action Script** above.
 
 <!-- section-separator -->
 
-#### Add BigPanda Custom Action
+#### Set the AppDynamics Timezone (Optional)
 
-Create `<CONTROLLER INSTALL ROOT>/custom/actions/custom.xml` with the following content. If the file already exists, just add the bigpanda-alert action.
+The on-premise version of AppDynamics uses the timezone that has been set on the system that AppDynamics is installed on. Connect to the server AppDynamics is installed on, check its timezone, and select it below.
 
-    <custom-actions>
-        <action>
-            <type>bigpanda-alert</type>
-            <executable>bigpanda_alert.py</executable>
-        </action>
-    </custom-actions>
-
+<!-- include 'integrations/appdynamics/appdynamics' -->
 
 <!-- section-separator -->
 
-#### Configuration
+#### Create the BigPanda HTTP Request Template
 
-Edit `<CONTROLLER INSTALL ROOT>/custom/actions/bigpanda-alert/config.ini` and set your API token and app key:
+__Note__: Complete this step only one time per AppDynamics controller.
 
-    [base]
-    api_token: $TOKEN
-    app_key: $STREAM_ID
-    logging: no
+1\. Log in to your AppDynamics controller.
 
-You can enable logging for debug purposes. The log will be at `/tmp/bigpanda-alert.log`
+2\. Click **Alert & Respond**.
 
-<!-- section-separator -->
+3\. Click **HTTP Request Templates**.
 
-#### Login to AppDynamics
+4\. Click **New**.
 
-Login to the AppDynamics Controller.
+5\. In the **Name** field, enter `BigPandaAlertTemplate`.
 
-For every application you have configured in AppDynamics, please follow steps 7-8.
+6\. In the **Request URL** section:
+
+* For the method, select **POST**.
+* In the **Raw URL** field, enter `https://api.bigpanda.io/data/integrations/appdynamics-webhook?app_key=$STREAM_ID`.
+    
+7\. In the **Custom Request Headers** section, add a header with the following values:
+    `Authorization`     `Bearer $TOKEN`
+    
+8\. In the **Payload** section:
+
+* In the **MIME Type** field, enter `application/json`.
+* In the text area, copy the following template:
+
+
+            {
+              "account_name":                  "${account.name}",
+              "account_id":                    "${account.id}",
+              "action_name":                   "${action.name}",
+              "action_id":                     "${action.id}",
+              "action_trigger_time":           "${action.triggerTime}",
+              "controller_link_url":           "${controllerUrl}",
+              "clamped":                       ${clamped},
+              "clamp_limit":                   ${clampLimit},
+              "from_web_hook":                 true,
+            #if (${notes})
+              "notes":                         "${notes}",
+            #end
+              "policy_name":                   "${policy.name}",
+              "policy_id":                     "${policy.id}",
+              "policy_digest":                 ${policy.digest},
+              "full_events_list":              [
+            #foreach(${event} in ${fullEventList})#if (${event.healthRuleEvent})
+              {
+                "app_id":                      ${event.application.id},
+                "app_name":                    "${event.application.name}",
+                "bt_performance_event":        ${event.btPerformanceEvent},
+                "deep_link_url":               "${event.deepLink}",
+                "event_type":                  "$event.eventType",
+                "event_message":               "${event.eventMessage.replaceAll("\\<[^>]*\\>","")}",
+                "event_type_key":              "${event.eventTypeKey}",
+                "event_time":                  "${event.eventTime}",
+                "guid":                        "${event.guid}",
+                "health_rule_event":           ${event.healthRuleEvent},
+                "health_rule_violation_event": ${event.healthRuleViolationEvent},
+                "health_rule_id":              ${event.healthRule.id},
+                "health_rule_name":            "${event.healthRule.name}",
+                "incident_id":                 "${event.incident.id}",
+                "incident_name":               "${event.incident.name}",
+            #if (${event.node.name})
+                "node_name":                   "${event.node.name}",
+                "node_id":                     "${event.node.id}",
+            #end
+                "summary_message":             "${event.summaryMessage.replaceAll("\\<[^>]*\\>","")}",
+                "severity":                    "${event.severity}",
+                "tag":                         "bigpanda-api",
+            #if (${event.tier.name})
+                "tier_name":                   "${event.tier.name}",
+                "tier_id":                     "${event.tier.id}",
+            #end
+                "affected_entities":           [
+            #foreach(${entity} in ${event.affectedEntities})
+                    {
+                      "id":                    ${entity.id},
+                      "name":                  "${entity.name}",
+                      "type":                  "${entity.entityType}"
+                    }#if ($velocityHasNext), #end 
+            
+            #end
+            
+                ]
+              }#if ($velocityHasNext), #end 
+            
+            #end 
+            #end
+              ]
+            }
+
+
+9\. In the **Settings** section, make sure that the **One Request Per Event** check box is not selected.
+
+10\. Click **Save**.
 
 <!-- section-separator -->
 
 #### Create an AppDynamics Policy
 
-Go to `Application > Alert & Respond > Policies` and click on `Create Policy`.
+__Note__: You'll need to repeat this step for each Application.
 
-In the Create Policy window:
+1\. Go to **Application** > **Alert & Respond** > **Policies**, and click **Create Policy**.
 
-* Input `BigPanda` in the name field
-* Check all of the `Health Rule Violation Events` checkboxes
+2\. In the Create Policy window:
 
-The final outcome should look like this:
-![Create Policy window](/media/appdynamics1.png)
+* In the name field, enter `BigPanda`.
+* Select all of the **Health Rule Violation Events** check boxes.
 
 <!-- section-separator -->
 
 #### Create an AppDynamics Action
-Without leaving the Create Policy window.
-<!-- docs-only-start -->
-Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).
-{: .not-responsive}
-<!-- docs-only-end -->
-<!-- app-only-start -->
-Click on `Actions` on the left pane, and then click on ![+](/media/appdynamics-plus.png).
-<!-- app-only-end -->
 
-If you already created a `BigPandaAlert` action for another application in AppDynamics, choose it and then click `Select`.
+1\. In the Create Policy window, click **Actions** in the left pane, and then click ![+](/media/appdynamics-plus.png).
 
-Otherwise:
+2\. If you already created a `BigPandaAlert` action for another application in AppDynamics, choose it and then click **Select**.
 
-* Click on `Create Action`
-* Select the `Run a Custom Action that has been uploaded to the Controller` option
-* Click on `OK`
-* Input `BigPandaAlert` in the name field
-* Click on `Reload Custom Actions`
-* In the Custom Action field choose `bigpanda-alert`
-* Click on `Save` to save the new custom action
+3\. If you have not created a `BigPandaAlert` action for another application in AppDynamics, create the action:
 
-After creating the new custom action, click on `Save` to create the new policy.
+  1. Click **Create Action**.
+  
+  2. Select **Make an HTTP Request**.
+  
+  3. Click **OK**.
+  
+  4. In the **HTTP Request Template** field, select **BigPandaAlertTemplate**.
+  
+  5. Click **Save** to save the action.
+
+4\. Click **Save** to create the new policy.
 
 <!-- section-separator -->
 
 #### Success
-*Don't forget to follow steps 7-8 for every application in AppDynamics*
 
-Next time you'll have AppDynamics alerts, you will able to see them in the Incidents tab.
+The next time AppDynamics generates a health rules alert, you will see it in the Incidents Dashboard.
 
-
-__Note__: If you need support in alerts other than health rules, please contact support@bigpanda.io.
+__Note__: If you need support for alerts other than health rules, please contact support@bigpanda.io.
