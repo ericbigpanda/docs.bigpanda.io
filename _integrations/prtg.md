@@ -6,47 +6,51 @@ type: System Monitoring
 
 ---
 
-#### Create a PRTG Notification  
+#### Create a PRTG Notification
+**Note:** This integration supports only the English language version of PRTG.
 
-Login to the PRTG Dashboard as an admin user.
+1. Log in to the PRTG Dashboard as an admin user.
 
-Go to *Setup > Account Settings > Notifications* and click on **Add new notification**.
+2. Go to **Setup > Account Settings > Notifications** and click **Add new notification**.
 
-In the Add Notification page:
+3. In the Add Notification page:
 
-* In **Notification Name** input: `BigPanda Notification`
-* For **NOTIFICATION SUMMARIZATION > Method** choose: `Always notify ASAP`
-* Mark **EXECUTE HTTP ACTION** as checked
-* In **EXECUTE HTTP ACTION > URL** insert: `https://api.bigpanda.io/data/integrations/prtg?$URL_PARAMS`
-* In **EXECUTE HTTP ACTION > Postdata** insert: `sensor=%name&status=%status&datetime=%datetime&timezone=%timezone&message=%message&group=%group&device=%device&host=%host&home=%home&prio=%prio&since=%since&linksensor=%linksensor`
+  * In **Notification Name**, enter `BigPanda Notification`.
+  * For **NOTIFICATION SUMMARIZATION > Method**, select **Always notify ASAP**.
+  * Select the **EXECUTE HTTP ACTION** check box.
+  * In **EXECUTE HTTP ACTION > URL**, enter `https://api.bigpanda.io/data/integrations/prtg?$URL_PARAMS`.
+  * In **EXECUTE HTTP ACTION > Postdata**, enter `sensor=%name&status=%status&datetime=%datetime&timezone=%timezone&message=%message&group=%group&device=%device&host=%host&home=%home&prio=%prio&since=%since&linksensor=%linksensor`.
 
-The final outcome should look like this:  
+  Your Add Notification page should look like this example.  
 ![Create Policy window](/media/prtg1.jpg)
 
-
-Click on save and continue with the tutorial.
+4. Click **Save**.
 
 <!-- section-separator -->
 
 #### Create PRTG Triggers
-Click on **Devices**, in the devices page click on the **Notifications** button (for Group **Root**)
+**Note:** BigPanda monitors the **Down**, **Warning**, **Unusual**, and **Partial Down** states. You must add a trigger for each of these states.
 
-BigPanda will monitor the **Down**, **Warning**, **Unusual** and **Partial Down** states. The following instructions are for the **Down** state. Please repeat them for every state.
+1. Click **Devices**.
 
-* Click on **Add State Trigger**.
-* Update the fields to the corresponding values:
+2. In the Devices page, click the **Notifications** button for the Group **Root**.
+
+3. Click **Add State Trigger**.
+
+4. Fill in the fields:
+
   * **When sensor is**: `Down`
   * In all of the **...perform**: `BigPanda Notification`
   * **...repeat every**: `300`
-* Keep the other fields with the default values.
-* Click on **Save**.
+  * Keep the default values for all other fields.
+5. Click **Save**.
 
-*Note: Don't forget to add state triggers also for **Warning**, **Unusual** and **Partial Down** (choose the desired state instead of **Down**).*
+6. Repeat steps 3 - 5 to add state triggers for each of these states: **Warning**, **Unusual**, and **Partial Down**.
 
-The final outcome should look like this:  
+  The complete list of BigPanda triggers in PRTG should look like this example.  
 ![Create Policy window](/media/prtg2.jpg)
 
 <!-- section-separator -->
 
 #### Success
-Next time you'll have PRTG alerts, you will able to see them in BigPanda.
+The next time PRTG generates an alert, you will see it in the Incidents Dashboard.
