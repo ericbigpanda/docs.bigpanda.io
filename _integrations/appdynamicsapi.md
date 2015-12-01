@@ -1,13 +1,13 @@
 ---
 layout: integration 
-title: "AppDynamics WebHooks"
+title: "AppDynamics Webhooks"
 draft: false
 type: Application Monitoring
 ---
 
 #### Determine Your Version
 
-AppDynamics WebHooks are available in AppDynamics version 4.1 and up.
+AppDynamics Webhooks are available in AppDynamics version 4.1 and up.
 
 For previous versions, please click on **Action Script** above.
 
