@@ -19,18 +19,18 @@ Collect the SolarWinds user account and server information that you will need to
 
 #### Create system level user account in SolarWinds
 
-Create a system level user account by sending a POST request to your SolarWinds server. If you have previously created a system user account through this method, you can proceed to the next step.
+Create a system level user account by sending a POST request to your SolarWinds server. You can use either cURL or PowerShell commands to send the POST request. If you have previously created a system user account through this method, you can proceed to the next step.
 
 **Note:**
 * System level user accounts cannot be created or managed from the Orion web interface. You must use a POST request.
 * You must use admin user credentials to create the new system user.
 * When using the commands below, be sure to replace the generic text (indicated in &lt;CAPS&gt;) with your specific user and server information.
 
-cURL command:
+Option 1 (cURL command):
 
     curl -XPOST -H "Content-Type: application/json" https://<ADMIN USER NAME>:<ADMIN PASSWORD>@<YOUR SERVER>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<NEW SYSTEM USER NAME>","password":"<NEW SYSTEM USER PASSWORD>"}]'
 
-PowerShell commands:
+Option 2 (PowerShell commands):
 
     $securepassword = ConvertTo-SecureString “<ADMIN PASSWORD>” -AsPlainText -Force
     $credentials = New-Object System.Management.Automation.PSCredential(“<ADMIN USER NAME>”, $securepassword)
@@ -41,7 +41,7 @@ PowerShell commands:
 
 #### Subscribe BigPanda to alert notifications in SolarWinds
 
-Subscribe BigPanda to your SolarWinds alert notifications by sending a POST request to your SolarWinds server.
+Subscribe BigPanda to your SolarWinds alert notifications by sending a POST request to your SolarWinds server. You can use either cURL or PowerShell commands to send the POST request.
 
 Use the credentials of the system user account from the previous step. 
 
@@ -49,11 +49,11 @@ Use the credentials of the system user account from the previous step.
 * An admin user cannot be used in place of a system level user.
 * When using the commands below, be sure to replace the generic text (indicated in &lt;CAPS&gt;) with your specific user and server information.
 
-cURL command:
+Option 1 (cURL command):
 
     curl -XPOST -H "Content-Type: application/json" https://<SYSTEM USER NAME>:<SYSTEM USER PASSWORD>@<YOUR SERVER>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
 
-PowerShell commands:
+Option 2 (PowerShell commands):
 
     $securepassword = ConvertTo-SecureString “<SYSTEM USER PASSWORD>” -AsPlainText -Force
     $credentials = New-Object System.Management.Automation.PSCredential(“<SYSTEM USER NAME>”, $securepassword)
@@ -76,5 +76,5 @@ To get notifications on alerts, mark the alert as "Alert Integration". Built-in 
 <!-- section-separator -->
 
 #### Success
-Next time you have SolarWinds alerts, you'll see them in the BigPanda Incident Dashboard.
+The next time SolarWinds generates an alert, you'll see it in the Incident Dashboard.
 
