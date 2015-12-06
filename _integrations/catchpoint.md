@@ -45,3 +45,12 @@ In Catchpoint, go to **Settings > API**.
 
 6\. At the bottom of the screen, click **Save**.
 
+![media/CatchpointScreenshot.jpg](/media/CatchpointScreenshot.jpg)
+
+<!-- section-separator -->
+
+#### Success
+
+Next time you have Catchpoint alerts, you will see them in BigPanda
+
+
