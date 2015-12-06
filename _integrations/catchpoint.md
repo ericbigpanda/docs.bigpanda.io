@@ -13,6 +13,8 @@ In Catchpoint, go to **Settings > API**.
 
 #### Create an API Alert for BigPanda
 
+![media/CatchpointScreenshot.jpg](/media/CatchpointScreenshot.jpg)
+
 1\. Under **Alerts API**, add a new endpoint by filling in the fields:
 
 * **Endpoint URL**: `https://api.bigpanda.io/data/integrations/catchpoint?$URL_PARAMS`
@@ -24,7 +26,7 @@ In Catchpoint, go to **Settings > API**.
 
 * **Name**: `BigPanda`
 * **Format**: select **JSON**
-* **Template**: 
+* **Template**:
 ```
     {
     "notificationLevelId" : "${notificationLevelId}",
@@ -45,12 +47,11 @@ In Catchpoint, go to **Settings > API**.
 
 6\. At the bottom of the screen, click **Save**.
 
-![media/CatchpointScreenshot.jpg](/media/CatchpointScreenshot.jpg)
 
 <!-- section-separator -->
 
-#### Success
+#### Success!
 
-Next time you have Catchpoint alerts, you will see them in BigPanda
+Next time you have Catchpoint alerts, you will see them in BigPanda.
 
 
