@@ -5,43 +5,37 @@ draft: false
 type: System Monitoring
 ---
 
-#### Create system user account in SolarWinds
+#### Download the BigPanda SolarWinds integrator Utility
 
-If you already have a user account with system rights, proceed to the next step. If not, create a new account.
+`bigpanda-solarwinds-config` is a small command line application that will configure your BigPanda SolarWinds integration.
 
-You can create a system user account by sending a POST request to your SolarWinds server. System user accounts cannot be created or managed from the Orion web interface. You must use admin user credentials in the POST request to create a new system user account.
+1. Download the compressed archive according to your operating system:
 
-cURL command:
+    [Linux 64bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_linux_amd64.tar.gz)
+    [Windows 64bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_windows_amd64.zip)
+    [Windows 32bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_windows_386.zip)
+    [MacOs 64bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_darwin_amd64.zip)
 
-    curl -XPOST -H "Content-Type: application/json" https://<admin user name>:<admin password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -d '["System",{"AccountID":"<new system user name>","password":"<new system user password>"}]'
+2. Extract the archive and open a terminal / command prompt to the extracted directory
 
-PowerShell commands:
+3. Run `bigpanda-solarwinds-config`
 
-    $securepassword = ConvertTo-SecureString “<admin password>” -AsPlainText -Force
-    $credentials = New-Object System.Management.Automation.PSCredential(“<admin user name>”, $securepassword)
+    This application will prompt for the SolarWinds details (Credentials and URL Address), and the BigPanda details (App Key - `$STREAM_ID` and API Token - `$TOKEN`).
+    You can also pass all these details as command line flags:
 
-    Invoke-WebRequest -ContentType application/json  -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Invoke/Orion.Accounts/CreateAccount -Body '["System",{"AccountID":"<new system user name>","password":"<new system user password>"}]' -Credential $credentials
+```
+-t, --bigpanda_api_token="": BigPanda API Token
+-k, --bigpanda_app_key="": BigPanda App Key
+-p, --solarwinds_admin_password="": SolarWinds Admin Password
+-u, --solarwinds_admin_user="": SolarWinds Admin User
+-a, --solarwinds_api_url="": SolarWinds Orion API Url (E.g: 'https://<YOUR_SOLAR_WINDS_SERVER>:17778')   
+```
 
-<!-- section-separator -->
+#### Example
 
-#### Subscribe BigPanda to alert notifications in SolarWinds
-
-To subscribe BigPanda to your SolarWinds alert notifications, send a POST request to your SolarWinds server.
-
-Use the credentials of the system user account from the previous step.
-
-cURL command:
-
-    curl -XPOST -H "Content-Type: application/json" https://<system user name>:<system user password>@<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -d '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }'
-
-PowerShell commands:
-
-    $securepassword = ConvertTo-SecureString “<system user password>” -AsPlainText -Force
-    $credentials = New-Object System.Management.Automation.PSCredential(“<system user name>”, $securepassword)
-
-    Invoke-WebRequest -ContentType application/json -Method Post -Uri https://<your server>:17778/SolarWinds/InformationService/v3/Json/Create/System.Subscription -Body '{ "EndpointAddress": "https://api.bigpanda.io/data/integrations/solarwinds?access_token=$TOKEN&app_key=$STREAM_ID", "Binding": "http", "DataFormat": "json", "CredentialType": "None", "Query": "SUBSCRIBE Orion.AlertIndication" }' -Credential $credentials
-
-The response contains the identifier of the subscription, which is required to remove it. For example: "swis://dev.local/Orion/System.Subscription/Id=b626ef38-b1e3-448e-ba5a-f148dc9889ba"
+```
+./bigpanda-solarwinds-config -t $TOKEN -k $STREAM_ID
+```
 
 <!-- section-separator -->
 
