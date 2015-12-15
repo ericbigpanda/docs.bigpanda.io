@@ -12,4 +12,4 @@ Execute the following command and follow the on-screen instructions to configure
 
 You will be prompted for your admin password which will be used for this configuration only and will not be stored.
 
-**Note:** If new host groups are added to Zabbix in the future, make sure to give the 'BigPanda Service' user group permissions to them. More information on Zabbix permissions can be found [here](http://www.zabbix.com/documentation/2.0/manual/config/users_and_usergroups/permissions)
+**Note:** If new host groups are added to your Zabbix in the future, make sure to give BigPanda permissions to them by giving the 'BigPanda Service' user group permissions to them in Zabbix. More information on Zabbix permissions can be found [here](http://www.zabbix.com/documentation/2.0/manual/config/users_and_usergroups/permissions).
