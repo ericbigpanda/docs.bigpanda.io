@@ -10,7 +10,7 @@ Execute the following command and follow the on-screen instructions to configure
 
     $ sudo bigpanda-config --add zabbix --app-key $STREAM_ID
 
-You will be prompted for your admin password which will be used for this configuration only and will not be stored.
-
-**Note:** If you add host groups after installing this integration, you must manually grant permissions to the **BigPanda Service** user group in Zabbix. For more information, see the [documentation on Zabbix permissions](http://www.zabbix.com/documentation/2.0/manual/config/users_and_usergroups/permissions).
+**Note:** You will be prompted for your Zabbix admin user and password, which will be used for this configuration only and will not be stored, in order to create a new Zabbix user.
+The new user accesses monitoring data to enable this BigPanda integration. You will be prompted to select the user's user type, which affects the user's access to data and the integration.
+For more information, see the [BigPanda's documentation on Zabbix permissions](http://www.bigpanda.io/docs/display/DD/.Configuring+Zabbix+Permissions+vZabbix).
 
