@@ -12,8 +12,11 @@ The `bigpanda-solarwinds-config` utility is a small, command line application fo
 1. Download the compressed archive of the utility for your operating system:
 
     [Linux 64-bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_linux_amd64.tar.gz)
+
     [Windows 64-bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_windows_amd64.zip)
+
     [Windows 32-bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_windows_386.zip)
+
     [Mac OS 64-bit](https://s3.amazonaws.com/bp-solarwinds-config/latest/bigpanda-solarwinds-config_darwin_amd64.zip)
 
 2. Extract the archive and open a terminal with a command prompt in the extracted directory.
@@ -27,20 +30,17 @@ The `bigpanda-solarwinds-config` utility is a small, command line application fo
   * BigPanda App Key: `$STREAM_ID` 
   * BigPanda API Token: `$TOKEN`
     
-  Alternatively, you can pass all the details as command line flags:
+Alternatively, you can pass all the details as command line flags:
 
-```
--t, --bigpanda_api_token="": BigPanda API Token
--k, --bigpanda_app_key="": BigPanda App Key
--p, --solarwinds_admin_password="": SolarWinds Admin Password
--u, --solarwinds_admin_user="": SolarWinds Admin User Name
--a, --solarwinds_api_url="": SolarWinds Orion API Url (For example, 'https://<YOUR_SOLAR_WINDS_SERVER>:17778')   
-```
-  For example:
+    -t, --bigpanda_api_token="": BigPanda API Token
+    -k, --bigpanda_app_key="": BigPanda App Key
+    -p, --solarwinds_admin_password="": SolarWinds Admin Password
+    -u, --solarwinds_admin_user="": SolarWinds Admin User Name
+    -a, --solarwinds_api_url="": SolarWinds Orion API Url (For example, 'https://<YOUR_SOLAR_WINDS_SERVER>:17778')   
 
-```
-./bigpanda-solarwinds-config -t $TOKEN -k $STREAM_ID
-```
+For example:
+
+    ./bigpanda-solarwinds-config -t $TOKEN -k $STREAM_ID
 
 <!-- section-separator -->
 
