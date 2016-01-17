@@ -13,7 +13,7 @@ Login to LogicMonitor and enter your [webhook integrations settings](https://app
 In the New Webhook form, fill out the following:  
 
 * Webhook Name: `BigPanda`
-* Webhook URL: `https://api.bigpanda.io/data/integrations/datadog?$URL_PARAMS`
+* Webhook URL: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS`
 * Use custom payload (mark checkbox)
 * In the custom payload, fill in the following:
 
@@ -48,15 +48,12 @@ Custom payload json:
 			"userdata":"##USERDATA##"
 		}
 
-* Ensure that the "Encode as form" checkbox is not checked
-
 <!-- section-separator -->
 
-#### Add the BigPanda Webhook to your alerts
+#### Add the BigPanda Webhook to your escalation chains
 
-Enter the LogicMonitor metrics section, specifically the [Manage Monitors](https://app.datadoghq.com/monitors) section.
-Edit each monitor, and add the BigPanda Webhook that you created to the last part of the edit Monitor screen ("Notify your team" section)
- 
+Enter the LogicMonitor's escalation chains settings, add BigPanda webhook as a recipient to warning, error and critical alerts.
+
 <!-- section-separator -->
 
 #### Success
