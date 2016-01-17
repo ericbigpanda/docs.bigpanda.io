@@ -32,7 +32,8 @@ Custom payload json:
        "aggreg_key": "$AGGREG_KEY",
        "alert_transition": "$ALERT_TRANSITION",
        "tags":  "$TAGS",
-       "alert_metric": "$ALERT_METRIC"
+       "alert_metric": "$ALERT_METRIC",
+       "alert_query": "$ALERT_QUERY"
      }
 
 * Ensure that the "Encode as form" checkbox is not checked
