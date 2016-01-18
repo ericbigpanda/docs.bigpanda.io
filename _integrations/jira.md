@@ -8,7 +8,7 @@ draft: false
 #### Connect JIRA to BigPanda
 
 The JIRA integration allows you to easily create JIRA issues from BigPanda incidents.
-Use the form below to configure how the JIRA issues should be created.
+Use the form below to configure how the JIRA issues are created.
 
 
 |Field|Description|Example|
