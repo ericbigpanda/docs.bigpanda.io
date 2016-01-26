@@ -10,14 +10,14 @@ type: System Monitoring
 
 1\. Log in to Datadog and go to the [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks) (**Integrations > Integrations > Webhooks**).
 
-2\. In the **New Webhook** form, enter the following:  
+2\. In the **New Webhook** form, enter the following information:  
 
 * **Webhook Name:** `BigPanda`
 * **Webhook URL:** `https://api.bigpanda.io/data/integrations/datadog?$URL_PARAMS`
 * **Use custom payload:** Select the check box.
 * **Custom payload:** Enter the following JSON payload:
 
-
+````
      {
        "id":"$ID",
        "title":"$EVENT_TITLE",
@@ -34,7 +34,7 @@ type: System Monitoring
        "alert_metric": "$ALERT_METRIC",
        "alert_query": "$ALERT_QUERY"
      }
-
+````
 * Ensure that the **Encode as form** check box is not selected.
 
 <!-- section-separator -->
@@ -43,7 +43,7 @@ type: System Monitoring
 
 1\. In Datadog, go to the [Manage Monitors](https://app.datadoghq.com/monitors) page (**Monitors > Manage Monitors**).
 
-2\. For each monitor, edit the monitor and add the **BigPanda Webhook** in the **Notify your team** section.
+2\. For each monitor, edit the monitor and add the **BigPanda** webhook in the **Notify your team** section.
  
 <!-- section-separator -->
 
