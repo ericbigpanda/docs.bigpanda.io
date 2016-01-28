@@ -17,24 +17,24 @@ type: System Monitoring
 * **Use custom payload:** Select the check box.
 * **Custom payload:** Enter the following JSON payload:
 
-````
-     {
-       "id":"$ID",
-       "title":"$EVENT_TITLE",
-       "last_updated": "$LAST_UPDATED",
-       "date": "$DATE",
-       "event_type":"$EVENT_TYPE",
-       "body":"$EVENT_MSG",
-       "link": "$LINK",
-       "priority": "$PRIORITY",
-       "alert_status": "$ALERT_STATUS",
-       "aggreg_key": "$AGGREG_KEY",
-       "alert_transition": "$ALERT_TRANSITION",
-       "tags":  "$TAGS",
-       "alert_metric": "$ALERT_METRIC",
-       "alert_query": "$ALERT_QUERY"
-     }
-````
+        {
+           "id":"$ID",
+           "title":"$EVENT_TITLE",
+           "last_updated": "$LAST_UPDATED",
+           "date": "$DATE",
+           "event_type":"$EVENT_TYPE",
+           "body":"$EVENT_MSG",
+           "link": "$LINK",
+           "priority": "$PRIORITY",
+           "alert_status": "$ALERT_STATUS",
+           "aggreg_key": "$AGGREG_KEY",
+           "alert_transition": "$ALERT_TRANSITION",
+           "tags":  "$TAGS",
+           "alert_metric": "$ALERT_METRIC",
+           "alert_query": "$ALERT_QUERY"
+        }
+
+
 * Ensure that the **Encode as form** check box is not selected.
 
 <!-- section-separator -->
