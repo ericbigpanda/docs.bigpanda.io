@@ -8,44 +8,44 @@ type: System Monitoring
 
 #### Create a Datadog Webhook Notification  
 
-Login to Datadog and enter your [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks) (Integrations -> Integrations -> Webhooks)
+1\. Log in to Datadog and go to the [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks) (**Integrations > Integrations > Webhooks**).
 
-In the New Webhook form, fill out the following:  
+2\. In the **New Webhook** form, enter the following information:  
 
-* Webhook Name: `BigPanda`
-* Webhook URL: `https://api.bigpanda.io/data/integrations/datadog?$URL_PARAMS`
-* Use custom payload (mark checkbox)
-* In the custom payload, fill in the following:
+* **Webhook Name:** `BigPanda`
+* **Webhook URL:** `https://api.bigpanda.io/data/integrations/datadog?$URL_PARAMS`
+* **Use custom payload:** Select the check box.
+* **Custom payload:** Enter the following JSON payload:
 
-Custom payload json:
+        {
+           "id":"$ID",
+           "title":"$EVENT_TITLE",
+           "last_updated": "$LAST_UPDATED",
+           "date": "$DATE",
+           "event_type":"$EVENT_TYPE",
+           "body":"$EVENT_MSG",
+           "link": "$LINK",
+           "priority": "$PRIORITY",
+           "alert_status": "$ALERT_STATUS",
+           "aggreg_key": "$AGGREG_KEY",
+           "alert_transition": "$ALERT_TRANSITION",
+           "tags":  "$TAGS",
+           "alert_metric": "$ALERT_METRIC",
+           "alert_query": "$ALERT_QUERY"
+        }
 
-     {
-       "id":"$ID",
-       "title":"$EVENT_TITLE",
-       "last_updated": "$LAST_UPDATED",
-       "date": "$DATE",
-       "event_type":"$EVENT_TYPE",
-       "body":"$EVENT_MSG",
-       "link": "$LINK",
-       "priority": "$PRIORITY",
-       "alert_status": "$ALERT_STATUS",
-       "aggreg_key": "$AGGREG_KEY",
-       "alert_transition": "$ALERT_TRANSITION",
-       "tags":  "$TAGS",
-       "alert_metric": "$ALERT_METRIC",
-       "alert_query": "$ALERT_QUERY"
-     }
 
-* Ensure that the "Encode as form" checkbox is not checked
+* Ensure that the **Encode as form** check box is not selected.
 
 <!-- section-separator -->
 
-#### Add the BigPanda Webhook to your alerts
+#### Add the BigPanda Webhook to Your Alerts
 
-Enter the Datadog metrics section, specifically the [Manage Monitors](https://app.datadoghq.com/monitors) section.
-Edit each monitor, and add the BigPanda Webhook that you created to the last part of the edit Monitor screen ("Notify your team" section)
+1\. In Datadog, go to the [Manage Monitors](https://app.datadoghq.com/monitors) page (**Monitors > Manage Monitors**).
+
+2\. For each monitor, edit the monitor and add the **BigPanda** webhook in the **Notify your team** section.
  
 <!-- section-separator -->
 
 #### Success
-Next time you'll have Datadog alerts, you will be able to see them in BigPanda.
+The next time Datadog generates an alert, you will see it in the Incidents Dashboard.

@@ -27,8 +27,8 @@ The `bigpanda-solarwinds-config` utility is a small, command line application fo
 
   * SolarWinds Admin credentials
   * URL for the SolarWinds controller
-  * BigPanda App Key: `$STREAM_ID` 
   * BigPanda API Token: `$TOKEN`
+  * BigPanda App Key: `$STREAM_ID` 
     
 Alternatively, you can pass all the details as command line flags:
 
@@ -36,7 +36,7 @@ Alternatively, you can pass all the details as command line flags:
     -k, --bigpanda_app_key="": BigPanda App Key
     -p, --solarwinds_admin_password="": SolarWinds Admin Password
     -u, --solarwinds_admin_user="": SolarWinds Admin User Name
-    -a, --solarwinds_api_url="": SolarWinds Orion API Url (For example, 'https://<YOUR_SOLAR_WINDS_SERVER>:17778')   
+    -a, --solarwinds_api_url="": SolarWinds Orion base URL (For example, 'https://<YOUR_SOLAR_WINDS_SERVER>:17778')   
 
 For example:
 
