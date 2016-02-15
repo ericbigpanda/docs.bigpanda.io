@@ -6,19 +6,18 @@ draft: false
 ---
 
 #### Create an Integration with HipChat
-The HipChat integration allows you to easily share BigPanda incidents to a HipChat room.
 
-* Create a new HipChat room for BigPanda
-* In [https://hipchat.com](https://hipchat.com) navigate through the top menu to **Integrations** tab *[or just click here...](https://hipchat.com/addons/)*
-* Find the BigPanda addon box and click it.
-* In the dialog, search for the room you've just created, select it from the dropdown and click **Continue**.
-* In the next dialog, click **Install**.
-* If your'e not yet logged in to **BigPanda** - login with your **BigPanda** user.
-* Click **Configure**, and wait until you see the green **DONE** label under the button.
+1. In HipChat, create a new chat room with the same name as the integration in BigPanda.
+2. Go to the **Integrations** tab [or click here](https://hipchat.com/addons/).
+3. Click the **BigPanda** add-on.
+4. Search for the room you created, select it from the dropdown, and click **Continue**.
+5. Click **Install**.
+6. If prompted, enter your BigPanda login credentials.
+7. Click **Configure**. When the installation is complete, a green **DONE** label appears below the button.
 
 
 <!-- section-separator -->
 #### Success
- You should be ready to share incidents to HipChat.
+You are ready to share incidents to HipChat.
 
-*Note: If you want to share using other rooms, you may create another HipChat integration.*
+**Note:** If you want to share incidents to a different room, you can create another HipChat integration with a different integration name.
