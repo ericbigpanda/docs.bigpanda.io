@@ -15,6 +15,7 @@ draft: false
 6. If prompted, enter your BigPanda login credentials.
 7. Click **Configure**. When the installation is complete, a green **DONE** label appears below the button.
 
+**Tip:** To take advantage of the latest features, enable HipChat Connect. Log in to HipChat as an admin, then go to **Group Admin > Preferences > HipChat Connect**, and select **Enable**.
 
 <!-- section-separator -->
 #### Success
