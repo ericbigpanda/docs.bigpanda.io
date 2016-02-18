@@ -7,10 +7,10 @@ draft: false
 
 #### Create an Integration with HipChat
 
-1\. In HipChat, create a new chat room or find the name of an existing room.
+1\. In HipChat, create a new chat room or find the name of an existing room.  
 2\. Go to the **Integrations** tab [or click here](https://hipchat.com/addons/).  
 3\. Click the **BigPanda** add-on.  
-4\. Search for the room you created, select it from the drop-down list, and click **Continue**.
+4\. Search for the room you created, select it from the drop-down list, and click **Continue**.  
 5\. Click **Install**.  
 6\. If prompted, enter your BigPanda login credentials.  
 7\. Click **Configure**. When the installation is complete, a green **DONE** label appears below the button.
