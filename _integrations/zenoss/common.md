@@ -9,7 +9,7 @@ And add the Zenoss plugin with the application key you created in step 1:
 
     $ sudo bigpanda-config --add zenoss --app-key $STREAM_ID
 
-When prompted, specify the url of the Zenoss web interface and a valid username and password.
+When prompted, enter the base URL of the Zenoss.core web interface and a valid username and password.
 
 *Note: You may want to create a dedicated user for BigPanda, the required role is `ZenUser`.*
 
