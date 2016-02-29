@@ -5,31 +5,20 @@ type: Sharing & Ticket Management
 draft: false
 ---
 
-#### Get an API Token for BigPanda
-The HipChat integration allows you to easily share BigPanda incidents to a HipChat room.
+#### Create an Integration with HipChat
 
-* Create a new HipChat room for BigPanda
-* In [https://hipchat.com](https://hipchat.com) navigate through the top menu to **Group admin** and choose the **Rooms** tab *[or just click here...](https://hipchat.com/admin/rooms)*
-* Find the room that you've just created and click on it
-* In the **Room Details** section, find the **API ID** and copy it to the form below
-* Switch to the **Tokens** tab on the left menu
-* Under **Create new token**, enter the label `BigPanda` and click on **Create**
-* Copy the generated **Token** to the form below
+1\. In HipChat, create a new chat room or find the name of an existing room.  
+2\. Go to the **Integrations** tab [or click here](https://hipchat.com/addons/).  
+3\. Click the **BigPanda** add-on.  
+4\. Search for the room you created, select it from the drop-down list, and click **Continue**.  
+5\. Click **Install**.  
+6\. If prompted, enter your BigPanda login credentials.  
+7\. Click **Configure**. When the installation is complete, a green **DONE** label appears below the button.
 
-<!-- app-only-start -->
-
-<!-- include 'integrations/hipchat/hipchat' -->
-
-<!-- app-only-end -->
-
-<!-- docs-only-start -->
-
-In the BigPanda Application, you'll be able to set HipChat params here.
-
-<!-- docs-only-end -->
+**Tip:** To take advantage of the latest features, enable HipChat Connect. Log in to HipChat as an admin, then go to **Group Admin > Preferences > HipChat Connect**, and select **Enable**.
 
 <!-- section-separator -->
 #### Success
-Submit the form. You should be ready to share incidents to HipChat.
+You are ready to share incidents to HipChat.
 
-*Note: If you want to share using other rooms, you may create another HipChat integration with a different system name.*
+**Note:** If you want to share incidents to different rooms, install the BigPanda add-on for each HipChat room.
