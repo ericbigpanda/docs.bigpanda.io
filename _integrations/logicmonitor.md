@@ -8,16 +8,17 @@ type: System Monitoring
 
 #### Create a LogicMonitor Webhook Notification  
 
-Login to LogicMonitor and enter your [webhook integrations settings](https://app.datadoghq.com/account/settings#integrations/webhooks) (Integrations -> Integrations -> Webhooks)
+Login to LogicMonitor and go to "Settings" > "Integrations" 
+"Add" -> "Custom HTTP Delivery"
 
-In the New Webhook form, fill out the following:  
+* Name: 'BigPanda'
+Important for Acknowledge feature: ״Use different URLs or data formats to notify on various alert activity״
+* make sure "New Alerts" and "Cleared" are checked
+* HTTP Method: HTTP Post
+* URL for New and Cleared alerts: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS`
+* Alert Data: choose "raw" and format: "JSON"
 
-* Webhook Name: `BigPanda`
-* Webhook URL: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS`
-* Use custom payload (mark checkbox)
-* In the custom payload, fill in the following:
-
-Custom payload json:
+Fill payload with:
 
 		{
 		  "alert_type":"##ALERTTYPE##",
@@ -48,11 +49,21 @@ Custom payload json:
 			"userdata":"##USERDATA##"
 		}
 
+
+* Make sure the "Include an ID provided in HTTP response when updating alert status" is unchecked
+
+To enable acknowledged alerts please do the following:
+* Manage the BigPanda existing integration in logicmonitor
+* Press the plus (+) button
+* Choose the Acknowledged checkbox
+* Webhook URL for Acknowledged alerts: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS&ack`
+* Use the same payload given above
 <!-- section-separator -->
 
 #### Add the BigPanda Webhook to your escalation chains
 
-Enter the LogicMonitor's escalation chains settings, add BigPanda webhook as a recipient to warning, error and critical alerts.
+Enter the LogicMonitor's escalation chains settings, add BigPanda webhook as a recipient. - should i tell them to add us to default or let them manage that relatively to their configuration.
+Update the Alert Rules to use the relevant escalation chain to warning, error, and critical.
 
 <!-- section-separator -->
 
