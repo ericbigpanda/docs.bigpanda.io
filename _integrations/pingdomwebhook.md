@@ -6,14 +6,11 @@ type: Application Monitoring
 
 ---
 
-#### Locate Pingdom Integrations
-In Pingdom, go to [Integrations > Integrations](https://my.pingdom.com/reports/integration/settings).
-
-<!-- section-separator -->
-
 #### Create an Integration for BigPanda
 
-1\. Click **Add integration**, and add a new integration by filling in the fields:
+1\. In Pingdom, go to [Integrations > Integrations](https://my.pingdom.com/reports/integration/settings).
+
+2\. Click **Add integration**, and add a new integration by filling in the fields:
 
 * **Type**: Select **Webhook**
 * **Name**: `BigPanda Integration`
@@ -21,7 +18,7 @@ In Pingdom, go to [Integrations > Integrations](https://my.pingdom.com/reports/i
 
 Make sure **Active** is selected (default).
 
-2\. Click **Save integration**.
+3\. Click **Save integration**.
 
 <!-- section-separator -->
 
@@ -29,9 +26,12 @@ Make sure **Active** is selected (default).
 
 1\. Under **Monitoring**, open the settings of each Pingdom check you would like to connect with BigPanda by clicking **Edit**.
 
-2\. Select the **BigPanda Integration** and click **Modify Check**.
+2\. Under **Connect Integrations**, select the **BigPanda Integration**.
 
-**Note:** The **Test** button next to the integration may not work, although the integration is configured properly. Pingdom may send a resolved test alert which will not appear in BigPanda.
+3\. Click **Test** next to the **BigPanda Integration** to test the integration. Note that the alert will not appear in BigPanda if the status of the test alert is 'Ok'.
+
+4\. Click **Modify Check**.
+
 
 <!-- section-separator -->
 
