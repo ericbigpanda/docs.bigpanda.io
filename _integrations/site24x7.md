@@ -15,23 +15,24 @@ type: Application Monitoring
 * **Display Name**: `BigPanda`
 * **URL**: `https://api.bigpanda.io/data/integrations/site24x7?$URL_PARAMS`
 * **TimeOut**: `30 secs`
-* **HTTP Method**: Select **POST**
-
-Select **Send Incident Parameters** and **Post as JSON**
+* **HTTP Method**: select **POST**
+* **Send Incident Parameters** and **Post as JSON**: select the check boxes
 
 3\. Click **Save**.
 
 <!-- section-separator -->
 
-#### Connect Action to Site24x7 Monitors
+#### Connect the Action to Site24x7 Monitors
 
 1\. Go to [Admin > Inventory > Monitors](https://www.site24x7.com/app/client#/admin/inventory/monitors).
 
-2\. Enter the edit mode of each monitor you would like to connect with BigPanda.
+2\. For each monitor you would like to connect with BigPanda:
 
-3\. Under **Configuration Profiles > Actions**, select **BigPanda** and **Execute on any status change**. Make sure to click **Add**. 
+  1. Open the monitor in edit mode.
 
-4\. Click **Save**.
+  2. Under **Configuration Profiles > Actions**, select **BigPanda** and **Execute on any status change**. Then, click **Add**. 
+
+  3. Click **Save**.
 
 
 <!-- section-separator -->
