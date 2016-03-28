@@ -24,10 +24,12 @@ Click **Integrate with Webhooks**.
 
 #### Apply Webhook to All Policies
 
-1. Navigate to [Account settings > Integrations > Data sharing](https://rpm.newrelic.com/integrations?page=data_sharing).
-2. If API access is not already enabled, click **Enable API access**.
+1\. Navigate to [Account settings > Integrations > API keys](https://rpm.newrelic.com/integrations?page=api_keys).
+
+2\. Click **Create REST API key**.
+
 <!-- app-only-start -->
-3. Copy the **API key** into the form below.
+3\. Copy the **Key** into the form below.
 
 <!-- include 'integrations/newrelic/newrelic' -->
 <!-- app-only-end -->
