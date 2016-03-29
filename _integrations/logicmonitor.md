@@ -20,34 +20,34 @@ Important for Acknowledge feature: ״Use different URLs or data formats to notif
 
 Fill payload with:
 
-		{
-		  "alert_type":"##ALERTTYPE##",
-		  "alert_status":"##ALERTSTATUS##",
-		  "error_level":"##LEVEL##",
-		  "start":"##START##",
-		  "startepoch":"##STARTEPOCH##",
-		  "alert_id":"##ALERTID##",
-		  "service":"##SERVICE##",
-		  "service_url":"##URL##",
-		  "service_group":"##SERVICEGROUP##",
-		  "checkpoint":"##CHECKPOINT##",
-		  "device_url":"##DEVICEURL##",
-		  "device_ips":"##system.ips##",
-		  "device_sysinfo":"##system.sysinfo##",
-		  "value":"##VALUE##",
-		  "detail":"##DETAIL##",
-		  "message":"##MESSAGE##",
-		  "host":"##HOST##",
-		  "batchjob":"##BATCHJOB##",
-			"datasource":"##DATASOURCE##",
-			"facility":"##FACILITY##",
-			"instance":"##INSTANCE##",
-			"datapoint":"##DATAPOINT##",
-			"cmdline":"##CMDLINE##",
-			"finish":"##FINISH##",
-			"exitcode":"##EXITCODE##",
-			"userdata":"##USERDATA##"
-		}
+    {
+      "alert_type":"##ALERTTYPE##",
+      "alert_status":"##ALERTSTATUS##",
+      "error_level":"##LEVEL##",
+      "start":"##START##",
+      "startepoch":"##STARTEPOCH##",
+      "alert_id":"##ALERTID##",
+      "service":"##SERVICE##",
+      "service_url":"##URL##",
+      "service_group":"##SERVICEGROUP##",
+      "checkpoint":"##CHECKPOINT##",
+      "device_url":"##DEVICEURL##",
+      "device_ips":"##system.ips##",
+      "device_sysinfo":"##system.sysinfo##",
+      "value":"##VALUE##",
+      "detail":"##DETAIL##",
+      "message":"##MESSAGE##",
+      "host":"##HOST##",
+      "batchjob":"##BATCHJOB##",
+      "datasource":"##DATASOURCE##",
+      "facility":"##FACILITY##",
+      "instance":"##INSTANCE##",
+      "datapoint":"##DATAPOINT##",
+      "cmdline":"##CMDLINE##",
+      "finish":"##FINISH##",
+      "exitcode":"##EXITCODE##",
+      "userdata":"##USERDATA##"
+    }
 
 
 * Make sure the "Include an ID provided in HTTP response when updating alert status" is unchecked
@@ -56,7 +56,7 @@ To enable acknowledged alerts please do the following:
 * Manage the BigPanda existing integration in logicmonitor
 * Press the plus (+) button
 * Choose the Acknowledged checkbox
-* Webhook URL for Acknowledged alerts: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS&ack`
+* Webhook URL for Acknowledged alerts: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS&ack=true`
 * Use the same payload given above
 <!-- section-separator -->
 
