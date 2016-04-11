@@ -1,10 +1,8 @@
-
 ---
-layout: integration·
+layout: integration
 title: "LogicMonitor"
-draft: true
+draft: false
 type: System Monitoring
-
 ---
 
 #### Create a LogicMonitor Webhook Notification
@@ -32,8 +30,8 @@ Fill payload with:
       "service_group":"##SERVICEGROUP##",
       "checkpoint":"##CHECKPOINT##",
       "device_url":"##DEVICEURL##",
-      "device_ips":"##system.ips##",
-      "device_sysinfo":"##system.sysinfo##",
+      "device_ips":"##SYSTEM.IPS##",
+      "device_sysinfo":"##SYSTEM.SYSINFO##",
       "value":"##VALUE##",
       "detail":"##DETAIL##",
       "message":"##MESSAGE##",
