@@ -50,7 +50,8 @@ Fill payload with:
 
 * Make sure the "Include an ID provided in HTTP response when updating alert status" is unchecked
 
-To enable acknowledged alerts please do the following:
+### To enable acknowledged alerts please do the following:
+
 * Manage the BigPanda existing integration in logicmonitor
 * Press the plus (+) button
 * Choose the Acknowledged checkbox
