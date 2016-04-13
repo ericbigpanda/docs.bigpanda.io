@@ -61,7 +61,7 @@ Fill payload with:
 
 #### Add the BigPanda Webhook to your escalation chains
 
-* Enter the LogicMonitor's escalation chains settings, add BigPanda webhook as a recipient. - should i tell them to add us to default or let them manage that relatively to their configuration.
+* Enter the LogicMonitor's escalation chains settings, add BigPanda webhook as a recipient to the wanted escalation chains.
 * Update the Alert Rules to use the relevant escalation chain to warning, error, and critical.
 
 <!-- section-separator -->
