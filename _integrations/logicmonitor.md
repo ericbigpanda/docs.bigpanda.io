@@ -18,7 +18,7 @@ type: System Monitoring
 * **URL for New and Cleared alerts**: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS`
 * **Alert Data**: select the **Raw** option and the **JSON** format. Then, enter the following information in the payload field.
 
-
+````
     {
       "alert_type":"##ALERTTYPE##",
       "alert_status":"##ALERTSTATUS##",
@@ -47,7 +47,7 @@ type: System Monitoring
       "exitcode":"##EXITCODE##",
       "userdata":"##USERDATA##"
     }
-
+````
 
 * **Include an ID provided in HTTP response when updating alert status**: clear the check box.
 
@@ -63,6 +63,7 @@ type: System Monitoring
 
 * **Webhook URL for Acknowledged alerts**: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS&ack=true`
 * **Alert Data**: enter the same payload as in the previous step.
+
 <!-- section-separator -->
 
 #### Add the BigPanda Webhook to your Escalation Chains
