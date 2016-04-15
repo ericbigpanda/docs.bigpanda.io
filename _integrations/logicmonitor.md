@@ -5,18 +5,19 @@ draft: false
 type: System Monitoring
 ---
 
-#### Create a LogicMonitor Webhook Notification
+#### Create a LogicMonitor Webhook Integration
 
-Login to LogicMonitor and go to "Settings" > "Integrations" > "Add" > "Custom HTTP Delivery"
+1\. Log in to LogicMonitor and go to **Settings > Integrations > Add > Custom HTTP Delivery**.
 
-* Name: 'BigPanda'
-* Select ״Use different URLs or data formats to notify on various alert activity״ (Important for Acknowledge feature)
-* Make sure "New Alerts" and "Cleared" are checked
-* HTTP Method: HTTP Post
-* URL for New and Cleared alerts: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS`
-* Alert Data: choose "raw" and format: "JSON"
+2\. Fill in the following information.
 
-Fill payload with:
+* **Name**: `BigPanda`
+* **Use different URLs or data formats to notify on various alert activity**: select this option. You must use a different URL to enable support for acknowledged alerts.
+* **New Alerts** and **Cleared**: select the check boxes.
+* **HTTP Method**: `HTTP Post`
+* **URL for New and Cleared alerts**: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS`
+* **Alert Data**: select the **Raw** option and the **JSON** format. Then, enter the following information in the payload field.
+
 
     {
       "alert_type":"##ALERTTYPE##",
@@ -48,23 +49,31 @@ Fill payload with:
     }
 
 
-* Make sure the "Include an ID provided in HTTP response when updating alert status" is unchecked
+* **Include an ID provided in HTTP response when updating alert status**: clear the check box.
 
-### To enable acknowledged alerts please do the following:
+3\. Click **Save**.
 
-* Manage the BigPanda existing integration in logicmonitor
-* Press the plus (+) button
-* Choose the Acknowledged checkbox
-* Webhook URL for Acknowledged alerts: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS&ack=true`
-* Use the same payload given above
+### Enable Support for Acknowledged Alerts
+
+1\. Edit the LogicMonitor webhook integration that you created for BigPanda.
+
+2\. Click the **Plus** (**+**) icon.
+
+3\. Select the **Acknowledged** check box, and then fill in the following information.
+
+* **Webhook URL for Acknowledged alerts**: `https://api.bigpanda.io/data/integrations/logicmonitor?$URL_PARAMS&ack=true`
+* **Alert Data**: enter the same payload as in the previous step.
 <!-- section-separator -->
 
-#### Add the BigPanda Webhook to your escalation chains
+#### Add the BigPanda Webhook to your Escalation Chains
 
-* Enter the LogicMonitor's escalation chains settings, add BigPanda webhook as a recipient. - should i tell them to add us to default or let them manage that relatively to their configuration.
-* Update the Alert Rules to use the relevant escalation chain to warning, error, and critical.
+1\. Go to the LogicMonitor escalation chains settings.
+
+2\. Add the BigPanda webhook as a recipient. - should i tell them to add us to default or let them manage that relatively to their configuration.
+
+3\. Update the Alert Rules to use the relevant escalation chain to warning, error, and critical.
 
 <!-- section-separator -->
 
 #### Success
-Next time you'll have LogicMonitor alerts, you will be able to see them in BigPanda.
+Th next time LogicMonitor generates an alert, you will see it in BigPanda.
