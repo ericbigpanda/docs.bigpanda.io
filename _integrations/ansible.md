@@ -21,7 +21,6 @@ Use the bigpanda module in your playbook to send a notification at the start of 
 
     - name: Start BigPanda deployment
       local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=started
-      register: deployment
 
 **Note:** Don't forget to replace `component` and `version` with the right arguments.
 
@@ -31,13 +30,12 @@ Use the bigpanda module in your playbook to send a notification at the start of 
 Use the bigpanda module in your playbook to send a notification at the end of a deployment:
 
     - name: End BigPanda deployment
-      local_action: bigpanda state=finished
-      args: deployment
+      local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=finished
 
 or in case of failure:
 
     - name: End BigPanda deployment
-      local_action: bigpanda state=failed
-      args: deployment
+      local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=failed
 
 **Note:** Deployments will be shown as in-progress until you send this notification.
+**Note:** You can use `register` when sending the start notification to use the deployment info on later tasks.
