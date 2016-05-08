@@ -8,7 +8,7 @@ type: Application Monitoring
 
 #### Create an Integration for BigPanda
 
-1\. In Pingdom, go to [Integrations > Integrations](https://my.pingdom.com/reports/integration/settings).
+1\. In Pingdom, go to [Integrations > Integrations](https://my.pingdom.com/integrations/settings).
 
 2\. Click **Add integration**, and add a new integration by filling in the fields:
 
