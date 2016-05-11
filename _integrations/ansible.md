@@ -6,6 +6,10 @@ draft: false
 ---
 
 #### Install the BigPanda Ansible module
+If you're using Ansible v1.8 or higher, no installation is needed.
+
+If you're using Ansible v1.7 or lower, perform these steps:
+
 Download the module file below into a `library` directory next to your playbook:
 
     mkdir playbooks; curl https://s3-us-west-1.amazonaws.com/bp-public/ansible/bigpanda > library/bigpanda
