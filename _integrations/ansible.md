@@ -37,12 +37,14 @@ You can register the event to use the deployment information on later tasks. Thi
       local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=started
       register: deployment
 
-**Note:** Don't forget to replace `component` and `version` with the right arguments.
+**Note:** You must replace `component` and `version` with the correct values for your deployment.
 
 <!-- section-separator -->
 
 #### Notify BigPanda when a deployment ends
 Use the bigpanda module in your playbook to send a notification at the end of a deployment:
+
+**Note:** Deployments will be shown as in-progress until you send this notification.
 
 ##### Option 1: Simple (Unregistered Event)
 
@@ -54,7 +56,6 @@ or in case of failure:
     - name: End BigPanda deployment
       local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=failed
 
-**Note:** Deployments will be shown as in-progress until you send this notification.
 
 ##### Option 2: Advanced (Registered Event)
 Use the info from the previously registered deployment object:
@@ -66,5 +67,3 @@ or in case of failure:
 
     - name: End BigPanda deployment
       local_action: bigpanda token={{deployment.token}} component={{deployment.component}} version={{deployment.version}} hosts={{deployment.hosts}} state=failed
-
-**Note:** Deployments will be shown as in-progress until you send this notification.
