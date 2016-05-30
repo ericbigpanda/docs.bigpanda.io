@@ -26,13 +26,25 @@ Add one of the following options into your playbook to send a notification at th
 ##### Option 1: Simple (Unregistered Event)
 
     - name: Start BigPanda deployment
-      local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=started
+      local_action:
+        module: bigpanda
+        token: $TOKEN
+        component: {{app_name}}
+        version: {{app_version}}
+        hosts: {{ansible_hostname}}
+        state: started
 
 ##### Option 2: Advanced (Registered Event)
 You can register the event to use the deployment information on later tasks. This can be useful if you have a common finish task that is used by multiple deployment start tasks.
 
     - name: Start BigPanda deployment
-      local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=started
+      local_action:
+        module: bigpanda
+        token: $TOKEN
+        component: {{app_name}}
+        version: {{app_version}}
+        hosts: {{ansible_hostname}}
+        state: started
       register: deployment
 
 <!-- section-separator -->
@@ -45,21 +57,45 @@ Add one of the following options into your playbook to send a notification at th
 ##### Option 1: Simple (Unregistered Event)
 
     - name: End BigPanda deployment
-      local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=finished
+      local_action:
+        module: bigpanda
+        token: $TOKEN
+        component: {{app_name}}
+        version: {{app_version}}
+        hosts: {{ansible_hostname}}
+        state: finished
 
 Or, in case of failure:
 
     - name: End BigPanda deployment
-      local_action: bigpanda token=$TOKEN component={{app_name}} version={{app_version}} hosts={{ansible_hostname}} state=failed
+      local_action:
+        module: bigpanda
+        token: $TOKEN
+        component: {{app_name}}
+        version: {{app_version}}
+        hosts: {{ansible_hostname}}
+        state: failed
 
 
 ##### Option 2: Advanced (Registered Event)
 Use the information from the previously registered deployment object.
 
     - name: End BigPanda deployment
-      local_action: bigpanda token={{deployment.token}} component={{deployment.component}} version={{deployment.version}} hosts={{deployment.hosts}} state=finished
+      local_action:
+        module: bigpanda
+        token: {{deployment.token}}
+        component: {{deployment.component}}
+        version: {{deployment.version}}
+        hosts: {{deployment.hosts}}
+        state: finished
 
 Or, in case of failure:
 
     - name: End BigPanda deployment
-      local_action: bigpanda token={{deployment.token}} component={{deployment.component}} version={{deployment.version}} hosts={{deployment.hosts}} state=failed
+      local_action:
+        module: bigpanda
+        token: {{deployment.token}}
+        component: {{deployment.component}}
+        version: {{deployment.version}}
+        hosts: {{deployment.hosts}}
+        state: failed
