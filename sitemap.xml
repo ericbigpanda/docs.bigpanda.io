@@ -6,7 +6,7 @@ layout:
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% for page in site.pages %}
     <url>
       <loc>{{ site.baseurl }}{{ page.url }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <lastmod>{{ site.time | date_to_xmlschema  }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
   </url>{% endfor %}
