@@ -34,7 +34,7 @@ Use the bigpanda-alert utility in your scripts to send an alert about a host, ap
 
 STATUS can be one of:
 
-- ok
-- warn
-- crit
-- ack
+- `ok`
+- `warn`
+- `crit`
+- `ack`
