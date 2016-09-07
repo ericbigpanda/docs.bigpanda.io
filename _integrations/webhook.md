@@ -9,7 +9,8 @@ draft: false
 Configure the webhook receiver to accept BigPanda requests, if applicable. Then, use the form below to specify the callback URL and authentication details.
 
 1. Enter the full **Webhook URL** where BigPanda will send the request.
-  For example: `https://my-api-endpoint.com/events`
+
+   For example: `https://my-api-endpoint.com/events`
 2. (Optional) To add custom a HTTP header, click the plus and add a key-value pair. For example:
   * **Header key**: `my-api-key`
   * **Header value**: `XIpjpJPLRN79LIsAa9TdA3XnxS4VfESv65NqqH8G`
