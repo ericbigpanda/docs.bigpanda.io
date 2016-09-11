@@ -47,6 +47,10 @@ To run PowerShell scripts we need to change the execution policy to RemoteSigned
 
 3. Run the following command `bigpanda-scom-cli.exe install -t $TOKEN -k $STREAM_ID`
 
+**NOTE:** If you are using a HTTP Proxy, run the following instead of step 3:
+
+`bigpanda-scom-cli install -t $TOKEN -k $STREAM_ID --proxy http://yourproxy.server`
+
 <!-- section-separator -->
 
 #### Success
