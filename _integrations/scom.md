@@ -13,8 +13,6 @@ The `bigpanda-scom-cli` utility is a small, command line application for configu
 
     [Windows 64-bit](https://s3.amazonaws.com/bp-golang-artifacts/bigpanda-scom-cli/master/bigpanda-scom-cli_windows_amd64.zip)
 
-    [Windows 32-bit](https://s3.amazonaws.com/bp-golang-artifacts/bigpanda-scom-cli/master/bigpanda-scom-cli_windows_386.zip)
-
 2. Extract the archive. The path it is archived to will be used in **Install BigPanda CLI in SCOM**, step 5.2.
 
 <!-- section-separator -->
