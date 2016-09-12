@@ -16,7 +16,7 @@ Configure the webhook receiver to accept BigPanda requests, if applicable. Then,
   * **Header value**: `XIpjpJPLRN79LIsAa9TdA3XnxS4VfESv65NqqH8G`
 3. Repeat step 2 for each additional header you want to add to the request.
 
-**Note:** For more information, see Notifications Webhook.
+**Note:** For more information, see [Notifications Webhook](https://www.bigpanda.io/docs/display/_PK/BD/notifications_webhook).
 
 <!-- app-only-start -->
 
