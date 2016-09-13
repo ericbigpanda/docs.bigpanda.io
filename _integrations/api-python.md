@@ -5,17 +5,17 @@ type: API
 draft: false
 ---
 
-#### Install the BigPanda Python module
-Run:
+#### Install the BigPanda Python Module
+Run the following command:
 
     pip install bigpanda
 
-For more detailed information, refer to the module documentation (`help(bigpanda)`)
+For more detailed information, refer to the module documentation by running `help(bigpanda)`.
 
 <!-- section-separator -->
 
-#### Create and send a new alert object
-Create a new alert objects decribing the status of a host, application, service etc. You can also give an optional specific check on that host, application or service.
+#### Create and Send a New Alert Object
+Create a new alert object that decribes the status of a host, application, service, or other monitored object. You have the option to include the specific check on that host, application, or service.
 
     import bigpanda
  

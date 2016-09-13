@@ -5,7 +5,7 @@ draft: false
 type: API
 ---
 
-#### Create deployment start event
+#### Create a Deployment Start Event
 To create a new, in-progress deployment in the **Changes** tab, send the deployment data as a JSON object with the following fields: 
 
 |Field|Description|Example|
@@ -36,18 +36,14 @@ For more information on authentication, start and end event methods, and respons
 
 <!-- section-separator -->
 
-#### Notify BigPanda when a deployment starts
+#### Notify BigPanda When a Deployment Starts
 
-**Note**: Deployments appear as in-progress until you send a matching end of deployment notification.
-
-POST your JSON object to `https://api.bigpanda.io/data/events/deployments/start`, using the following HTTP headers:
+POST your JSON object to `https://api.bigpanda.io/data/events/deployments/start` with the following HTTP headers:
 
     Authorization: Bearer $TOKEN  
     Content-Type: application/json  
 
-**Example API Call**
-
-Execute the following cURL call (with deployment-start.json containing the deployment object) :
+For example, run the following cURL call (with deployment-start.json containing the deployment object):
 
     curl -i -X POST -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" \
@@ -56,7 +52,7 @@ Execute the following cURL call (with deployment-start.json containing the deplo
 
 <!-- section-separator -->
 
-#### Create deployment end event
+#### Create a Deployment End Event
 Send the deployment data as a JSON object with the following fields:
 
 |Field|Description|Example|
@@ -81,16 +77,16 @@ Example:
 
 <!-- section-separator -->
 
-#### Notify BigPanda when a deployment ends
+#### Notify BigPanda When a Deployment Ends
 
 **Note**: Deployments appear as in-progress until you send a matching end notification.
 
-POST your JSON object to `https://api.bigpanda.io/data/events/deployments/end`, using the following HTTP headers:
+POST your JSON object to `https://api.bigpanda.io/data/events/deployments/end` with the following HTTP headers:
 
     Authorization: Bearer $TOKEN 
     Content-Type: application/json  
 
-Execute the following cURL call (with deployment-end.json containing the deployment object):
+For example, run the following cURL call (with deployment-end.json containing the deployment object):
 
     curl -i -X POST -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" \

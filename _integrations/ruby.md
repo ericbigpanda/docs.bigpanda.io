@@ -5,36 +5,36 @@ draft: false
 type: API
 ---
 
-#### Install the BigPanda Ruby module
-Simply run:
+#### Install the BigPanda Ruby Module
+Run the following command:
 
     gem install bigpanda
 
 <!-- section-separator -->
 
-#### Notify BigPanda when a deployment starts
+#### Notify BigPanda When a Deployment Starts
 
-**Note:** Deployments will be shown as in-progress until you send end of deployment notification.
+**Note:** Deployments appear as in-progress until you send a matching end notification.
 
-Use the bigpanda module in your scripts to send a notification at the start of a deployment:
+Use the bigpanda module in your scripts to send a notification at the start of a deployment.
 
     require 'bigpanda'
 
     bigpanda = BigPanda::Client.new(access_token: '$TOKEN')
     bigpanda.deployment_start({hosts: [hostname], component: app_name, version: app_version})
 
-**Note:** Don't forget to replace `app_name`, `app_version` and `hostname` with the right arguments.
+**Note:** You must replace `app_name`, `app_version` and `hostname` with the correct values for your deployment.
 
 <!-- section-separator -->
 
-#### Notify BigPanda when a deployment ends
-Use the bigpanda module in your scripts to send a notification at the end of a deployment:
+#### Notify BigPanda When a Deployment Ends
+Use the bigpanda module in your scripts to send a notification at the end of a deployment.
 
 
     bigpanda.deployment_end({ hosts: [hostname], component: app_name, version: app_version })
 
-or in case of failure:
+Or, in case of failure:
     
     bigpanda.deployment_end({ status: 'failure', hosts: [hostname], component: app_name, version: app_version })
 
-**Note:** Don't forget to replace `app_name`, `app_version` and `hostname` with the right arguments.
+**Note:** You must replace `app_name`, `app_version` and `hostname` with the correct values for your deployment.
