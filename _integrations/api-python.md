@@ -25,8 +25,8 @@ Create a new alert objects decribing the status of a host, application, service 
 
 Status can be one of:
 
-- ok
-- warn
-- crit
-- ack
+- `ok`
+- `warn`
+- `crit`
+- `ack`
 

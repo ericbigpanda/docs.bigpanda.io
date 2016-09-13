@@ -6,17 +6,19 @@ type: API
 ---
 
 #### Create deployment start event
-The deployment's data is sent as a JSON object with the following fields:
+To create a new, in-progress deployment in the **Changes** tab, send the deployment data as a JSON object with the following fields: 
 
 |Field|Description|Example|
 |-----|-----------|-------|
-|component|The name of the component being deployed|billing|
-|version|The deployment version|1.2.3|
-|hosts|Affected hosts names|["prod-api-1", "prod-api-2"]|
-|timestamp *\*optional*|UNIX timestamp (without milliseconds) in UTC. *Default: now*|1367316102|
-|description *\*optional*|Description of the deployment|New improvement to the billing process|
-|owner *\*optional*|The person responsible for the deployment|John|
-|source *\*optional*|The system that triggered the event|Chef|
+|`component`|Name of the component being deployed.|`"component": "billing"`|
+|`version`|Deployment version.|`"version": "1.2.3"`|
+|`hosts`|Array of host names for hosts that are affected by the deployment.|`"hosts": ["prod-api-1", "prod-api-2"]`|
+|`timestamp` *\*optional*| Time that the event started in Unix format (UTC timezone, without milliseconds). If the time is not specified, the value defaults to the current time. |`"timestamp": 1367316102`|
+|`description` *\*optional*|Additional free-form text information about this deployment.|`"description": "New improvement to the billing process"`|
+|`owner` *\*optional*|Person responsible for the deployment.|`"owner": "John"`|
+|`source` *\*optional*|System that triggered the event.|`"source: "Chef"`|
+
+**Note**: You must configure the `component`, `version`, and `hosts` parameters identically in the start and end events to ensure that BigPanda updates the status of the correct deployment. 
 
 Example:
 
@@ -30,48 +32,40 @@ Example:
       "owner": "john@acme.com"
     }
 
+For more information on authentication, start and end event methods, and response codes, see [Deployments API](https://www.bigpanda.io/docs/x/WIdzAQ).
+
 <!-- section-separator -->
 
 #### Notify BigPanda when a deployment starts
 
-`Note:` Deployments will be shown as in-progress until you send an end of deployment notification.
+**Note**: Deployments appear as in-progress until you send a matching end of deployment notification.
 
 POST your JSON object to `https://api.bigpanda.io/data/events/deployments/start`, using the following HTTP headers:
 
-**Authorization**: Bearer $TOKEN  
-**Content-Type**: application/json  
+    Authorization: Bearer $TOKEN  
+    Content-Type: application/json  
 
 **Example API Call**
 
-execute the following cURL call (with deployment-start.json containing the deployment object) :
+Execute the following cURL call (with deployment-start.json containing the deployment object) :
 
     curl -i -X POST -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" \
     -d @deployment-start.json \
     "https://api.bigpanda.io/data/events/deployments/start"
 
-The possible responses are in the following table:
-
-|Response|Description|
-|--------|-----------|
-|`201 Created`|Success.  |
-|`400 Bad Request`|Default code for invalid requests. For example, a missing mandatory field.|
-|`401 Unauthorized`|The used token is invalid or missing.|
-|`404 Not Found`|The requested endpoint isn't available|
-|`500 Internal Server Error`|Default code for errors that occurred due to problems on our side.|
-
 <!-- section-separator -->
 
 #### Create deployment end event
-The deployment's data is sent as a JSON object with the following fields:
+Send the deployment data as a JSON object with the following fields:
 
 |Field|Description|Example|
 |-----|-----------|-------|
-|component|The name of the component being deployed|billing|
-|version|The deployment version|1.2.3|
-|hosts|Affected hosts names|["prod-api-1", "prod-api-2"]|
-|status *optional*|The final status of the deployment - success/failure. *Default: success*|success|
-|errorMessage *optional*|The error message in case the deployment failed|Failed migration mongodb
+|`component`|Name of the component being deployed.|`"component": "billing"`|
+|`version`|Deployment version.|`"version": "1.2.3"`|
+|`hosts`|Array of host names for hosts that are affected by the deployment.|`"host": ["prod-api-1", "prod-api-2"]`|
+|`status` *optional*|Final status of the deployment. One of [`success`, `failure`]. If the status is not specified, the value defaults to success. |`"status": "success"`|
+|`errorMessage` *optional*|Error message, if the deployment failed.|`"errorMessage": "Failed migration mongodb"`|
 
 Example:
 
@@ -89,19 +83,18 @@ Example:
 
 #### Notify BigPanda when a deployment ends
 
-`Note:` Deployments will be shown as in-progress until you send this notification.
+**Note**: Deployments appear as in-progress until you send a matching end notification.
 
 POST your JSON object to `https://api.bigpanda.io/data/events/deployments/end`, using the following HTTP headers:
 
-**Authorization**: Bearer $TOKEN  
-**Content-Type**: application/json  
+    Authorization: Bearer $TOKEN 
+    Content-Type: application/json  
 
-The possible responses are in the following table:
+Execute the following cURL call (with deployment-end.json containing the deployment object):
 
-|Response|Description|
-|--------|-----------|
-|`201 Created`|Success.  |
-|`400 Bad Request`|Default code for invalid requests. For example, a missing mandatory field.|
-|`401 Unauthorized`|The used token is invalid or missing.|
-|`404 Not Found`|The requested endpoint isn't available|
-|`500 Internal Server Error`|Default code for errors that occurred due to problems on our side.|
+    curl -i -X POST -H "Authorization: Bearer $TOKEN" \
+    -H "Content-Type: application/json" \
+    -d @deployment-end.json \
+    "https://api.bigpanda.io/data/events/deployments/end"
+
+
