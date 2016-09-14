@@ -5,30 +5,30 @@ type: API
 draft: false
 ---
 
-#### Install the BigPanda Shell utilities
-Run the following commands to install the utility:
+#### Install the BigPanda Shell Utility
+Run the following commands to install the utility.
 
-### Debian/Ubuntu:
+For **Debian or Ubuntu**:
 
     $ echo deb http://repos.bigpanda.io/deb `lsb_release -c -s` main | sudo tee /etc/apt/sources.list.d/bigpanda.list
     $ curl https://repos.bigpanda.io/config/bigpanda.pub | sudo apt-key add -
     $ sudo apt-get update
     $ sudo apt-get install bigpanda-utils
 
-### RedHat/CentOS:
+For **RedHat or CentOS**:
 
     $ sudo wget http://repos.bigpanda.io/config/bigpanda.repo -O /etc/yum.repos.d/bigpanda.repo
     $ sudo yum install bigpanda-utils
 
 
-For more details about the utility, run:
+For more information about the utility, run:
     
     bigpanda-alert --help
 
 <!-- section-separator -->
 
-#### Send an alert
-Use the bigpanda-alert utility in your scripts to send an alert about a host, application, service etc. You can also give an optional specific check on that host, application or service.
+#### Send an Alert
+Use the bigpanda-alert utility in your scripts to send an alert about a host, application, service, or other monitored object. You have the option to include the specific check on that host, application, or service.
 
     BP_API_TOKEN=$TOKEN BP_APP_KEY=$STREAM_ID bigpanda-alert $STATUS $HOST $CHECK
 
