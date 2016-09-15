@@ -13,41 +13,43 @@ The `bigpanda-scom-cli` utility is a small, command line application for configu
 
     [Windows 64-bit](https://s3.amazonaws.com/bp-golang-artifacts/bigpanda-scom-cli/master/bigpanda-scom-cli_windows_amd64.zip)
 
-2. Extract the archive. The path it is archived to will be used in **Install BigPanda CLI in SCOM**, step 5.2.
+2. Extract the archive, and note the path to the extracted directory. You will use it to install the utility in step 5.
 
 <!-- section-separator -->
 
-#### Set SCOM timezone
+#### Set the SCOM Time Zone
 
-SCOM uses the timezone set on the system that SCOM is installed on. Connect to the server SCOM is installed on, check its timezone, and select it below.
+SCOM uses the time zone of the server it is installed on. Connect to the SCOM server and check the time zone settings. Select the same time zone in the field below.
 
 <!-- include 'integrations/scom/scom' -->
 
 <!-- section-separator -->
 
-### Set Execution Policy in PowerShell
+### Set the Execution Policy in PowerShell
 
-To run PowerShell scripts we need to change the execution policy to RemoteSigned.
+To install the utility, you must change the PowerShell execution policy to `RemoteSigned`.
 
-1. Open **PowerShell**.
+1. On the SCOM server, open **PowerShell**.
 
-2. Enter `Set-ExecutionPolicy remotesigned` and press enter.
+2. Run the following command.
 
-3. When prompted if you are sure, enter `y` and press enter.
+    `Set-ExecutionPolicy remotesigned`
+
+3. At the prompt, enter `y` to confirm the change, and press **Enter**.
 
 <!-- section-separator -->
 
-### Install BigPanda CLI in SCOM
+### Install the BigPanda SCOM Integration Utility
 
-1. Use same **PowerShell** from last step.
+1. In the same PowerShell console, go to the path where you extracted the utility in step 2.
 
-2. Go to the path from step 2.2.
+3. Run the following command.
+ 
+    `./bigpanda-scom-cli.exe install -t $TOKEN -k $STREAM_ID`
 
-3. Run the following command `./bigpanda-scom-cli.exe install -t $TOKEN -k $STREAM_ID`
+    **Note:** If you're using an HTTP Proxy, run the following command instead. You must replace `<Proxy server URL>` with the full URL to your proxy server.
 
-**NOTE:** If you are using a HTTP Proxy, run the following instead of step 3:
-
-`./bigpanda-scom-cli install -t $TOKEN -k $STREAM_ID --proxy http://yourproxy.server`
+    `./bigpanda-scom-cli install -t $TOKEN -k $STREAM_ID --proxy <Proxy server URL>`
 
 <!-- section-separator -->
 
