@@ -20,7 +20,7 @@ Configure the webhook receiver to accept BigPanda requests, if applicable. Then,
 
 For more information, see [Notifications Webhook](https://www.bigpanda.io/docs/display/_PK/BD/notifications_webhook)
 
-**Note:** Make sure to complete **Step 1: Create an App Key** before configuring the webhook below.
+**Note:** Please complete **Step 1: Create an App Key** before configuring the webhook below.
 
 <!-- app-only-start -->
 
