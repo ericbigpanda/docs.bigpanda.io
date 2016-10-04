@@ -15,10 +15,12 @@ Configure the webhook receiver to accept BigPanda requests, if applicable. Then,
 2. (Optional) To add custom a HTTP header, click the plus and add a key-value pair. For example:
   * **Header key**: `my-api-key`
   * **Header value**: `XIpjpJPLRN79LIsAa9TdA3XnxS4VfESv65NqqH8G`
-  
+
 3. Repeat step 2 for each additional header you want to add to the request.
 
-**Note:** For more information, see [Notifications Webhook](https://www.bigpanda.io/docs/display/_PK/BD/notifications_webhook).
+For more information, see [Notifications Webhook](https://www.bigpanda.io/docs/display/_PK/BD/notifications_webhook)
+
+**Note:** Make sure to complete **Step 1: Create an App Key** before configuring the webhook below.
 
 <!-- app-only-start -->
 
