@@ -5,30 +5,29 @@ type: Sharing & Ticket Management
 draft: false
 ---
 
-#### Connect Webhook
-Use the form below to specify the webhook receiver and authentication details:
+#### Configure the Webhook
+Configure the webhook receiver to accept BigPanda requests, if applicable. Then, use the form below to specify the callback URL and authentication details.
 
-|Field|Description|Example|
-|-----|-----------|-------|
-|**Webhook URL**|Fully qualified URL of the webhook receiver|`https://my-api-id.execute-api.region-id.amazonaws/lambda`|
-|**x-api-key**|Alphanumeric key passed in a header for authentication purposes |`XIpjpJPLRN79LIsAa9TdA3XnxS4VfESv65NqqH8G`|
+1. Enter the full **Callback URL** where BigPanda will send the request.
+
+   For example: `https://my-api-endpoint.com/events`
+
+2. (Optional) To add custom a HTTP header, click the plus and add a key-value pair. For example:
+  * **Header key**: `my-api-key`
+  * **Header value**: `XIpjpJPLRN79LIsAa9TdA3XnxS4VfESv65NqqH8G`
+
+3. Repeat step 2 for each additional header you want to add to the request.
+
+For more information, see [Notifications Webhook](https://www.bigpanda.io/docs/display/_PK/BD/notifications_webhook)
+
+**Note:** Please complete **Step 1: Create an App Key** before configuring the webhook below.
 
 <!-- app-only-start -->
 
 <!-- include 'integrations/webhook/webhook' -->
 
-*All fields are required*
-
 <!-- app-only-end -->
-
-<!-- docs-only-start -->
-
-
-In the BigPanda Application, you'll be able to set Webhook params here.
-
-<!-- docs-only-end -->
 
 <!-- section-separator -->
 #### Success
-After the form is complete, click on "Configure Webhook".
-You should be ready to share incidents using a Webhook.
+After the form is complete, click **Configure Webhook**. You are ready to share incidents using a Webhook.
