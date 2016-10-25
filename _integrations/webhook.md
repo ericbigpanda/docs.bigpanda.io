@@ -24,7 +24,7 @@ For more information, see [Notifications Webhook](https://www.bigpanda.io/docs/d
 
 <!-- app-only-start -->
 
-<!-- include 'integrations/webhook/webhook' -->
+<!-- include 'integrations/webhook/generic_webhook' -->
 
 <!-- app-only-end -->
 
