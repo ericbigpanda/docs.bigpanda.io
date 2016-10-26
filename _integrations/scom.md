@@ -9,7 +9,7 @@ type: System Monitoring
 
 The `bigpanda-scom-cli` utility is a small, command line application for configuring your BigPanda SCOM integration.
 
-1. Download the compressed archive of the utility for your operating system:
+1. Download the compressed archive of the utility:
 
     [Windows 64-bit](https://s3.amazonaws.com/bp-golang-artifacts/bigpanda-scom-cli/master/bigpanda-scom-cli_windows_amd64.zip)
 
