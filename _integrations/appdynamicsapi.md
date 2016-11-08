@@ -68,6 +68,14 @@ __Note__: Complete this step only one time per AppDynamics controller.
               "full_events_list":              [
             #foreach(${event} in ${fullEventList})#if (${event.healthRuleEvent})
               {
+                "health_rule_event":           ${event.healthRuleEvent},
+                "health_rule_violation_event": ${event.healthRuleViolationEvent},
+                "health_rule_id":              ${event.healthRule.id},
+                "health_rule_name":            "${event.healthRule.name}",
+                "incident_id":                 "${event.incident.id}",
+                "incident_name":               "${event.incident.name}",
+                "appd_event_type":               "health-rule",
+                "display_name":                "${event.displayName}",
                 "app_id":                      ${event.application.id},
                 "app_name":                    "${event.application.name}",
                 "bt_performance_event":        ${event.btPerformanceEvent},
@@ -77,20 +85,14 @@ __Note__: Complete this step only one time per AppDynamics controller.
                 "event_type_key":              "${event.eventTypeKey}",
                 "event_time":                  "${event.eventTime}",
                 "guid":                        "${event.guid}",
-                "health_rule_event":           ${event.healthRuleEvent},
-                "health_rule_violation_event": ${event.healthRuleViolationEvent},
-                "health_rule_id":              ${event.healthRule.id},
-                "health_rule_name":            "${event.healthRule.name}",
-                "incident_id":                 "${event.incident.id}",
-                "incident_name":               "${event.incident.name}",
-            #if (${event.node.name})
+            #if (${event.node_name})
                 "node_name":                   "${event.node.name}",
                 "node_id":                     "${event.node.id}",
             #end
                 "summary_message":             "${event.summaryMessage.replaceAll("\\<[^>]*\\>","")}",
                 "severity":                    "${event.severity}",
                 "tag":                         "bigpanda-api",
-            #if (${event.tier.name})
+            #if (${event.tier_name})
                 "tier_name":                   "${event.tier.name}",
                 "tier_id":                     "${event.tier.id}",
             #end
@@ -100,14 +102,11 @@ __Note__: Complete this step only one time per AppDynamics controller.
                       "id":                    ${entity.id},
                       "name":                  "${entity.name}",
                       "type":                  "${entity.entityType}"
-                    }#if ($velocityHasNext), #end 
-            
+                    }#if ($velocityHasNext), #end
             #end
-            
                 ]
-              }#if ($velocityHasNext), #end 
-            
-            #end 
+              }#if ($velocityHasNext), #end
+            #end
             #end
               ]
             }
