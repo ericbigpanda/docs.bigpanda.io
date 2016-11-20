@@ -11,7 +11,7 @@ The Asana integration allows you to easily share BigPanda incidents to an Asana 
 * Go to your `Account Settings` (found in the user menu) and choose the `Apps` tab *[or just click here...](http://app.asana.com/-/account_api)*
 * Click on the `API Key...` link
 * Copy the API Key to the form below
-* Start writing the destination Workspace and choose it from the dropdown
+* Choose the destination Workspace from the dropdown
 * Do the same for the destination Project
 
 <!-- app-only-start -->
