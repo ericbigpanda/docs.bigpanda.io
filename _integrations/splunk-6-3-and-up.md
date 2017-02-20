@@ -12,7 +12,7 @@ type: "Log Aggregation"
 
 1. In the Splunkbase app store, search for **BigPanda** and download the **BigPanda App for Splunk**.
 
-2. Log in to Splunk 6.3 as an administrator.
+2. Log in to Splunk as an administrator.
 
 3. Go to **Settings...Alert Actions (under Knowledge)**.
 
