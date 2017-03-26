@@ -7,43 +7,52 @@ type: Application Monitoring
 ---
 
 #### Locate Alerts Settings
-In the New Relic dashboard, navigate to [Alerts > Channels and groups](https://rpm.newrelic.com/notification_channels).
+In the New Relic dashboard, navigate to **Notification channels**.
+
+For more information, see the [legacy alerting system documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/alerting-new-relic).
 
 <!-- section-separator -->
 
 #### Create Channel for BigPanda
-Click **Create channel** and select **Webhook**. Fill in the form:
+1\. Under **Channels**, click **Create a notification channel** and select **Webhook** as the channel type.
 
-* **Webhook Name**: `BigPanda`
-* **Webhook URL**: `https://api.bigpanda.io/data/integrations/newrelic?$URL_PARAMS`
-* **Notification level**: Select **All critical events** from the drop-down menu
+2\. Fill in the form:
 
-Click **Integrate with Webhooks**.
+* **Channel Name**: `BigPanda`
+* **Base URL**: `https://api.bigpanda.io/data/integrations/newrelic?$URL_PARAMS`
 
-<!-- section-separator -->
+3\. Click **Add Custom Payload**, scroll to the bottom and ensure that **JSON** is selected as the payload type.
 
-#### Apply Webhook to All Policies
-
-1\. Navigate to [Account settings > Integrations > API keys](https://rpm.newrelic.com/integrations?page=api_keys).
-
-2\. Click **Create REST API key**.
-
-<!-- app-only-start -->
-3\. Copy the **Key** into the form below.
-
-<!-- include 'integrations/newrelic/newrelic' -->
-<!-- app-only-end -->
-<!-- docs-only-start -->
-
-Within the BigPanda Application use the interactive New Relic integration guide to enter your API Key. It will create the New Relic WebHook for you.
-
-<!-- docs-only-end -->
+4\. At the bottom of the screen, click **Create channel > Integrate with Webhooks**.
 
 <!-- section-separator -->
 
-#### Test the webhook
+#### Test the Channel
 
-A test message should arrive in a few moments. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received. 
+1\. Under **Alerts > Notification channels**, choose the **BigPanda channel** you just created, scroll down and click **Send a test notification**.
 
-**Note:** Since it's a test message, it won't be resolved automatically. Click **Resolve incident** to manually resolve it.
+2\. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received.
 
+**Note:** Since it is a test message, it won't be resolved automatically. Click **Resolve incident** to manually resolve it.
+
+<!-- section-separator -->
+
+#### Add BigPanda Notification to a New Alert Policy
+
+1\. In the New Relic dashboard, navigate to **Alerts policy > Add alert policy**.
+
+2\. Under **Alerts policy**, choose your policy and add all of your conditions by using **Add new condition**.
+
+3\. Under **Notification channels > Add notification channels**, choose **Webhook > BigPanda** channel, and click **Update policy**.
+
+<!-- section-separator -->
+
+#### Add BigPanda Notification to an Existing Alert Policy
+
+1\. Under **Alerts policy**, choose your policy and click **Notification channel > Add notification channels**.
+
+2\. Choose **Webhook > BigPanda**, and click **Update policy**.
+
+**Note:** You must set the incident preference of each policy to **By condition and entity**.
+
+For each alert policy, select the policy, and then set the incident preference. ![media/NewRelicIncidentPreference.png](/media/NewRelicIncidentPreference.png)
