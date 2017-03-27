@@ -9,14 +9,14 @@ type: Application Monitoring
 
 
 #### Locate Alerts Settings
-In the New Relic dashboard, navigate to **Alerts Beta > Notification channels**.
+In the New Relic dashboard, navigate to **Alerts New > Notification channels**.
 
 <!-- section-separator -->
 
 #### Create the Channel for BigPanda
 
 1\. Under **Channels**, click **+New notification channel** and select **Webhook** as the channel type.
- 
+
 2\. Fill in the form:
 
 * **Channel name**: `BigPanda`
@@ -30,7 +30,7 @@ In the New Relic dashboard, navigate to **Alerts Beta > Notification channels**.
 
 #### Test the Channel
 
-1\. After the **Channel successfully created** notification appears, scroll down and click **Send a test notification**.
+1\. After the **Channel successfully created** notification appears. Choose the new notification channel, scroll down and click **Send a test notification**.
 
 2\. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received.
 
@@ -40,13 +40,15 @@ In the New Relic dashboard, navigate to **Alerts Beta > Notification channels**.
 
 #### Add Alert Policies to the Channel in New Relic
 
-1\. In the New Relic dashboard, navigate to **Alerts Beta > Notification channels**.
+1\. In the New Relic dashboard, navigate to **Alerts New > Alert policies**.
 
-2\. Under **Channels**, select the **BigPanda** channel.
+2\. Click ** +New alert policies**.
 
-3\. Under **Alert policies**, click **Add alert policies**.
+3\. Add all of your conditions by **Create condition** or **+Add new condition**.         s
 
-4\. Add all of your policies to the **BigPanda** channel, and then click **Update channel**.
+4\. Under **Alert policies**, choose **Your Policy > Notification channels**.
+
+5\. Choose **Webhook > BigPanda** channel, and click **Update policy**.
 
 **Note:** You must set the incident preference of each policy to **By condition and target**. Navigate to **Alerts Beta > Alert policies**. The incident preference is set per alert policy.
 

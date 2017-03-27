@@ -7,25 +7,27 @@ type: Application Monitoring
 ---
 
 #### Locate Alerts Settings
-In the New Relic dashboard, navigate to **Notification channels > Channels tab**.
+In the New Relic dashboard, navigate to **Notification channels**.
 
 <!-- section-separator -->
 
 #### Create Channel for BigPanda
-Click **Create a notification channel** and select a channel type **Webhook**. Fill in the form:
+1\. Under **Channels**, Click **Create a notification channel** and select **Webhook** as the channel type.
+
+2\. Fill in the form:
 
 * **Channel Name**: `BigPanda`
 * **Base URL**: `https://api.bigpanda.io/data/integrations/newrelic?$URL_PARAMS`
-* Click **Add Custom Payload** look and the bottom and ensure that **JSON** is selected as the payload type.
-* At the bottom of the screen, click **Create channel**.
 
-Click **Integrate with Webhooks**.
+3\. Click **Add Custom Payload** scroll to the bottom and ensure that **JSON** is selected as the payload type.
+
+4\. At the bottom of the screen, click **Create channel**, and click **Integrate with Webhooks**.
 
 <!-- section-separator -->
 
 #### Test the Channel
 
-1\. After the **Channel successfully created** notification appears. click on the notification, scroll down and click **Send a test notification**.
+1\. After the **Channel successfully created** notification appears. Choose the new notification channel, scroll down and click **Send a test notification**.
 
 2\. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received.
 
@@ -35,13 +37,15 @@ Click **Integrate with Webhooks**.
 
 #### Add Alert Policies to the Channel in New Relic
 
-1\. In the New Relic dashboard, navigate to **Alerts policy**, click **Add alert policy**.
+1\. In the New Relic dashboard, navigate to **Alerts policy > Add alert policy**.
 
-2\. After **Policy successfully created** new policy appears. click on your policy, at the bottom click on **create a condition** and then define your condition.
+2\. After **Policy successfully created** new policy appears.
 
-3\. Click again on your policy, and click on **Notification channel**. Click on **Add notification channels** and choose **Webhook**.
+3\. Choose your policy and add all of your conditions by ** +Add new condition**.
 
-4\. Add **BigPanda** channel, and then click **Update policy**
+3\. Under **Alerts policy** Choose again your policy, and click on **Notification channel > Add notification channels**.
+
+4\. Choose **Webhook > BigPanda**, and click **Update policy**.
 
 **Note:** You must set the incident preference of each policy to **By condition and entity**. Navigate to **Alerts > Alert policies**. The incident preference is set per alert policy.
 
