@@ -7,6 +7,7 @@ type: Application Monitoring
 ---
 
 #### Locate Alerts Settings
+For [legacy alerting system documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/alerting-new-relic)
 In the New Relic dashboard, navigate to **Notification channels**.
 
 <!-- section-separator -->

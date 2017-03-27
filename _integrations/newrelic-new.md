@@ -9,6 +9,7 @@ type: Application Monitoring
 
 
 #### Locate Alerts Settings
+For [New Relic Alerts documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/introduction-new-relic-alerts)
 In the New Relic dashboard, navigate to **Alerts New > Notification channels**.
 
 <!-- section-separator -->
@@ -50,7 +51,7 @@ In the New Relic dashboard, navigate to **Alerts New > Notification channels**.
 
 5\. Choose **Webhook > BigPanda** channel, and click **Update policy**.
 
-**Note:** You must set the incident preference of each policy to **By condition and target**. Navigate to **Alerts Beta > Alert policies**. The incident preference is set per alert policy.
+**Note:** You must set the incident preference of each policy to **By condition and target**. Navigate to **Alerts New > Alert policies**. The incident preference is set per alert policy.
 
 ![media/NewRelicIncidentPreference.png](/media/NewRelicIncidentPreference.png)
 
