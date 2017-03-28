@@ -7,7 +7,6 @@ type: Application Monitoring
 ---
 
 #### Locate Alerts Settings
-For [legacy alerting system documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/alerting-new-relic)
 In the New Relic dashboard, navigate to **Notification channels**.
 
 <!-- section-separator -->
@@ -28,7 +27,7 @@ In the New Relic dashboard, navigate to **Notification channels**.
 
 #### Test the Channel
 
-1\. After the **Channel successfully created** notification appears. Choose the new notification channel, scroll down and click **Send a test notification**.
+1\. Under **Alerts > notification channels** Choose your notification channel, scroll down and click **Send a test notification**.
 
 2\. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received.
 
@@ -36,18 +35,22 @@ In the New Relic dashboard, navigate to **Notification channels**.
 
 <!-- section-separator -->
 
-#### Add Alert Policies to the Channel in New Relic
+#### Create Alert Policy
 
 1\. In the New Relic dashboard, navigate to **Alerts policy > Add alert policy**.
 
-2\. After **Policy successfully created** new policy appears.
+2\. Under **Alerts policy** Choose your policy and add all of your conditions by **Add new condition**.
 
-3\. Choose your policy and add all of your conditions by ** +Add new condition**.
+<!-- section-separator -->
 
-3\. Under **Alerts policy** Choose again your policy, and click on **Notification channel > Add notification channels**.
+#### Add Alert Policies to the Channel in New Relic
 
-4\. Choose **Webhook > BigPanda**, and click **Update policy**.
+1\. Under **Alerts policy** Choose again your policy, and click on **Notification channel > Add notification channels**.
+
+2\. Choose **Webhook > BigPanda**, and click **Update policy**.
 
 **Note:** You must set the incident preference of each policy to **By condition and entity**. Navigate to **Alerts > Alert policies**. The incident preference is set per alert policy.
 
 Choose policy and then click on ![media/NewRelicIncidentPreference.png](/media/NewRelicIncidentPreference.png), and set the incident preference.
+
+[For more information, see legacy alerting system documentation](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/alerting-new-relic).
