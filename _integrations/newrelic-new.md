@@ -26,17 +26,17 @@ For more information, see the [New Relic Alerts documentation](https://docs.newr
 
 3\. Click **Add custom payload** and ensure that **JSON** is selected as the payload type.
 
-4\. At the bottom of the screen, click on **Create channel**.
+4\. At the bottom of the screen, click **Create channel**.
 
 <!-- section-separator -->
 
 #### Test the Channel
 
-1\. Under **Alerts New > notification channels** choose your notification channel, scroll down and click **Send a test notification**.
+1\. Under **Alerts New > Notification channels**, choose your notification channel, scroll down and click **Send a test notification**.
 
-2\. In BigPanda, click on  **Incidents** in the top menu and confirm that the test message was received.
+2\. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received.
 
-**Note:** Since it is a test message, it won't be resolved automatically. Click on **Resolve incident** to manually resolve it.
+**Note:** Since it is a test message, it won't be resolved automatically. Click **Resolve incident** to manually resolve it.
 
 <!-- section-separator -->
 
@@ -56,8 +56,8 @@ For more information, see the [New Relic Alerts documentation](https://docs.newr
 
 2\. Choose **Webhook > BigPanda** channel, and click **Update policy**.
 
-**Note:** You must set the incident preference of each policy to **By condition and target**. Navigate to **Alerts New > Alert policies**. The incident preference is set per alert policy.
+**Note:** You must set the incident preference of each policy to **By condition and target**. Navigate to **Alerts New > Alert policies**.
 
-Choose policy and then click on ![media/NewRelicIncidentPreference.png](/media/NewRelicIncidentPreference.png) and set the incident preference.
+For each alert policy, select the policy, and then set the incident preference. ![media/NewRelicIncidentPreference.png](/media/NewRelicIncidentPreference.png)
 
 
