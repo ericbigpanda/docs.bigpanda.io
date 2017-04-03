@@ -10,23 +10,20 @@ type: System Monitoring
 
 <!-- section-separator -->
 
-#### Configure Nagios
-Open the main Nagios configuration file (usually `/usr/local/nagios/etc/nagios.cfg` or `/etc/nagios3/nagios.cfg`):
+<!-- docs-include _integrations/agent-common/configure-agent-actions/generic.md:::PLATFORM=redhat:::SERVICE_NAME=nagios -->
 
-    $ sudo vim /usr/local/nagios/etc/nagios.cfg
+3. Start the BigPanda agent service by running one of the following commands:
 
-<!-- docs-include _integrations/agent-common/configure-service/generic.md:::PLATFORM=redhat:::SERVICE_NAME=nagios -->* Test that `nagios` user has write permissions to the `log_archive_path` folder
-
-<!-- docs-include _integrations/agent-common/configure-service/restart-redhat.md:::SERVICENAME=Nagios:::SERVICE_LOWER=nagios -->
+<!-- docs-include _integrations/agent-common/configure-agent-actions/start-redhat.md:::SERVICENAME=Nagios:::SERVICE_LOWER=nagios:::ACTION=start -->
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/configure-agent/nagios.md:::SOURCE_SYSTEM_NAME=Nagios:::SOURCE_SYSTEM_UPPER=NAGIOS:::SOURCE_SYSTEM_LOWER=nagios:::SOURCE_SYSTEM_FOLDER=nagios3:::LOGFILE=nagios -->
+<!-- docs-include _integrations/agent-common/configure-agent/nagios_notifications.md:::SOURCE_SYSTEM_NAME=Nagios:::SOURCE_SYSTEM_UPPER=NAGIOS:::SOURCE_SYSTEM_LOWER=nagios:::SOURCE_SYSTEM_FOLDER=nagios3:::LOGFILE=nagios -->
+
+4. Restart the Nagios service.
+
+<!-- docs-include _integrations/agent-common/configure-agent-actions/start-redhat.md:::SERVICENAME=Nagios:::SERVICE_LOWER=nagios:::ACTION=start -->
 
 <!-- section-separator -->
 
-<!-- docs-include _integrations/agent-common/configure-agent/permissions.md -->
-
-<!-- section-separator -->
-
-<!-- docs-include _integrations/agent-common/start-and-summary/generic.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM=redhat -->
+<!-- docs-include _integrations/agent-common/start-and-summary/test-and-success.md:::SOURCE_SYSTEM_NAME=Nagios:::PLATFORM=redhat -->

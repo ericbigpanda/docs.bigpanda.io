@@ -7,3 +7,4 @@ public_prod
 node_modules
 _config-deploy.yml
 css/
+.idea/
