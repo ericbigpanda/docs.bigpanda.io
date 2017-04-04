@@ -17,7 +17,7 @@ For more information, see the [New Relic Alerts documentation](https://docs.newr
 
 #### Create the Channel for BigPanda
 
-1\. Under **Channels**, click **New notification channel** and select **Webhook** as the channel type.
+1\. Under **Notification channels > Channels**, click **New notification channel** and select **Webhook** as the channel type.
 
 2\. Fill in the form:
 
@@ -32,7 +32,7 @@ For more information, see the [New Relic Alerts documentation](https://docs.newr
 
 #### Test the Channel
 
-1\. Under **Alerts New > Notification channels**, choose your notification channel, scroll down and click **Send a test notification**.
+1\. Under **Alerts New > Notification channels**, choose the **BigPanda channel** you just created, scroll down and click **Send a test notification**.
 
 2\. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received.
 
@@ -40,7 +40,7 @@ For more information, see the [New Relic Alerts documentation](https://docs.newr
 
 <!-- section-separator -->
 
-#### Create Alert Policy
+#### Add BigPanda Notification to a New Alert Policy
 
 1\. In the New Relic dashboard, navigate to **Alerts New > Alert policies**.
 
@@ -48,9 +48,11 @@ For more information, see the [New Relic Alerts documentation](https://docs.newr
 
 3\. Add all of your conditions by using **Create condition** or **Add new condition**.
 
+4\. Under **Notification channels > Add notification channels**, choose **Webhook > BigPanda** channel, and click **Update policy**.
+
 <!-- section-separator -->
 
-#### Add notification channel to alert policy
+#### Add BigPanda Notification to an Existing Alert Policy
 
 1\. Under **Alerts policy**, choose your policy and click **Notification channels > Add notification channels**.
 
