@@ -54,7 +54,7 @@ For more information, see the [New Relic Alerts documentation](https://docs.newr
 
 #### Add BigPanda Notification to an Existing Alert Policy
 
-1\. Under **Alerts policy**, choose your policy and click **Notification channels > Add notification channels**.
+1\. Under **Alerts policies**, choose your policy and click **Notification channels > Add notification channels**.
 
 2\. Choose **Webhook > BigPanda** channel, and click **Update policy**.
 

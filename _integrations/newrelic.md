@@ -29,7 +29,7 @@ For more information, see the [legacy alerting system documentation](https://doc
 
 #### Test the Channel
 
-1\. Under **Alerts > Notification channels**, choose your notification channel, scroll down and click **Send a test notification**.
+1\. Under **Alerts > Notification channels**, choose the **BigPanda channel** you just created, scroll down and click **Send a test notification**.
 
 2\. In BigPanda, click **Incidents** in the top menu and confirm that the test message was received.
 
@@ -37,15 +37,17 @@ For more information, see the [legacy alerting system documentation](https://doc
 
 <!-- section-separator -->
 
-#### Create Alert Policy
+#### Add BigPanda Notification to a New Alert Policy
 
 1\. In the New Relic dashboard, navigate to **Alerts policy > Add alert policy**.
 
 2\. Under **Alerts policy**, choose your policy and add all of your conditions by using **Add new condition**.
 
+3\. Under **Notification channels > Add notification channels**, choose **Webhook > BigPanda** channel, and click **Update policy**.
+
 <!-- section-separator -->
 
-#### Add Alert Policies to the Channel in New Relic
+#### Add BigPanda Notification to an Existing Alert Policy
 
 1\. Under **Alerts policy**, choose your policy and click **Notification channel > Add notification channels**.
 
