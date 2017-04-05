@@ -14,7 +14,7 @@ For more information, see the [legacy alerting system documentation](https://doc
 <!-- section-separator -->
 
 #### Create Channel for BigPanda
-1\. Under **Channels**, Click **Create a notification channel** and select **Webhook** as the channel type.
+1\. Under **Channels**, click **Create a notification channel** and select **Webhook** as the channel type.
 
 2\. Fill in the form:
 
