@@ -21,6 +21,8 @@ The `bigpanda-solarwinds-config` utility is a small, command line application fo
 
 2. Extract the archive and open a terminal with a command prompt in the extracted directory.
 
+   **Note:** BigPanda recommends running the integration utility locally on the SolarWinds server. Alternatively, make sure there are no firewalls blocking access TCP port `17778, including network firewalls, AWS security groups, or the local Windows Firewall on the SolarWinds server.
+
 3. Run `bigpanda-solarwinds-config`.
 
 4. At the prompts, enter your SolarWinds and BigPanda details.
