@@ -1,6 +1,6 @@
 
-    # On RHEL 6:
-    $ sudo initctl start bigpanda
+    # On RHEL 5 and 6:
+    $ sudo service bigpanda restart
 
-    # On RHEL 5 and 7:
-    $ sudo service bigpanda start
+    # On RHEL 7:
+    $ sudo systemctl restart bigpanda
