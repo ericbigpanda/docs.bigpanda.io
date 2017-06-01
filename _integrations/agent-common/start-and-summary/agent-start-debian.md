@@ -1,3 +1,3 @@
 
-    $ sudo service bigpanda start
+    $ sudo service nagios reload
 
