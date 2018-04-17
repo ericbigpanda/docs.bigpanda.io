@@ -14,8 +14,8 @@ type: Application Monitoring
 
 * **Display Name**: `BigPanda`
 * **URL**: `https://api.bigpanda.io/data/integrations/site24x7?$URL_PARAMS`
-* **TimeOut**: `30 secs`
 * **HTTP Method**: select **POST**
+* **Time-out**: `30 secs`
 * **Send the Automation Result via Email**: select **No**
 
 3\. Click **Save**.
