@@ -31,7 +31,7 @@ The JSON payload can contain all or a subset of the following fields:
 |`cluster` *\*optional*|Server cluster or logical host-group from which the alert was sent. This value is used to correlate alerts into high-level incidents.|`"cluster": "east-mongodb"`|
 |Additional attributes *\*optional*|Additional information you want to have available in the BigPanda Incident Dashboard. You can add any number of custom JSON attributes with a string value to the payload.|||
 
-For information on how to send multiple alerts or configure primary and secondary properties, see [Alerts API](https://www.bigpanda.io/docs/x/V4dzAQ).
+For information on how to send multiple alerts or configure primary and secondary properties, see [Alerts API](https://docs.bigpanda.io/v1.0/reference#alerts-how-it-works).
 
 Below is an example of a full payload:
 
